@@ -1,0 +1,20 @@
+[
+  {
+    "id": "network-deep-dive",
+    "title": "网络专题",
+    "status": "planned",
+    "description": "在计算机网络与网络编程结构上继续细化，等待后续图片。",
+    "relatedDomains": ["networks", "os"],
+    "photos": [],
+    "outline": ""
+  },
+  {
+    "id": "compilers",
+    "title": "编译原理",
+    "status": "planned",
+    "description": "已在总览与程序执行过程中保留关联入口，等待后续专题图片。",
+    "relatedDomains": ["overview", "architecture"],
+    "photos": [],
+    "outline": ""
+  }
+]

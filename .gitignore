@@ -1,0 +1,5 @@
+.DS_Store
+__pycache__/
+source/contact.jpg
+*.tar.gz
+*.tmp
