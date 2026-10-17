@@ -98,6 +98,7 @@ DOMAINS=[
     链式结构
       单链表
         遍历访问结点
+        插入和删除
         指针存储开销
       双链表
         前驱结点指针
@@ -108,32 +109,36 @@ DOMAINS=[
   受限线性表
     栈
       顺序或链式实现
-      浏览器前进与后退
-      括号匹配
-      表达式计算
+      实际应用
+        浏览器前进与后退
+        括号匹配
+        表达式计算
     堆
       大顶堆
       小顶堆
-      找第 K 大元素
+      实际应用
+        找第 K 大元素
     队列
       普通队列
       双边队列
       优先级队列
-      LFU Cache
+      实际应用
+        LFU Cache
   树与二叉树
     二叉树
-      顺序和链式实现
+      特点
+        顺序和链式实现
+        遍历方式
+          广度优先搜索
+          深度优先搜索
+            前序遍历
+            中序遍历
+            后序遍历
       完全二叉树
       满二叉树
       二叉搜索树
       平衡二叉搜索树
         红黑树
-      遍历方式
-        广度优先搜索
-        深度优先搜索
-          前序遍历
-          中序遍历
-          后序遍历
     哈夫曼树
     字典树
 排序 @8067
@@ -184,53 +189,17 @@ DOMAINS=[
     AB 测试
     推荐模型
 数学学习方法 @8068
-  广度优先了解概念 :: 原图建议先认识各领域概念的名称及其解决的问题。
-  了解概念的用途与局限 :: 原图建议先了解作用、大致步骤、发明背景与局限，再深入算法和证明。
-  将复杂操作暂作整体理解 :: 原图建议面对陌生符号时，先把它实现的功能看作一个整体操作。
-  从工作相关领域开始 :: 原图建议通过实际用途建立学习反馈。
-  用程序实现数学问题的解法 :: 原图建议将正在学习的数学解法写成程序。
-  结合在线课程系统学习
+  Steve Yegge :: 作者与职位按原图署名记录。
+    广度优先了解概念 :: 原图建议先认识各领域概念的名称及其解决的问题。
+    了解概念的用途与局限 :: 原图建议先了解作用、大致步骤、发明背景与局限，再深入算法和证明。
+    将复杂操作暂作整体理解 :: 原图建议面对陌生符号时，先把它实现的功能看作一个整体操作。
+  徐文浩 :: 作者与职位按原图署名记录。
+    从工作相关领域开始 :: 原图建议通过实际用途建立学习反馈。
+    用程序实现数学问题的解法 :: 原图建议将正在学习的数学解法写成程序。
+    结合在线课程系统学习
 '''),
  ('os','操作系统','从进程、内存与文件系统，延伸到 I/O 和网络编程。',['8069','8070','8071','8072'],'''操作系统工作流程 @8069
-  初创期
-    x86 体系结构 :: 原图类比：要有开放的营商环境。
-    系统初始化 :: 原图类比：创建一家软件外包公司。
-    实模式 :: 原图类比：公司初创没员工，老板亲自接项目。
-  发展期
-    保护模式和多进程 :: 原图类比：公司慢慢做大，项目越接越多。
-    进程管理 :: 原图类比：建立项目管理体系。
-    内存管理 :: 原图类比：建立会议室管理体系。
-    文件系统 :: 原图类比：建立文档资料管理体系。
-    输入输出设备管理 :: 原图类比：建立售前售后体系。
-  壮大期
-    进程间通信 :: 原图类比：公司内部项目合作。
-    网络通信 :: 原图类比：外部公司合作。
-  内核子系统
-    系统调用子系统
-    进程管理子系统
-      调度
-      任务管理
-      同步
-      CPU
-    内存管理子系统
-      内存映射
-      虚拟内存
-      物理内存
-      页表
-      swap
-      伙伴
-      slab
-    文件子系统
-      VFS
-      缓存
-      文件系统
-    设备子系统
-      字符设备
-      块设备
-    网络子系统
-      套接字
-      协议栈
-      网络设备
+应用程序 @8069
 进程管理 @8069
   程序到进程
     ELF Header
@@ -267,8 +236,14 @@ DOMAINS=[
     Data 区域
     Text 区域
   虚拟内存与物理内存
+    虚拟内存
+    物理内存
     页
+      页 0
+      页 N
     页表项
+      页表项 0
+      页表项 N
     换出
     换入
     文件映射
@@ -278,11 +253,21 @@ DOMAINS=[
     sys_open
     sys_read
     sys_write
-  文件描述符
+  用户态与内核态
+    用户态
+    内核态
   进程打开的文件
-  虚拟文件系统 VFS
+    文件描述符
+    进程 A
+      fd
+      缓存
+    进程 B
+      fd
+      缓存
+  文件子系统
     struct file
       file operation
+  虚拟文件系统 VFS
     struct dentry
       dir operation
     struct inode
@@ -291,6 +276,25 @@ DOMAINS=[
     ext4
     ext3
     ntfs
+  ext4 文件系统
+    inode
+      Block
+        sector
+输入输出系统 @8070
+  用户进程
+    open / read / write / ioctl
+      open
+      read
+      write
+      ioctl
+  文件系统接口
+  虚拟文件系统 :: 原图：抽象为文件系统操作，对用户提供文件操作。
+  操作系统
+  块设备
+  设备驱动程序 :: 原图：屏蔽设备控制器，对操作系统提供统一接口。
+  中断处理器 :: 原图：硬件事件统一处理。
+  设备控制器 :: 原图：屏蔽不同硬件的差别。
+  硬件 :: 原图：各种各样的硬件设备。
   块设备访问路径
     struct address_space
     Page Cache
@@ -301,27 +305,17 @@ DOMAINS=[
       I/O 请求队列
     块设备驱动程序
     硬盘设备
-  ext4 文件系统
-    inode
-    Block
-    sector
-输入输出系统 @8070
-  用户进程
-    open / read / write / ioctl
-  文件系统接口
-  虚拟文件系统 :: 原图：抽象为文件系统操作，对用户提供文件操作。
-  块设备
-  设备驱动程序 :: 原图：屏蔽设备控制器，对操作系统提供统一接口。
-  中断处理器 :: 原图：硬件事件统一处理。
-  设备控制器 :: 原图：屏蔽不同硬件的差别。
-  硬件 :: 原图：各种各样的硬件设备。
 网络通信 @8070
   Linux 服务器 A
     Firefox
     Chrome
+    socket
+    eth0
   Linux 服务器 B
     nginx
     tomcat
+    socket
+    eth0
   用户态与内核态
   Socket
   HTTP 报文
@@ -331,9 +325,21 @@ DOMAINS=[
   IP header
   MAC header
   eth0 / eth1
+  报文封装与解封装
+    HTTP 应用数据
+    TCP 报文
+    IP 报文
+    MAC 帧
+    发送与接收方向
   交换机
+    eth0
+    eth1
   Linux 服务器作路由器
     路由表
+    eth0
+    eth1
+    IP header
+    MAC header
 网络编程 @8071
   基本知识
     TCP/IP 和 OSI 参考模型
@@ -508,16 +514,16 @@ DOMAINS=[
     DRAM 和内存
     SSD 硬盘和 Flash Card
     机械硬盘
+  存储器和 I/O 系统
     虚拟内存和内存保护
-  I/O 系统
     IO_WAIT :: 原图文字为“IO_WAIT：CPU 和内存的通信”；保留此标签供对照，不将其作为 I/O wait 的准确定义。
     DMA 技术
     访问输入输出设备
-  数据完整性
-    RAID
-    Erasure Code
-    ECC 内存
-    Hadoop 和分布式存储
+    数据完整性
+      RAID
+      Erasure Code
+      ECC 内存
+      Hadoop 和分布式存储
 5 大类 CPU 指令 @8074
   算术类指令
     add :: 原图示例：add $s1, $s2, $s3；$s1 = $s2 + $s3。
@@ -578,7 +584,7 @@ MIPS 指令 @8074
   静态程序库
   链接器
   可执行代码
-  装载器 :: 原图在可执行代码到内存的箭头处标为“汇编器”；此处按装载阶段整理为“装载器”，请结合原图核对。
+    汇编器 :: 此位置的名称按原图标注保留。
   内存中的程序和数据
 冯·诺依曼结构示意 @8075
   CPU
@@ -620,9 +626,9 @@ HTTP 全览图 @8076
     顶级 DNS
     权威 DNS
     本地 DNS
-  负载均衡
-    四层与七层
+    负载均衡
   下层协议
+    四层与七层
     TCP/IP
       IPv4
       IPv6
@@ -647,8 +653,9 @@ HTTP 全览图 @8076
   编码与压缩
     Base64
     chunked
-    gzip
-    deflate
+    压缩
+      gzip
+      deflate
   WebSocket
     全双工
     二进制帧
@@ -692,6 +699,7 @@ Web 技术 @8077
 HTTP 演进与服务 @8077
   HTTP/2
     SPDY
+      功能增强
     HPACK
     Server Push
     gRPC
@@ -709,15 +717,19 @@ HTTP 演进与服务 @8077
       V2
   WebService
     RESTful
+      JSON
     SOAP
     RPC
-    JSON
   Web 服务器
     Nginx
+      高性能
       OpenResty
     Apache
+      老牌
     Microsoft-IIS
+      仅用于 Windows
     Tomcat
+      Java
       Servlet 容器
   CDN
     负载均衡
@@ -830,6 +842,10 @@ def match(label,photo):
  _,r=max(candidates,key=lambda x:(x[0],-len(x[1]['text'])))
  x=max(0,min(1,r['x']));y=max(0,min(1,r['y']))
  return {'text':r['text'],'box':[x,y,min(r['w'],1-x),min(r['h'],1-y)],'confidence':r['confidence'],'method':'ocr-assisted'}
+annotations=json.loads((ROOT/'source/annotations.json').read_text()) if (ROOT/'source/annotations.json').exists() else {}
+# Preserve published node IDs after hierarchy corrections and disambiguate repeated photo labels.
+node_overrides=json.loads((ROOT/'source/node-overrides.json').read_text())
+used_overrides=set()
 nodes=[];domains=[]
 for slug,title,desc,photos,block in DOMAINS:
  stack=[];roots=[];photo='IMG_'+photos[0]
@@ -840,9 +856,20 @@ for slug,title,desc,photos,block in DOMAINS:
   if m:photo='IMG_'+m[1];label=label[:m.start()]
   while len(stack)>depth:stack.pop()
   path_key='/'.join([slug]+[x['title'] for x in stack]+[label])
-  stable_id=slug+'-'+hashlib.sha256(path_key.encode()).hexdigest()[:10]
+  override=node_overrides.get(path_key,{})
+  if override:used_overrides.add(path_key)
+  stable_id=override.get('id',slug+'-'+hashlib.sha256(path_key.encode()).hexdigest()[:10])
   node={'id':stable_id,'title':label,'domain':slug,'parent':stack[-1]['id'] if stack else None,'children':[],'photo':photo,'note':note,'depth':depth}
-  evidence=match(label,photo)
+  annotation=annotations.get(stable_id)
+  if annotation:
+   assert annotation['title']==label and annotation['photo']==photo, f'Annotation source mismatch: {stable_id}'
+   node['sourceText']=annotation['text']
+   if 'note' in annotation:node['note']=annotation['note']
+   if node['note'].startswith('原图示例：'):node['note']=''
+  evidence=(match(label+' '+node['sourceText'],photo) if node.get('sourceText') else None) or match(label,photo)
+  if 'evidence' in override:
+   assert override['photo']==photo, f'Evidence photo mismatch: {path_key}'
+   evidence=override['evidence']
   if evidence:node['evidence']=evidence
   if stack:stack[-1]['children'].append(node['id'])
   else:roots.append(node['id'])
@@ -856,7 +883,9 @@ photos=[]
 for num,label in photo_labels.items():
  p='IMG_'+num
  photos.append({'id':p,'title':label,'src':'photos/'+p+'.jpg','thumb':'photos/'+p+'-thumb.jpg','domains':[d['id'] for d in domains if p in d['photos']]})
-data={'schemaVersion':1,'title':'计算机基础知识地图','description':'从知识结构出发，读懂计算机','domains':domains,'extensions':extensions,'nodes':nodes,'photos':photos,'contentPolicy':'根据用户提供的照片整理层级与摘要；原图中的简化说法在条目中另作说明。OCR 仅作为定位辅助，不能替代原图。'}
+assert used_overrides==set(node_overrides), 'Node overrides refer to removed paths'
+assert set(annotations).issubset({n['id'] for n in nodes}), 'Annotations refer to removed nodes'
+data={'schemaVersion':2,'title':'计算机基础知识地图','description':'从知识结构出发，读懂计算机','domains':domains,'extensions':extensions,'nodes':nodes,'photos':photos,'contentPolicy':'根据用户提供的照片整理层级与摘要；原图中的简化说法在条目中另作说明。OCR 仅作为定位辅助，不能替代原图。'}
 (DIST/'data.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 # Browser-native data keeps file:// preview useful as well as normal static hosting.
 (DIST/'data.js').write_text('window.KNOWLEDGE_DATA='+json.dumps(data,ensure_ascii=False).replace('</','<\\/')+';\n')
@@ -865,10 +894,10 @@ for d in domains:
  md+=['## '+d['title'],'',d['description'],'']
  for n in nodes:
   if n['domain']==d['id']:
-   md.append('  '*n['depth']+'- '+n['title']+('：'+n['note'] if n['note'] else '')+f' [原图]({"photos/"+n["photo"]+".jpg"})')
+   md.append('  '*n['depth']+'- '+n['title']+('：'+n['sourceText'] if n.get('sourceText') else '')+('（整理说明：'+n['note']+'）' if n['note'] else '')+f' [原图]({"photos/"+n["photo"]+".jpg"})')
  md.append('')
 md+=['## 后续专题','']
 for t in extensions:md.append('- '+t['title']+'：'+('已接入' if t['status']=='ready' else '等待图片')+'。'+t['description'])
 md.append('')
 (DIST/'knowledge-map.md').write_text('\n'.join(md))
-print(json.dumps({'domains':len(domains),'nodes':len(nodes),'photos':len(photos),'evidenceLocated':sum('evidence'in n for n in nodes)},ensure_ascii=False))
+print(json.dumps({'domains':len(domains),'nodes':len(nodes),'photos':len(photos),'evidenceLocated':sum('evidence'in n for n in nodes),'sourceAnnotations':sum(bool(n.get('sourceText')) for n in nodes)},ensure_ascii=False))

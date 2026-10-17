@@ -1,0 +1,590 @@
+{
+  "photos": [
+    "IMG_8069",
+    "IMG_8070",
+    "IMG_8071",
+    "IMG_8072"
+  ],
+  "description": "逐图核对标签、流程文字与主要图示关系；diagram 为按图示整理的文字，非连续原文。",
+  "items": [
+    {
+      "id": "os-064c686b05",
+      "path": "操作系统工作流程",
+      "photo": "IMG_8069",
+      "text": "如何把一家软件公司做上市（Linux 操作系统的工作流程）。",
+      "diagram": false
+    },
+    {
+      "id": "os-fa130d4e5c",
+      "path": "应用程序",
+      "photo": "IMG_8069",
+      "text": "应用 A、应用 B、应用 C 位于内核上方，与系统调用子系统相连。",
+      "diagram": true
+    },
+    {
+      "id": "os-bfde8b8298",
+      "path": "进程管理/程序到进程",
+      "photo": "IMG_8069",
+      "text": "程序图从上到下为 ELF Header、Segment Header Table、.text、.rodata、.data、.bss、.symtab、.strtab、Section Header Table；右侧进程图列出进程列表中的任务信息。",
+      "diagram": true
+    },
+    {
+      "id": "os-e0704138a4",
+      "path": "进程管理/程序到进程/代码段",
+      "photo": "IMG_8069",
+      "text": ".text、.rodata。",
+      "diagram": false
+    },
+    {
+      "id": "os-7130d9b0c2",
+      "path": "进程管理/程序到进程/数据段",
+      "photo": "IMG_8069",
+      "text": ".data、.bss。",
+      "diagram": false
+    },
+    {
+      "id": "os-5215b80ac2",
+      "path": "进程管理/程序到进程/不加载到内存",
+      "photo": "IMG_8069",
+      "text": ".symtab、.strtab、Section Header Table。",
+      "diagram": false
+    },
+    {
+      "id": "os-f324ea818c",
+      "path": "进程管理/进程列表",
+      "photo": "IMG_8069",
+      "text": "任务 ID、亲缘关系、任务状态、权限、运行统计、调度相关、信号处理、内存管理、文件与文件系统、内核栈。",
+      "diagram": false
+    },
+    {
+      "id": "os-a75591a92b",
+      "path": "内存管理/进程地址空间",
+      "photo": "IMG_8069",
+      "text": "图中自上而下：Stack 栈、mmap 内存映射区、堆、BSS 区域、Data 区域、Text 区域；上方另标内核态与用户态分界。",
+      "diagram": true
+    },
+    {
+      "id": "os-9c67a6e7d0",
+      "path": "内存管理/进程地址空间/Stack 栈",
+      "photo": "IMG_8069",
+      "text": "图中栈内的箭头向下。",
+      "diagram": true
+    },
+    {
+      "id": "os-c95af6fd40",
+      "path": "内存管理/进程地址空间/mmap 内存映射区",
+      "photo": "IMG_8069",
+      "text": "图中位于栈与堆之间，区域内的箭头向下。",
+      "diagram": true
+    },
+    {
+      "id": "os-619f578f34",
+      "path": "内存管理/进程地址空间/堆",
+      "photo": "IMG_8069",
+      "text": "图中堆内的箭头向上。",
+      "diagram": true
+    },
+    {
+      "id": "os-7a6cf7f513",
+      "path": "内存管理/进程地址空间/BSS 区域",
+      "photo": "IMG_8069",
+      "text": "图中位于堆下方、Data 区域上方。",
+      "diagram": true
+    },
+    {
+      "id": "os-3557730084",
+      "path": "内存管理/进程地址空间/Data 区域",
+      "photo": "IMG_8069",
+      "text": "图中位于 BSS 区域与 Text 区域之间。",
+      "diagram": true
+    },
+    {
+      "id": "os-9256033fca",
+      "path": "内存管理/进程地址空间/Text 区域",
+      "photo": "IMG_8069",
+      "text": "图中位于 Data 区域下方。",
+      "diagram": true
+    },
+    {
+      "id": "os-46b2a3b29c",
+      "path": "内存管理/虚拟内存与物理内存",
+      "photo": "IMG_8069",
+      "text": "虚拟内存中的页面经中间页表项映射到物理内存；右侧另画出换出、换入和文件映射的箭头。",
+      "diagram": true
+    },
+    {
+      "id": "os-b28a4e7627",
+      "path": "内存管理/虚拟内存与物理内存/虚拟内存",
+      "photo": "IMG_8069",
+      "text": "图中页面从底部的页 0 到顶部的页 N，通过页表项与物理页连接。",
+      "diagram": true
+    },
+    {
+      "id": "os-15a17d985b",
+      "path": "内存管理/虚拟内存与物理内存/物理内存",
+      "photo": "IMG_8069",
+      "text": "图中页面从底部的页 0 到顶部的页 N，右侧连接换入、换出与文件映射。",
+      "diagram": true
+    },
+    {
+      "id": "os-db3491c198",
+      "path": "内存管理/虚拟内存与物理内存/页",
+      "photo": "IMG_8069",
+      "text": "页 0、页 N。",
+      "diagram": false
+    },
+    {
+      "id": "os-56c06ccfeb",
+      "path": "内存管理/虚拟内存与物理内存/页表项",
+      "photo": "IMG_8069",
+      "text": "页表项 0、页表项 N。",
+      "diagram": false
+    },
+    {
+      "id": "os-8a8dcd44f4",
+      "path": "内存管理/虚拟内存与物理内存/内存映射",
+      "photo": "IMG_8069",
+      "text": "虚拟内存 → 页表项 → 物理内存。",
+      "diagram": true
+    },
+    {
+      "id": "os-171f6dfe1c",
+      "path": "内存管理/虚拟内存与物理内存/换出",
+      "photo": "IMG_8069",
+      "text": "图中箭头从物理内存指向右侧圆柱形存储。",
+      "diagram": true
+    },
+    {
+      "id": "os-5d3f45899e",
+      "path": "内存管理/虚拟内存与物理内存/换入",
+      "photo": "IMG_8069",
+      "text": "图中箭头从右侧圆柱形存储指向物理内存。",
+      "diagram": true
+    },
+    {
+      "id": "os-578d50bbc0",
+      "path": "内存管理/虚拟内存与物理内存/文件映射",
+      "photo": "IMG_8069",
+      "text": "图中右侧存储与物理内存页面间另有标为“文件映射”的连线。",
+      "diagram": true
+    },
+    {
+      "id": "os-fd706d7a38",
+      "path": "文件系统",
+      "photo": "IMG_8070",
+      "text": "进程 A、进程 B 经系统调用访问打开的文件；下方依次画出文件子系统、虚拟文件系统 VFS、文件系统类型、Page Cache 与块设备访问层。",
+      "diagram": true
+    },
+    {
+      "id": "os-003f9f7175",
+      "path": "文件系统/用户态与内核态",
+      "photo": "IMG_8070",
+      "text": "进程 A、进程 B 位于用户态，系统调用及以下部分位于内核态。",
+      "diagram": true
+    },
+    {
+      "id": "os-718fc5b504",
+      "path": "文件系统/进程打开的文件",
+      "photo": "IMG_8070",
+      "text": "图中进程 A 和进程 B 分别有 fd、缓存及打开的文件描述符。",
+      "diagram": true
+    },
+    {
+      "id": "os-b95b28daf7",
+      "path": "文件系统/进程打开的文件/进程 A",
+      "photo": "IMG_8070",
+      "text": "进程 A：fd、缓存；进程 A 打开的文件：文件描述符。",
+      "diagram": false
+    },
+    {
+      "id": "os-26a8120d7d",
+      "path": "文件系统/进程打开的文件/进程 B",
+      "photo": "IMG_8070",
+      "text": "进程 B：fd、缓存；进程 B 打开的文件：文件描述符。",
+      "diagram": false
+    },
+    {
+      "id": "os-61dfc73c9d",
+      "path": "文件系统/系统调用",
+      "photo": "IMG_8070",
+      "text": "sys_open、sys_read、sys_write。",
+      "diagram": false
+    },
+    {
+      "id": "os-4b3e9b585b",
+      "path": "文件系统/文件子系统",
+      "photo": "IMG_8070",
+      "text": "打开的文件 struct file → file operation。",
+      "diagram": true
+    },
+    {
+      "id": "os-51f8926ebe",
+      "path": "文件系统/文件子系统/struct file",
+      "photo": "IMG_8070",
+      "text": "打开的文件：struct file。",
+      "diagram": false
+    },
+    {
+      "id": "os-caec1cef9a",
+      "path": "文件系统/文件子系统/struct file/file operation",
+      "photo": "IMG_8070",
+      "text": "图中“打开的文件 struct file”指向 file operation。",
+      "diagram": true
+    },
+    {
+      "id": "os-65c14ae08a",
+      "path": "文件系统/虚拟文件系统 VFS/struct dentry",
+      "photo": "IMG_8070",
+      "text": "文件夹：struct dentry → dir operation。",
+      "diagram": true
+    },
+    {
+      "id": "os-24384233ed",
+      "path": "文件系统/虚拟文件系统 VFS/struct inode",
+      "photo": "IMG_8070",
+      "text": "文件：struct inode → inode operation。",
+      "diagram": true
+    },
+    {
+      "id": "os-e7983436da",
+      "path": "文件系统/文件系统类型",
+      "photo": "IMG_8070",
+      "text": "ext4、ext3、ntfs。",
+      "diagram": false
+    },
+    {
+      "id": "os-f9f522de10",
+      "path": "输入输出系统/块设备访问路径",
+      "photo": "IMG_8070",
+      "text": "虚拟文件系统 → Page Cache → 通用块设备层（BIO）→ 块设备 I/O 调度层 → 块设备驱动程序 → 硬盘设备。",
+      "diagram": true
+    },
+    {
+      "id": "os-c181173c3a",
+      "path": "输入输出系统/块设备访问路径/struct address_space",
+      "photo": "IMG_8070",
+      "text": "右侧虚拟文件系统图中，struct file 下有 struct inode 与 struct address_space，后者连接多个 Page Cache。",
+      "diagram": true
+    },
+    {
+      "id": "os-41eb8fc805",
+      "path": "输入输出系统/块设备访问路径/Page Cache",
+      "photo": "IMG_8070",
+      "text": "缓存；右侧图中画出多个 Page Cache，并向下连接 BIO。",
+      "diagram": true
+    },
+    {
+      "id": "os-5166d79da7",
+      "path": "输入输出系统/块设备访问路径/通用块设备层",
+      "photo": "IMG_8070",
+      "text": "图中包含多个 BIO。",
+      "diagram": true
+    },
+    {
+      "id": "os-cd39d7afa3",
+      "path": "输入输出系统/块设备访问路径/块设备 I/O 调度层",
+      "photo": "IMG_8070",
+      "text": "调度算法、I/O 请求队列。",
+      "diagram": false
+    },
+    {
+      "id": "os-153d55c461",
+      "path": "输入输出系统/块设备访问路径/块设备 I/O 调度层/I/O 请求队列",
+      "photo": "IMG_8070",
+      "text": "原图画出连续排队的请求方块。",
+      "diagram": true
+    },
+    {
+      "id": "os-53e16781e8",
+      "path": "文件系统/ext4 文件系统",
+      "photo": "IMG_8070",
+      "text": "文件 inode → 多个 Block → 每个 Block 对应的 sector。",
+      "diagram": true
+    },
+    {
+      "id": "os-6b25ea7044",
+      "path": "文件系统/ext4 文件系统/inode",
+      "photo": "IMG_8070",
+      "text": "图中一个文件 inode 连到多个 Block。",
+      "diagram": true
+    },
+    {
+      "id": "os-0ee100210d",
+      "path": "文件系统/ext4 文件系统/inode/Block",
+      "photo": "IMG_8070",
+      "text": "图中每个 Block 连到多个 sector。",
+      "diagram": true
+    },
+    {
+      "id": "os-386a7d0298",
+      "path": "输入输出系统",
+      "photo": "IMG_8070",
+      "text": "图中从上到下：用户进程、文件系统接口、虚拟文件系统、操作系统、块设备、设备驱动程序、中断处理器、设备控制器、硬件。",
+      "diagram": true
+    },
+    {
+      "id": "os-60c8d1c0d4",
+      "path": "输入输出系统/用户进程",
+      "photo": "IMG_8070",
+      "text": "open、read、write、ioctl。",
+      "diagram": false
+    },
+    {
+      "id": "os-68053aaf3f",
+      "path": "输入输出系统/文件系统接口",
+      "photo": "IMG_8070",
+      "text": "图中位于用户进程与虚拟文件系统之间。",
+      "diagram": true
+    },
+    {
+      "id": "os-b61fa56dbc",
+      "path": "输入输出系统/块设备",
+      "photo": "IMG_8070",
+      "text": "图中位于虚拟文件系统下方、设备驱动程序上方。",
+      "diagram": true
+    },
+    {
+      "id": "os-f9054458bc",
+      "path": "网络通信",
+      "photo": "IMG_8070",
+      "text": "Linux 服务器 A → 交换机 → Linux 服务器作路由器 → 交换机 → Linux 服务器 B；图中通过 eth0、eth1 连接。",
+      "diagram": true
+    },
+    {
+      "id": "os-6ec4cd3c9b",
+      "path": "网络通信/Linux 服务器 A",
+      "photo": "IMG_8070",
+      "text": "Firefox、Chrome → socket → 内核中的报文各层 → eth0。",
+      "diagram": true
+    },
+    {
+      "id": "os-b6f5b0736b",
+      "path": "网络通信/Linux 服务器 B",
+      "photo": "IMG_8070",
+      "text": "eth0 → 内核中的报文各层 → socket → nginx、tomcat。",
+      "diagram": true
+    },
+    {
+      "id": "os-f77c5e5836",
+      "path": "网络通信/用户态与内核态",
+      "photo": "IMG_8070",
+      "text": "Firefox、Chrome、nginx、tomcat 位于用户态；socket 下方的 TCP、IP、MAC 报文层位于内核态。",
+      "diagram": true
+    },
+    {
+      "id": "os-59e4a73943",
+      "path": "网络通信/Socket",
+      "photo": "IMG_8070",
+      "text": "图中服务器 A 和服务器 B 的应用程序均经 socket 与内核中的网络报文层相连。",
+      "diagram": true
+    },
+    {
+      "id": "os-989cd5df09",
+      "path": "网络通信/报文封装与解封装",
+      "photo": "IMG_8070",
+      "text": "HTTP header + HTTP body → TCP header + HTTP header + HTTP body → IP header + TCP header + HTTP header + HTTP body → MAC header + IP header + TCP header + HTTP header + HTTP body。",
+      "diagram": true
+    },
+    {
+      "id": "os-7470d187ed",
+      "path": "网络通信/报文封装与解封装/HTTP 应用数据",
+      "photo": "IMG_8070",
+      "text": "HTTP header + HTTP body。",
+      "diagram": true
+    },
+    {
+      "id": "os-10f642fd7a",
+      "path": "网络通信/报文封装与解封装/TCP 报文",
+      "photo": "IMG_8070",
+      "text": "TCP header + HTTP header + HTTP body。",
+      "diagram": true
+    },
+    {
+      "id": "os-14faf5bfed",
+      "path": "网络通信/报文封装与解封装/IP 报文",
+      "photo": "IMG_8070",
+      "text": "IP header + TCP header + HTTP header + HTTP body。",
+      "diagram": true
+    },
+    {
+      "id": "os-ba6b6e0fa0",
+      "path": "网络通信/报文封装与解封装/MAC 帧",
+      "photo": "IMG_8070",
+      "text": "MAC header + IP header + TCP header + HTTP header + HTTP body。",
+      "diagram": true
+    },
+    {
+      "id": "os-8ba4e65d18",
+      "path": "网络通信/报文封装与解封装/发送与接收方向",
+      "photo": "IMG_8070",
+      "text": "服务器 A 图中的箭头由应用向下至 eth0；服务器 B 图中的箭头由 eth0 向上至应用。",
+      "diagram": true
+    },
+    {
+      "id": "os-bb9eaf2f60",
+      "path": "网络通信/交换机",
+      "photo": "IMG_8070",
+      "text": "图中有两处交换机，各标 eth0、eth1，并画出包含 MAC header、IP header、TCP header、HTTP header 和 HTTP body 的报文。",
+      "diagram": true
+    },
+    {
+      "id": "os-00163515dc",
+      "path": "网络通信/Linux 服务器作路由器",
+      "photo": "IMG_8070",
+      "text": "图中标出用户态、内核态；路由表与 IP header 相连，接口为 eth0 与 eth1。",
+      "diagram": true
+    },
+    {
+      "id": "os-c5c92f15a5",
+      "path": "网络通信/Linux 服务器作路由器/路由表",
+      "photo": "IMG_8070",
+      "text": "图中从 IP header 指向路由表，再接续到发送方向的报文。",
+      "diagram": true
+    },
+    {
+      "id": "os-f69c9e711a",
+      "path": "网络编程/使用技巧/字节流读写/读取",
+      "photo": "IMG_8071",
+      "text": "检测异常输入、流式处理、缓冲区溢出处理。",
+      "diagram": false
+    },
+    {
+      "id": "os-85e3a4b77e",
+      "path": "网络编程/使用技巧/字节流读写/写入",
+      "photo": "IMG_8071",
+      "text": "RST 捕获和 SIGPIPE。",
+      "diagram": false
+    },
+    {
+      "id": "os-7123dc8d6d",
+      "path": "网络编程/使用技巧/有序关闭",
+      "photo": "IMG_8071",
+      "text": "半关闭连接、shutdown。",
+      "diagram": false
+    },
+    {
+      "id": "os-fed091bbc9",
+      "path": "网络编程/I/O 模型",
+      "photo": "IMG_8071",
+      "text": "阻塞式 I/O、非阻塞式 I/O、I/O 多路复用、信号驱动式 I/O、异步 I/O。",
+      "diagram": false
+    },
+    {
+      "id": "os-6cd64ea572",
+      "path": "网络编程/I/O 模型/I/O 多路复用",
+      "photo": "IMG_8071",
+      "text": "select、poll、Linux → epoll、BSD → kqueue。",
+      "diagram": true
+    },
+    {
+      "id": "os-d40c4a26c1",
+      "path": "网络编程：协议与模型/编程模型/服务器端",
+      "photo": "IMG_8072",
+      "text": "socket create → bind → listen → accept → read/write → close/shutdown。",
+      "diagram": true
+    },
+    {
+      "id": "os-89b2c52b15",
+      "path": "网络编程：协议与模型/编程模型/客户端",
+      "photo": "IMG_8072",
+      "text": "socket create → connect → read/write → close/shutdown。",
+      "diagram": true
+    },
+    {
+      "id": "os-4b69261ff9",
+      "path": "网络编程：协议与模型/编程范式/单线程处理 accept 和连接 I/O",
+      "photo": "IMG_8072",
+      "text": "单线程处理所有 accept 和连接 I/O。",
+      "diagram": false
+    },
+    {
+      "id": "os-c255c0711d",
+      "path": "输入输出系统/操作系统",
+      "photo": "IMG_8070",
+      "text": "图中“操作系统”标注位于虚拟文件系统与块设备之间。",
+      "diagram": true
+    }
+  ],
+  "diagramOnlyItems": [
+    {
+      "id": "os-4c40681421",
+      "path": "os/操作系统工作流程/初创期/系统初始化",
+      "title": "系统初始化",
+      "photo": "IMG_8069",
+      "text": "创建一家软件外包公司（系统初始化）。",
+      "note": ""
+    },
+    {
+      "id": "os-27adae99a0",
+      "path": "os/操作系统工作流程/发展期/文件系统",
+      "title": "文件系统",
+      "photo": "IMG_8069",
+      "text": "建立文档资料管理体系（文件系统）。",
+      "note": ""
+    },
+    {
+      "id": "os-d5dcc905be",
+      "path": "os/操作系统工作流程/发展期/输入输出设备管理",
+      "title": "输入输出设备管理",
+      "photo": "IMG_8069",
+      "text": "建立售前售后体系（输入输出设备管理）。",
+      "note": ""
+    },
+    {
+      "id": "os-7cb042e82e",
+      "path": "os/操作系统工作流程/发展期/内存管理",
+      "title": "内存管理",
+      "photo": "IMG_8069",
+      "text": "建立会议室管理体系（内存管理）。",
+      "note": ""
+    },
+    {
+      "id": "os-bc832db68b",
+      "path": "os/操作系统工作流程/壮大期/进程间通信",
+      "title": "进程间通信",
+      "photo": "IMG_8069",
+      "text": "公司内部项目合作（进程间通信）。",
+      "note": ""
+    },
+    {
+      "id": "os-be75baf25f",
+      "path": "os/操作系统工作流程/初创期/实模式",
+      "title": "实模式",
+      "photo": "IMG_8069",
+      "text": "公司初创没员工，老板亲自接项目（实模式）。",
+      "note": ""
+    },
+    {
+      "id": "os-30dbb58920",
+      "path": "os/操作系统工作流程/壮大期/网络通信",
+      "title": "网络通信",
+      "photo": "IMG_8069",
+      "text": "外部公司合作（网络通信）。",
+      "note": ""
+    },
+    {
+      "id": "os-f40ff6bdbb",
+      "path": "os/操作系统工作流程/发展期/进程管理",
+      "title": "进程管理",
+      "photo": "IMG_8069",
+      "text": "建立项目管理体系（进程管理）。",
+      "note": ""
+    },
+    {
+      "id": "os-b654b6c57d",
+      "path": "os/操作系统工作流程/发展期/保护模式和多进程",
+      "title": "保护模式和多进程",
+      "photo": "IMG_8069",
+      "text": "公司慢慢做大，项目越接越多（保护模式和多进程）。",
+      "note": ""
+    },
+    {
+      "id": "os-724b29c8a7",
+      "path": "os/操作系统工作流程/初创期/x86 体系结构",
+      "title": "x86 体系结构",
+      "photo": "IMG_8069",
+      "text": "要有开放的营商环境（x86 体系结构）。",
+      "note": ""
+    }
+  ]
+}

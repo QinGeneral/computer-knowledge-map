@@ -5,16 +5,16 @@
 <meta name="description" content="从照片整理的计算机基础知识地图。按七个领域探索知识层级，搜索概念并回到原图核对。">
 <meta name="theme-color" content="#176857"><title>计算机基础知识地图</title>
 <link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
-<script defer src="data.js"></script><script defer src="app.js"></script>
+<script defer src="data.js"></script><script defer src="diagrams.js"></script><script defer src="mindmap.js?v=folded-diagrams-2"></script><script defer src="app.js"></script>
 </head>
 <body>
 <a class="skip" href="#content">跳到知识内容</a>
-<header class="header"><div class="topbar"><a class="identity" href="#view=overview" aria-label="计算机基础知识地图首页"><svg viewBox="0 0 40 36" aria-hidden="true"><path fill="currentColor" d="M2 4C8 1 14 2 19 6v28c-5-4-11-5-17-2zm36 0C32 1 26 2 21 6v28c5-4 11-5 17-2z"/></svg><span>计算机基础知识地图</span></a><p class="tagline">从知识结构出发，读懂计算机</p><a class="button primary download" href="knowledge-map.md" download><span data-icon="download"></span><span>下载知识地图</span></a></div>
-<nav class="tabs" aria-label="视图切换"><a href="#view=overview" data-view="overview">知识总览</a><a href="#view=tree" data-view="tree">知识树</a><a href="#view=photos" data-view="photos">原图资料</a></nav></header>
-<div class="shell"><aside class="sidebar" aria-label="领域导航"><nav id="domainNav"></nav><div class="extension-nav"><p>专题扩展</p><nav id="extensionNav"></nav></div><p class="sidebar-foot">依原图整理 · 结构可追溯</p></aside>
+<header class="header"><div class="topbar"><a class="identity" href="#view=overview" aria-label="计算机基础知识地图首页"><svg viewBox="0 0 40 36" aria-hidden="true"><path fill="currentColor" d="M2 4C8 1 14 2 19 6v28c-5-4-11-5-17-2zm36 0C32 1 26 2 21 6v28c5-4 11-5 17-2z"/></svg><span>计算机基础知识地图</span></a><nav class="tabs" aria-label="视图切换"><a href="#view=overview" data-view="overview">知识总览</a><a href="#view=tree" data-view="tree">思维导图</a><a href="#view=photos" data-view="photos">原图资料</a></nav><a class="button download" aria-label="下载知识地图" href="knowledge-map.md" download><span data-icon="download"></span><span>下载知识地图</span></a></div>
+</header>
+<div class="shell"><aside class="sidebar" aria-label="领域导航"><p class="sidebar-title">知识领域</p><nav id="domainNav"></nav><div class="extension-nav"><p>专题扩展</p><nav id="extensionNav"></nav></div><p class="sidebar-foot">原图可追溯</p></aside>
 <div class="mobile-picker"><label for="domainPicker">探索领域</label><select id="domainPicker"></select></div>
 <main id="content" tabindex="-1"></main></div>
 <dialog id="detailDialog" class="detail-dialog" aria-labelledby="detailTitle"><div id="detailContent"></div></dialog>
 <dialog id="photoDialog" class="photo-dialog" aria-labelledby="photoTitle"><div class="photo-header"><div><h2 id="photoTitle"></h2><p id="photoCaption"></p></div><button class="icon-button" data-close="photoDialog" aria-label="关闭原图"><span data-icon="close"></span></button></div><div class="photo-tools"><button class="button" id="zoomOut" aria-label="缩小原图"><span data-icon="minus"></span></button><output id="zoomLevel">100%</output><button class="button" id="zoomIn" aria-label="放大原图"><span data-icon="plus"></span></button><button class="button" id="zoomFit">适应窗口</button><a class="button" id="originalLink" target="_blank" rel="noopener">打开完整图片<span data-icon="external"></span></a></div><div class="photo-viewport" id="photoViewport"><div class="photo-stage" id="photoStage"><img id="fullPhoto" alt=""><div class="source-marker" id="sourceMarker" hidden></div></div></div></dialog>
-<noscript><p class="no-script">知识树需要 JavaScript。你也可以<a href="knowledge-map.md">阅读完整 Markdown 知识地图</a>。</p></noscript>
+<noscript><p class="no-script">思维导图需要 JavaScript。你也可以<a href="knowledge-map.md">阅读完整 Markdown 知识地图</a>。</p></noscript>
 </body></html>

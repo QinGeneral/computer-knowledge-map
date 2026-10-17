@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "title": "计算机基础知识地图",
   "description": "从知识结构出发，读懂计算机",
   "domains": [
@@ -36,7 +36,7 @@
       ],
       "status": "ready",
       "extension": false,
-      "count": 137
+      "count": 142
     },
     {
       "id": "math",
@@ -52,7 +52,7 @@
       ],
       "status": "ready",
       "extension": false,
-      "count": 35
+      "count": 37
     },
     {
       "id": "os",
@@ -66,6 +66,7 @@
       ],
       "roots": [
         "os-064c686b05",
+        "os-fa130d4e5c",
         "os-c54be2eeac",
         "os-ae1536a5fa",
         "os-fd706d7a38",
@@ -76,7 +77,7 @@
       ],
       "status": "ready",
       "extension": false,
-      "count": 253
+      "count": 252
     },
     {
       "id": "architecture",
@@ -120,7 +121,7 @@
       ],
       "status": "ready",
       "extension": false,
-      "count": 151
+      "count": 157
     },
     {
       "id": "engineering",
@@ -534,8 +535,20 @@
       "parent": "algorithms-4f434e42f0",
       "children": [],
       "photo": "IMG_8066",
-      "note": "原图示例：Hash 表、缓存。",
-      "depth": 3
+      "note": "",
+      "depth": 3,
+      "sourceText": "常数复杂度，最佳，比如 Hash 表、缓存等。",
+      "evidence": {
+        "text": "O（1） 常数复杂度，最佳，比如 Hash表、缓存等",
+        "box": [
+          0.1933139513026269,
+          0.4922480619072569,
+          0.127906980968657,
+          0.009736065195981691
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "algorithms-09da0edaca",
@@ -544,15 +557,16 @@
       "parent": "algorithms-4f434e42f0",
       "children": [],
       "photo": "IMG_8066",
-      "note": "原图示例：二分查找、二叉搜索树。",
+      "note": "",
       "depth": 3,
+      "sourceText": "仅次于常数复杂度，如二分查找、二叉搜索树等。",
       "evidence": {
-        "text": "O（log n） 仅次于常数复杂度，如二分查找、二又搜索树等",
+        "text": "O（log n） 仅次于常数复杂度，如二分查找、二叉搜索树等",
         "box": [
-          0.19245870583688102,
-          0.5130718953883465,
-          0.15001313025210086,
-          0.010270774976657312
+          0.19186046766528728,
+          0.5115740739496374,
+          0.15261627378917872,
+          0.011681740246121897
         ],
         "confidence": 0.5,
         "method": "ocr-assisted"
@@ -565,8 +579,20 @@
       "parent": "algorithms-4f434e42f0",
       "children": [],
       "photo": "IMG_8066",
-      "note": "原图示例：遍历操作。",
-      "depth": 3
+      "note": "",
+      "depth": 3,
+      "sourceText": "线性复杂度，如大多数遍历操作。",
+      "evidence": {
+        "text": "O（n） 线性复杂度，如大多数遍历操作",
+        "box": [
+          0.1924587053411244,
+          0.5333411141823522,
+          0.0982644157710973,
+          0.010079871817908481
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "algorithms-17df5e538a",
@@ -575,8 +601,9 @@
       "parent": "algorithms-4f434e42f0",
       "children": [],
       "photo": "IMG_8066",
-      "note": "原图示例：双重 for 循环。",
+      "note": "",
       "depth": 3,
+      "sourceText": "双重 for 循环。",
       "evidence": {
         "text": "O（n^2） 双重 for 循环",
         "box": [
@@ -597,7 +624,19 @@
       "children": [],
       "photo": "IMG_8066",
       "note": "原图以递归举例；递归并不都具有指数复杂度，需分析递推关系。",
-      "depth": 3
+      "depth": 3,
+      "sourceText": "递归的时间复杂度。",
+      "evidence": {
+        "text": "0（2^n） 递归的时间复杂度",
+        "box": [
+          0.1918772608360602,
+          0.5736606010752664,
+          0.06977354659476442,
+          0.009304497199677377
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "algorithms-935e73e0b9",
@@ -632,6 +671,7 @@
       "photo": "IMG_8066",
       "note": "",
       "depth": 3,
+      "sourceText": "O(1)：原地操作。",
       "evidence": {
         "text": "O（1） 原地操作",
         "box": [
@@ -653,6 +693,7 @@
       "photo": "IMG_8066",
       "note": "",
       "depth": 3,
+      "sourceText": "O(n)：开辟线性辅助空间。",
       "evidence": {
         "text": "O（n）开辟线性辅助空间",
         "box": [
@@ -679,6 +720,7 @@
       "photo": "IMG_8066",
       "note": "",
       "depth": 1,
+      "sourceText": "盗梦空间；终止状态 → 本层处理 → Drill Down → 本层状态清理。",
       "evidence": {
         "text": "递归、分治",
         "box": [
@@ -811,6 +853,7 @@
       "photo": "IMG_8066",
       "note": "",
       "depth": 2,
+      "sourceText": "简单版本是递归加缓存。",
       "evidence": {
         "text": "简单版本是递归加缓存",
         "box": [
@@ -832,6 +875,7 @@
       "photo": "IMG_8066",
       "note": "",
       "depth": 2,
+      "sourceText": "高级版本是递推公式。",
       "evidence": {
         "text": "高级版本是递推公式",
         "box": [
@@ -853,13 +897,14 @@
       "photo": "IMG_8066",
       "note": "",
       "depth": 2,
+      "sourceText": "有些场景需要套用模板。",
       "evidence": {
-        "text": "状态定义",
+        "text": "有些场景需要套用模板",
         "box": [
-          0.7209302327934994,
-          0.649140211633815,
-          0.03343023194207084,
-          0.009920634920634885
+          0.7812365230481634,
+          0.6479294176218274,
+          0.05435540012478804,
+          0.011273593350507516
         ],
         "confidence": 1,
         "method": "ocr-assisted"
@@ -983,6 +1028,7 @@
       "photo": "IMG_8066",
       "note": "",
       "depth": 2,
+      "sourceText": "能够通过索引随机访问。",
       "evidence": {
         "text": "能够通过索引随机访问",
         "box": [
@@ -1048,7 +1094,8 @@
       "children": [],
       "photo": "IMG_8066",
       "note": "原图将贪心描述为“弱化版的动态规划”，此处保留为原图提示，不作为通用定义。",
-      "depth": 2
+      "depth": 2,
+      "sourceText": "弱化版的动态规划。"
     },
     {
       "id": "algorithms-46e9a9a31b",
@@ -1172,6 +1219,7 @@
       "photo": "IMG_8066",
       "note": "",
       "depth": 2,
+      "sourceText": "判断不存在 100% 准确。",
       "evidence": {
         "text": "判断不存在100% 准确",
         "box": [
@@ -1193,6 +1241,7 @@
       "photo": "IMG_8066",
       "note": "",
       "depth": 2,
+      "sourceText": "判断存在有误差。",
       "evidence": {
         "text": "判断存在有误差",
         "box": [
@@ -1213,7 +1262,8 @@
       "children": [],
       "photo": "IMG_8066",
       "note": "",
-      "depth": 2
+      "depth": 2,
+      "sourceText": "利用 Hash 函数将待判断 Key 对应到多个位上。"
     },
     {
       "id": "algorithms-db57f5ff56",
@@ -1247,6 +1297,7 @@
       "photo": "IMG_8066",
       "note": "",
       "depth": 2,
+      "sourceText": "需要记忆一些常见的位运算公式。",
       "evidence": {
         "text": "需要记忆一些常见的位运算公式",
         "box": [
@@ -1408,7 +1459,8 @@
       "children": [],
       "photo": "IMG_8066",
       "note": "原图概括为“查找快、插入/删除结点慢”；按下标访问和按值查找需区分。",
-      "depth": 2
+      "depth": 2,
+      "sourceText": "查找快、插入/删除结点慢。"
     },
     {
       "id": "algorithms-4e93a72ebb",
@@ -1463,7 +1515,8 @@
       "children": [],
       "photo": "IMG_8066",
       "note": "原图概括为“查找慢、插入/删除结点快”；插入删除的常数时间以已定位结点为前提。",
-      "depth": 2
+      "depth": 2,
+      "sourceText": "查找慢、插入/删除结点快。"
     },
     {
       "id": "algorithms-7d01fc30d5",
@@ -1862,7 +1915,19 @@
       "children": [],
       "photo": "IMG_8066",
       "note": "",
-      "depth": 2
+      "depth": 2,
+      "sourceText": "遍历时需要记录已经访问过的结点。",
+      "evidence": {
+        "text": "遍历时需要记录已经访问过的结点",
+        "box": [
+          0.49418604543450834,
+          0.7615740739440887,
+          0.10029069961063447,
+          0.011681740246121786
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "algorithms-e2e2512955",
@@ -1970,6 +2035,7 @@
       "photo": "IMG_8067",
       "note": "",
       "depth": 4,
+      "sourceText": "支持 O(1) 的随机访问。",
       "evidence": {
         "text": "支持O（1）的随机访问",
         "box": [
@@ -1991,6 +2057,7 @@
       "photo": "IMG_8067",
       "note": "",
       "depth": 4,
+      "sourceText": "平均为 O(n) 的插入和删除。",
       "evidence": {
         "text": "平均为 O（n）的插入和删除",
         "box": [
@@ -2012,13 +2079,14 @@
       "photo": "IMG_8067",
       "note": "原图写有“导致 Stack OverFlow”；越界后果依语言与运行环境而异，不能一概而论。",
       "depth": 4,
+      "sourceText": "警惕越界错误，导致 Stack OverFlow。",
       "evidence": {
-        "text": "警愓越界错误，导致 Stack OverFlow",
+        "text": "警惕越界错误，导致 Stack OverFlow",
         "box": [
-          0.2542365877808888,
-          0.7118999585341913,
-          0.1101765732811111,
-          0.021219860828446003
+          0.2552605945085297,
+          0.7109746972835781,
+          0.1086132110111297,
+          0.02281312715439565
         ],
         "confidence": 0.5,
         "method": "ocr-assisted"
@@ -2057,6 +2125,7 @@
       "parent": "algorithms-02b9d126d5",
       "children": [
         "algorithms-bde0b2256b",
+        "algorithms-f30a1ca182",
         "algorithms-7162f9db81"
       ],
       "photo": "IMG_8067",
@@ -2083,15 +2152,38 @@
       "photo": "IMG_8067",
       "note": "",
       "depth": 4,
+      "sourceText": "不支持随机访问，需要遍历去访问结点。",
       "evidence": {
-        "text": "需要遍历去访问结点",
+        "text": "不支持随机访问，需要遍历去访问结点",
         "box": [
-          0.3047012829833113,
-          0.7469526860175798,
-          0.06062550014919704,
-          0.018203689938499745
+          0.2540983209937164,
+          0.7419051198950671,
+          0.11097662570724262,
+          0.023472944450200338
         ],
         "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "algorithms-f30a1ca182",
+      "title": "插入和删除",
+      "domain": "algorithms",
+      "parent": "algorithms-ce009ebf75",
+      "children": [],
+      "photo": "IMG_8067",
+      "note": "",
+      "depth": 4,
+      "sourceText": "插入和删除只需要移动指针，时间复杂度为 O(1)。",
+      "evidence": {
+        "text": "插入和删除只需要移动指针，时间复杂度为O（1）",
+        "box": [
+          0.2535799451095007,
+          0.7630355151545227,
+          0.141033565518875,
+          0.02545877308849968
+        ],
+        "confidence": 0.5,
         "method": "ocr-assisted"
       }
     },
@@ -2103,7 +2195,19 @@
       "children": [],
       "photo": "IMG_8067",
       "note": "",
-      "depth": 4
+      "depth": 4,
+      "sourceText": "每个结点需要额外的空间存储指针，需要的内存比数组大。",
+      "evidence": {
+        "text": "每个结点需要额外的空间存储指针，需要的内存比",
+        "box": [
+          0.2534299972448191,
+          0.7838877581689,
+          0.1464320022002386,
+          0.028497275629408642
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "algorithms-049ebbffb7",
@@ -2136,7 +2240,19 @@
       "children": [],
       "photo": "IMG_8067",
       "note": "",
-      "depth": 4
+      "depth": 4,
+      "sourceText": "在单链表的基础上，除头结点外，每个结点多了一个存放前驱结点内存地址的指针。",
+      "evidence": {
+        "text": "上，除头结点外，每个结点多了一个存放前驱结点内存地址指针",
+        "box": [
+          0.29969865454180916,
+          0.8208048748659442,
+          0.19400107760389312,
+          0.021801409823776548
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "algorithms-c016683345",
@@ -2170,6 +2286,7 @@
       "photo": "IMG_8067",
       "note": "",
       "depth": 4,
+      "sourceText": "尾结点指针指向头结点。",
       "evidence": {
         "text": "尾结点指针指向头结点",
         "box": [
@@ -2202,7 +2319,19 @@
       "children": [],
       "photo": "IMG_8067",
       "note": "",
-      "depth": 4
+      "depth": 4,
+      "sourceText": "借助数组，伴随指向后继结点的指针。",
+      "evidence": {
+        "text": "借助数组，伴随指向后继结点的指针",
+        "box": [
+          0.25279301769164586,
+          0.8707456055708546,
+          0.10382003040219723,
+          0.028406347992484777
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "algorithms-fc076239fd",
@@ -2236,9 +2365,7 @@
       "parent": "algorithms-fc076239fd",
       "children": [
         "algorithms-fed10387e6",
-        "algorithms-cb45f478fc",
-        "algorithms-d5b5b93ffd",
-        "algorithms-e544f8176e"
+        "algorithms-0e661d50d4"
       ],
       "photo": "IMG_8067",
       "note": "",
@@ -2263,27 +2390,64 @@
       "children": [],
       "photo": "IMG_8067",
       "note": "",
-      "depth": 3
+      "depth": 3,
+      "sourceText": "顺序和链式都可以实现，先进后出。",
+      "evidence": {
+        "text": "顺序和链式都可以实现，先进后出",
+        "box": [
+          0.8063784038398789,
+          0.586066597268821,
+          0.0953571791000903,
+          0.011739191666148086
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "algorithms-0e661d50d4",
+      "title": "实际应用",
+      "domain": "algorithms",
+      "parent": "algorithms-62ce6e77c5",
+      "children": [
+        "algorithms-cb45f478fc",
+        "algorithms-d5b5b93ffd",
+        "algorithms-e544f8176e"
+      ],
+      "photo": "IMG_8067",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "实际应用",
+        "box": [
+          0.8046221151549328,
+          0.6355209107595051,
+          0.02502608388826448,
+          0.010185785765518754
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "algorithms-cb45f478fc",
       "title": "浏览器前进与后退",
       "domain": "algorithms",
-      "parent": "algorithms-62ce6e77c5",
+      "parent": "algorithms-0e661d50d4",
       "children": [],
       "photo": "IMG_8067",
       "note": "",
-      "depth": 3
+      "depth": 4
     },
     {
       "id": "algorithms-d5b5b93ffd",
       "title": "括号匹配",
       "domain": "algorithms",
-      "parent": "algorithms-62ce6e77c5",
+      "parent": "algorithms-0e661d50d4",
       "children": [],
       "photo": "IMG_8067",
       "note": "",
-      "depth": 3,
+      "depth": 4,
       "evidence": {
         "text": "括号匹配",
         "box": [
@@ -2300,11 +2464,11 @@
       "id": "algorithms-e544f8176e",
       "title": "表达式计算",
       "domain": "algorithms",
-      "parent": "algorithms-62ce6e77c5",
+      "parent": "algorithms-0e661d50d4",
       "children": [],
       "photo": "IMG_8067",
       "note": "",
-      "depth": 3,
+      "depth": 4,
       "evidence": {
         "text": "表达式计算",
         "box": [
@@ -2325,7 +2489,7 @@
       "children": [
         "algorithms-c01aab79c9",
         "algorithms-5bd3597152",
-        "algorithms-783e3d9aee"
+        "algorithms-0c17c1622f"
       ],
       "photo": "IMG_8067",
       "note": "",
@@ -2385,14 +2549,37 @@
       }
     },
     {
-      "id": "algorithms-783e3d9aee",
-      "title": "找第 K 大元素",
+      "id": "algorithms-0c17c1622f",
+      "title": "实际应用",
       "domain": "algorithms",
       "parent": "algorithms-1c25b80ff3",
-      "children": [],
+      "children": [
+        "algorithms-783e3d9aee"
+      ],
       "photo": "IMG_8067",
       "note": "",
       "depth": 3,
+      "evidence": {
+        "text": "实际应用",
+        "box": [
+          0.8008708466392869,
+          0.7290824510049029,
+          0.026119525897251982,
+          0.01186725694814875
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "algorithms-783e3d9aee",
+      "title": "找第 K 大元素",
+      "domain": "algorithms",
+      "parent": "algorithms-0c17c1622f",
+      "children": [],
+      "photo": "IMG_8067",
+      "note": "",
+      "depth": 4,
       "evidence": {
         "text": "找第 K 大元素",
         "box": [
@@ -2414,7 +2601,7 @@
         "algorithms-6f9917993f",
         "algorithms-33542aa668",
         "algorithms-aa141449e0",
-        "algorithms-2004f428e0"
+        "algorithms-87bb280113"
       ],
       "photo": "IMG_8067",
       "note": "",
@@ -2440,13 +2627,14 @@
       "photo": "IMG_8067",
       "note": "",
       "depth": 3,
+      "sourceText": "顺序和链式都可以实现，先进先出。",
       "evidence": {
-        "text": "普通队列",
+        "text": "顺序和链式都可以实现，先进后出",
         "box": [
-          0.8015562185843546,
-          0.7618002953206793,
-          0.025352463644553992,
-          0.01060866819821594
+          0.8063784038398789,
+          0.586066597268821,
+          0.0953571791000903,
+          0.011739191666148086
         ],
         "confidence": 1,
         "method": "ocr-assisted"
@@ -2461,13 +2649,14 @@
       "photo": "IMG_8067",
       "note": "",
       "depth": 3,
+      "sourceText": "入口和出口都可以进队和出队。",
       "evidence": {
-        "text": "双边队列",
+        "text": "入口和出口都可以进队和出队",
         "box": [
-          0.800830983899842,
-          0.7817916375850635,
-          0.02563099096068946,
-          0.012286736072501109
+          0.8473518202680382,
+          0.7787712622287962,
+          0.0936698018214005,
+          0.017686895518298454
         ],
         "confidence": 1,
         "method": "ocr-assisted"
@@ -2482,6 +2671,7 @@
       "photo": "IMG_8067",
       "note": "",
       "depth": 3,
+      "sourceText": "根据优先级来出队。",
       "evidence": {
         "text": "优先级队列",
         "box": [
@@ -2495,14 +2685,37 @@
       }
     },
     {
-      "id": "algorithms-2004f428e0",
-      "title": "LFU Cache",
+      "id": "algorithms-87bb280113",
+      "title": "实际应用",
       "domain": "algorithms",
       "parent": "algorithms-d28a19d0fe",
-      "children": [],
+      "children": [
+        "algorithms-2004f428e0"
+      ],
       "photo": "IMG_8067",
       "note": "",
       "depth": 3,
+      "evidence": {
+        "text": "实际应用",
+        "box": [
+          0.7995548923479165,
+          0.8236097615161312,
+          0.02585965251487668,
+          0.013214608645684007
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "algorithms-2004f428e0",
+      "title": "LFU Cache",
+      "domain": "algorithms",
+      "parent": "algorithms-87bb280113",
+      "children": [],
+      "photo": "IMG_8067",
+      "note": "",
+      "depth": 4,
       "evidence": {
         "text": "LFU Cache",
         "box": [
@@ -2546,12 +2759,11 @@
       "domain": "algorithms",
       "parent": "algorithms-73d28438be",
       "children": [
-        "algorithms-0171e5c233",
+        "algorithms-69e3ef81cd",
         "algorithms-9fc7283a8b",
         "algorithms-4d41f54662",
         "algorithms-cf64f46b4c",
-        "algorithms-fb0d26f1dc",
-        "algorithms-230d4c130f"
+        "algorithms-fb0d26f1dc"
       ],
       "photo": "IMG_8067",
       "note": "",
@@ -2569,14 +2781,39 @@
       }
     },
     {
-      "id": "algorithms-0171e5c233",
-      "title": "顺序和链式实现",
+      "id": "algorithms-69e3ef81cd",
+      "title": "特点",
       "domain": "algorithms",
       "parent": "algorithms-4dcc3099ec",
-      "children": [],
+      "children": [
+        "algorithms-0171e5c233",
+        "algorithms-230d4c130f"
+      ],
       "photo": "IMG_8067",
       "note": "",
       "depth": 3,
+      "evidence": {
+        "text": "特点",
+        "box": [
+          0.3535193145940504,
+          0.5434173671048166,
+          0.013954709852990493,
+          0.010971055088702117
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "algorithms-0171e5c233",
+      "title": "顺序和链式实现",
+      "domain": "algorithms",
+      "parent": "algorithms-69e3ef81cd",
+      "children": [],
+      "photo": "IMG_8067",
+      "note": "",
+      "depth": 4,
+      "sourceText": "顺序和链式都可以实现。",
       "evidence": {
         "text": "顺序和链式都可以实现",
         "box": [
@@ -2584,6 +2821,139 @@
           0.5433166484832819,
           0.06239076822745699,
           0.010718208512449558
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "algorithms-230d4c130f",
+      "title": "遍历方式",
+      "domain": "algorithms",
+      "parent": "algorithms-69e3ef81cd",
+      "children": [
+        "algorithms-690e7a238c",
+        "algorithms-6a97ef5ec8"
+      ],
+      "photo": "IMG_8067",
+      "note": "",
+      "depth": 4,
+      "evidence": {
+        "text": "遍历方式",
+        "box": [
+          0.4127237091822832,
+          0.58517694880454,
+          0.027964004281522174,
+          0.009533044225584117
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "algorithms-690e7a238c",
+      "title": "广度优先搜索",
+      "domain": "algorithms",
+      "parent": "algorithms-230d4c130f",
+      "children": [],
+      "photo": "IMG_8067",
+      "note": "",
+      "depth": 5,
+      "evidence": {
+        "text": "广度优先搜索",
+        "box": [
+          0.4665697671696879,
+          0.5717054262193042,
+          0.03924418631054105,
+          0.009689922685976349
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "algorithms-6a97ef5ec8",
+      "title": "深度优先搜索",
+      "domain": "algorithms",
+      "parent": "algorithms-230d4c130f",
+      "children": [
+        "algorithms-0d0f2b0124",
+        "algorithms-012209dc50",
+        "algorithms-6163b6df1e"
+      ],
+      "photo": "IMG_8067",
+      "note": "",
+      "depth": 5,
+      "evidence": {
+        "text": "深度优先搜索",
+        "box": [
+          0.4656729990186526,
+          0.5991988914268236,
+          0.03840556532061065,
+          0.009402649965829435
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "algorithms-0d0f2b0124",
+      "title": "前序遍历",
+      "domain": "algorithms",
+      "parent": "algorithms-6a97ef5ec8",
+      "children": [],
+      "photo": "IMG_8067",
+      "note": "",
+      "depth": 6,
+      "evidence": {
+        "text": "前序遍历",
+        "box": [
+          0.5325681391722287,
+          0.5813811115459889,
+          0.02444562992128005,
+          0.009370971238023204
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "algorithms-012209dc50",
+      "title": "中序遍历",
+      "domain": "algorithms",
+      "parent": "algorithms-6a97ef5ec8",
+      "children": [],
+      "photo": "IMG_8067",
+      "note": "",
+      "depth": 6,
+      "evidence": {
+        "text": "中序遍历",
+        "box": [
+          0.532575239928121,
+          0.6000233425549317,
+          0.02384972772678407,
+          0.009304497199677422
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "algorithms-6163b6df1e",
+      "title": "后序遍历",
+      "domain": "algorithms",
+      "parent": "algorithms-6a97ef5ec8",
+      "children": [],
+      "photo": "IMG_8067",
+      "note": "",
+      "depth": 6,
+      "evidence": {
+        "text": "后序遍历",
+        "box": [
+          0.5319595244162316,
+          0.6176956977110992,
+          0.0244994577573461,
+          0.009627025223134513
         ],
         "confidence": 1,
         "method": "ocr-assisted"
@@ -2693,139 +3063,6 @@
           0.009366020323738223
         ],
         "confidence": 0.30000001192092896,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "algorithms-230d4c130f",
-      "title": "遍历方式",
-      "domain": "algorithms",
-      "parent": "algorithms-4dcc3099ec",
-      "children": [
-        "algorithms-690e7a238c",
-        "algorithms-6a97ef5ec8"
-      ],
-      "photo": "IMG_8067",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "遍历方式",
-        "box": [
-          0.4127237091822832,
-          0.58517694880454,
-          0.027964004281522174,
-          0.009533044225584117
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "algorithms-690e7a238c",
-      "title": "广度优先搜索",
-      "domain": "algorithms",
-      "parent": "algorithms-230d4c130f",
-      "children": [],
-      "photo": "IMG_8067",
-      "note": "",
-      "depth": 4,
-      "evidence": {
-        "text": "广度优先搜索",
-        "box": [
-          0.4665697671696879,
-          0.5717054262193042,
-          0.03924418631054105,
-          0.009689922685976349
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "algorithms-6a97ef5ec8",
-      "title": "深度优先搜索",
-      "domain": "algorithms",
-      "parent": "algorithms-230d4c130f",
-      "children": [
-        "algorithms-0d0f2b0124",
-        "algorithms-012209dc50",
-        "algorithms-6163b6df1e"
-      ],
-      "photo": "IMG_8067",
-      "note": "",
-      "depth": 4,
-      "evidence": {
-        "text": "深度优先搜索",
-        "box": [
-          0.4656729990186526,
-          0.5991988914268236,
-          0.03840556532061065,
-          0.009402649965829435
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "algorithms-0d0f2b0124",
-      "title": "前序遍历",
-      "domain": "algorithms",
-      "parent": "algorithms-6a97ef5ec8",
-      "children": [],
-      "photo": "IMG_8067",
-      "note": "",
-      "depth": 5,
-      "evidence": {
-        "text": "前序遍历",
-        "box": [
-          0.5325681391722287,
-          0.5813811115459889,
-          0.02444562992128005,
-          0.009370971238023204
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "algorithms-012209dc50",
-      "title": "中序遍历",
-      "domain": "algorithms",
-      "parent": "algorithms-6a97ef5ec8",
-      "children": [],
-      "photo": "IMG_8067",
-      "note": "",
-      "depth": 5,
-      "evidence": {
-        "text": "中序遍历",
-        "box": [
-          0.532575239928121,
-          0.6000233425549317,
-          0.02384972772678407,
-          0.009304497199677422
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "algorithms-6163b6df1e",
-      "title": "后序遍历",
-      "domain": "algorithms",
-      "parent": "algorithms-6a97ef5ec8",
-      "children": [],
-      "photo": "IMG_8067",
-      "note": "",
-      "depth": 5,
-      "evidence": {
-        "text": "后序遍历",
-        "box": [
-          0.5319595244162316,
-          0.6176956977110992,
-          0.0244994577573461,
-          0.009627025223134513
-        ],
-        "confidence": 1,
         "method": "ocr-assisted"
       }
     },
@@ -3863,12 +4100,8 @@
       "domain": "math",
       "parent": null,
       "children": [
-        "math-e84f5c7f72",
-        "math-04e7516383",
-        "math-eea91c2605",
-        "math-2b027622d8",
-        "math-8872671f4f",
-        "math-9501a65068"
+        "math-aa2ec04e0e",
+        "math-2372e9deae"
       ],
       "photo": "IMG_8068",
       "note": "",
@@ -3886,79 +4119,133 @@
       }
     },
     {
+      "id": "math-aa2ec04e0e",
+      "title": "Steve Yegge",
+      "domain": "math",
+      "parent": "math-be3695a614",
+      "children": [
+        "math-e84f5c7f72",
+        "math-04e7516383",
+        "math-eea91c2605"
+      ],
+      "photo": "IMG_8068",
+      "note": "作者与职位按原图署名记录。",
+      "depth": 1,
+      "sourceText": "资深程序员",
+      "evidence": {
+        "text": "Steve Yegge／资深程序员",
+        "box": [
+          0.8028700114522507,
+          0.6637896759453664,
+          0.10027283510015236,
+          0.027080705074591663
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
       "id": "math-e84f5c7f72",
       "title": "广度优先了解概念",
       "domain": "math",
-      "parent": "math-be3695a614",
+      "parent": "math-aa2ec04e0e",
       "children": [],
       "photo": "IMG_8068",
       "note": "原图建议先认识各领域概念的名称及其解决的问题。",
-      "depth": 1
+      "depth": 2,
+      "sourceText": "正确学习数学的方法是广度优先，而非深度优先。你要了解的是整个数学领域每个概念的名字，并且知道它们要解决什么问题。"
     },
     {
       "id": "math-04e7516383",
       "title": "了解概念的用途与局限",
       "domain": "math",
-      "parent": "math-be3695a614",
+      "parent": "math-aa2ec04e0e",
       "children": [],
       "photo": "IMG_8068",
       "note": "原图建议先了解作用、大致步骤、发明背景与局限，再深入算法和证明。",
-      "depth": 1
+      "depth": 2,
+      "sourceText": "把数学当成文科来学，你可以先不去重点看那些算法和证明，只需要了解数学概念的名字、作用、大致步骤、发明人、发明时间、局限等。"
     },
     {
       "id": "math-eea91c2605",
       "title": "将复杂操作暂作整体理解",
       "domain": "math",
-      "parent": "math-be3695a614",
+      "parent": "math-aa2ec04e0e",
       "children": [],
       "photo": "IMG_8068",
       "note": "原图建议面对陌生符号时，先把它实现的功能看作一个整体操作。",
-      "depth": 1
+      "depth": 2,
+      "sourceText": "数学符号是关闭你通往另一个世界的符咒，如果你看到一堆自己可能不懂的数学符号时，就把它实现的功能简单地当成一个原子操作，不要深究太多。"
+    },
+    {
+      "id": "math-2372e9deae",
+      "title": "徐文浩",
+      "domain": "math",
+      "parent": "math-be3695a614",
+      "children": [
+        "math-2b027622d8",
+        "math-8872671f4f",
+        "math-9501a65068"
+      ],
+      "photo": "IMG_8068",
+      "note": "作者与职位按原图署名记录。",
+      "depth": 1,
+      "sourceText": "bothub.ai 创始人",
+      "evidence": {
+        "text": "—徐文浩/bothub.ai创始人",
+        "box": [
+          0.7772387885320661,
+          0.8436550237112356,
+          0.11913144411519375,
+          0.03782301189518773
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "math-2b027622d8",
       "title": "从工作相关领域开始",
       "domain": "math",
-      "parent": "math-be3695a614",
+      "parent": "math-2372e9deae",
       "children": [],
       "photo": "IMG_8068",
       "note": "原图建议通过实际用途建立学习反馈。",
-      "depth": 1
+      "depth": 2,
+      "sourceText": "从工作相关的领域开始了解数学，这样你更容易获得正反馈。"
     },
     {
       "id": "math-8872671f4f",
       "title": "用程序实现数学问题的解法",
       "domain": "math",
-      "parent": "math-be3695a614",
+      "parent": "math-2372e9deae",
       "children": [],
       "photo": "IMG_8068",
       "note": "原图建议将正在学习的数学解法写成程序。",
-      "depth": 1
+      "depth": 2,
+      "sourceText": "把正在学习的数学问题的解法，写一个算法程序实现出来，这是一个不错的练习方法。"
     },
     {
       "id": "math-9501a65068",
       "title": "结合在线课程系统学习",
       "domain": "math",
-      "parent": "math-be3695a614",
+      "parent": "math-2372e9deae",
       "children": [],
       "photo": "IMG_8068",
       "note": "",
-      "depth": 1
+      "depth": 2,
+      "sourceText": "你可以选择追一门数学相关的在线课程，跟着老师的节奏来系统理解数学。"
     },
     {
       "id": "os-064c686b05",
       "title": "操作系统工作流程",
       "domain": "os",
       "parent": null,
-      "children": [
-        "os-0738057495",
-        "os-c138e7383b",
-        "os-78696be4bb",
-        "os-2248e994b3"
-      ],
+      "children": [],
       "photo": "IMG_8069",
       "note": "",
       "depth": 0,
+      "sourceText": "如何把一家软件公司做上市（Linux 操作系统的工作流程）。",
       "evidence": {
         "text": "操作系统工作流程",
         "box": [
@@ -3972,856 +4259,15 @@
       }
     },
     {
-      "id": "os-0738057495",
-      "title": "初创期",
+      "id": "os-fa130d4e5c",
+      "title": "应用程序",
       "domain": "os",
-      "parent": "os-064c686b05",
-      "children": [
-        "os-724b29c8a7",
-        "os-4c40681421",
-        "os-be75baf25f"
-      ],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 1,
-      "evidence": {
-        "text": "初创期",
-        "box": [
-          0.16438086498472296,
-          0.2588294748754459,
-          0.03289783299019663,
-          0.015023503094271553
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-724b29c8a7",
-      "title": "x86 体系结构",
-      "domain": "os",
-      "parent": "os-0738057495",
+      "parent": null,
       "children": [],
       "photo": "IMG_8069",
-      "note": "原图类比：要有开放的营商环境。",
-      "depth": 2,
-      "evidence": {
-        "text": "环境（x86 体系结构）",
-        "box": [
-          0.2996327965765327,
-          0.24971089968172297,
-          0.07445046881667707,
-          0.015222814793234982
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-4c40681421",
-      "title": "系统初始化",
-      "domain": "os",
-      "parent": "os-0738057495",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "原图类比：创建一家软件外包公司。",
-      "depth": 2,
-      "evidence": {
-        "text": "包公司（系统初始化）",
-        "box": [
-          0.2996747634928905,
-          0.2668280037987643,
-          0.07605580455448781,
-          0.014776008135798274
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-be75baf25f",
-      "title": "实模式",
-      "domain": "os",
-      "parent": "os-0738057495",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "原图类比：公司初创没员工，老板亲自接项目。",
-      "depth": 2,
-      "evidence": {
-        "text": "-，老板亲自接项目（实模式）",
-        "box": [
-          0.2996624017808961,
-          0.2810481668259303,
-          0.10048518461339614,
-          0.01767620652997525
-        ],
-        "confidence": 0.30000001192092896,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-c138e7383b",
-      "title": "发展期",
-      "domain": "os",
-      "parent": "os-064c686b05",
-      "children": [
-        "os-b654b6c57d",
-        "os-f40ff6bdbb",
-        "os-7cb042e82e",
-        "os-27adae99a0",
-        "os-d5dcc905be"
-      ],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 1,
-      "evidence": {
-        "text": "发展期",
-        "box": [
-          0.16562800533310348,
-          0.3639574164100535,
-          0.03215637784095699,
-          0.014475360304033714
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-b654b6c57d",
-      "title": "保护模式和多进程",
-      "domain": "os",
-      "parent": "os-c138e7383b",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "原图类比：公司慢慢做大，项目越接越多。",
-      "depth": 2,
-      "evidence": {
-        "text": "项目越接越多（保护模式和多进程）",
-        "box": [
-          0.29974913735344777,
-          0.33427001604926043,
-          0.12072475016617976,
-          0.01479668265519912
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-f40ff6bdbb",
-      "title": "进程管理",
-      "domain": "os",
-      "parent": "os-c138e7383b",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "原图类比：建立项目管理体系。",
-      "depth": 2,
-      "evidence": {
-        "text": "进程管理",
-        "box": [
-          0.49360129340002123,
-          0.17290856941293056,
-          0.06980408206373369,
-          0.024811991345203455
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-7cb042e82e",
-      "title": "内存管理",
-      "domain": "os",
-      "parent": "os-c138e7383b",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "原图类比：建立会议室管理体系。",
-      "depth": 2,
-      "evidence": {
-        "text": "内存管理",
-        "box": [
-          0.4941432715237635,
-          0.5540494927084494,
-          0.07162862932648645,
-          0.022939347196805134
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-27adae99a0",
-      "title": "文件系统",
-      "domain": "os",
-      "parent": "os-c138e7383b",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "原图类比：建立文档资料管理体系。",
-      "depth": 2,
-      "evidence": {
-        "text": "文件系统",
-        "box": [
-          0.37481015524588546,
-          0.7810473800590336,
-          0.031067367361373267,
-          0.01259838143427946
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-d5dcc905be",
-      "title": "输入输出设备管理",
-      "domain": "os",
-      "parent": "os-c138e7383b",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "原图类比：建立售前售后体系。",
-      "depth": 2,
-      "evidence": {
-        "text": "系（输入输出设备管理）",
-        "box": [
-          0.2997488093484713,
-          0.40148380726214683,
-          0.08461695759236312,
-          0.013268018414437706
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-78696be4bb",
-      "title": "壮大期",
-      "domain": "os",
-      "parent": "os-064c686b05",
-      "children": [
-        "os-bc832db68b",
-        "os-30dbb58920"
-      ],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 1,
-      "evidence": {
-        "text": "壮大期",
-        "box": [
-          0.16687507131350376,
-          0.4596171799289822,
-          0.033142435567078944,
-          0.015639589169000913
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-bc832db68b",
-      "title": "进程间通信",
-      "domain": "os",
-      "parent": "os-78696be4bb",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "原图类比：公司内部项目合作。",
-      "depth": 2,
-      "evidence": {
-        "text": "作（进程间通信）",
-        "box": [
-          0.29989495769709723,
-          0.4542483658649469,
-          0.06166027507194284,
-          0.010971055088702117
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-30dbb58920",
-      "title": "网络通信",
-      "domain": "os",
-      "parent": "os-78696be4bb",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "原图类比：外部公司合作。",
-      "depth": 2,
-      "evidence": {
-        "text": "（网络通信）",
-        "box": [
-          0.29984537366592445,
-          0.47018651144387946,
-          0.04485167709051394,
-          0.010802950177873862
-        ],
-        "confidence": 0.30000001192092896,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-2248e994b3",
-      "title": "内核子系统",
-      "domain": "os",
-      "parent": "os-064c686b05",
-      "children": [
-        "os-80b2f78995",
-        "os-c363a2d379",
-        "os-780a6719ea",
-        "os-ffc563ecc9",
-        "os-e0aab8759c",
-        "os-e589658e9c"
-      ],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 1
-    },
-    {
-      "id": "os-80b2f78995",
-      "title": "系统调用子系统",
-      "domain": "os",
-      "parent": "os-2248e994b3",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "系统调用子系统",
-        "box": [
-          0.21408402321443465,
-          0.6513081019658908,
-          0.08172825622164082,
-          0.02221206323105415
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-c363a2d379",
-      "title": "进程管理子系统",
-      "domain": "os",
-      "parent": "os-2248e994b3",
-      "children": [
-        "os-48a52c94a9",
-        "os-e18b2a9ad5",
-        "os-8c3c4b05df",
-        "os-46be54387d"
-      ],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "进程管理子系统",
-        "box": [
-          0.09644077653801215,
-          0.7153235564211256,
-          0.06586092537648522,
-          0.014045830645592353
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-48a52c94a9",
-      "title": "调度",
-      "domain": "os",
-      "parent": "os-c363a2d379",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "调度",
-        "box": [
-          0.09826441471346516,
-          0.7418002084055487,
-          0.016861941183621353,
-          0.010855246436139587
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-e18b2a9ad5",
-      "title": "任务管理",
-      "domain": "os",
-      "parent": "os-c363a2d379",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "任务管理",
-        "box": [
-          0.1319729022242558,
-          0.7409477134176246,
-          0.032591778705390435,
-          0.011784861624296544
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-8c3c4b05df",
-      "title": "同步",
-      "domain": "os",
-      "parent": "os-c363a2d379",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "同步",
-        "box": [
-          0.09884586089660774,
-          0.7712418301781301,
-          0.016861941183621353,
-          0.011671335200746966
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-46be54387d",
-      "title": "CPU",
-      "domain": "os",
-      "parent": "os-c363a2d379",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "CPU",
-        "box": [
-          0.15001313038472108,
-          0.7704890741059108,
-          0.016280494383457557,
-          0.010089823957028246
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-780a6719ea",
-      "title": "内存管理子系统",
-      "domain": "os",
-      "parent": "os-2248e994b3",
-      "children": [
-        "os-495c0f8f24",
-        "os-88b20bed0c",
-        "os-8925b6405a",
-        "os-693165223e",
-        "os-a8d5d0983e",
-        "os-18b7188136",
-        "os-b60df98a8e"
-      ],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "内存管理子系统",
-        "box": [
-          0.2405978431529354,
-          0.7026507572308013,
-          0.0651959010532924,
-          0.020965711149589117
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-495c0f8f24",
-      "title": "内存映射",
-      "domain": "os",
-      "parent": "os-780a6719ea",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "内存映射",
-        "box": [
-          0.2818677348802644,
-          0.7297558887008518,
-          0.03163289014273967,
-          0.012016499409822495
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-88b20bed0c",
-      "title": "虚拟内存",
-      "domain": "os",
-      "parent": "os-780a6719ea",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "虚拟内存",
-        "box": [
-          0.23210370558516655,
-          0.7319249289769746,
-          0.033466532312580434,
-          0.015022149606913091
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-8925b6405a",
-      "title": "物理内存",
-      "domain": "os",
-      "parent": "os-780a6719ea",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "物理内存",
-        "box": [
-          0.2812914064752865,
-          0.7581124918954549,
-          0.03219658019233014,
-          0.011811742150371727
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-693165223e",
-      "title": "页表",
-      "domain": "os",
-      "parent": "os-780a6719ea",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "页表",
-        "box": [
-          0.23199705018917338,
-          0.7627353267855479,
-          0.01686194118362134,
-          0.012474757282673842
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-a8d5d0983e",
-      "title": "swap",
-      "domain": "os",
-      "parent": "os-780a6719ea",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "swap",
-        "box": [
-          0.2295679718024862,
-          0.7925236685458223,
-          0.022282210657625923,
-          0.009459296083138665
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-18b7188136",
-      "title": "伙伴",
-      "domain": "os",
-      "parent": "os-780a6719ea",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "伙伴",
-        "box": [
-          0.2640254764808334,
-          0.7862161132263012,
-          0.017852456788703015,
-          0.013575981311103578
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-b60df98a8e",
-      "title": "slab",
-      "domain": "os",
-      "parent": "os-780a6719ea",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "slab",
-        "box": [
-          0.29763130954324146,
-          0.7857873119469083,
-          0.017000272946057476,
-          0.01049838613729186
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-ffc563ecc9",
-      "title": "文件子系统",
-      "domain": "os",
-      "parent": "os-2248e994b3",
-      "children": [
-        "os-122474f1c8",
-        "os-b49f9ca740",
-        "os-a070e52292"
-      ],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "文件子系统",
-        "box": [
-          0.3684716904182186,
-          0.7009384990221095,
-          0.04433715777570794,
-          0.013490441800499502
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-122474f1c8",
-      "title": "VFS",
-      "domain": "os",
-      "parent": "os-ffc563ecc9",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "VFS",
-        "box": [
-          0.38375451957886947,
-          0.7270680880925114,
-          0.014536155318060266,
-          0.009393163087989133
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-b49f9ca740",
-      "title": "缓存",
-      "domain": "os",
-      "parent": "os-ffc563ecc9",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "缓存",
-        "box": [
-          0.3831730732010257,
-          0.754201680470456,
-          0.016280494383457557,
-          0.010971055088702162
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-a070e52292",
-      "title": "文件系统",
-      "domain": "os",
-      "parent": "os-ffc563ecc9",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "文件系统",
-        "box": [
-          0.37481015524588546,
-          0.7810473800590336,
-          0.031067367361373267,
-          0.01259838143427946
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-e0aab8759c",
-      "title": "设备子系统",
-      "domain": "os",
-      "parent": "os-2248e994b3",
-      "children": [
-        "os-15dd93c452",
-        "os-1d60be9d10"
-      ],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "设备子系统",
-        "box": [
-          0.30665817362098075,
-          0.8545058801511737,
-          0.04511388521345833,
-          0.01579444055204038
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-15dd93c452",
-      "title": "字符设备",
-      "domain": "os",
-      "parent": "os-e0aab8759c",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "字符设备",
-        "box": [
-          0.29360465058022595,
-          0.8798449614326095,
-          0.03197674524216426,
-          0.013673557175530315
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-1d60be9d10",
-      "title": "块设备",
-      "domain": "os",
-      "parent": "os-e0aab8759c",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "块设备",
-        "box": [
-          0.33993762503219505,
-          0.8777399160382786,
-          0.02400562275691527,
-          0.01225400616586152
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-e589658e9c",
-      "title": "网络子系统",
-      "domain": "os",
-      "parent": "os-2248e994b3",
-      "children": [
-        "os-025e1d61f7",
-        "os-e612a5a55f",
-        "os-c737266212"
-      ],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "网络子系统",
-        "box": [
-          0.13594926307043076,
-          0.869665458537642,
-          0.04673522279056472,
-          0.013374510265531995
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-025e1d61f7",
-      "title": "套接字",
-      "domain": "os",
-      "parent": "os-e589658e9c",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "套接字",
-        "box": [
-          0.10079087587136468,
-          0.8962678650817489,
-          0.026424931326360528,
-          0.014440558760328678
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-e612a5a55f",
-      "title": "协议栈",
-      "domain": "os",
-      "parent": "os-e589658e9c",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "协议栈",
-        "box": [
-          0.14456120940407496,
-          0.895034326345386,
-          0.024838524538825426,
-          0.012211707014552233
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-c737266212",
-      "title": "网络设备",
-      "domain": "os",
-      "parent": "os-e589658e9c",
-      "children": [],
-      "photo": "IMG_8069",
-      "note": "",
-      "depth": 3,
-      "evidence": {
-        "text": "网络设备",
-        "box": [
-          0.18621670935420476,
-          0.8899742838627271,
-          0.03346736274106589,
-          0.014691149821134522
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 0,
+      "sourceText": "应用 A、应用 B、应用 C 位于内核上方，与系统调用子系统相连。"
     },
     {
       "id": "os-c54be2eeac",
@@ -4860,8 +4306,9 @@
         "os-5215b80ac2"
       ],
       "photo": "IMG_8069",
-      "note": "",
-      "depth": 1
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "程序图从上到下为 ELF Header、Segment Header Table、.text、.rodata、.data、.bss、.symtab、.strtab、Section Header Table；右侧进程图列出进程列表中的任务信息。"
     },
     {
       "id": "os-a1681deae0",
@@ -4917,6 +4364,7 @@
       "photo": "IMG_8069",
       "note": "",
       "depth": 2,
+      "sourceText": ".text、.rodata。",
       "evidence": {
         "text": "代码段",
         "box": [
@@ -4983,15 +4431,16 @@
       "photo": "IMG_8069",
       "note": "",
       "depth": 2,
+      "sourceText": ".data、.bss。",
       "evidence": {
         "text": "数据段",
         "box": [
-          0.5389739471054855,
-          0.38141923440638176,
-          0.02501313025210084,
-          0.011695763421437091
+          0.5389029278989018,
+          0.38111473000787927,
+          0.0245734676927412,
+          0.012911862018061649
         ],
-        "confidence": 0.5,
+        "confidence": 1,
         "method": "ocr-assisted"
       }
     },
@@ -5049,7 +4498,8 @@
       ],
       "photo": "IMG_8069",
       "note": "",
-      "depth": 2
+      "depth": 2,
+      "sourceText": ".symtab、.strtab、Section Header Table。"
     },
     {
       "id": "os-528546f3b5",
@@ -5134,6 +4584,7 @@
       "photo": "IMG_8069",
       "note": "",
       "depth": 1,
+      "sourceText": "任务 ID、亲缘关系、任务状态、权限、运行统计、调度相关、信号处理、内存管理、文件与文件系统、内核栈。",
       "evidence": {
         "text": "进程列表",
         "box": [
@@ -5385,8 +4836,9 @@
         "os-9256033fca"
       ],
       "photo": "IMG_8069",
-      "note": "",
-      "depth": 1
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "图中自上而下：Stack 栈、mmap 内存映射区、堆、BSS 区域、Data 区域、Text 区域；上方另标内核态与用户态分界。"
     },
     {
       "id": "os-4153f19f35",
@@ -5437,8 +4889,9 @@
       "parent": "os-a75591a92b",
       "children": [],
       "photo": "IMG_8069",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "图中栈内的箭头向下。",
       "evidence": {
         "text": "Stack栈",
         "box": [
@@ -5458,8 +4911,9 @@
       "parent": "os-a75591a92b",
       "children": [],
       "photo": "IMG_8069",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "图中位于栈与堆之间，区域内的箭头向下。",
       "evidence": {
         "text": "mmap内存映射区",
         "box": [
@@ -5479,8 +4933,9 @@
       "parent": "os-a75591a92b",
       "children": [],
       "photo": "IMG_8069",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "图中堆内的箭头向上。",
       "evidence": {
         "text": "堆",
         "box": [
@@ -5500,8 +4955,9 @@
       "parent": "os-a75591a92b",
       "children": [],
       "photo": "IMG_8069",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "图中位于堆下方、Data 区域上方。",
       "evidence": {
         "text": "BSS 区域",
         "box": [
@@ -5521,8 +4977,9 @@
       "parent": "os-a75591a92b",
       "children": [],
       "photo": "IMG_8069",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "图中位于 BSS 区域与 Text 区域之间。",
       "evidence": {
         "text": "Data 区域",
         "box": [
@@ -5542,8 +4999,9 @@
       "parent": "os-a75591a92b",
       "children": [],
       "photo": "IMG_8069",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "图中位于 Data 区域下方。",
       "evidence": {
         "text": "Text 区域",
         "box": [
@@ -5562,6 +5020,8 @@
       "domain": "os",
       "parent": "os-ae1536a5fa",
       "children": [
+        "os-b28a4e7627",
+        "os-15a17d985b",
         "os-db3491c198",
         "os-56c06ccfeb",
         "os-171f6dfe1c",
@@ -5570,35 +5030,183 @@
         "os-8a8dcd44f4"
       ],
       "photo": "IMG_8069",
-      "note": "",
-      "depth": 1
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "虚拟内存中的页面经中间页表项映射到物理内存；右侧另画出换出、换入和文件映射的箭头。"
+    },
+    {
+      "id": "os-b28a4e7627",
+      "title": "虚拟内存",
+      "domain": "os",
+      "parent": "os-46b2a3b29c",
+      "children": [],
+      "photo": "IMG_8069",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 2,
+      "sourceText": "图中页面从底部的页 0 到顶部的页 N，通过页表项与物理页连接。",
+      "evidence": {
+        "text": "虚拟内存",
+        "box": [
+          0.6397203780122261,
+          0.9132295651979891,
+          0.03588233007436376,
+          0.01611685463471685
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-15a17d985b",
+      "title": "物理内存",
+      "domain": "os",
+      "parent": "os-46b2a3b29c",
+      "children": [],
+      "photo": "IMG_8069",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 2,
+      "sourceText": "图中页面从底部的页 0 到顶部的页 N，右侧连接换入、换出与文件映射。",
+      "evidence": {
+        "text": "物理内存",
+        "box": [
+          0.7981747446345447,
+          0.9227354159278689,
+          0.03444534848869412,
+          0.01265242832158903
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "os-db3491c198",
       "title": "页",
       "domain": "os",
       "parent": "os-46b2a3b29c",
+      "children": [
+        "os-721271abc4",
+        "os-78b10ad7f7"
+      ],
+      "photo": "IMG_8069",
+      "note": "",
+      "depth": 2,
+      "sourceText": "页 0、页 N。",
+      "evidence": {
+        "text": "页0",
+        "box": [
+          0.6512421830013471,
+          0.8891214107572956,
+          0.016287619326294956,
+          0.010855246436139542
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-721271abc4",
+      "title": "页 0",
+      "domain": "os",
+      "parent": "os-db3491c198",
       "children": [],
       "photo": "IMG_8069",
       "note": "",
-      "depth": 2
+      "depth": 3,
+      "evidence": {
+        "text": "页0",
+        "box": [
+          0.6512421830013471,
+          0.8891214107572956,
+          0.016287619326294956,
+          0.010855246436139542
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-78b10ad7f7",
+      "title": "页 N",
+      "domain": "os",
+      "parent": "os-db3491c198",
+      "children": [],
+      "photo": "IMG_8069",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "页N",
+        "box": [
+          0.648255814062279,
+          0.6104497357165806,
+          0.02180232509734137,
+          0.015542328042328024
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "os-56c06ccfeb",
       "title": "页表项",
       "domain": "os",
       "parent": "os-46b2a3b29c",
-      "children": [],
+      "children": [
+        "os-edb809299c",
+        "os-7e3bb0b386"
+      ],
       "photo": "IMG_8069",
       "note": "",
       "depth": 2,
+      "sourceText": "页表项 0、页表项 N。",
       "evidence": {
-        "text": "页表项N",
+        "text": "页表项0",
         "box": [
-          0.7283709933670227,
-          0.6691972433784302,
-          0.028678089411888763,
-          0.011066097950512402
+          0.7268413619120333,
+          0.8497818891056116,
+          0.02887449242416975,
+          0.013583313294596815
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-edb809299c",
+      "title": "页表项 0",
+      "domain": "os",
+      "parent": "os-56c06ccfeb",
+      "children": [],
+      "photo": "IMG_8069",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "页表项0",
+        "box": [
+          0.7268413619120333,
+          0.8497818891056116,
+          0.02887449242416975,
+          0.013583313294596815
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-7e3bb0b386",
+      "title": "页表项 N",
+      "domain": "os",
+      "parent": "os-56c06ccfeb",
+      "children": [],
+      "photo": "IMG_8069",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "页表项 N",
+        "box": [
+          0.7283275350893317,
+          0.6692726343092346,
+          0.0287781707304208,
+          0.01074496303953709
         ],
         "confidence": 0.30000001192092896,
         "method": "ocr-assisted"
@@ -5611,8 +5219,9 @@
       "parent": "os-46b2a3b29c",
       "children": [],
       "photo": "IMG_8069",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "图中箭头从物理内存指向右侧圆柱形存储。",
       "evidence": {
         "text": "换出",
         "box": [
@@ -5632,8 +5241,9 @@
       "parent": "os-46b2a3b29c",
       "children": [],
       "photo": "IMG_8069",
-      "note": "",
-      "depth": 2
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 2,
+      "sourceText": "图中箭头从右侧圆柱形存储指向物理内存。"
     },
     {
       "id": "os-578d50bbc0",
@@ -5642,17 +5252,18 @@
       "parent": "os-46b2a3b29c",
       "children": [],
       "photo": "IMG_8069",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "图中右侧存储与物理内存页面间另有标为“文件映射”的连线。",
       "evidence": {
         "text": "文件映射",
         "box": [
-          0.8499123591895149,
-          0.7825477741646933,
-          0.02573265570073876,
-          0.010774463276012693
+          0.8488372090356665,
+          0.7829457361524476,
+          0.027616279465811577,
+          0.011697120767421909
         ],
-        "confidence": 0.5,
+        "confidence": 1,
         "method": "ocr-assisted"
       }
     },
@@ -5663,15 +5274,16 @@
       "parent": "os-46b2a3b29c",
       "children": [],
       "photo": "IMG_8069",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "虚拟内存 → 页表项 → 物理内存。",
       "evidence": {
         "text": "内存映射",
         "box": [
-          0.2818677348802644,
-          0.7297558887008518,
-          0.03163289014273967,
-          0.012016499409822495
+          0.7209205617058934,
+          0.8683673032857402,
+          0.03654847137753617,
+          0.016912697187436185
         ],
         "confidence": 0.5,
         "method": "ocr-assisted"
@@ -5684,23 +5296,24 @@
       "parent": null,
       "children": [
         "os-61dfc73c9d",
-        "os-5609ea24a6",
+        "os-003f9f7175",
         "os-718fc5b504",
+        "os-4b3e9b585b",
         "os-e18d3f6a16",
         "os-e7983436da",
-        "os-f9f522de10",
         "os-53e16781e8"
       ],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 0,
+      "sourceText": "进程 A、进程 B 经系统调用访问打开的文件；下方依次画出文件子系统、虚拟文件系统 VFS、文件系统类型、Page Cache 与块设备访问层。",
       "evidence": {
-        "text": "文件系统",
+        "text": "文件子系统",
         "box": [
-          0.03137980833531703,
-          0.10845530759475731,
-          0.07620603496237092,
-          0.025781681335050273
+          0.10167556597641661,
+          0.4154995330612965,
+          0.05000437675070028,
+          0.015639589169000913
         ],
         "confidence": 1,
         "method": "ocr-assisted"
@@ -5719,6 +5332,7 @@
       "photo": "IMG_8070",
       "note": "",
       "depth": 1,
+      "sourceText": "sys_open、sys_read、sys_write。",
       "evidence": {
         "text": "系统调用",
         "box": [
@@ -5795,14 +5409,96 @@
       }
     },
     {
-      "id": "os-5609ea24a6",
-      "title": "文件描述符",
+      "id": "os-003f9f7175",
+      "title": "用户态与内核态",
       "domain": "os",
       "parent": "os-fd706d7a38",
+      "children": [
+        "os-120c1f7d77",
+        "os-268897cfd8"
+      ],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "进程 A、进程 B 位于用户态，系统调用及以下部分位于内核态。"
+    },
+    {
+      "id": "os-120c1f7d77",
+      "title": "用户态",
+      "domain": "os",
+      "parent": "os-003f9f7175",
       "children": [],
       "photo": "IMG_8070",
       "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "用户态",
+        "box": [
+          0.2413001905385106,
+          0.2217553686243883,
+          0.029653757436284272,
+          0.012407805516717583
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-268897cfd8",
+      "title": "内核态",
+      "domain": "os",
+      "parent": "os-003f9f7175",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "内核态",
+        "box": [
+          0.24188163572330687,
+          0.25116713347984027,
+          0.02907231330630855,
+          0.013305322128851537
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-718fc5b504",
+      "title": "进程打开的文件",
+      "domain": "os",
+      "parent": "os-fd706d7a38",
+      "children": [
+        "os-5609ea24a6",
+        "os-b95b28daf7",
+        "os-26a8120d7d"
+      ],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 1,
+      "sourceText": "图中进程 A 和进程 B 分别有 fd、缓存及打开的文件描述符。",
+      "evidence": {
+        "text": "进程B打开的文件",
+        "box": [
+          0.14098837219636845,
+          0.33914728704226715,
+          0.07267441825261192,
+          0.013696628272848788
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-5609ea24a6",
+      "title": "文件描述符",
+      "domain": "os",
+      "parent": "os-718fc5b504",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
       "evidence": {
         "text": "文件描述符",
         "box": [
@@ -5816,48 +5512,160 @@
       }
     },
     {
-      "id": "os-718fc5b504",
-      "title": "进程打开的文件",
+      "id": "os-b95b28daf7",
+      "title": "进程 A",
       "domain": "os",
-      "parent": "os-fd706d7a38",
-      "children": [],
+      "parent": "os-718fc5b504",
+      "children": [
+        "os-6eccb9e3a0",
+        "os-3340143162"
+      ],
       "photo": "IMG_8070",
       "note": "",
-      "depth": 1,
+      "depth": 2,
+      "sourceText": "进程 A：fd、缓存；进程 A 打开的文件：文件描述符。",
       "evidence": {
-        "text": "进程B打开的文件",
+        "text": "进程A",
         "box": [
-          0.14070998986590244,
-          0.338838765699058,
-          0.07326222739574713,
-          0.013181370290832809
+          0.061051855439233534,
+          0.17436974784018391,
+          0.03023520423644807,
+          0.014046316387272662
         ],
         "confidence": 0.30000001192092896,
         "method": "ocr-assisted"
       }
     },
     {
-      "id": "os-e18d3f6a16",
-      "title": "虚拟文件系统 VFS",
+      "id": "os-6eccb9e3a0",
+      "title": "fd",
       "domain": "os",
-      "parent": "os-fd706d7a38",
+      "parent": "os-b95b28daf7",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "fd",
+        "box": [
+          0.05116726912658065,
+          0.20392355894839032,
+          0.009884586257126102,
+          0.009304497199677422
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-3340143162",
+      "title": "缓存",
+      "domain": "os",
+      "parent": "os-b95b28daf7",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "缓存",
+        "box": [
+          0.08547259734568037,
+          0.20308123263913225,
+          0.01686194118362136,
+          0.01169757282032686
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-26a8120d7d",
+      "title": "进程 B",
+      "domain": "os",
+      "parent": "os-718fc5b504",
       "children": [
-        "os-51f8926ebe",
-        "os-65c14ae08a",
-        "os-24384233ed"
+        "os-4b6c74bbc4",
+        "os-a0b0144383"
       ],
       "photo": "IMG_8070",
       "note": "",
-      "depth": 1,
+      "depth": 2,
+      "sourceText": "进程 B：fd、缓存；进程 B 打开的文件：文件描述符。",
       "evidence": {
-        "text": "虚拟文件系统 VFS",
+        "text": "进程 B",
         "box": [
-          0.09070561248291961,
-          0.5116306210778477,
-          0.07733235232670556,
-          0.014046316387272662
+          0.1639678403526648,
+          0.17290856945592856,
+          0.029653757436284272,
+          0.015507494145526036
         ],
-        "confidence": 0.5,
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-4b6c74bbc4",
+      "title": "fd",
+      "domain": "os",
+      "parent": "os-26a8120d7d",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "fd",
+        "box": [
+          0.15408325408374723,
+          0.2023728094669879,
+          0.008721693324345555,
+          0.010079871817908481
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-a0b0144383",
+      "title": "缓存",
+      "domain": "os",
+      "parent": "os-26a8120d7d",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "缓存",
+        "box": [
+          0.18838858205338485,
+          0.20237280958942466,
+          0.01686194118362136,
+          0.010855246436139587
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-4b3e9b585b",
+      "title": "文件子系统",
+      "domain": "os",
+      "parent": "os-fd706d7a38",
+      "children": [
+        "os-51f8926ebe"
+      ],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "打开的文件 struct file → file operation。",
+      "evidence": {
+        "text": "文件子系统",
+        "box": [
+          0.10167556597641661,
+          0.4154995330612965,
+          0.05000437675070028,
+          0.015639589169000913
+        ],
+        "confidence": 1,
         "method": "ocr-assisted"
       }
     },
@@ -5865,13 +5673,14 @@
       "id": "os-51f8926ebe",
       "title": "struct file",
       "domain": "os",
-      "parent": "os-e18d3f6a16",
+      "parent": "os-4b3e9b585b",
       "children": [
         "os-caec1cef9a"
       ],
       "photo": "IMG_8070",
       "note": "",
       "depth": 2,
+      "sourceText": "打开的文件：struct file。",
       "evidence": {
         "text": "struct file",
         "box": [
@@ -5891,8 +5700,9 @@
       "parent": "os-51f8926ebe",
       "children": [],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 3,
+      "sourceText": "图中“打开的文件 struct file”指向 file operation。",
       "evidence": {
         "text": "file operation",
         "box": [
@@ -5900,6 +5710,30 @@
           0.45070047605532004,
           0.052428421531445064,
           0.012338464222257081
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-e18d3f6a16",
+      "title": "虚拟文件系统 VFS",
+      "domain": "os",
+      "parent": "os-fd706d7a38",
+      "children": [
+        "os-65c14ae08a",
+        "os-24384233ed"
+      ],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "虚拟文件系统 VFS",
+        "box": [
+          0.09070561248291961,
+          0.5116306210778477,
+          0.07733235232670556,
+          0.014046316387272662
         ],
         "confidence": 0.5,
         "method": "ocr-assisted"
@@ -5914,17 +5748,18 @@
         "os-4a4478192d"
       ],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "文件夹：struct dentry → dir operation。",
       "evidence": {
         "text": "struct dentry",
         "box": [
-          0.04757473921414544,
-          0.5574505612834262,
-          0.049056764392210586,
-          0.011714888553993393
+          0.047965115389028985,
+          0.5581395346090816,
+          0.04796511786324637,
+          0.011635597420748045
         ],
-        "confidence": 0.5,
+        "confidence": 1,
         "method": "ocr-assisted"
       }
     },
@@ -5958,8 +5793,9 @@
         "os-c52bc58db5"
       ],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "文件：struct inode → inode operation。",
       "evidence": {
         "text": "struct inode",
         "box": [
@@ -6006,13 +5842,14 @@
       "photo": "IMG_8070",
       "note": "",
       "depth": 1,
+      "sourceText": "ext4、ext3、ntfs。",
       "evidence": {
-        "text": "文件系统",
+        "text": "文件子系统",
         "box": [
-          0.03137980833531703,
-          0.10845530759475731,
-          0.07620603496237092,
-          0.025781681335050273
+          0.10167556597641661,
+          0.4154995330612965,
+          0.05000437675070028,
+          0.015639589169000913
         ],
         "confidence": 1,
         "method": "ocr-assisted"
@@ -6082,10 +5919,446 @@
       }
     },
     {
+      "id": "os-53e16781e8",
+      "title": "ext4 文件系统",
+      "domain": "os",
+      "parent": "os-fd706d7a38",
+      "children": [
+        "os-6b25ea7044"
+      ],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "文件 inode → 多个 Block → 每个 Block 对应的 sector。",
+      "evidence": {
+        "text": "ext4 文件系统",
+        "box": [
+          0.10522512091466239,
+          0.8603060044955527,
+          0.05585213665702199,
+          0.013434451946468702
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-6b25ea7044",
+      "title": "inode",
+      "domain": "os",
+      "parent": "os-53e16781e8",
+      "children": [
+        "os-0ee100210d"
+      ],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 2,
+      "sourceText": "图中一个文件 inode 连到多个 Block。",
+      "evidence": {
+        "text": "inode",
+        "box": [
+          0.3952938738853115,
+          0.48526787964214063,
+          0.02384972772678407,
+          0.009363306225403595
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-0ee100210d",
+      "title": "Block",
+      "domain": "os",
+      "parent": "os-6b25ea7044",
+      "children": [
+        "os-6f57b5bd1d"
+      ],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 3,
+      "sourceText": "图中每个 Block 连到多个 sector。",
+      "evidence": {
+        "text": "Block",
+        "box": [
+          0.4517091482968054,
+          0.5131398233269053,
+          0.018633809076303867,
+          0.007836842292051933
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-6f57b5bd1d",
+      "title": "sector",
+      "domain": "os",
+      "parent": "os-0ee100210d",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 4,
+      "evidence": {
+        "text": "sector",
+        "box": [
+          0.4930195915449689,
+          0.4371946452106941,
+          0.01803272177859183,
+          0.007016372502573626
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-386a7d0298",
+      "title": "输入输出系统",
+      "domain": "os",
+      "parent": null,
+      "children": [
+        "os-60c8d1c0d4",
+        "os-68053aaf3f",
+        "os-474726ee4a",
+        "os-c255c0711d",
+        "os-b61fa56dbc",
+        "os-02108ece35",
+        "os-3c9551f4f8",
+        "os-c50e554bff",
+        "os-ec65fa125e",
+        "os-f9f522de10"
+      ],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 0,
+      "sourceText": "图中从上到下：用户进程、文件系统接口、虚拟文件系统、操作系统、块设备、设备驱动程序、中断处理器、设备控制器、硬件。",
+      "evidence": {
+        "text": "输入输出系统",
+        "box": [
+          0.8245860929472274,
+          0.09970098251033127,
+          0.10715994434582038,
+          0.0363801480675278
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-60c8d1c0d4",
+      "title": "用户进程",
+      "domain": "os",
+      "parent": "os-386a7d0298",
+      "children": [
+        "os-17b7c81d55"
+      ],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 1,
+      "sourceText": "open、read、write、ioctl。",
+      "evidence": {
+        "text": "用户进程",
+        "box": [
+          0.6104479286275055,
+          0.1988992606037895,
+          0.0466864663345807,
+          0.0178023435377162
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-17b7c81d55",
+      "title": "open / read / write / ioctl",
+      "domain": "os",
+      "parent": "os-60c8d1c0d4",
+      "children": [
+        "os-0baeb81e12",
+        "os-5a94b8cca6",
+        "os-117895bc32",
+        "os-20d19c5ebd"
+      ],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "open, read, write,ioctl",
+        "box": [
+          0.7182902537617141,
+          0.1903293559008738,
+          0.11694868286757748,
+          0.02213406139840375
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-0baeb81e12",
+      "title": "open",
+      "domain": "os",
+      "parent": "os-17b7c81d55",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "open, read, write,ioctl",
+        "box": [
+          0.7182902537617141,
+          0.1903293559008738,
+          0.11694868286757748,
+          0.02213406139840375
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-5a94b8cca6",
+      "title": "read",
+      "domain": "os",
+      "parent": "os-17b7c81d55",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "open, read, write,ioctl",
+        "box": [
+          0.7182902537617141,
+          0.1903293559008738,
+          0.11694868286757748,
+          0.02213406139840375
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-117895bc32",
+      "title": "write",
+      "domain": "os",
+      "parent": "os-17b7c81d55",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "open, read, write,ioctl",
+        "box": [
+          0.7182902537617141,
+          0.1903293559008738,
+          0.11694868286757748,
+          0.02213406139840375
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-20d19c5ebd",
+      "title": "ioctl",
+      "domain": "os",
+      "parent": "os-17b7c81d55",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "open, read, write,ioctl",
+        "box": [
+          0.7182902537617141,
+          0.1903293559008738,
+          0.11694868286757748,
+          0.02213406139840375
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-68053aaf3f",
+      "title": "文件系统接口",
+      "domain": "os",
+      "parent": "os-386a7d0298",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "图中位于用户进程与虚拟文件系统之间。",
+      "evidence": {
+        "text": "文件系统接口",
+        "box": [
+          0.5988038035810357,
+          0.24042728878888317,
+          0.06880222715917421,
+          0.017517692679895867
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-474726ee4a",
+      "title": "虚拟文件系统",
+      "domain": "os",
+      "parent": "os-386a7d0298",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "原图：抽象为文件系统操作，对用户提供文件操作。",
+      "depth": 1,
+      "sourceText": "抽象为文件系统操作，对用户提供文件操作。",
+      "evidence": {
+        "text": "抽象为文件系统操作，对用户提供文件操作",
+        "box": [
+          0.7173841618076855,
+          0.26628734588125147,
+          0.18961075879582756,
+          0.018307766883201827
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-c255c0711d",
+      "title": "操作系统",
+      "domain": "os",
+      "parent": "os-386a7d0298",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "图中“操作系统”标注位于虚拟文件系统与块设备之间。",
+      "evidence": {
+        "text": "操作系统",
+        "box": [
+          0.609359731253897,
+          0.3046218486614076,
+          0.04653605827096466,
+          0.016383297525756756
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-b61fa56dbc",
+      "title": "块设备",
+      "domain": "os",
+      "parent": "os-386a7d0298",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "图中位于虚拟文件系统下方、设备驱动程序上方。",
+      "evidence": {
+        "text": "块设备",
+        "box": [
+          0.6151767388059336,
+          0.3370681603044049,
+          0.03432034244056511,
+          0.017273576097105527
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-02108ece35",
+      "title": "设备驱动程序",
+      "domain": "os",
+      "parent": "os-386a7d0298",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "原图：屏蔽设备控制器，对操作系统提供统一接口。",
+      "depth": 1,
+      "sourceText": "屏蔽设备控制器，对操作系统提供统一接口。",
+      "evidence": {
+        "text": "屏蔽设备控制器，对操作系统提供统一接口",
+        "box": [
+          0.7168356807224066,
+          0.3643790848233012,
+          0.1883885816802777,
+          0.01710529220538312
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-3c9551f4f8",
+      "title": "中断处理器",
+      "domain": "os",
+      "parent": "os-386a7d0298",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "原图：硬件事件统一处理。",
+      "depth": 1,
+      "sourceText": "硬件事件统一处理。",
+      "evidence": {
+        "text": "中断处理器",
+        "box": [
+          0.6035427255732891,
+          0.39532440886556947,
+          0.0575883689046908,
+          0.016282869654209355
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-c50e554bff",
+      "title": "设备控制器",
+      "domain": "os",
+      "parent": "os-386a7d0298",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "原图：屏蔽不同硬件的差别。",
+      "depth": 1,
+      "sourceText": "屏蔽不同硬件的差别。",
+      "evidence": {
+        "text": "屏蔽不同硬件的差别",
+        "box": [
+          0.7162542332714114,
+          0.4239028948934128,
+          0.09652007804079397,
+          0.01493930861173
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-ec65fa125e",
+      "title": "硬件",
+      "domain": "os",
+      "parent": "os-386a7d0298",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "原图：各种各样的硬件设备。",
+      "depth": 1,
+      "sourceText": "各种各样的硬件设备。",
+      "evidence": {
+        "text": "各种各样的硬件设备",
+        "box": [
+          0.7162542348204841,
+          0.45347751491782284,
+          0.09593862857044215,
+          0.014776453361903003
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
       "id": "os-f9f522de10",
       "title": "块设备访问路径",
       "domain": "os",
-      "parent": "os-fd706d7a38",
+      "parent": "os-386a7d0298",
       "children": [
         "os-c181173c3a",
         "os-41eb8fc805",
@@ -6095,8 +6368,9 @@
         "os-1259edbaf0"
       ],
       "photo": "IMG_8070",
-      "note": "",
-      "depth": 1
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "虚拟文件系统 → Page Cache → 通用块设备层（BIO）→ 块设备 I/O 调度层 → 块设备驱动程序 → 硬盘设备。"
     },
     {
       "id": "os-c181173c3a",
@@ -6105,8 +6379,9 @@
       "parent": "os-f9f522de10",
       "children": [],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "右侧虚拟文件系统图中，struct file 下有 struct inode 与 struct address_space，后者连接多个 Page Cache。",
       "evidence": {
         "text": "struct address_space",
         "box": [
@@ -6126,8 +6401,9 @@
       "parent": "os-f9f522de10",
       "children": [],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "缓存；右侧图中画出多个 Page Cache，并向下连接 BIO。",
       "evidence": {
         "text": "Page Cache",
         "box": [
@@ -6149,15 +6425,16 @@
         "os-471181e89e"
       ],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "图中包含多个 BIO。",
       "evidence": {
         "text": "通用块设备层",
         "box": [
-          0.1017416358113463,
-          0.7541208228177423,
-          0.058167536826138753,
-          0.014127508710189751
+          0.4290325147901329,
+          0.27138116229519865,
+          0.043045850695014334,
+          0.010855246436139542
         ],
         "confidence": 1,
         "method": "ocr-assisted"
@@ -6195,7 +6472,19 @@
       ],
       "photo": "IMG_8070",
       "note": "",
-      "depth": 2
+      "depth": 2,
+      "sourceText": "调度算法、I/O 请求队列。",
+      "evidence": {
+        "text": "块设备1/0 调度层",
+        "box": [
+          0.42379720755988687,
+          0.2999533146815384,
+          0.06166027507194287,
+          0.010971055088702162
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "os-8767830ae4",
@@ -6225,8 +6514,9 @@
       "parent": "os-cd39d7afa3",
       "children": [],
       "photo": "IMG_8070",
-      "note": "",
-      "depth": 3
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 3,
+      "sourceText": "原图画出连续排队的请求方块。"
     },
     {
       "id": "os-984fa0afd2",
@@ -6271,315 +6561,6 @@
       }
     },
     {
-      "id": "os-53e16781e8",
-      "title": "ext4 文件系统",
-      "domain": "os",
-      "parent": "os-fd706d7a38",
-      "children": [
-        "os-6b25ea7044",
-        "os-0ee100210d",
-        "os-6f57b5bd1d"
-      ],
-      "photo": "IMG_8070",
-      "note": "",
-      "depth": 1,
-      "evidence": {
-        "text": "ext4 文件系统",
-        "box": [
-          0.10522512091466239,
-          0.8603060044955527,
-          0.05585213665702199,
-          0.013434451946468702
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-6b25ea7044",
-      "title": "inode",
-      "domain": "os",
-      "parent": "os-53e16781e8",
-      "children": [],
-      "photo": "IMG_8070",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "inode",
-        "box": [
-          0.3952938738853115,
-          0.48526787964214063,
-          0.02384972772678407,
-          0.009363306225403595
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-0ee100210d",
-      "title": "Block",
-      "domain": "os",
-      "parent": "os-53e16781e8",
-      "children": [],
-      "photo": "IMG_8070",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "BloCK",
-        "box": [
-          0.45171884131423373,
-          0.44561157788643707,
-          0.018614423041250196,
-          0.007936507936507983
-        ],
-        "confidence": 0.30000001192092896,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-6f57b5bd1d",
-      "title": "sector",
-      "domain": "os",
-      "parent": "os-53e16781e8",
-      "children": [],
-      "photo": "IMG_8070",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "sector",
-        "box": [
-          0.4930195915449689,
-          0.4371946452106941,
-          0.01803272177859183,
-          0.007016372502573626
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-386a7d0298",
-      "title": "输入输出系统",
-      "domain": "os",
-      "parent": null,
-      "children": [
-        "os-60c8d1c0d4",
-        "os-68053aaf3f",
-        "os-474726ee4a",
-        "os-b61fa56dbc",
-        "os-02108ece35",
-        "os-3c9551f4f8",
-        "os-c50e554bff",
-        "os-ec65fa125e"
-      ],
-      "photo": "IMG_8070",
-      "note": "",
-      "depth": 0,
-      "evidence": {
-        "text": "输入输出系统",
-        "box": [
-          0.8245860929472274,
-          0.09970098251033127,
-          0.10715994434582038,
-          0.0363801480675278
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-60c8d1c0d4",
-      "title": "用户进程",
-      "domain": "os",
-      "parent": "os-386a7d0298",
-      "children": [
-        "os-17b7c81d55"
-      ],
-      "photo": "IMG_8070",
-      "note": "",
-      "depth": 1,
-      "evidence": {
-        "text": "用户进程",
-        "box": [
-          0.6104479286275055,
-          0.1988992606037895,
-          0.0466864663345807,
-          0.0178023435377162
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-17b7c81d55",
-      "title": "open / read / write / ioctl",
-      "domain": "os",
-      "parent": "os-60c8d1c0d4",
-      "children": [],
-      "photo": "IMG_8070",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "open, read, write,ioctl",
-        "box": [
-          0.7182902537617141,
-          0.1903293559008738,
-          0.11694868286757748,
-          0.02213406139840375
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-68053aaf3f",
-      "title": "文件系统接口",
-      "domain": "os",
-      "parent": "os-386a7d0298",
-      "children": [],
-      "photo": "IMG_8070",
-      "note": "",
-      "depth": 1,
-      "evidence": {
-        "text": "文件系统接口",
-        "box": [
-          0.5988038035810357,
-          0.24042728878888317,
-          0.06880222715917421,
-          0.017517692679895867
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-474726ee4a",
-      "title": "虚拟文件系统",
-      "domain": "os",
-      "parent": "os-386a7d0298",
-      "children": [],
-      "photo": "IMG_8070",
-      "note": "原图：抽象为文件系统操作，对用户提供文件操作。",
-      "depth": 1,
-      "evidence": {
-        "text": "虚拟文件系统",
-        "box": [
-          0.4247282846355358,
-          0.13411229155860152,
-          0.05054418847006577,
-          0.016733646838048382
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-b61fa56dbc",
-      "title": "块设备",
-      "domain": "os",
-      "parent": "os-386a7d0298",
-      "children": [],
-      "photo": "IMG_8070",
-      "note": "",
-      "depth": 1,
-      "evidence": {
-        "text": "块设备",
-        "box": [
-          0.6151767399996236,
-          0.335667600618908,
-          0.03490204103186685,
-          0.017127910581957412
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-02108ece35",
-      "title": "设备驱动程序",
-      "domain": "os",
-      "parent": "os-386a7d0298",
-      "children": [],
-      "photo": "IMG_8070",
-      "note": "原图：屏蔽设备控制器，对操作系统提供统一接口。",
-      "depth": 1,
-      "evidence": {
-        "text": "设备驱动程序",
-        "box": [
-          0.4290036213542874,
-          0.38127698458892517,
-          0.04310363748160395,
-          0.011270030651217202
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-3c9551f4f8",
-      "title": "中断处理器",
-      "domain": "os",
-      "parent": "os-386a7d0298",
-      "children": [],
-      "photo": "IMG_8070",
-      "note": "原图：硬件事件统一处理。",
-      "depth": 1,
-      "evidence": {
-        "text": "中断处理器",
-        "box": [
-          0.6035427255732891,
-          0.39532440886556947,
-          0.0575883689046908,
-          0.016282869654209355
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-c50e554bff",
-      "title": "设备控制器",
-      "domain": "os",
-      "parent": "os-386a7d0298",
-      "children": [],
-      "photo": "IMG_8070",
-      "note": "原图：屏蔽不同硬件的差别。",
-      "depth": 1,
-      "evidence": {
-        "text": "设备控制器",
-        "box": [
-          0.6035427245171714,
-          0.42478864934222343,
-          0.057006670313389005,
-          0.016387821022981152
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
-      "id": "os-ec65fa125e",
-      "title": "硬件",
-      "domain": "os",
-      "parent": "os-386a7d0298",
-      "children": [],
-      "photo": "IMG_8070",
-      "note": "原图：各种各样的硬件设备。",
-      "depth": 1,
-      "evidence": {
-        "text": "硬件",
-        "box": [
-          0.6198303454596142,
-          0.45347751505299694,
-          0.02384972772678407,
-          0.016282869654209314
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
       "id": "os-f9054458bc",
       "title": "网络通信",
       "domain": "os",
@@ -6594,12 +6575,14 @@
         "os-e8b4004fe7",
         "os-42908ab38e",
         "os-ab7405431e",
+        "os-989cd5df09",
         "os-bb9eaf2f60",
         "os-00163515dc"
       ],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 0,
+      "sourceText": "Linux 服务器 A → 交换机 → Linux 服务器作路由器 → 交换机 → Linux 服务器 B；图中通过 eth0、eth1 连接。",
       "evidence": {
         "text": "网络通信",
         "box": [
@@ -6619,11 +6602,14 @@
       "parent": "os-f9054458bc",
       "children": [
         "os-db4d74d96e",
-        "os-6f943dd9b0"
+        "os-6f943dd9b0",
+        "os-70822f307e",
+        "os-fbbdc43fc3"
       ],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 1,
+      "sourceText": "Firefox、Chrome → socket → 内核中的报文各层 → eth0。",
       "evidence": {
         "text": "Linux服务器A",
         "box": [
@@ -6679,17 +6665,62 @@
       }
     },
     {
+      "id": "os-70822f307e",
+      "title": "socket",
+      "domain": "os",
+      "parent": "os-6ec4cd3c9b",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "socket",
+        "box": [
+          0.36979132170106904,
+          0.6519269040163237,
+          0.02618205636115052,
+          0.008622215798143778
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-fbbdc43fc3",
+      "title": "eth0",
+      "domain": "os",
+      "parent": "os-6ec4cd3c9b",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "etho",
+        "box": [
+          0.3414511752529583,
+          0.7923466352983445,
+          0.019202121499539766,
+          0.011763340284844407
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
       "id": "os-b6f5b0736b",
       "title": "Linux 服务器 B",
       "domain": "os",
       "parent": "os-f9054458bc",
       "children": [
         "os-a39f16aec2",
-        "os-a5f83e6b51"
+        "os-a5f83e6b51",
+        "os-2d066ec577",
+        "os-737f0be076"
       ],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 1,
+      "sourceText": "eth0 → 内核中的报文各层 → socket → nginx、tomcat。",
       "evidence": {
         "text": "Linux服务器B",
         "box": [
@@ -6745,14 +6776,57 @@
       }
     },
     {
+      "id": "os-2d066ec577",
+      "title": "socket",
+      "domain": "os",
+      "parent": "os-b6f5b0736b",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "socket",
+        "box": [
+          0.7924108391894793,
+          0.6542336542647186,
+          0.02444644747560279,
+          0.008660963826041502
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-737f0be076",
+      "title": "eth0",
+      "domain": "os",
+      "parent": "os-b6f5b0736b",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "etho",
+        "box": [
+          0.8840170351566721,
+          0.7897548947508759,
+          0.016792693861667565,
+          0.009757679494934373
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
       "id": "os-f77c5e5836",
       "title": "用户态与内核态",
       "domain": "os",
       "parent": "os-f9054458bc",
       "children": [],
       "photo": "IMG_8070",
-      "note": "",
-      "depth": 1
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "Firefox、Chrome、nginx、tomcat 位于用户态；socket 下方的 TCP、IP、MAC 报文层位于内核态。"
     },
     {
       "id": "os-59e4a73943",
@@ -6761,8 +6835,9 @@
       "parent": "os-f9054458bc",
       "children": [],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 1,
+      "sourceText": "图中服务器 A 和服务器 B 的应用程序均经 socket 与内核中的网络报文层相连。",
       "evidence": {
         "text": "socket",
         "box": [
@@ -6904,21 +6979,161 @@
       "depth": 1
     },
     {
+      "id": "os-989cd5df09",
+      "title": "报文封装与解封装",
+      "domain": "os",
+      "parent": "os-f9054458bc",
+      "children": [
+        "os-7470d187ed",
+        "os-10f642fd7a",
+        "os-14faf5bfed",
+        "os-ba6b6e0fa0",
+        "os-8ba4e65d18"
+      ],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 1,
+      "sourceText": "HTTP header + HTTP body → TCP header + HTTP header + HTTP body → IP header + TCP header + HTTP header + HTTP body → MAC header + IP header + TCP header + HTTP header + HTTP body。"
+    },
+    {
+      "id": "os-7470d187ed",
+      "title": "HTTP 应用数据",
+      "domain": "os",
+      "parent": "os-989cd5df09",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 2,
+      "sourceText": "HTTP header + HTTP body。"
+    },
+    {
+      "id": "os-10f642fd7a",
+      "title": "TCP 报文",
+      "domain": "os",
+      "parent": "os-989cd5df09",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 2,
+      "sourceText": "TCP header + HTTP header + HTTP body。",
+      "evidence": {
+        "text": "TCP",
+        "box": [
+          0.40460108483446017,
+          0.6806623164251506,
+          0.0133791156843597,
+          0.009347020744943466
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-14faf5bfed",
+      "title": "IP 报文",
+      "domain": "os",
+      "parent": "os-989cd5df09",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 2,
+      "sourceText": "IP header + TCP header + HTTP header + HTTP body。"
+    },
+    {
+      "id": "os-ba6b6e0fa0",
+      "title": "MAC 帧",
+      "domain": "os",
+      "parent": "os-989cd5df09",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 2,
+      "sourceText": "MAC header + IP header + TCP header + HTTP header + HTTP body。",
+      "evidence": {
+        "text": "MAC",
+        "box": [
+          0.3430408835858607,
+          0.7440876201130137,
+          0.016305292419934916,
+          0.009381922019295979
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-8ba4e65d18",
+      "title": "发送与接收方向",
+      "domain": "os",
+      "parent": "os-989cd5df09",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 2,
+      "sourceText": "服务器 A 图中的箭头由应用向下至 eth0；服务器 B 图中的箭头由 eth0 向上至应用。"
+    },
+    {
       "id": "os-bb9eaf2f60",
       "title": "交换机",
       "domain": "os",
       "parent": "os-f9054458bc",
-      "children": [],
+      "children": [
+        "os-9429d900df",
+        "os-30d0dc9cc5"
+      ],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 1,
+      "sourceText": "图中有两处交换机，各标 eth0、eth1，并画出包含 MAC header、IP header、TCP header、HTTP header 和 HTTP body 的报文。",
       "evidence": {
         "text": "交换机",
         "box": [
-          0.7598627019571803,
-          0.810808561347436,
-          0.028490866506144765,
-          0.013187703632173083
+          0.4607558146087275,
+          0.8062015502818083,
+          0.03052325475783574,
+          0.015557709194365055
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-9429d900df",
+      "title": "eth0",
+      "domain": "os",
+      "parent": "os-bb9eaf2f60",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "etho",
+        "box": [
+          0.3830781589831317,
+          0.8844537814980747,
+          0.018614421705571878,
+          0.010971055088702162
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-30d0dc9cc5",
+      "title": "eth1",
+      "domain": "os",
+      "parent": "os-bb9eaf2f60",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "eth1",
+        "box": [
+          0.5488628589850351,
+          0.8828197947525773,
+          0.016869320588953386,
+          0.010270774976657357
         ],
         "confidence": 0.5,
         "method": "ocr-assisted"
@@ -6930,11 +7145,16 @@
       "domain": "os",
       "parent": "os-f9054458bc",
       "children": [
-        "os-c5c92f15a5"
+        "os-c5c92f15a5",
+        "os-f710104809",
+        "os-7de0017560",
+        "os-f601e7bb1d",
+        "os-eabf974c5f"
       ],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 1,
+      "sourceText": "图中标出用户态、内核态；路由表与 IP header 相连，接口为 eth0 与 eth1。",
       "evidence": {
         "text": "Linux服务器作路由器",
         "box": [
@@ -6954,8 +7174,9 @@
       "parent": "os-00163515dc",
       "children": [],
       "photo": "IMG_8070",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "图中从 IP header 指向路由表，再接续到发送方向的报文。",
       "evidence": {
         "text": "路由表",
         "box": [
@@ -6963,6 +7184,90 @@
           0.6736694677264973,
           0.02210462661016556,
           0.010094347899478799
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-f710104809",
+      "title": "eth0",
+      "domain": "os",
+      "parent": "os-00163515dc",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "etho",
+        "box": [
+          0.5808563980770715,
+          0.7898734427952546,
+          0.017451020515933426,
+          0.010079871817908438
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-7de0017560",
+      "title": "eth1",
+      "domain": "os",
+      "parent": "os-00163515dc",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "eth1",
+        "box": [
+          0.6460068768746261,
+          0.7906162465957172,
+          0.017451020515933384,
+          0.010112442778828695
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-f601e7bb1d",
+      "title": "IP header",
+      "domain": "os",
+      "parent": "os-00163515dc",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "header",
+        "box": [
+          0.5766748774354528,
+          0.6993017234867714,
+          0.025814061739197626,
+          0.009785619213912793
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "os-eabf974c5f",
+      "title": "MAC header",
+      "domain": "os",
+      "parent": "os-00163515dc",
+      "children": [],
+      "photo": "IMG_8070",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "header",
+        "box": [
+          0.5766748774354528,
+          0.6993017234867714,
+          0.025814061739197626,
+          0.009785619213912793
         ],
         "confidence": 1,
         "method": "ocr-assisted"
@@ -7266,6 +7571,7 @@
       "photo": "IMG_8071",
       "note": "",
       "depth": 3,
+      "sourceText": "检测异常输入、流式处理、缓冲区溢出处理。",
       "evidence": {
         "text": "读取",
         "box": [
@@ -7420,15 +7726,16 @@
       "photo": "IMG_8071",
       "note": "",
       "depth": 3,
+      "sourceText": "RST 捕获和 SIGPIPE。",
       "evidence": {
-        "text": "写入",
+        "text": "RST捕获和SIGPIPE",
         "box": [
-          0.31921398673344353,
-          0.5938203445119418,
-          0.027327972905817205,
-          0.014732120417747192
+          0.37493434958653304,
+          0.5938203448082547,
+          0.08143809663147486,
+          0.012405995672601706
         ],
-        "confidence": 0.5,
+        "confidence": 1,
         "method": "ocr-assisted"
       }
     },
@@ -7465,6 +7772,7 @@
       "photo": "IMG_8071",
       "note": "",
       "depth": 2,
+      "sourceText": "半关闭连接、shutdown。",
       "evidence": {
         "text": "有序关闭",
         "box": [
@@ -7933,7 +8241,8 @@
       ],
       "photo": "IMG_8071",
       "note": "",
-      "depth": 1
+      "depth": 1,
+      "sourceText": "阻塞式 I/O、非阻塞式 I/O、I/O 多路复用、信号驱动式 I/O、异步 I/O。"
     },
     {
       "id": "os-afaa41c163",
@@ -7978,8 +8287,9 @@
         "os-2d3282bbe1"
       ],
       "photo": "IMG_8071",
-      "note": "",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "select、poll、Linux → epoll、BSD → kqueue。",
       "evidence": {
         "text": "1/O多路复用",
         "box": [
@@ -8820,8 +9130,9 @@
         "os-97747204e2"
       ],
       "photo": "IMG_8072",
-      "note": "原图给出的调用顺序：socket create → bind → listen → accept → read/write → close/shutdown。",
-      "depth": 2
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
+      "depth": 2,
+      "sourceText": "socket create → bind → listen → accept → read/write → close/shutdown。"
     },
     {
       "id": "os-a10288da47",
@@ -8961,8 +9272,9 @@
         "os-7b31aba83e"
       ],
       "photo": "IMG_8072",
-      "note": "原图给出的调用顺序：socket create → connect → read/write → close/shutdown。",
+      "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。",
       "depth": 2,
+      "sourceText": "socket create → connect → read/write → close/shutdown。",
       "evidence": {
         "text": "客户端",
         "box": [
@@ -9095,6 +9407,7 @@
       "photo": "IMG_8072",
       "note": "",
       "depth": 2,
+      "sourceText": "主进程 accept，为每个连接 fork 一个子进程。",
       "evidence": {
         "text": "主进程accept，为每个连接fork一个子进程",
         "box": [
@@ -9116,6 +9429,7 @@
       "photo": "IMG_8072",
       "note": "",
       "depth": 2,
+      "sourceText": "主线程 accept，为每个连接创建一个线程。",
       "evidence": {
         "text": "主线程accept，为每个连接创建一个线程",
         "box": [
@@ -9137,6 +9451,7 @@
       "photo": "IMG_8072",
       "note": "",
       "depth": 2,
+      "sourceText": "单线程处理所有 accept 和连接 I/O。",
       "evidence": {
         "text": "单线程处理所有accept和连接1/0",
         "box": [
@@ -9158,6 +9473,7 @@
       "photo": "IMG_8072",
       "note": "",
       "depth": 2,
+      "sourceText": "单线程处理 accept 和连接 I/O，分离业务逻辑到 Worker 线程池。",
       "evidence": {
         "text": "业务逻辑到worker线程池",
         "box": [
@@ -9179,6 +9495,7 @@
       "photo": "IMG_8072",
       "note": "主线程 accept，sub 线程池处理连接 I/O。",
       "depth": 2,
+      "sourceText": "主线程 accept，sub 线程池处理连接 I/O。",
       "evidence": {
         "text": "main-sub reactor： 主线程accept, sub线程池处理连接！",
         "box": [
@@ -10575,8 +10892,7 @@
       "parent": null,
       "children": [
         "architecture-1b74dee092",
-        "architecture-f511d1e4d6",
-        "architecture-353042b4df"
+        "architecture-f511d1e4d6"
       ],
       "photo": "IMG_8073",
       "note": "",
@@ -10603,8 +10919,7 @@
         "architecture-c23be36839",
         "architecture-76cf7eb9f5",
         "architecture-10dc458707",
-        "architecture-1e39bffc18",
-        "architecture-6fb648806a"
+        "architecture-1e39bffc18"
       ],
       "photo": "IMG_8073",
       "note": "",
@@ -10727,10 +11042,37 @@
       }
     },
     {
+      "id": "architecture-f511d1e4d6",
+      "title": "存储器和 I/O 系统",
+      "domain": "architecture",
+      "parent": "architecture-ce54698c4e",
+      "children": [
+        "architecture-6fb648806a",
+        "architecture-0ba3cde5b1",
+        "architecture-fad1405b62",
+        "architecture-23d55ffdbc",
+        "architecture-353042b4df"
+      ],
+      "photo": "IMG_8073",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "存储器和1/O系统",
+        "box": [
+          0.5516642113496123,
+          0.8058939463637538,
+          0.08679931704737562,
+          0.018562670404058457
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
       "id": "architecture-6fb648806a",
       "title": "虚拟内存和内存保护",
       "domain": "architecture",
-      "parent": "architecture-1b74dee092",
+      "parent": "architecture-f511d1e4d6",
       "children": [],
       "photo": "IMG_8073",
       "note": "",
@@ -10748,31 +11090,6 @@
       }
     },
     {
-      "id": "architecture-f511d1e4d6",
-      "title": "I/O 系统",
-      "domain": "architecture",
-      "parent": "architecture-ce54698c4e",
-      "children": [
-        "architecture-0ba3cde5b1",
-        "architecture-fad1405b62",
-        "architecture-23d55ffdbc"
-      ],
-      "photo": "IMG_8073",
-      "note": "",
-      "depth": 1,
-      "evidence": {
-        "text": "O系统",
-        "box": [
-          0.5999649860941628,
-          0.716153128216276,
-          0.03604966689770979,
-          0.01944408185230472
-        ],
-        "confidence": 0.30000001192092896,
-        "method": "ocr-assisted"
-      }
-    },
-    {
       "id": "architecture-0ba3cde5b1",
       "title": "IO_WAIT",
       "domain": "architecture",
@@ -10781,6 +11098,7 @@
       "photo": "IMG_8073",
       "note": "原图文字为“IO_WAIT：CPU 和内存的通信”；保留此标签供对照，不将其作为 I/O wait 的准确定义。",
       "depth": 2,
+      "sourceText": "CPU 和内存的通信。",
       "evidence": {
         "text": "IO_WAIT:CPU和内存的通信",
         "box": [
@@ -10839,7 +11157,7 @@
       "id": "architecture-353042b4df",
       "title": "数据完整性",
       "domain": "architecture",
-      "parent": "architecture-ce54698c4e",
+      "parent": "architecture-f511d1e4d6",
       "children": [
         "architecture-fbb242eaf1",
         "architecture-7e06230e9d",
@@ -10848,7 +11166,7 @@
       ],
       "photo": "IMG_8073",
       "note": "",
-      "depth": 1,
+      "depth": 2,
       "evidence": {
         "text": "数据完整性",
         "box": [
@@ -10869,7 +11187,7 @@
       "children": [],
       "photo": "IMG_8073",
       "note": "",
-      "depth": 2,
+      "depth": 3,
       "evidence": {
         "text": "RAID",
         "box": [
@@ -10890,7 +11208,7 @@
       "children": [],
       "photo": "IMG_8073",
       "note": "",
-      "depth": 2,
+      "depth": 3,
       "evidence": {
         "text": "Erasure Code",
         "box": [
@@ -10911,7 +11229,7 @@
       "children": [],
       "photo": "IMG_8073",
       "note": "",
-      "depth": 2,
+      "depth": 3,
       "evidence": {
         "text": "ECC内存",
         "box": [
@@ -10932,7 +11250,7 @@
       "children": [],
       "photo": "IMG_8073",
       "note": "",
-      "depth": 2,
+      "depth": 3,
       "evidence": {
         "text": "Hadoop和分布式存储",
         "box": [
@@ -11002,8 +11320,9 @@
       "parent": "architecture-01f1b5fa79",
       "children": [],
       "photo": "IMG_8074",
-      "note": "原图示例：add $s1, $s2, $s3；$s1 = $s2 + $s3。",
+      "note": "",
       "depth": 2,
+      "sourceText": "add $s1, $s2, $s3；$s1 = $s2 + $s3。",
       "evidence": {
         "text": "add",
         "box": [
@@ -11046,8 +11365,9 @@
       "parent": "architecture-6f433ea547",
       "children": [],
       "photo": "IMG_8074",
-      "note": "原图示例：or $s1, $s2, $s3；$s1 = $s2 | $s3。",
+      "note": "",
       "depth": 2,
+      "sourceText": "or $s1, $s2, $s3；$s1 = $s2 | $s3。",
       "evidence": {
         "text": "Or",
         "box": [
@@ -11090,8 +11410,9 @@
       "parent": "architecture-831bfbb6fa",
       "children": [],
       "photo": "IMG_8074",
-      "note": "原图示例：load $s1, 10($s2)；$s1 = memory[$s2 + 10]。这是原图中的示意写法。",
+      "note": "原图中的 load 为示意写法，按照片保留以便对照。",
       "depth": 2,
+      "sourceText": "load $s1, 10($s2)；$s1 = memory[$s2 + 10]。",
       "evidence": {
         "text": "load word",
         "box": [
@@ -11134,8 +11455,9 @@
       "parent": "architecture-fe0725edcf",
       "children": [],
       "photo": "IMG_8074",
-      "note": "原图示例：beq $s1, $s2, 10；相等时跳转，原图以 PC+4+10 示意，具体偏移须依指令编码解释。",
+      "note": "原图以 PC+4+10 示意分支目标，具体偏移须依指令编码解释。",
       "depth": 2,
+      "sourceText": "beq $s1, $s2, 10；if ($s1 == $s2) go to PC+4+10。",
       "evidence": {
         "text": "branch on equal",
         "box": [
@@ -11178,8 +11500,9 @@
       "parent": "architecture-a5f92ddce9",
       "children": [],
       "photo": "IMG_8074",
-      "note": "原图示例：j 1000；跳转到目标地址。",
+      "note": "",
       "depth": 2,
+      "sourceText": "j 1000；go to 1000。",
       "evidence": {
         "text": "jump",
         "box": [
@@ -11569,7 +11892,8 @@
       "children": [],
       "photo": "IMG_8075",
       "note": "原图示意：从栈底向栈顶，内存地址逐渐变小。",
-      "depth": 1
+      "depth": 1,
+      "sourceText": "栈自底向顶内存地址逐渐变小。"
     },
     {
       "id": "architecture-c45f7ea536",
@@ -11771,6 +12095,7 @@
       "photo": "IMG_8075",
       "note": "原图：下一条指令的内存地址。",
       "depth": 1,
+      "sourceText": "下一条指令的内存地址，例如：3F。",
       "evidence": {
         "text": "PC寄存器",
         "box": [
@@ -11792,6 +12117,7 @@
       "photo": "IMG_8075",
       "note": "原图：当前正在执行的指令码。",
       "depth": 1,
+      "sourceText": "当前正在执行的指令码，例如：83 7d fc 00。",
       "evidence": {
         "text": "指令寄存器",
         "box": [
@@ -11815,6 +12141,7 @@
       "photo": "IMG_8075",
       "note": "原图：存放条件和逻辑运算的结果。",
       "depth": 1,
+      "sourceText": "存放条件和逻辑运算的结果，CF、ZF、SF、OF 等条件码。",
       "evidence": {
         "text": "条件码寄存器",
         "box": [
@@ -11950,7 +12277,6 @@
         "architecture-8b404bc6fe",
         "architecture-9d7c886d0a",
         "architecture-b547b1e669",
-        "architecture-d54f7e615e",
         "architecture-226a22b07e"
       ],
       "photo": "IMG_8075",
@@ -12109,7 +12435,9 @@
       "title": "可执行代码",
       "domain": "architecture",
       "parent": "architecture-f5bce333d7",
-      "children": [],
+      "children": [
+        "architecture-d54f7e615e"
+      ],
       "photo": "IMG_8075",
       "note": "",
       "depth": 1,
@@ -12127,13 +12455,24 @@
     },
     {
       "id": "architecture-d54f7e615e",
-      "title": "装载器",
+      "title": "汇编器",
       "domain": "architecture",
-      "parent": "architecture-f5bce333d7",
+      "parent": "architecture-b547b1e669",
       "children": [],
       "photo": "IMG_8075",
-      "note": "原图在可执行代码到内存的箭头处标为“汇编器”；此处按装载阶段整理为“装载器”，请结合原图核对。",
-      "depth": 1
+      "note": "此位置的名称按原图标注保留。",
+      "depth": 2,
+      "evidence": {
+        "text": "汇编器",
+        "box": [
+          0.7144554001383321,
+          0.3406942970904694,
+          0.03153129749776792,
+          0.01451114134516924
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
     },
     {
       "id": "architecture-226a22b07e",
@@ -12862,7 +13201,6 @@
       "parent": null,
       "children": [
         "networks-b9702e70f2",
-        "networks-df9c1765f0",
         "networks-0be66cbf3e",
         "networks-336249c7a1",
         "networks-fcecd53c9b",
@@ -12894,7 +13232,8 @@
         "networks-468e6edd30",
         "networks-c9e0b73919",
         "networks-05ddc3a714",
-        "networks-e4828dd667"
+        "networks-e4828dd667",
+        "networks-df9c1765f0"
       ],
       "photo": "IMG_8076",
       "note": "",
@@ -12999,13 +13338,11 @@
       "id": "networks-df9c1765f0",
       "title": "负载均衡",
       "domain": "networks",
-      "parent": "networks-3bc90ef55a",
-      "children": [
-        "networks-32c2fb9c09"
-      ],
+      "parent": "networks-b9702e70f2",
+      "children": [],
       "photo": "IMG_8076",
       "note": "",
-      "depth": 1,
+      "depth": 2,
       "evidence": {
         "text": "负载均衡",
         "box": [
@@ -13019,32 +13356,12 @@
       }
     },
     {
-      "id": "networks-32c2fb9c09",
-      "title": "四层与七层",
-      "domain": "networks",
-      "parent": "networks-df9c1765f0",
-      "children": [],
-      "photo": "IMG_8076",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "四层与七层",
-        "box": [
-          0.2034420128242096,
-          0.8366757430385837,
-          0.05303947804696335,
-          0.014150354152077499
-        ],
-        "confidence": 0.5,
-        "method": "ocr-assisted"
-      }
-    },
-    {
       "id": "networks-0be66cbf3e",
       "title": "下层协议",
       "domain": "networks",
       "parent": "networks-3bc90ef55a",
       "children": [
+        "networks-32c2fb9c09",
         "networks-6702cda216",
         "networks-320b5e4e9f",
         "networks-1c10d4cc06"
@@ -13061,6 +13378,27 @@
           0.019560515602318394
         ],
         "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "networks-32c2fb9c09",
+      "title": "四层与七层",
+      "domain": "networks",
+      "parent": "networks-0be66cbf3e",
+      "children": [],
+      "photo": "IMG_8076",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "四层与七层",
+        "box": [
+          0.2034420128242096,
+          0.8366757430385837,
+          0.05303947804696335,
+          0.014150354152077499
+        ],
+        "confidence": 0.5,
         "method": "ocr-assisted"
       }
     },
@@ -13535,8 +13873,7 @@
       "children": [
         "networks-e316cf909e",
         "networks-0683772d70",
-        "networks-f8d563e906",
-        "networks-2bebc75761"
+        "networks-a7f78c71c3"
       ],
       "photo": "IMG_8076",
       "note": "",
@@ -13585,14 +13922,38 @@
       }
     },
     {
-      "id": "networks-f8d563e906",
-      "title": "gzip",
+      "id": "networks-a7f78c71c3",
+      "title": "压缩",
       "domain": "networks",
       "parent": "networks-fcecd53c9b",
-      "children": [],
+      "children": [
+        "networks-f8d563e906",
+        "networks-2bebc75761"
+      ],
       "photo": "IMG_8076",
       "note": "",
       "depth": 2,
+      "evidence": {
+        "text": "压缩",
+        "box": [
+          0.8302176980757002,
+          0.25277216812238607,
+          0.023839294775022574,
+          0.014034554404037019
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "networks-f8d563e906",
+      "title": "gzip",
+      "domain": "networks",
+      "parent": "networks-a7f78c71c3",
+      "children": [],
+      "photo": "IMG_8076",
+      "note": "",
+      "depth": 3,
       "evidence": {
         "text": "gzip",
         "box": [
@@ -13609,11 +13970,11 @@
       "id": "networks-2bebc75761",
       "title": "deflate",
       "domain": "networks",
-      "parent": "networks-fcecd53c9b",
+      "parent": "networks-a7f78c71c3",
       "children": [],
       "photo": "IMG_8076",
       "note": "",
-      "depth": 2,
+      "depth": 3,
       "evidence": {
         "text": "deflate",
         "box": [
@@ -14540,10 +14901,13 @@
       "title": "SPDY",
       "domain": "networks",
       "parent": "networks-06c58db08c",
-      "children": [],
+      "children": [
+        "networks-1343367988"
+      ],
       "photo": "IMG_8077",
       "note": "",
       "depth": 2,
+      "sourceText": "功成身退。",
       "evidence": {
         "text": "SPDY",
         "box": [
@@ -14555,6 +14919,16 @@
         "confidence": 1,
         "method": "ocr-assisted"
       }
+    },
+    {
+      "id": "networks-1343367988",
+      "title": "功能增强",
+      "domain": "networks",
+      "parent": "networks-0b228c7cef",
+      "children": [],
+      "photo": "IMG_8077",
+      "note": "",
+      "depth": 3
     },
     {
       "id": "networks-941f22b6ae",
@@ -14893,8 +15267,7 @@
       "children": [
         "networks-394fbe16b6",
         "networks-eb8990fbb7",
-        "networks-3da0360b28",
-        "networks-3bed161000"
+        "networks-3da0360b28"
       ],
       "photo": "IMG_8077",
       "note": "",
@@ -14916,7 +15289,9 @@
       "title": "RESTful",
       "domain": "networks",
       "parent": "networks-4971cbd9aa",
-      "children": [],
+      "children": [
+        "networks-3bed161000"
+      ],
       "photo": "IMG_8077",
       "note": "",
       "depth": 2,
@@ -14929,6 +15304,27 @@
           0.011389475910603504
         ],
         "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "networks-3bed161000",
+      "title": "JSON",
+      "domain": "networks",
+      "parent": "networks-394fbe16b6",
+      "children": [],
+      "photo": "IMG_8077",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "JSON",
+        "box": [
+          0.5141632875356991,
+          0.7584578961611542,
+          0.023962210540344062,
+          0.012354624148955669
+        ],
+        "confidence": 1,
         "method": "ocr-assisted"
       }
     },
@@ -14975,27 +15371,6 @@
       }
     },
     {
-      "id": "networks-3bed161000",
-      "title": "JSON",
-      "domain": "networks",
-      "parent": "networks-4971cbd9aa",
-      "children": [],
-      "photo": "IMG_8077",
-      "note": "",
-      "depth": 2,
-      "evidence": {
-        "text": "JSON",
-        "box": [
-          0.5141632875356991,
-          0.7584578961611542,
-          0.023962210540344062,
-          0.012354624148955669
-        ],
-        "confidence": 1,
-        "method": "ocr-assisted"
-      }
-    },
-    {
       "id": "networks-e76e0af268",
       "title": "Web 服务器",
       "domain": "networks",
@@ -15027,11 +15402,13 @@
       "domain": "networks",
       "parent": "networks-e76e0af268",
       "children": [
+        "networks-ff73f8bc01",
         "networks-7322af12d1"
       ],
       "photo": "IMG_8077",
       "note": "",
       "depth": 2,
+      "sourceText": "高性能。",
       "evidence": {
         "text": "Nginx",
         "box": [
@@ -15041,6 +15418,27 @@
           0.01481083416693905
         ],
         "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "networks-ff73f8bc01",
+      "title": "高性能",
+      "domain": "networks",
+      "parent": "networks-245099caca",
+      "children": [],
+      "photo": "IMG_8077",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "高性能",
+        "box": [
+          0.8627509558238557,
+          0.09848240882908958,
+          0.03603690339880147,
+          0.02103581326125826
+        ],
+        "confidence": 1,
         "method": "ocr-assisted"
       }
     },
@@ -15070,10 +15468,13 @@
       "title": "Apache",
       "domain": "networks",
       "parent": "networks-e76e0af268",
-      "children": [],
+      "children": [
+        "networks-4c697687be"
+      ],
       "photo": "IMG_8077",
       "note": "",
       "depth": 2,
+      "sourceText": "老牌。",
       "evidence": {
         "text": "Apache",
         "box": [
@@ -15087,14 +15488,38 @@
       }
     },
     {
+      "id": "networks-4c697687be",
+      "title": "老牌",
+      "domain": "networks",
+      "parent": "networks-59ff607bcd",
+      "children": [],
+      "photo": "IMG_8077",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "老牌",
+        "box": [
+          0.8578498122475011,
+          0.16996201104673866,
+          0.038545411568137934,
+          0.021173963359757977
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
       "id": "networks-738bfa7b74",
       "title": "Microsoft-IIS",
       "domain": "networks",
       "parent": "networks-e76e0af268",
-      "children": [],
+      "children": [
+        "networks-b6b024b158"
+      ],
       "photo": "IMG_8077",
       "note": "",
       "depth": 2,
+      "sourceText": "仅用于 Windows。",
       "evidence": {
         "text": "Microsoft-IIS",
         "box": [
@@ -15108,16 +15533,39 @@
       }
     },
     {
+      "id": "networks-b6b024b158",
+      "title": "仅用于 Windows",
+      "domain": "networks",
+      "parent": "networks-738bfa7b74",
+      "children": [],
+      "photo": "IMG_8077",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "仅用于Windows",
+        "box": [
+          0.8521879718592293,
+          0.19812831942250012,
+          0.08698935445052515,
+          0.02914553018065952
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
       "id": "networks-0a9eafd0fc",
       "title": "Tomcat",
       "domain": "networks",
       "parent": "networks-e76e0af268",
       "children": [
+        "networks-5d73354d77",
         "networks-163800b895"
       ],
       "photo": "IMG_8077",
       "note": "",
       "depth": 2,
+      "sourceText": "Java；Servlet 容器。",
       "evidence": {
         "text": "Tomcat",
         "box": [
@@ -15127,6 +15575,27 @@
           0.014676468935556032
         ],
         "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "networks-5d73354d77",
+      "title": "Java",
+      "domain": "networks",
+      "parent": "networks-0a9eafd0fc",
+      "children": [],
+      "photo": "IMG_8077",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "Java",
+        "box": [
+          0.866267364972357,
+          0.2488328662975703,
+          0.026746526105653427,
+          0.010971055088702162
+        ],
+        "confidence": 1,
         "method": "ocr-assisted"
       }
     },

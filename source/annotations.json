@@ -1,0 +1,741 @@
+{
+  "algorithms-6d90572b08": {
+    "title": "O(1)",
+    "photo": "IMG_8066",
+    "text": "常数复杂度，最佳，比如 Hash 表、缓存等。"
+  },
+  "algorithms-09da0edaca": {
+    "title": "O(log n)",
+    "photo": "IMG_8066",
+    "text": "仅次于常数复杂度，如二分查找、二叉搜索树等。"
+  },
+  "algorithms-73bbaa710b": {
+    "title": "O(n)",
+    "photo": "IMG_8066",
+    "text": "线性复杂度，如大多数遍历操作。"
+  },
+  "algorithms-17df5e538a": {
+    "title": "O(n²)",
+    "photo": "IMG_8066",
+    "text": "双重 for 循环。"
+  },
+  "algorithms-70b17d5b66": {
+    "title": "O(2ⁿ)",
+    "photo": "IMG_8066",
+    "text": "递归的时间复杂度。"
+  },
+  "algorithms-beb40e1286": {
+    "title": "O(1) 原地操作",
+    "photo": "IMG_8066",
+    "text": "O(1)：原地操作。"
+  },
+  "algorithms-435bb6f8ab": {
+    "title": "O(n) 线性辅助空间",
+    "photo": "IMG_8066",
+    "text": "O(n)：开辟线性辅助空间。"
+  },
+  "algorithms-58d34b4749": {
+    "title": "递归与分治",
+    "photo": "IMG_8066",
+    "text": "盗梦空间；终止状态 → 本层处理 → Drill Down → 本层状态清理。"
+  },
+  "algorithms-24f6fd3f4a": {
+    "title": "递归加缓存",
+    "photo": "IMG_8066",
+    "text": "简单版本是递归加缓存。"
+  },
+  "algorithms-8c721029fa": {
+    "title": "递推公式",
+    "photo": "IMG_8066",
+    "text": "高级版本是递推公式。"
+  },
+  "algorithms-dd2ffc252b": {
+    "title": "状态定义",
+    "photo": "IMG_8066",
+    "text": "有些场景需要套用模板。"
+  },
+  "algorithms-ba7140e459": {
+    "title": "通过索引随机访问",
+    "photo": "IMG_8066",
+    "text": "能够通过索引随机访问。"
+  },
+  "algorithms-f7b236f37b": {
+    "title": "与动态规划的联系",
+    "photo": "IMG_8066",
+    "text": "弱化版的动态规划。"
+  },
+  "algorithms-258859a864": {
+    "title": "判断不存在准确",
+    "photo": "IMG_8066",
+    "text": "判断不存在 100% 准确。"
+  },
+  "algorithms-6427ae0de5": {
+    "title": "判断存在有误差",
+    "photo": "IMG_8066",
+    "text": "判断存在有误差。"
+  },
+  "algorithms-0948db4016": {
+    "title": "多个 Hash 函数映射到位",
+    "photo": "IMG_8066",
+    "text": "利用 Hash 函数将待判断 Key 对应到多个位上。"
+  },
+  "algorithms-41cf985958": {
+    "title": "常见的位运算公式",
+    "photo": "IMG_8066",
+    "text": "需要记忆一些常见的位运算公式。"
+  },
+  "algorithms-726cfb4d1a": {
+    "title": "查找与插入删除",
+    "photo": "IMG_8066",
+    "text": "查找快、插入/删除结点慢。"
+  },
+  "algorithms-bc46cbff23": {
+    "title": "查找与插入删除",
+    "photo": "IMG_8066",
+    "text": "查找慢、插入/删除结点快。"
+  },
+  "algorithms-83311f481c": {
+    "title": "记录已访问的结点",
+    "photo": "IMG_8066",
+    "text": "遍历时需要记录已经访问过的结点。"
+  },
+  "algorithms-43ff19e71b": {
+    "title": "O(1) 随机访问",
+    "photo": "IMG_8067",
+    "text": "支持 O(1) 的随机访问。"
+  },
+  "algorithms-8f5f28ea65": {
+    "title": "平均 O(n) 插入和删除",
+    "photo": "IMG_8067",
+    "text": "平均为 O(n) 的插入和删除。"
+  },
+  "algorithms-740d409b90": {
+    "title": "越界错误",
+    "photo": "IMG_8067",
+    "text": "警惕越界错误，导致 Stack OverFlow。"
+  },
+  "algorithms-bde0b2256b": {
+    "title": "遍历访问结点",
+    "photo": "IMG_8067",
+    "text": "不支持随机访问，需要遍历去访问结点。"
+  },
+  "algorithms-7162f9db81": {
+    "title": "指针存储开销",
+    "photo": "IMG_8067",
+    "text": "每个结点需要额外的空间存储指针，需要的内存比数组大。"
+  },
+  "algorithms-6a8162721b": {
+    "title": "前驱结点指针",
+    "photo": "IMG_8067",
+    "text": "在单链表的基础上，除头结点外，每个结点多了一个存放前驱结点内存地址的指针。"
+  },
+  "algorithms-5bc23440aa": {
+    "title": "尾结点指向头结点",
+    "photo": "IMG_8067",
+    "text": "尾结点指针指向头结点。"
+  },
+  "algorithms-5a5430a64c": {
+    "title": "数组与后继指针",
+    "photo": "IMG_8067",
+    "text": "借助数组，伴随指向后继结点的指针。"
+  },
+  "algorithms-fed10387e6": {
+    "title": "顺序或链式实现",
+    "photo": "IMG_8067",
+    "text": "顺序和链式都可以实现，先进后出。"
+  },
+  "algorithms-6f9917993f": {
+    "title": "普通队列",
+    "photo": "IMG_8067",
+    "text": "顺序和链式都可以实现，先进先出。"
+  },
+  "algorithms-33542aa668": {
+    "title": "双边队列",
+    "photo": "IMG_8067",
+    "text": "入口和出口都可以进队和出队。"
+  },
+  "algorithms-aa141449e0": {
+    "title": "优先级队列",
+    "photo": "IMG_8067",
+    "text": "根据优先级来出队。"
+  },
+  "math-e84f5c7f72": {
+    "title": "广度优先了解概念",
+    "photo": "IMG_8068",
+    "text": "正确学习数学的方法是广度优先，而非深度优先。你要了解的是整个数学领域每个概念的名字，并且知道它们要解决什么问题。"
+  },
+  "math-04e7516383": {
+    "title": "了解概念的用途与局限",
+    "photo": "IMG_8068",
+    "text": "把数学当成文科来学，你可以先不去重点看那些算法和证明，只需要了解数学概念的名字、作用、大致步骤、发明人、发明时间、局限等。"
+  },
+  "math-eea91c2605": {
+    "title": "将复杂操作暂作整体理解",
+    "photo": "IMG_8068",
+    "text": "数学符号是关闭你通往另一个世界的符咒，如果你看到一堆自己可能不懂的数学符号时，就把它实现的功能简单地当成一个原子操作，不要深究太多。"
+  },
+  "math-2b027622d8": {
+    "title": "从工作相关领域开始",
+    "photo": "IMG_8068",
+    "text": "从工作相关的领域开始了解数学，这样你更容易获得正反馈。"
+  },
+  "math-8872671f4f": {
+    "title": "用程序实现数学问题的解法",
+    "photo": "IMG_8068",
+    "text": "把正在学习的数学问题的解法，写一个算法程序实现出来，这是一个不错的练习方法。"
+  },
+  "math-9501a65068": {
+    "title": "结合在线课程系统学习",
+    "photo": "IMG_8068",
+    "text": "你可以选择追一门数学相关的在线课程，跟着老师的节奏来系统理解数学。"
+  },
+  "os-474726ee4a": {
+    "title": "虚拟文件系统",
+    "photo": "IMG_8070",
+    "text": "抽象为文件系统操作，对用户提供文件操作。"
+  },
+  "os-02108ece35": {
+    "title": "设备驱动程序",
+    "photo": "IMG_8070",
+    "text": "屏蔽设备控制器，对操作系统提供统一接口。"
+  },
+  "os-3c9551f4f8": {
+    "title": "中断处理器",
+    "photo": "IMG_8070",
+    "text": "硬件事件统一处理。"
+  },
+  "os-c50e554bff": {
+    "title": "设备控制器",
+    "photo": "IMG_8070",
+    "text": "屏蔽不同硬件的差别。"
+  },
+  "os-ec65fa125e": {
+    "title": "硬件",
+    "photo": "IMG_8070",
+    "text": "各种各样的硬件设备。"
+  },
+  "os-c40c68c155": {
+    "title": "每个连接 fork 一个子进程",
+    "photo": "IMG_8072",
+    "text": "主进程 accept，为每个连接 fork 一个子进程。"
+  },
+  "os-26829ca3ed": {
+    "title": "每个连接创建一个线程",
+    "photo": "IMG_8072",
+    "text": "主线程 accept，为每个连接创建一个线程。"
+  },
+  "os-512f858ff1": {
+    "title": "业务逻辑分离到 Worker 线程池",
+    "photo": "IMG_8072",
+    "text": "单线程处理 accept 和连接 I/O，分离业务逻辑到 Worker 线程池。"
+  },
+  "os-eb554dd489": {
+    "title": "main-sub reactor",
+    "photo": "IMG_8072",
+    "text": "主线程 accept，sub 线程池处理连接 I/O。"
+  },
+  "architecture-c13b684c9d": {
+    "title": "PC 寄存器",
+    "photo": "IMG_8075",
+    "text": "下一条指令的内存地址，例如：3F。"
+  },
+  "architecture-1efb4c1259": {
+    "title": "指令寄存器",
+    "photo": "IMG_8075",
+    "text": "当前正在执行的指令码，例如：83 7d fc 00。"
+  },
+  "architecture-9b11cd6898": {
+    "title": "条件码寄存器",
+    "photo": "IMG_8075",
+    "text": "存放条件和逻辑运算的结果，CF、ZF、SF、OF 等条件码。"
+  },
+  "architecture-1cece7c8d9": {
+    "title": "栈的地址方向",
+    "photo": "IMG_8075",
+    "text": "栈自底向顶内存地址逐渐变小。"
+  },
+  "architecture-46ff66b505": {
+    "title": "add",
+    "photo": "IMG_8074",
+    "text": "add $s1, $s2, $s3；$s1 = $s2 + $s3。"
+  },
+  "architecture-e83146b5a2": {
+    "title": "or",
+    "photo": "IMG_8074",
+    "text": "or $s1, $s2, $s3；$s1 = $s2 | $s3。"
+  },
+  "architecture-167f3feffd": {
+    "title": "load word",
+    "photo": "IMG_8074",
+    "text": "load $s1, 10($s2)；$s1 = memory[$s2 + 10]。",
+    "note": "原图中的 load 为示意写法，按照片保留以便对照。"
+  },
+  "architecture-20c5d009e4": {
+    "title": "branch on equal",
+    "photo": "IMG_8074",
+    "text": "beq $s1, $s2, 10；if ($s1 == $s2) go to PC+4+10。",
+    "note": "原图以 PC+4+10 示意分支目标，具体偏移须依指令编码解释。"
+  },
+  "architecture-84c98548d2": {
+    "title": "jump",
+    "photo": "IMG_8074",
+    "text": "j 1000；go to 1000。"
+  },
+  "networks-0b228c7cef": {
+    "title": "SPDY",
+    "photo": "IMG_8077",
+    "text": "功成身退。"
+  },
+  "networks-245099caca": {
+    "title": "Nginx",
+    "photo": "IMG_8077",
+    "text": "高性能。"
+  },
+  "networks-59ff607bcd": {
+    "title": "Apache",
+    "photo": "IMG_8077",
+    "text": "老牌。"
+  },
+  "networks-738bfa7b74": {
+    "title": "Microsoft-IIS",
+    "photo": "IMG_8077",
+    "text": "仅用于 Windows。"
+  },
+  "networks-0a9eafd0fc": {
+    "title": "Tomcat",
+    "photo": "IMG_8077",
+    "text": "Java；Servlet 容器。"
+  },
+  "algorithms-f30a1ca182": {
+    "title": "插入和删除",
+    "photo": "IMG_8067",
+    "text": "插入和删除只需要移动指针，时间复杂度为 O(1)。"
+  },
+  "algorithms-0171e5c233": {
+    "title": "顺序和链式实现",
+    "photo": "IMG_8067",
+    "text": "顺序和链式都可以实现。"
+  },
+  "math-aa2ec04e0e": {
+    "title": "Steve Yegge",
+    "photo": "IMG_8068",
+    "text": "资深程序员"
+  },
+  "math-2372e9deae": {
+    "title": "徐文浩",
+    "photo": "IMG_8068",
+    "text": "bothub.ai 创始人"
+  },
+  "os-064c686b05": {
+    "title": "操作系统工作流程",
+    "photo": "IMG_8069",
+    "text": "如何把一家软件公司做上市（Linux 操作系统的工作流程）。"
+  },
+  "os-fa130d4e5c": {
+    "title": "应用程序",
+    "photo": "IMG_8069",
+    "text": "应用 A、应用 B、应用 C 位于内核上方，与系统调用子系统相连。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-bfde8b8298": {
+    "title": "程序到进程",
+    "photo": "IMG_8069",
+    "text": "程序图从上到下为 ELF Header、Segment Header Table、.text、.rodata、.data、.bss、.symtab、.strtab、Section Header Table；右侧进程图列出进程列表中的任务信息。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-e0704138a4": {
+    "title": "代码段",
+    "photo": "IMG_8069",
+    "text": ".text、.rodata。"
+  },
+  "os-7130d9b0c2": {
+    "title": "数据段",
+    "photo": "IMG_8069",
+    "text": ".data、.bss。"
+  },
+  "os-5215b80ac2": {
+    "title": "不加载到内存",
+    "photo": "IMG_8069",
+    "text": ".symtab、.strtab、Section Header Table。"
+  },
+  "os-f324ea818c": {
+    "title": "进程列表",
+    "photo": "IMG_8069",
+    "text": "任务 ID、亲缘关系、任务状态、权限、运行统计、调度相关、信号处理、内存管理、文件与文件系统、内核栈。"
+  },
+  "os-a75591a92b": {
+    "title": "进程地址空间",
+    "photo": "IMG_8069",
+    "text": "图中自上而下：Stack 栈、mmap 内存映射区、堆、BSS 区域、Data 区域、Text 区域；上方另标内核态与用户态分界。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-9c67a6e7d0": {
+    "title": "Stack 栈",
+    "photo": "IMG_8069",
+    "text": "图中栈内的箭头向下。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-c95af6fd40": {
+    "title": "mmap 内存映射区",
+    "photo": "IMG_8069",
+    "text": "图中位于栈与堆之间，区域内的箭头向下。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-619f578f34": {
+    "title": "堆",
+    "photo": "IMG_8069",
+    "text": "图中堆内的箭头向上。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-7a6cf7f513": {
+    "title": "BSS 区域",
+    "photo": "IMG_8069",
+    "text": "图中位于堆下方、Data 区域上方。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-3557730084": {
+    "title": "Data 区域",
+    "photo": "IMG_8069",
+    "text": "图中位于 BSS 区域与 Text 区域之间。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-9256033fca": {
+    "title": "Text 区域",
+    "photo": "IMG_8069",
+    "text": "图中位于 Data 区域下方。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-46b2a3b29c": {
+    "title": "虚拟内存与物理内存",
+    "photo": "IMG_8069",
+    "text": "虚拟内存中的页面经中间页表项映射到物理内存；右侧另画出换出、换入和文件映射的箭头。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-b28a4e7627": {
+    "title": "虚拟内存",
+    "photo": "IMG_8069",
+    "text": "图中页面从底部的页 0 到顶部的页 N，通过页表项与物理页连接。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-15a17d985b": {
+    "title": "物理内存",
+    "photo": "IMG_8069",
+    "text": "图中页面从底部的页 0 到顶部的页 N，右侧连接换入、换出与文件映射。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-db3491c198": {
+    "title": "页",
+    "photo": "IMG_8069",
+    "text": "页 0、页 N。"
+  },
+  "os-56c06ccfeb": {
+    "title": "页表项",
+    "photo": "IMG_8069",
+    "text": "页表项 0、页表项 N。"
+  },
+  "os-8a8dcd44f4": {
+    "title": "内存映射",
+    "photo": "IMG_8069",
+    "text": "虚拟内存 → 页表项 → 物理内存。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-171f6dfe1c": {
+    "title": "换出",
+    "photo": "IMG_8069",
+    "text": "图中箭头从物理内存指向右侧圆柱形存储。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-5d3f45899e": {
+    "title": "换入",
+    "photo": "IMG_8069",
+    "text": "图中箭头从右侧圆柱形存储指向物理内存。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-578d50bbc0": {
+    "title": "文件映射",
+    "photo": "IMG_8069",
+    "text": "图中右侧存储与物理内存页面间另有标为“文件映射”的连线。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-fd706d7a38": {
+    "title": "文件系统",
+    "photo": "IMG_8070",
+    "text": "进程 A、进程 B 经系统调用访问打开的文件；下方依次画出文件子系统、虚拟文件系统 VFS、文件系统类型、Page Cache 与块设备访问层。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-003f9f7175": {
+    "title": "用户态与内核态",
+    "photo": "IMG_8070",
+    "text": "进程 A、进程 B 位于用户态，系统调用及以下部分位于内核态。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-718fc5b504": {
+    "title": "进程打开的文件",
+    "photo": "IMG_8070",
+    "text": "图中进程 A 和进程 B 分别有 fd、缓存及打开的文件描述符。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-b95b28daf7": {
+    "title": "进程 A",
+    "photo": "IMG_8070",
+    "text": "进程 A：fd、缓存；进程 A 打开的文件：文件描述符。"
+  },
+  "os-26a8120d7d": {
+    "title": "进程 B",
+    "photo": "IMG_8070",
+    "text": "进程 B：fd、缓存；进程 B 打开的文件：文件描述符。"
+  },
+  "os-61dfc73c9d": {
+    "title": "系统调用",
+    "photo": "IMG_8070",
+    "text": "sys_open、sys_read、sys_write。"
+  },
+  "os-4b3e9b585b": {
+    "title": "文件子系统",
+    "photo": "IMG_8070",
+    "text": "打开的文件 struct file → file operation。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-51f8926ebe": {
+    "title": "struct file",
+    "photo": "IMG_8070",
+    "text": "打开的文件：struct file。"
+  },
+  "os-caec1cef9a": {
+    "title": "file operation",
+    "photo": "IMG_8070",
+    "text": "图中“打开的文件 struct file”指向 file operation。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-65c14ae08a": {
+    "title": "struct dentry",
+    "photo": "IMG_8070",
+    "text": "文件夹：struct dentry → dir operation。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-24384233ed": {
+    "title": "struct inode",
+    "photo": "IMG_8070",
+    "text": "文件：struct inode → inode operation。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-e7983436da": {
+    "title": "文件系统类型",
+    "photo": "IMG_8070",
+    "text": "ext4、ext3、ntfs。"
+  },
+  "os-f9f522de10": {
+    "title": "块设备访问路径",
+    "photo": "IMG_8070",
+    "text": "虚拟文件系统 → Page Cache → 通用块设备层（BIO）→ 块设备 I/O 调度层 → 块设备驱动程序 → 硬盘设备。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-c181173c3a": {
+    "title": "struct address_space",
+    "photo": "IMG_8070",
+    "text": "右侧虚拟文件系统图中，struct file 下有 struct inode 与 struct address_space，后者连接多个 Page Cache。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-41eb8fc805": {
+    "title": "Page Cache",
+    "photo": "IMG_8070",
+    "text": "缓存；右侧图中画出多个 Page Cache，并向下连接 BIO。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-5166d79da7": {
+    "title": "通用块设备层",
+    "photo": "IMG_8070",
+    "text": "图中包含多个 BIO。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-cd39d7afa3": {
+    "title": "块设备 I/O 调度层",
+    "photo": "IMG_8070",
+    "text": "调度算法、I/O 请求队列。"
+  },
+  "os-153d55c461": {
+    "title": "I/O 请求队列",
+    "photo": "IMG_8070",
+    "text": "原图画出连续排队的请求方块。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-53e16781e8": {
+    "title": "ext4 文件系统",
+    "photo": "IMG_8070",
+    "text": "文件 inode → 多个 Block → 每个 Block 对应的 sector。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-6b25ea7044": {
+    "title": "inode",
+    "photo": "IMG_8070",
+    "text": "图中一个文件 inode 连到多个 Block。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-0ee100210d": {
+    "title": "Block",
+    "photo": "IMG_8070",
+    "text": "图中每个 Block 连到多个 sector。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-386a7d0298": {
+    "title": "输入输出系统",
+    "photo": "IMG_8070",
+    "text": "图中从上到下：用户进程、文件系统接口、虚拟文件系统、操作系统、块设备、设备驱动程序、中断处理器、设备控制器、硬件。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-60c8d1c0d4": {
+    "title": "用户进程",
+    "photo": "IMG_8070",
+    "text": "open、read、write、ioctl。"
+  },
+  "os-68053aaf3f": {
+    "title": "文件系统接口",
+    "photo": "IMG_8070",
+    "text": "图中位于用户进程与虚拟文件系统之间。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-b61fa56dbc": {
+    "title": "块设备",
+    "photo": "IMG_8070",
+    "text": "图中位于虚拟文件系统下方、设备驱动程序上方。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-f9054458bc": {
+    "title": "网络通信",
+    "photo": "IMG_8070",
+    "text": "Linux 服务器 A → 交换机 → Linux 服务器作路由器 → 交换机 → Linux 服务器 B；图中通过 eth0、eth1 连接。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-6ec4cd3c9b": {
+    "title": "Linux 服务器 A",
+    "photo": "IMG_8070",
+    "text": "Firefox、Chrome → socket → 内核中的报文各层 → eth0。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-b6f5b0736b": {
+    "title": "Linux 服务器 B",
+    "photo": "IMG_8070",
+    "text": "eth0 → 内核中的报文各层 → socket → nginx、tomcat。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-f77c5e5836": {
+    "title": "用户态与内核态",
+    "photo": "IMG_8070",
+    "text": "Firefox、Chrome、nginx、tomcat 位于用户态；socket 下方的 TCP、IP、MAC 报文层位于内核态。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-59e4a73943": {
+    "title": "Socket",
+    "photo": "IMG_8070",
+    "text": "图中服务器 A 和服务器 B 的应用程序均经 socket 与内核中的网络报文层相连。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-989cd5df09": {
+    "title": "报文封装与解封装",
+    "photo": "IMG_8070",
+    "text": "HTTP header + HTTP body → TCP header + HTTP header + HTTP body → IP header + TCP header + HTTP header + HTTP body → MAC header + IP header + TCP header + HTTP header + HTTP body。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-7470d187ed": {
+    "title": "HTTP 应用数据",
+    "photo": "IMG_8070",
+    "text": "HTTP header + HTTP body。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-10f642fd7a": {
+    "title": "TCP 报文",
+    "photo": "IMG_8070",
+    "text": "TCP header + HTTP header + HTTP body。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-14faf5bfed": {
+    "title": "IP 报文",
+    "photo": "IMG_8070",
+    "text": "IP header + TCP header + HTTP header + HTTP body。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-ba6b6e0fa0": {
+    "title": "MAC 帧",
+    "photo": "IMG_8070",
+    "text": "MAC header + IP header + TCP header + HTTP header + HTTP body。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-8ba4e65d18": {
+    "title": "发送与接收方向",
+    "photo": "IMG_8070",
+    "text": "服务器 A 图中的箭头由应用向下至 eth0；服务器 B 图中的箭头由 eth0 向上至应用。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-bb9eaf2f60": {
+    "title": "交换机",
+    "photo": "IMG_8070",
+    "text": "图中有两处交换机，各标 eth0、eth1，并画出包含 MAC header、IP header、TCP header、HTTP header 和 HTTP body 的报文。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-00163515dc": {
+    "title": "Linux 服务器作路由器",
+    "photo": "IMG_8070",
+    "text": "图中标出用户态、内核态；路由表与 IP header 相连，接口为 eth0 与 eth1。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-c5c92f15a5": {
+    "title": "路由表",
+    "photo": "IMG_8070",
+    "text": "图中从 IP header 指向路由表，再接续到发送方向的报文。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-f69c9e711a": {
+    "title": "读取",
+    "photo": "IMG_8071",
+    "text": "检测异常输入、流式处理、缓冲区溢出处理。"
+  },
+  "os-85e3a4b77e": {
+    "title": "写入",
+    "photo": "IMG_8071",
+    "text": "RST 捕获和 SIGPIPE。"
+  },
+  "os-7123dc8d6d": {
+    "title": "有序关闭",
+    "photo": "IMG_8071",
+    "text": "半关闭连接、shutdown。"
+  },
+  "os-fed091bbc9": {
+    "title": "I/O 模型",
+    "photo": "IMG_8071",
+    "text": "阻塞式 I/O、非阻塞式 I/O、I/O 多路复用、信号驱动式 I/O、异步 I/O。"
+  },
+  "os-6cd64ea572": {
+    "title": "I/O 多路复用",
+    "photo": "IMG_8071",
+    "text": "select、poll、Linux → epoll、BSD → kqueue。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-d40c4a26c1": {
+    "title": "服务器端",
+    "photo": "IMG_8072",
+    "text": "socket create → bind → listen → accept → read/write → close/shutdown。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-89b2c52b15": {
+    "title": "客户端",
+    "photo": "IMG_8072",
+    "text": "socket create → connect → read/write → close/shutdown。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "os-4b69261ff9": {
+    "title": "单线程处理 accept 和连接 I/O",
+    "photo": "IMG_8072",
+    "text": "单线程处理所有 accept 和连接 I/O。"
+  },
+  "os-c255c0711d": {
+    "title": "操作系统",
+    "photo": "IMG_8070",
+    "text": "图中“操作系统”标注位于虚拟文件系统与块设备之间。",
+    "note": "按原图的分组、排列或箭头整理为文字；用于说明图示关系。"
+  },
+  "architecture-0ba3cde5b1": {
+    "title": "IO_WAIT",
+    "photo": "IMG_8073",
+    "text": "CPU 和内存的通信。"
+  }
+}
