@@ -57,3 +57,5 @@
 
 /* Protocol photo diagrams: keep original ring and dashed teaching cards. */
 .kd-http-sector{fill:#376f8d;stroke:var(--surface,#fff);stroke-width:6}.kd-tcp-dashed{fill:none;stroke:#d6e6ec;stroke-width:1;stroke-dasharray:5 4}.kd-tcp-card{stroke-dasharray:7 5}
+
+.source-transcription p{white-space:pre-wrap}.source-crop>img{display:block;width:100%;height:auto}.photo-status{padding:8px 20px;background:#f4f8f3;color:var(--muted);font-size:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}.photo-status .button{min-height:30px;padding:4px 10px}.photo-dialog{display:flex;flex-direction:column}.photo-dialog:not([open]){display:none}.photo-viewport{flex:1;min-height:0}

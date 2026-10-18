@@ -4,23 +4,23 @@
   "topics": [
     "什么是网络协议？",
     "网络为什么分层？",
-    "IP 地址与 MAC 地址",
+    "IP地址与MAC地址",
     "网关",
     "路由协议",
     "UDP",
-    "Socket 编程",
+    "Socket编程",
     "流媒体协议",
-    "DNS 与 HTTPDNS",
+    "DNS与HTTPDNS",
     "HTTPS",
     "CDN",
     "P2P",
     "HTTP",
     "TCP",
-    "DHCP 协议",
+    "DHCP协议",
     "ICMP",
     "VLAN",
-    "MAC 层",
-    "STP 协议",
+    "MAC层",
+    "STP协议",
     "PXE"
   ],
   "items": [
@@ -89,7 +89,7 @@
     },
     {
       "id": "network-deep-dive-244e289490",
-      "title": "IP 地址与 MAC 地址",
+      "title": "IP地址与MAC地址",
       "photo": "IMG_8082",
       "depth": 0,
       "hasDescription": false
@@ -166,7 +166,7 @@
     },
     {
       "id": "network-deep-dive-16eba75a26",
-      "title": "玄奘西行与 NAT",
+      "title": "玄奘西行",
       "photo": "IMG_8084",
       "depth": 1,
       "hasDescription": true
@@ -180,14 +180,14 @@
     },
     {
       "id": "network-deep-dive-f85cb1ec0a",
-      "title": "OSPF：国家内部找路",
+      "title": "基于链路状态路由算法的OSPF",
       "photo": "IMG_8084",
       "depth": 1,
       "hasDescription": true
     },
     {
       "id": "network-deep-dive-c4f2dae8ee",
-      "title": "BGP：国家之间选路",
+      "title": "基于距离矢量路由算法的BGP",
       "photo": "IMG_8084",
       "depth": 1,
       "hasDescription": true
@@ -236,7 +236,7 @@
     },
     {
       "id": "network-deep-dive-d2c7815195",
-      "title": "资源少、内网或对丢包不敏感",
+      "title": "需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用",
       "photo": "IMG_8085",
       "depth": 2,
       "hasDescription": true
@@ -250,7 +250,7 @@
     },
     {
       "id": "network-deep-dive-18ea2659af",
-      "title": "不需一对一连接、可以广播",
+      "title": "不需要一对一沟通，建立连接，而是可以广播的应用",
       "photo": "IMG_8085",
       "depth": 2,
       "hasDescription": true
@@ -264,7 +264,7 @@
     },
     {
       "id": "network-deep-dive-43d163f3fa",
-      "title": "速度快、时延低、容忍少量丢包",
+      "title": "需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候",
       "photo": "IMG_8085",
       "depth": 2,
       "hasDescription": true
@@ -278,14 +278,14 @@
     },
     {
       "id": "network-deep-dive-5824b787a5",
-      "title": "Socket 编程",
+      "title": "Socket编程",
       "photo": "IMG_8086",
       "depth": 0,
       "hasDescription": false
     },
     {
       "id": "network-deep-dive-e3a7f632e4",
-      "title": "0：单人循环服务",
+      "title": "方式0：在建立连接后，进行一个while循环，客户端发了收，服务端收了发",
       "photo": "IMG_8086",
       "depth": 1,
       "hasDescription": true
@@ -299,7 +299,7 @@
     },
     {
       "id": "network-deep-dive-8532847602",
-      "title": "1：多进程",
+      "title": "方式1：将项目外包给其他公司（多进程）",
       "photo": "IMG_8086",
       "depth": 1,
       "hasDescription": true
@@ -313,7 +313,7 @@
     },
     {
       "id": "network-deep-dive-c387550e17",
-      "title": "2：多线程",
+      "title": "方式2：将项目转给独立的项目组（多线程）",
       "photo": "IMG_8086",
       "depth": 1,
       "hasDescription": true
@@ -327,7 +327,7 @@
     },
     {
       "id": "network-deep-dive-c1816809aa",
-      "title": "3：IO 多路复用与轮询",
+      "title": "方式3：一个项目组支撑多个项目（IO多路复用，一个线程多个Socket）",
       "photo": "IMG_8086",
       "depth": 1,
       "hasDescription": true
@@ -341,7 +341,7 @@
     },
     {
       "id": "network-deep-dive-1caacd506c",
-      "title": "4：IO 多路复用与事件通知",
+      "title": "方式4：一个项目组支撑多个项目（IO多路复用，从派人盯着到有事通知）",
       "photo": "IMG_8086",
       "depth": 1,
       "hasDescription": true
@@ -362,7 +362,7 @@
     },
     {
       "id": "network-deep-dive-48a1972741",
-      "title": "编码",
+      "title": "编码：如何将丰富多彩的图片变成二进制流？",
       "photo": "IMG_8087",
       "depth": 1,
       "hasDescription": true
@@ -411,7 +411,7 @@
     },
     {
       "id": "network-deep-dive-bebd9bdf13",
-      "title": "推流",
+      "title": "推流：如何把数据流打包传输到对端？",
       "photo": "IMG_8087",
       "depth": 1,
       "hasDescription": true
@@ -435,7 +435,7 @@
       "title": "分发与流处理",
       "photo": "IMG_8087",
       "depth": 1,
-      "hasDescription": false
+      "hasDescription": true
     },
     {
       "id": "network-deep-dive-5eb89e1096",
@@ -453,7 +453,7 @@
     },
     {
       "id": "network-deep-dive-a7fc22fb2b",
-      "title": "拉流",
+      "title": "拉流：观众的客户端如何看到视频？",
       "photo": "IMG_8087",
       "depth": 1,
       "hasDescription": true
@@ -474,7 +474,7 @@
     },
     {
       "id": "network-deep-dive-391dc1675b",
-      "title": "DNS 与 HTTPDNS",
+      "title": "DNS与HTTPDNS",
       "photo": "IMG_8088",
       "depth": 0,
       "hasDescription": false
@@ -537,7 +537,7 @@
     },
     {
       "id": "network-deep-dive-ab4d963545",
-      "title": "传统 DNS 的问题",
+      "title": "传统DNS问题",
       "photo": "IMG_8088",
       "depth": 1,
       "hasDescription": false
@@ -610,7 +610,7 @@
       "title": "数字证书",
       "photo": "IMG_8088",
       "depth": 1,
-      "hasDescription": false
+      "hasDescription": true
     },
     {
       "id": "network-deep-dive-3285c6d47a",
@@ -649,7 +649,7 @@
     },
     {
       "id": "network-deep-dive-e65a982e91",
-      "title": "静态资源：就近配送",
+      "title": "静态资源模仿物流“就近配送”",
       "photo": "IMG_8089",
       "depth": 1,
       "hasDescription": true
@@ -694,7 +694,7 @@
       "title": "BitTorrent 的两个角色",
       "photo": "IMG_8089",
       "depth": 1,
-      "hasDescription": false
+      "hasDescription": true
     },
     {
       "id": "network-deep-dive-bb6d2b9677",
@@ -894,7 +894,7 @@
     },
     {
       "id": "network-deep-dive-d569eb7bad",
-      "title": "滑动窗口的四部分",
+      "title": "四部分",
       "photo": "IMG_8091",
       "depth": 2,
       "hasDescription": false
@@ -936,7 +936,7 @@
     },
     {
       "id": "network-deep-dive-311a57de1d",
-      "title": "做完一条划掉一条，新来一条在最后添加一条",
+      "title": "做完一条划掉一条，新来一条，在最后添加一条",
       "photo": "IMG_8091",
       "depth": 3,
       "hasDescription": false
@@ -999,7 +999,7 @@
     },
     {
       "id": "network-deep-dive-5d468fcd66",
-      "title": "DHCP 协议",
+      "title": "DHCP协议",
       "photo": "IMG_8092",
       "depth": 0,
       "hasDescription": true
@@ -1104,7 +1104,7 @@
     },
     {
       "id": "network-deep-dive-a23c68493d",
-      "title": "MAC 层",
+      "title": "MAC层",
       "photo": "IMG_8093",
       "depth": 0,
       "hasDescription": true
@@ -1132,7 +1132,7 @@
     },
     {
       "id": "network-deep-dive-65fc713a59",
-      "title": "STP 协议",
+      "title": "STP协议",
       "photo": "IMG_8093",
       "depth": 0,
       "hasDescription": false
@@ -1156,7 +1156,7 @@
       "title": "比武规则",
       "photo": "IMG_8093",
       "depth": 1,
-      "hasDescription": false
+      "hasDescription": true
     },
     {
       "id": "network-deep-dive-0cc135fcde",
@@ -1201,5 +1201,537 @@
       "hasDescription": true
     }
   ],
-  "transcriptionPolicy": "逐图核对后整理层级、正文与类比；统一中英文空格与标点，较长段落按语义拆为子节点。原图说明和整理说明分开保存；没有补写照片中未提供的课程正文。"
+  "transcriptionPolicy": "原图说明逐段照录，仅合并排版换行；保留原图用词、句式和数值，不改写、不缩写。结构性分组标题与整理说明不冒充原文。",
+  "verbatimPassages": [
+    {
+      "id": "network-deep-dive-9171948ca4",
+      "photo": "IMG_8082",
+      "text": "《圣经》中有一个通天塔的故事，大致是说，上帝为了阻止人类联合起来，就让人类说不同的语言。人类没法儿沟通，达不成“协议”，通天塔的计划就失败了。所以，要想打造互联网世界的通天塔，就需要让一大片机器互相协作、共同完成一件事。"
+    },
+    {
+      "id": "network-deep-dive-74c0cf5abb",
+      "photo": "IMG_8082",
+      "text": "《圣经》中有一个通天塔的故事，大致是说，上帝为了阻止人类联合起来，就让人类说不同的语言。人类没法儿沟通，达不成“协议”，通天塔的计划就失败了。所以，要想打造互联网世界的通天塔，就需要让一大片机器互相协作、共同完成一件事。"
+    },
+    {
+      "id": "network-deep-dive-0f22193b10",
+      "photo": "IMG_8082",
+      "text": "复杂的程序都要分层，不能表达层层封装的比喻都是不恰当的。"
+    },
+    {
+      "id": "network-deep-dive-90c5fa76ce",
+      "photo": "IMG_8082",
+      "text": "不理解？如果你把代码都写在一起，但是产品经理却突然改了需求，你需要将TCP换成UDP的时候，你就明白了。"
+    },
+    {
+      "id": "network-deep-dive-eb0dda7606",
+      "photo": "IMG_8082",
+      "text": "只要网络上跑的包，都是完整的，可以有下层没上层，不能有上层没下层。"
+    },
+    {
+      "id": "network-deep-dive-79c3d3268d",
+      "photo": "IMG_8082",
+      "text": "把自己想象成一个处理网络包的程序，你的脑袋就是处理逻辑，你的手就是网口。"
+    },
+    {
+      "id": "network-deep-dive-297da427bd",
+      "photo": "IMG_8082",
+      "text": "啥叫二层设备？有人递给你左手一个包，取下一层头来看，用脑袋想想，是自己吃了，还是扔了，还是右手递给其他人。"
+    },
+    {
+      "id": "network-deep-dive-a288b0ad61",
+      "photo": "IMG_8082",
+      "text": "啥叫三层设备？有人递给你左手一个包，取下二层和三层头来看，用脑袋想想，是自己吃了，还是扔了，还是右手递给其他人。"
+    },
+    {
+      "id": "network-deep-dive-9e53df3a49",
+      "photo": "IMG_8082",
+      "text": "IP地址是网络世界的通信地址，相当于现实世界的门牌号码，有定位功能。"
+    },
+    {
+      "id": "network-deep-dive-ebeae8c266",
+      "photo": "IMG_8082",
+      "text": "MAC地址是网络世界的身份证，没有定位功能。"
+    },
+    {
+      "id": "network-deep-dive-cee2a743cd",
+      "photo": "IMG_8084",
+      "text": "网关往往是一台路由器，它有5个网口或者网卡，相当于有5只手，分别连着5个局域网。每只手的IP地址都和局域网的IP地址相同的网段，每只手都是它握住的那个局域网的网关。"
+    },
+    {
+      "id": "network-deep-dive-efe5947279",
+      "photo": "IMG_8084",
+      "text": "在路由器上，配置一条一条规则。想访问BBS站，从2号口出去，下一跳是IP2；想访问教学视频站，从3号口出去，下一跳是IP3。"
+    },
+    {
+      "id": "network-deep-dive-0eac94d732",
+      "photo": "IMG_8084",
+      "text": "想访问BBS站，从2号口出去，下一跳是IP2；想访问教学视频站，从3号口出去，下一跳是IP3。"
+    },
+    {
+      "id": "network-deep-dive-90d45e90ea",
+      "photo": "IMG_8084",
+      "text": "可以配置多个路由表，可以根据源IP地址、入口设备、TOS等选择路由表，然后在路由表中查找路由。这样可以使得来自不同来源的包走不同的路由。"
+    },
+    {
+      "id": "network-deep-dive-5e0f519678",
+      "photo": "IMG_8084",
+      "text": "MAC变IP不变\n这就像在欧洲各国之间旅游，一个签证就能搞定。"
+    },
+    {
+      "id": "network-deep-dive-16eba75a26",
+      "photo": "IMG_8084",
+      "text": "MAC变IP也变NAT\n就像出国，不能用咱们自己的身份证，而要改用护照一样，玄奘西游也要拿着专门取经的通关文牒，而不能用自己国家的身份证。"
+    },
+    {
+      "id": "network-deep-dive-28cc540061",
+      "photo": "IMG_8084",
+      "text": "唐僧西天取经，需要解决两大问题：一个是在每个国家如何找到正确的路，去换通关文牒、吃饭、休息；一个如何是在国家之间，野外行走的时候，如何找到正确的路、水源的问题。"
+    },
+    {
+      "id": "network-deep-dive-f85cb1ec0a",
+      "photo": "IMG_8084",
+      "text": "在一个国家内部，找到最短路径是最重要，走得越少越好。"
+    },
+    {
+      "id": "network-deep-dive-c4f2dae8ee",
+      "photo": "IMG_8084",
+      "text": "国家之间，不光远近的问题，还有政策的问题。例如，唐僧去西天取经，路过女儿国，那最好绕远点走。"
+    },
+    {
+      "id": "network-deep-dive-860fb58c03",
+      "photo": "IMG_8085",
+      "text": "沟通简单，不需要一肚子花花肠子（大量的数据结构、处理逻辑、包头字段）。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。"
+    },
+    {
+      "id": "network-deep-dive-6c5d16c065",
+      "photo": "IMG_8085",
+      "text": "轻信他人。它不会建立连接，虽然有端口号，但是监听在这个地方，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。"
+    },
+    {
+      "id": "network-deep-dive-1fc140b9b0",
+      "photo": "IMG_8085",
+      "text": "愣头青，做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。"
+    },
+    {
+      "id": "network-deep-dive-d2c7815195",
+      "photo": "IMG_8085",
+      "text": "需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用"
+    },
+    {
+      "id": "network-deep-dive-f3eca57cfa",
+      "photo": "IMG_8085",
+      "text": "你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。"
+    },
+    {
+      "id": "network-deep-dive-18ea2659af",
+      "photo": "IMG_8085",
+      "text": "不需要一对一沟通，建立连接，而是可以广播的应用"
+    },
+    {
+      "id": "network-deep-dive-2972189adc",
+      "photo": "IMG_8085",
+      "text": "咱们小时候人都很简单，大家在班级里面谁得几个小红花都是当着全班的面讲的。长大了人心复杂了，薪水、奖金要背靠背，和员工一对一沟通。"
+    },
+    {
+      "id": "network-deep-dive-43d163f3fa",
+      "photo": "IMG_8085",
+      "text": "需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候"
+    },
+    {
+      "id": "network-deep-dive-ee0995de51",
+      "photo": "IMG_8085",
+      "text": "曾国藩建立湘军的时候，专门招出生牛犊不怕虎的新兵，而不用那些“老油条”的八旗兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。"
+    },
+    {
+      "id": "network-deep-dive-e3a7f632e4",
+      "photo": "IMG_8086",
+      "text": "方式0：在建立连接后，进行一个while循环，客户端发了收，服务端收了发"
+    },
+    {
+      "id": "network-deep-dive-20ad9d8db0",
+      "photo": "IMG_8086",
+      "text": "这就相当于老板成立一个公司，只有自己一个人，自己亲自上来服务客户，只能干完了一家再干下一家，赚不来多少钱。"
+    },
+    {
+      "id": "network-deep-dive-8532847602",
+      "photo": "IMG_8086",
+      "text": "方式1：将项目外包给其他公司（多进程）"
+    },
+    {
+      "id": "network-deep-dive-f4189542cf",
+      "photo": "IMG_8086",
+      "text": "就像来了一个新的项目，但是项目不一定是你自己做，可以再注册一家子公司，招一点人，然后项目转包给这家子公司做，以后对接就交给这家子公司了，你又可以去接新的项目了。"
+    },
+    {
+      "id": "network-deep-dive-c387550e17",
+      "photo": "IMG_8086",
+      "text": "方式2：将项目转给独立的项目组（多线程）"
+    },
+    {
+      "id": "network-deep-dive-04006e815d",
+      "photo": "IMG_8086",
+      "text": "如果创建进程相当于成立新公司，购买新办公家具，而创建线程，就相当于在同一个公司成立项目组。一个项目做完了，那这个项目组就可以解散，组成另外的项目组，办公家具可以共用。"
+    },
+    {
+      "id": "network-deep-dive-c1816809aa",
+      "photo": "IMG_8086",
+      "text": "方式3：一个项目组支撑多个项目（IO多路复用，一个线程多个Socket）"
+    },
+    {
+      "id": "network-deep-dive-19167e9735",
+      "photo": "IMG_8086",
+      "text": "一个项目组看多个项目了，这个时候，每个项目组都应该有个项目进度墙，将自己组看的项目列在那里，然后每天通过项目墙看每个项目的进度，一旦某个项目有了进展，就派人去盯一下。"
+    },
+    {
+      "id": "network-deep-dive-1caacd506c",
+      "photo": "IMG_8086",
+      "text": "方式4：一个项目组支撑多个项目（IO多路复用，从派人盯着到有事通知）"
+    },
+    {
+      "id": "network-deep-dive-85765b7ab7",
+      "photo": "IMG_8086",
+      "text": "如果改成事件通知的方式，情况就会好很多，项目组不需要通过轮询挨个盯着这些项目，而是当项目进度发生变化的时候，主动通知项目组，然后项目组再根据项目进展情况做相应的操作。"
+    },
+    {
+      "id": "network-deep-dive-48a1972741",
+      "photo": "IMG_8087",
+      "text": "编码：如何将丰富多彩的图片变成二进制流？"
+    },
+    {
+      "id": "network-deep-dive-3772131578",
+      "photo": "IMG_8087",
+      "text": "视频是一张张图片的序列，但是如果每张图片都完整，就太大了，因而会将视频序列分成三种帧I、B、P。"
+    },
+    {
+      "id": "network-deep-dive-c6a46bd5c2",
+      "photo": "IMG_8087",
+      "text": "一个视频，可以拆分成一系列的帧，每一帧拆分成一系列的片，每一片都放在一个NALU里面，NALU之间都是通过特殊的起始标识符分隔，在每一个I帧的第一片前面，要插入单独保存SPS和PPS的NALU，最终形成一个长的NALU序列。"
+    },
+    {
+      "id": "network-deep-dive-7610c0be82",
+      "photo": "IMG_8087",
+      "text": "在每一个I帧的第一片前面，要插入单独保存SPS和PPS的NALU，最终形成一个长的NALU序列。"
+    },
+    {
+      "id": "network-deep-dive-bebd9bdf13",
+      "photo": "IMG_8087",
+      "text": "推流：如何把数据流打包传输到对端？"
+    },
+    {
+      "id": "network-deep-dive-1180695851",
+      "photo": "IMG_8087",
+      "text": "推流的过程，就是将NALU放在Message里面发送，这个也称为RTMP Packet包。"
+    },
+    {
+      "id": "network-deep-dive-8f02963dcb",
+      "photo": "IMG_8087",
+      "text": "RTMP在收发数据的时候并不是以Message为单位的，而是把Message拆分成Chunk发送。"
+    },
+    {
+      "id": "network-deep-dive-4284105427",
+      "photo": "IMG_8087",
+      "text": "分发网络分为中心和边缘两层。边缘层服务器部署在全国各地及横跨各大运营商里，和用户距离很近。中心层是流媒体服务集群，负责内容的转发。"
+    },
+    {
+      "id": "network-deep-dive-5eb89e1096",
+      "photo": "IMG_8087",
+      "text": "中心层是流媒体服务集群，负责内容的转发。"
+    },
+    {
+      "id": "network-deep-dive-505426da24",
+      "photo": "IMG_8087",
+      "text": "边缘层服务器部署在全国各地及横跨各大运营商里，和用户距离很近。"
+    },
+    {
+      "id": "network-deep-dive-a7fc22fb2b",
+      "photo": "IMG_8087",
+      "text": "拉流：观众的客户端如何看到视频？"
+    },
+    {
+      "id": "network-deep-dive-54978ee532",
+      "photo": "IMG_8087",
+      "text": "先读到的是H.264的解码参数，例如SPS和PPS，然后对收到的NALU组成的一个个帧，进行解码，交给播放器播放，一个绚丽多彩的视频画面就出来了。"
+    },
+    {
+      "id": "network-deep-dive-08b7c41cf8",
+      "photo": "IMG_8087",
+      "text": "然后对收到的NALU组成的一个个帧，进行解码，交给播放器播放，一个绚丽多彩的视频画面就出来了。"
+    },
+    {
+      "id": "network-deep-dive-fe4e501179",
+      "photo": "IMG_8088",
+      "text": "DNS服务器组成树状结构，老大是根域名服务器，老二是顶级域名服务器，真正干活的是权威DNS服务器，每次查找地址簿，都要遍历这棵树，比较费时，因而每个运营商都有本地域名服务器做缓存。"
+    },
+    {
+      "id": "network-deep-dive-9429ad2379",
+      "photo": "IMG_8088",
+      "text": "常用的网站就有二三十个，如果全部用IP地址进行访问，恐怕很难记住。于是，就需要一个地址簿，根据名称就可以查看具体的地址。"
+    },
+    {
+      "id": "network-deep-dive-e42756f212",
+      "photo": "IMG_8088",
+      "text": "我们肯定希望北京的用户访问北京的数据中心，上海的用户访问上海的数据中心，这样，客户体验就会非常好，访问速度就会超快。这就是全局负载均衡的概念。"
+    },
+    {
+      "id": "network-deep-dive-3baff2d28b",
+      "photo": "IMG_8088",
+      "text": "导游去过一个饭店，自己脑子记住了地址，当有一个游客问的时候，他就凭记忆回答了。结果饭店已经搬家了，但是导游并没有刷新这个缓存。"
+    },
+    {
+      "id": "network-deep-dive-6ee911489a",
+      "photo": "IMG_8088",
+      "text": "客户要吃西湖醋鱼的事，导游知道西湖边有一家，因为当时游客就在西湖边。可是下一次客户在灵隐寺，想吃西湖醋鱼的时候，导游还指向西湖边的那一家，那这就绕得太远了。"
+    },
+    {
+      "id": "network-deep-dive-dbc21a24b3",
+      "photo": "IMG_8088",
+      "text": "西湖边的导游比较懒，自己不去查，去问负责灵隐寺的导游同事，就推荐了灵隐寺旁边的西湖醋鱼。"
+    },
+    {
+      "id": "network-deep-dive-75c306adbd",
+      "photo": "IMG_8088",
+      "text": "HTTPDNS其实就是，不走传统的DNS解析，而是自己搭建基于HTTP协议的DNS服务器集群，分布在多个地点和多个运营商。当客户端需要DNS解析的时候，直接通过HTTP协议进行请求这个服务器集群，得到就近的地址。"
+    },
+    {
+      "id": "network-deep-dive-da2f5c50c8",
+      "photo": "IMG_8088",
+      "text": "通过自己的HTTPDNS服务器和自己的SDK，实现从依赖本地导游，到自己上网查询做旅游攻略，进行自由行，爱怎么玩怎么玩。这样就能够避免依赖导游，而导游又不专业，你还不能把他怎么样的尴尬。"
+    },
+    {
+      "id": "network-deep-dive-2e1fb9af05",
+      "photo": "IMG_8088",
+      "text": "我们在谍战剧里面经常看到这样的场景，就是特工破译的密码会有个密码本，截获无线电台，通过密码本就能将原文破解出来。"
+    },
+    {
+      "id": "network-deep-dive-27be1fed66",
+      "photo": "IMG_8088",
+      "text": "非对称加密的私钥放在外卖网站这里，不会在互联网上传输，这样就能保证这个秘钥的私密性。对应私钥的公钥，是可以在互联网上随意传播的，只要外卖网站把这个公钥给你，你们就可以愉快地互通了。"
+    },
+    {
+      "id": "network-deep-dive-3c48813941",
+      "photo": "IMG_8088",
+      "text": "证书里面有什么呢？有公钥，有证书的所有者，还有证书的发布机构和证书的有效期。"
+    },
+    {
+      "id": "network-deep-dive-e65a982e91",
+      "photo": "IMG_8089",
+      "text": "网站根据统计大概知道，每个种类的物品，各大城市每天能够卖出去多少。平时就可以将这类物品分布在各地仓库，客户一下单，就近的仓库就发出，客户很快就收到了。"
+    },
+    {
+      "id": "network-deep-dive-8b22208660",
+      "photo": "IMG_8089",
+      "text": "生鲜超市模式，也即边缘计算的模式。既然数据是动态生成的，所以数据的逻辑计算和存储，也相应的放在边缘的节点。"
+    },
+    {
+      "id": "network-deep-dive-7d3cd057aa",
+      "photo": "IMG_8089",
+      "text": "冷链运输模式，也即路径优化的模式。数据不是在边缘计算生成的，而是在源站生成的，但是数据的下发可以通过CDN的网络，对路径进行优化。"
+    },
+    {
+      "id": "network-deep-dive-651c602e08",
+      "photo": "IMG_8089",
+      "text": "P2P就是Peer-to-Peer。资源开始并不集中地存在某些设备上，而是分散地存储在多台设备上。这些设备我们称为Peer。"
+    },
+    {
+      "id": "network-deep-dive-96ba6275df",
+      "photo": "IMG_8089",
+      "text": "任何一个BitTorrent启动后，都有两个角色。Peer，用来上传和下载文件；DHT node，通过这个角色，这个节点加入了一个DHT的网络，每个DHT node都应该知道某些文件是保存在哪些节点上，也就是文件索引。"
+    },
+    {
+      "id": "network-deep-dive-bb6d2b9677",
+      "photo": "IMG_8089",
+      "text": "Peer，用来上传和下载文件；"
+    },
+    {
+      "id": "network-deep-dive-d87eea347a",
+      "photo": "IMG_8089",
+      "text": "DHT node，通过这个角色，这个节点加入了一个DHT的网络，每个DHT node都应该知道某些文件是保存在哪些节点上，也就是文件索引。"
+    },
+    {
+      "id": "network-deep-dive-38a92bdf55",
+      "photo": "IMG_8089",
+      "text": "如果一个文件计算出一个哈希值，DHT node的ID是和哈希值相同长度的串，则和这个哈希值一样的或者很接近的那些DHT node，就有责任知道从哪里下载这个文件。"
+    },
+    {
+      "id": "network-deep-dive-dea5ce0737",
+      "photo": "IMG_8089",
+      "text": "DHT网络特别像一个社交网络，每个node都保存了一些其他node的联系方式，也就是朋友圈，节点之间会相互通信，添加朋友或删除朋友圈。这样ID之间的距离就不是物理位置的距离，而是社交网络中的社交距离。"
+    },
+    {
+      "id": "network-deep-dive-c54215d467",
+      "photo": "IMG_8089",
+      "text": "一个新的DHT node上线，只要联系上DHT网络中的一个节点，就加入了这个网络。"
+    },
+    {
+      "id": "network-deep-dive-2ab552930e",
+      "photo": "IMG_8089",
+      "text": "新DHT node节点通过计算文件哈希，可以知道某个node应该有这个文件保存在哪里的知识，于是去万能的朋友圈去问，朋友如果不知道，朋友再去自己的朋友圈问，很快就能找到。"
+    },
+    {
+      "id": "network-deep-dive-d6fa9593c4",
+      "photo": "IMG_8090",
+      "text": "GET就是去服务器获取一些资源。对于访问网页来讲，要获取的资源往往是一个页面。"
+    },
+    {
+      "id": "network-deep-dive-2f24aa1dac",
+      "photo": "IMG_8090",
+      "text": "支付场景，客户端就需要把“我是谁？我要支付多少？我要买啥？”告诉服务器，这就需要通过POST方法。"
+    },
+    {
+      "id": "network-deep-dive-f29935f9e3",
+      "photo": "IMG_8090",
+      "text": "向指定资源位置上传最新内容。"
+    },
+    {
+      "id": "network-deep-dive-b0677be607",
+      "photo": "IMG_8090",
+      "text": "用来删除资源。"
+    },
+    {
+      "id": "network-deep-dive-ddd4a1a9f3",
+      "photo": "IMG_8091",
+      "text": "给每个事情编个号。程序员平时看任务的时候，就像程序员都会看JIRA的ID，等开周会的时候，将JIRA ID的列表拉出来就行了。"
+    },
+    {
+      "id": "network-deep-dive-8f9136f16f",
+      "photo": "IMG_8091",
+      "text": "比如你交代给下属一个事情以后，下属到底能不能做到，做到什么程度，什么时候能够交付，往往就会有应答，有回复。"
+    },
+    {
+      "id": "network-deep-dive-b1fe14181f",
+      "photo": "IMG_8091",
+      "text": "三次握手与四次挥手。"
+    },
+    {
+      "id": "network-deep-dive-a8ba76136f",
+      "photo": "IMG_8091",
+      "text": "滑动窗口就是你和你的下属记录你布置给他的任务的本子。"
+    },
+    {
+      "id": "network-deep-dive-bac427f1f1",
+      "photo": "IMG_8091",
+      "text": "如果下属反馈能力强，可以多布置几条，反馈做不过来就需要少布置几条"
+    },
+    {
+      "id": "network-deep-dive-7c693dbc65",
+      "photo": "IMG_8091",
+      "text": "我们通过漏斗往瓶子里灌水，一桶水一下子倒进去，肯定会溅出来，要一开始慢慢地倒，然后发现还可以倒进去，就可以越倒越快。这叫作慢启动。"
+    },
+    {
+      "id": "network-deep-dive-9d57a76892",
+      "photo": "IMG_8091",
+      "text": "涨到什么时候是个头呢？有一个值ssthresh为65535个字节，当超过这个值的时候，就要小心一点了，不能倒这么快了，可能快满了，再慢下来。"
+    },
+    {
+      "id": "network-deep-dive-cb29e66a3b",
+      "photo": "IMG_8091",
+      "text": "一旦超时重传，马上回到解放前，窗口为1，从头开始慢启动。"
+    },
+    {
+      "id": "network-deep-dive-2e22d7a4e0",
+      "photo": "IMG_8091",
+      "text": "部分丢包可以快速重传，窗口腰斩，并非回到解放前为1。"
+    },
+    {
+      "id": "network-deep-dive-5d468fcd66",
+      "photo": "IMG_8092",
+      "text": "手动配置IP地址相当于自己买房装修，DHCP协议相当于租房。"
+    },
+    {
+      "id": "network-deep-dive-104ccbc942",
+      "photo": "IMG_8092",
+      "text": "新到一个城市要先找中介（DHCP服务器）租个房（IP）——Discover。"
+    },
+    {
+      "id": "network-deep-dive-306fd3455b",
+      "photo": "IMG_8092",
+      "text": "中介（DHCP服务器）会带你看房，可能会有多个中介带你看多个房——Offer。"
+    },
+    {
+      "id": "network-deep-dive-3aa8c4077a",
+      "photo": "IMG_8092",
+      "text": "你看上其中一个房，愿意租下来——Request。"
+    },
+    {
+      "id": "network-deep-dive-7788930b89",
+      "photo": "IMG_8092",
+      "text": "中介说没问题，咱们签合同，租约达成——Ack。"
+    },
+    {
+      "id": "network-deep-dive-695f3719b2",
+      "photo": "IMG_8092",
+      "text": "租约达成要广播，防止中介之间跳单。"
+    },
+    {
+      "id": "network-deep-dive-e7e5fb1353",
+      "photo": "IMG_8092",
+      "text": "租期快到之前，记得续租。"
+    },
+    {
+      "id": "network-deep-dive-ffc7b3e709",
+      "photo": "IMG_8092",
+      "text": "主帅说，来人哪！前方战事如何，快去派人打探，一有情况，立即通报！"
+    },
+    {
+      "id": "network-deep-dive-9842a8683d",
+      "photo": "IMG_8092",
+      "text": "主帅骑马走着走着，突然来了一匹快马，上面的小兵气喘吁吁的：报告主公，不好啦！将军遭遇埋伏，全军覆没啦！"
+    },
+    {
+      "id": "network-deep-dive-f4826ec384",
+      "photo": "IMG_8093",
+      "text": "广播问题：公司大了都在一个会议室吵，谁也没法工作\n不同的部门不同VLAN，你听不到别的部门开会，清净很多。"
+    },
+    {
+      "id": "network-deep-dive-d8f58a0bde",
+      "photo": "IMG_8093",
+      "text": "安全问题：公司大了都在一个会议室吵，HR聊的东西，程序员都听到了\n不同部门不同VLAN，你别想听到HR开会，打听薪资。"
+    },
+    {
+      "id": "network-deep-dive-a23c68493d",
+      "photo": "IMG_8093",
+      "text": "MAC层主要解决多路访问的堵车问题。"
+    },
+    {
+      "id": "network-deep-dive-5c0f15d909",
+      "photo": "IMG_8093",
+      "text": "思路一：划分多个车道，你走你的，我走我的。"
+    },
+    {
+      "id": "network-deep-dive-456527d835",
+      "photo": "IMG_8093",
+      "text": "思路二：单双号，今天单号出行，明天双号出行。"
+    },
+    {
+      "id": "network-deep-dive-850b019f48",
+      "photo": "IMG_8093",
+      "text": "思路三：不管三七二十一，有事儿先出门，发现堵再回去，错过高峰再出门。以太网是这个思路。"
+    },
+    {
+      "id": "network-deep-dive-4782555c88",
+      "photo": "IMG_8093",
+      "text": "STP就是在二层，将拓扑图中的环破了，生成了树。"
+    },
+    {
+      "id": "network-deep-dive-e831a68330",
+      "photo": "IMG_8093",
+      "text": "树要有树根，形成树的是一场血雨腥风的武林比武，最终决出谁是盟主，谁是长老，谁是堂主，谁是小兵的方式。"
+    },
+    {
+      "id": "network-deep-dive-78937c269a",
+      "photo": "IMG_8093",
+      "text": "比武规则：先比掌门（当前树的树根ID），再比和掌门关系铁（距离当前树根的路径开销），最后比自己的本事（自己的ID）。"
+    },
+    {
+      "id": "network-deep-dive-79d38762ab",
+      "photo": "IMG_8093",
+      "text": "PXE在DHCP服务器配置里面多了一个next-server，可以安装操作系统。"
+    },
+    {
+      "id": "network-deep-dive-66a7ff1540",
+      "photo": "IMG_8093",
+      "text": "这就是中介租给你房子之后，签完约说，还给你介绍一个装修公司：“哥们，想装修一下吗，接下来找它。”"
+    }
+  ]
 }

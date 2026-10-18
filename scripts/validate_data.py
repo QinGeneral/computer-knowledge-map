@@ -14,11 +14,12 @@ for d in data['domains']:
  assert d['count']==sum(n['domain']==d['id'] for n in nodes.values())
 assert seen==set(nodes),f'Unreachable nodes: {set(nodes)-seen}'
 for p in photos.values():
- for k in ['src','thumb']:assert (DIST/p[k]).is_file(),p[k]
+ for k in ['src','preview','thumb']:assert (DIST/p[k]).is_file(),p[k]
 manifest=json.loads((DIST/'source-manifest.json').read_text())
 assert len(manifest)==len(photos)
 for row in manifest:
  assert hashlib.sha256((DIST/row['webImage']).read_bytes()).hexdigest()==row['webImageSha256']
+ assert hashlib.sha256((DIST/row['previewImage']).read_bytes()).hexdigest()==row['previewImageSha256']
  collection=row.get('sourceCollection','计算机基础知识地图')
  assert Path(collection).name==collection, 'Source collection must be a folder name'
  source=Path.home()/'Downloads'/collection/row['original']
@@ -104,6 +105,8 @@ for row in network_review['items']:
  n=nodes[row['id']]
  assert n['domain']==topic['id'] and n['title']==row['title'] and n['photo']==row['photo'] and n['depth']==row['depth']
  assert bool(n.get('sourceText'))==row['hasDescription']
+for row in network_review['verbatimPassages']:
+ assert nodes[row['id']]['sourceText']==row['text'] and nodes[row['id']]['photo']==row['photo'], 'Original wording was altered'
 assert {nodes[row['id']]['photo'] for row in network_review['items']}==set(topic['photos'])-{'IMG_8081'}, 'Every content photo must have structured entries; IMG_8081 is the contents page'
 for p in DIST.rglob('*'):
  if p.suffix in ['.html','.js','.json','.css','.md']:

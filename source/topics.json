@@ -1,7 +1,7 @@
 [
   {
     "id": "network-deep-dive",
-    "title": "网络专题",
+    "title": "网络协议知识地图",
     "status": "ready",
     "description": "从协议分层与路由，到传输、应用与网络服务；按 12 张原图整理 20 个主题。",
     "relatedDomains": [

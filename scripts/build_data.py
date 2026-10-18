@@ -886,7 +886,7 @@ for t in topic_config:
 photos=[]
 for num,label in photo_labels.items():
  p='IMG_'+num
- photos.append({'id':p,'title':label,'src':'photos/'+p+'.jpg','thumb':'photos/'+p+'-thumb.jpg','domains':[d['id'] for d in domains if p in d['photos']]})
+ photos.append({'id':p,'title':label,'src':'photos/'+p+'.jpg','preview':'photos/'+p+'-preview.jpg','thumb':'photos/'+p+'-thumb.jpg','domains':[d['id'] for d in domains if p in d['photos']]})
 assert used_overrides==set(node_overrides), 'Node overrides refer to removed paths'
 assert set(annotations).issubset({n['id'] for n in nodes}), 'Annotations refer to removed nodes'
 data={'schemaVersion':2,'title':'计算机基础知识地图','description':'从知识结构出发，读懂计算机','domains':domains,'extensions':extensions,'nodes':nodes,'photos':photos,'contentPolicy':'根据用户提供的照片整理层级与摘要；原图中的简化说法在条目中另作说明。OCR 仅作为定位辅助，不能替代原图。'}
@@ -901,7 +901,7 @@ for d in domains:
    md.append('  '*n['depth']+'- '+n['title']+('：'+n['sourceText'] if n.get('sourceText') else '')+('（整理说明：'+n['note']+'）' if n['note'] else '')+f' [原图]({"photos/"+n["photo"]+".jpg"})')
  md.append('')
 md+=['## 后续专题','']
-for t in extensions:md.append('- '+t['title']+'：'+('已接入' if t['status']=='ready' else '等待图片')+'。'+t['description'])
+for t in extensions:md.append('- '+t['title']+'：'+('' if t['status']=='ready' else '等待图片。')+t['description'])
 md.append('')
 (DIST/'knowledge-map.md').write_text('\n'.join(md))
 print(json.dumps({'domains':len(domains),'nodes':len(nodes),'photos':len(photos),'evidenceLocated':sum('evidence'in n for n in nodes),'sourceAnnotations':sum(bool(n.get('sourceText')) for n in nodes)},ensure_ascii=False))

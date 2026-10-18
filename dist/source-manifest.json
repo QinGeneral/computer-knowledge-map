@@ -3,174 +3,228 @@
     "original": "IMG_8064.HEIC",
     "originalSha256": "6980f50a4008dd92dc0416f97333befc7b5881ee9d7991bbcedc33544e50b03a",
     "webImage": "photos/IMG_8064.jpg",
-    "webImageSha256": "3cc627ba7a170e266e493a7503624043f632bccd849bd45f7d5a0a66f5b452be"
+    "webImageSha256": "3cc627ba7a170e266e493a7503624043f632bccd849bd45f7d5a0a66f5b452be",
+    "previewImage": "photos/IMG_8064-preview.jpg",
+    "previewImageSha256": "1e74d61005d7f7b948df63a12f68825fdef93bbc9dd9aa4b631b62c2e57322e4"
   },
   {
     "original": "IMG_8065.HEIC",
     "originalSha256": "cd28be6fe98f3cbe479b27d669d18d22a6c05ac14ed274ec22701575236fe63a",
     "webImage": "photos/IMG_8065.jpg",
-    "webImageSha256": "4f425aab39582280458ce2c43457ae1d46154efe82dccd097ba475f5dfd8c0ac"
+    "webImageSha256": "4f425aab39582280458ce2c43457ae1d46154efe82dccd097ba475f5dfd8c0ac",
+    "previewImage": "photos/IMG_8065-preview.jpg",
+    "previewImageSha256": "5e5ac4e794828f5be47a308ded85e0b2f601c643d5451e57a2be4a3cfc5702c8"
   },
   {
     "original": "IMG_8066.HEIC",
     "originalSha256": "679fa9d70f5ad7559028b0e84f8662f547a3f67edbb63dccef940bcb8154a88a",
     "webImage": "photos/IMG_8066.jpg",
-    "webImageSha256": "bcddba0590b01268c651aabc2d82ca0626f3221ee82f6c82bef035dc786bdee4"
+    "webImageSha256": "bcddba0590b01268c651aabc2d82ca0626f3221ee82f6c82bef035dc786bdee4",
+    "previewImage": "photos/IMG_8066-preview.jpg",
+    "previewImageSha256": "1c54c84dcc5df665bd7da23c6d2ba3384b01f495a36f5ee0bb7b062878910aa0"
   },
   {
     "original": "IMG_8067.HEIC",
     "originalSha256": "3fc69dcddbf13deafd5909f442565d79bf02e781ac82b687056ce67f77f42149",
     "webImage": "photos/IMG_8067.jpg",
-    "webImageSha256": "5633f2c2f27c12e48de8a1c9a0dcd827aea332160c01054e82a4c7a2f9514c67"
+    "webImageSha256": "5633f2c2f27c12e48de8a1c9a0dcd827aea332160c01054e82a4c7a2f9514c67",
+    "previewImage": "photos/IMG_8067-preview.jpg",
+    "previewImageSha256": "b8308cb95d02bfb6d16cd9f93863d78d4067b428bbe839f1346397a209d3dfde"
   },
   {
     "original": "IMG_8068.HEIC",
     "originalSha256": "09891c6f41bcb9dd8463f05c40248743aeaffcf5216a23c5187929078e8fcfe5",
     "webImage": "photos/IMG_8068.jpg",
-    "webImageSha256": "7293b63ece8d9026283745f7fbf83ff5226d33a62b43f983c695db7d13b5a0b6"
+    "webImageSha256": "7293b63ece8d9026283745f7fbf83ff5226d33a62b43f983c695db7d13b5a0b6",
+    "previewImage": "photos/IMG_8068-preview.jpg",
+    "previewImageSha256": "717ffdd11d49a29c2d1670c2faa6eb652b0226e1cf5cb57f468875687800cb9e"
   },
   {
     "original": "IMG_8069.HEIC",
     "originalSha256": "b8323b155ce9f86d9a05fd4407cf1f18edee08311afc9ff108dc486b9a8fec20",
     "webImage": "photos/IMG_8069.jpg",
-    "webImageSha256": "3d3030d70ee9347e4287bf2195973ac64bbc4d921d011886b1b1eb00cd50981d"
+    "webImageSha256": "3d3030d70ee9347e4287bf2195973ac64bbc4d921d011886b1b1eb00cd50981d",
+    "previewImage": "photos/IMG_8069-preview.jpg",
+    "previewImageSha256": "0bf87478bb4abd757eae39c17a13ce363ead4fe88ca7a42189694a00fffab877"
   },
   {
     "original": "IMG_8070.HEIC",
     "originalSha256": "f7811cfb26514c9f607029b467a4cb4fc41d9a03d280193218bc9b0243c2f564",
     "webImage": "photos/IMG_8070.jpg",
-    "webImageSha256": "e89d287092acd3611b27327626683622b813bb2afdd7174c4824cccd6bcf472c"
+    "webImageSha256": "e89d287092acd3611b27327626683622b813bb2afdd7174c4824cccd6bcf472c",
+    "previewImage": "photos/IMG_8070-preview.jpg",
+    "previewImageSha256": "334e59ed7586c71bb556d50ef42f36e6578cf780a657d20c9c9ad1cc4c158444"
   },
   {
     "original": "IMG_8071.HEIC",
     "originalSha256": "cda5731e3d262e7056816eaf91b18d6e1102875c6dc4c4cffc89873afa233ea5",
     "webImage": "photos/IMG_8071.jpg",
-    "webImageSha256": "ec582f40c680ec60ca4696ad47811d019f528ac105bbb7616d0a4c0aa5d395aa"
+    "webImageSha256": "ec582f40c680ec60ca4696ad47811d019f528ac105bbb7616d0a4c0aa5d395aa",
+    "previewImage": "photos/IMG_8071-preview.jpg",
+    "previewImageSha256": "5a9db39ab41d30dabcfad888cd44c304bf063e24331ab93847916e5136e484e1"
   },
   {
     "original": "IMG_8072.HEIC",
     "originalSha256": "53897d3f8b72196fa587b28074a66aff0e1886c9fdfe3eaeaa015cf4830719d9",
     "webImage": "photos/IMG_8072.jpg",
-    "webImageSha256": "67d6907b00c07dff707eed03f217dd7c7c61fa2b572f1caa737f55ba7257a04a"
+    "webImageSha256": "67d6907b00c07dff707eed03f217dd7c7c61fa2b572f1caa737f55ba7257a04a",
+    "previewImage": "photos/IMG_8072-preview.jpg",
+    "previewImageSha256": "a50fef4c14be89b8e24c04be737443b77ba2fda5d88f44046d4614d4655dd8fa"
   },
   {
     "original": "IMG_8073.HEIC",
     "originalSha256": "9c6b7402dc7966bd015d91519484ebbc9bc5985e92ba710c8ac619dc866e5192",
     "webImage": "photos/IMG_8073.jpg",
-    "webImageSha256": "48e18787f00781b451850f6e1094944750b631eb387269d94c604d60f181527e"
+    "webImageSha256": "48e18787f00781b451850f6e1094944750b631eb387269d94c604d60f181527e",
+    "previewImage": "photos/IMG_8073-preview.jpg",
+    "previewImageSha256": "5236f5ce8725f7f36427e81eed5cdd71a9b482d5a0cbbe3c69aee238f529b0a2"
   },
   {
     "original": "IMG_8074.HEIC",
     "originalSha256": "08dd2c2d4b61a1e5cf2d47eaa6a5b733af4b0a0737f5bea66031927152b97f69",
     "webImage": "photos/IMG_8074.jpg",
-    "webImageSha256": "7b92e96ed62834d9a559ceafe5800cb1d73aa03d10b7847fac9a76f8738080a2"
+    "webImageSha256": "7b92e96ed62834d9a559ceafe5800cb1d73aa03d10b7847fac9a76f8738080a2",
+    "previewImage": "photos/IMG_8074-preview.jpg",
+    "previewImageSha256": "1d2c3af72d3e467d5f7a8a4cc7e65f81446a011c4c2a7b42c1df501581928e02"
   },
   {
     "original": "IMG_8075.HEIC",
     "originalSha256": "4bbbafe4fa9bb7ca38bb62d92fad86c43793e4413cc58938838284ad01636824",
     "webImage": "photos/IMG_8075.jpg",
-    "webImageSha256": "fb78dd8f774e1ee016db2d27a84633bf1fb6b12e059acbe25d37849c251bb071"
+    "webImageSha256": "fb78dd8f774e1ee016db2d27a84633bf1fb6b12e059acbe25d37849c251bb071",
+    "previewImage": "photos/IMG_8075-preview.jpg",
+    "previewImageSha256": "fdf1d786988a613a9ae8201e57e43645c8666208178f2daeb15f8257158d498c"
   },
   {
     "original": "IMG_8076.HEIC",
     "originalSha256": "35cf17dfb04edf4269af551f4cc79b04d5eef5ace6ba7adf8490fb1113338a63",
     "webImage": "photos/IMG_8076.jpg",
-    "webImageSha256": "7c3ce55f79e47aba3d7ff8f7eed757595a2d6046c1a6b4f342228a1eb02b4d35"
+    "webImageSha256": "7c3ce55f79e47aba3d7ff8f7eed757595a2d6046c1a6b4f342228a1eb02b4d35",
+    "previewImage": "photos/IMG_8076-preview.jpg",
+    "previewImageSha256": "db8095cbf36f180c20c8861b749948daaf4c8e146e923cd8b482c1c25231634f"
   },
   {
     "original": "IMG_8077.HEIC",
     "originalSha256": "adb599f623f43d43ef03aed526cee770592db183a8c98a828964d2659c3faaf0",
     "webImage": "photos/IMG_8077.jpg",
-    "webImageSha256": "42a3d2d953ef48671e9a6950593f77fac9d9ba2e6e0346e4a0e0085e943b6cd5"
+    "webImageSha256": "42a3d2d953ef48671e9a6950593f77fac9d9ba2e6e0346e4a0e0085e943b6cd5",
+    "previewImage": "photos/IMG_8077-preview.jpg",
+    "previewImageSha256": "65054b3ba112fa6cf82c6d792e32d44b58a0552f3832bfc7706aefb1af5569be"
   },
   {
     "original": "IMG_8078.HEIC",
     "originalSha256": "888ec1f96b89191f5838aecf9dbfa063f24fecd9509cca058f686ad807473e35",
     "webImage": "photos/IMG_8078.jpg",
-    "webImageSha256": "53563d3cf8dc6ab1a564f9c0b0d1cf9c32be9da29746470449c427eb51f8f30d"
+    "webImageSha256": "53563d3cf8dc6ab1a564f9c0b0d1cf9c32be9da29746470449c427eb51f8f30d",
+    "previewImage": "photos/IMG_8078-preview.jpg",
+    "previewImageSha256": "da5db0205728d38e6e89c60d739db0b8699d14fbdcb5b5bb7ada1a35af48d2ad"
   },
   {
     "original": "IMG_8081.HEIC",
     "originalSha256": "983eca74fccf6b811bf366ace7b760b2f5b8c2708e20c602b09383d5e89077a7",
     "webImage": "photos/IMG_8081.jpg",
     "webImageSha256": "aed48476b313007d9d71141c80cf2e8e33c15b7eaf8d94264b8ab4a424075c9a",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8081-preview.jpg",
+    "previewImageSha256": "9376c4168b10a0faa2f051d4d063a8d73ea108c008828acaabcd4fcad63253e1"
   },
   {
     "original": "IMG_8082.HEIC",
     "originalSha256": "cdfeaf3f1fee0252e9db33ad2787732c40b570976a3130cc613aadeac430821b",
     "webImage": "photos/IMG_8082.jpg",
     "webImageSha256": "42f4aa94a352183053f476dab15f2ceb46b878034b3bb3f8f6c0936ff727dc4f",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8082-preview.jpg",
+    "previewImageSha256": "89405fe687e8cbda1bb46fd700036f8470a136d6e331ab7e144237618ff29cce"
   },
   {
     "original": "IMG_8084.HEIC",
     "originalSha256": "0c1862daf7f104d7edcd71995410242083856b71e4b4a27ff21fa23cc41cb5e5",
     "webImage": "photos/IMG_8084.jpg",
     "webImageSha256": "8ae25679003efa47d6f2e77e9465e017bc1de3623cafeaecda62da8a1ce29910",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8084-preview.jpg",
+    "previewImageSha256": "5540a08ffc454e3d955bb3dbeb0e1b37d1e4b9ba9781cdf145478f6afe0df89c"
   },
   {
     "original": "IMG_8085.HEIC",
     "originalSha256": "c6b346f4ddfcd089b5c4d870a21d0b103f9fc253730ae44ff0aa0edc1dc2e8f1",
     "webImage": "photos/IMG_8085.jpg",
     "webImageSha256": "7d21c5e25a665a7dcd5b1bff30bbdc558d6acfd6a242c18a7ab211195d6704f8",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8085-preview.jpg",
+    "previewImageSha256": "04fa478470c8a5373ad18c1bd0d8f6ea508a1ef0df5ee9e2241a9609408bfe3a"
   },
   {
     "original": "IMG_8086.HEIC",
     "originalSha256": "6ba515be29ffd2497ae07de2418f21dbd9924689a417ac8845a08efe35c0a2b9",
     "webImage": "photos/IMG_8086.jpg",
     "webImageSha256": "924818889a29e4c161d0b4c504c54e4c62c0e05f419645c2b74a20f5501cfbab",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8086-preview.jpg",
+    "previewImageSha256": "6c9e819342c387900dc45d4e3529dc5e67565c5c498867694d40c58e4760325f"
   },
   {
     "original": "IMG_8087.HEIC",
     "originalSha256": "f218b97d2b5b4b3d21cd525b0be5e0137562500691e86bd20dda2596169c211f",
     "webImage": "photos/IMG_8087.jpg",
     "webImageSha256": "b1f017e8643472baa430e8aefd31584b3f58b0d161d560eba1f76ae99ba4dea2",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8087-preview.jpg",
+    "previewImageSha256": "2b0c843c1b7905020a06567400bfac5f3e37864c0831f9c03ceaa918d36a2c20"
   },
   {
     "original": "IMG_8088.HEIC",
     "originalSha256": "1501dceb53e142ccfd87f7967b247bbe24dbb83f606341a9fc7e74fa260dd3b7",
     "webImage": "photos/IMG_8088.jpg",
     "webImageSha256": "e0d85d9e04d42d89bab451a31678b5e0629f845642dfb7b624b66e80dc58f47e",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8088-preview.jpg",
+    "previewImageSha256": "c302fbf300078f95436caa11fc704ed5ea68d2411a6f4d4390900386abebc143"
   },
   {
     "original": "IMG_8089.HEIC",
     "originalSha256": "e6f80922dcbb5ff56b28fc2b5ff4fa83af102435c6b4f16e94b8f50bc03a6a21",
     "webImage": "photos/IMG_8089.jpg",
     "webImageSha256": "74538122c078baa1877bf34ca056cfee37a45267f3ac86a218c877804bb49e5c",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8089-preview.jpg",
+    "previewImageSha256": "11a03dd0e503a7ef5abe3f054093c7d5aeb91dc9f4f0239ae4101d1cf52689f6"
   },
   {
     "original": "IMG_8090.HEIC",
     "originalSha256": "1fb6afab5cc4ea998e1a0616617502976a7fd90005a7fe8c61a68add7e4694c4",
     "webImage": "photos/IMG_8090.jpg",
     "webImageSha256": "5013391fe42af1fc37454a3192a76b234a9955cd25e4fe37deca2ff65da785c3",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8090-preview.jpg",
+    "previewImageSha256": "0a20ede8d86df51f2f819fe97f463bedb3db0f93b6c3dc477d6748aee362ab3c"
   },
   {
     "original": "IMG_8091.HEIC",
     "originalSha256": "485efe5418cc286ba1ecbe643519844a42cc3a13728634156005eac5eb146563",
     "webImage": "photos/IMG_8091.jpg",
     "webImageSha256": "d5300a794daf1c9be1cd6930dbb1f94fb5ef09357ae74ed13bd976a811923f15",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8091-preview.jpg",
+    "previewImageSha256": "a984d316e09e0773af359bc2d67842dad8a5e44894ca0cbc6229aca228e8e95f"
   },
   {
     "original": "IMG_8092.HEIC",
     "originalSha256": "50030a203204df59da4b6b0cdf7781e544fb107738b29e207eb83ada6d1ea71c",
     "webImage": "photos/IMG_8092.jpg",
     "webImageSha256": "9a3384ce1cfe97d5074468da631af9228dbd0e9a0cc32cb96110980fc4c544b9",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8092-preview.jpg",
+    "previewImageSha256": "a1539edda6afcadaf83cbe7219b933bec2adb2b8342dd83840151335d2f5d1a1"
   },
   {
     "original": "IMG_8093.HEIC",
     "originalSha256": "fdad79fae2b62571faf218dbbcc52f187240d5ac320025d7597c6d822c1848a0",
     "webImage": "photos/IMG_8093.jpg",
     "webImageSha256": "236587450626b149b4e27ce1d08928250874b1c9f2da0f015becce7a4ee68403",
-    "sourceCollection": "网络协议知识地图"
+    "sourceCollection": "网络协议知识地图",
+    "previewImage": "photos/IMG_8093-preview.jpg",
+    "previewImageSha256": "c353727724dbc2b1bd5d62d39a3fe8d7e0f14ff522a80cd7dd60a760f9550f42"
   }
 ]
