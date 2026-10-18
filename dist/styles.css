@@ -54,3 +54,6 @@
 .knowledge-diagram .kd-link:hover .kd-cross-connection .kd-arrow-tip,.knowledge-diagram .kd-link:focus .kd-cross-connection .kd-arrow-tip{fill:#176857}
 .detail-diagram .kd-protocols{min-width:1220px}.detail-dialog:has(.kd-protocols){width:min(1440px,96vw)}
 .kd-protocols .kd-blue{stroke:#afc3ce;stroke-width:1}
+
+/* Protocol photo diagrams: keep original ring and dashed teaching cards. */
+.kd-http-sector{fill:#376f8d;stroke:var(--surface,#fff);stroke-width:6}.kd-tcp-dashed{fill:none;stroke:#d6e6ec;stroke-width:1;stroke-dasharray:5 4}.kd-tcp-card{stroke-dasharray:7 5}

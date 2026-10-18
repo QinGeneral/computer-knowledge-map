@@ -379,7 +379,82 @@ window.KnowledgeDiagrams = (() => {
     });
     return frame(1320,440,'网络协议总览：应用层、传输层、网络层、链路层与物理层',b).replace('class="knowledge-diagram"','class="knowledge-diagram kd-protocols"');
   }
+  function dhcpLease(){
+    const root=get('network-deep-dive-5d468fcd66');
+    const rows=[
+      ['手动配置 IP 像买房装修，DHCP 像租房',root],
+      ['Discover：寻找中介（DHCP 服务器），租房（IP）',child(root,'Discover：寻找中介')],
+      ['Offer：中介提供房源，可能有多个中介与房源',child(root,'Offer：提供房源')],
+      ['Request：看中一个房，愿意租下来',child(root,'Request：选择房源')],
+      ['Ack：签合同，租约达成',child(root,'Ack：租约达成')],
+      ['租约达成要广播，防止中介之间跳单',child(root,'广播租约')],
+      ['租期快到之前，记得续租',child(root,'租期与续租')],
+    ];
+    let b=text(460,28,'DHCP 协议：用租房理解地址租约','kd-section');
+    rows.forEach(([label,n],i)=>{
+      const y=65+i*80;b+=cell(80,y,760,54,label,n,i===0);
+      if(i<6){
+        const right=i%2===1,x=right?840:80,dx=right?48:-48;
+        b+=wire(`M ${x} ${y+27} C ${x+dx} ${y+27} ${x+dx} ${y+107} ${x} ${y+107}`);
+        b+=flow([[x+dx/2,y+107],[x,y+107]]);
+      }
+    });
+    b+=text(460,650,'按原图的租房类比重绘；点击每一步查看原图说明。','kd-small');
+    return frame(920,680,'DHCP：Discover、Offer、Request、Ack、广播与续租',b);
+  }
+  function httpVersions(){
+    const root=get('network-deep-dive-94c7e6fffa'),one=child(root,'HTTP 1.1'),two=child(root,'HTTP 2.0'),quic=child(root,'QUIC'),udp=child(quic,'基于 UDP');
+    let b=cell(22,195,155,48,'HTTP 1.1',one,true)+wire('M 177 219 H 225 M 225 85 V 355');
+    const methodNotes=[['去服务器获取资源；访问网页时往往是页面。'],['把“我是谁、支付多少、买什么”告诉服务器。'],['向指定资源位置上传最新内容。'],['用来删除资源。']];
+    one.children.forEach((id,i)=>{
+      const n=get(id),y=55+i*90;
+      b+=wire(`M 225 ${y+30} H 265`)+cell(265,y,625,72,'',null)+cell(265,y,130,26,n.title,n,true)+link(n,lines(575,y+49,methodNotes[i],'kd-small'));
+    });
+    // The original uses a four-part ring, rather than a linear HTTP/2 sequence.
+    const cx=250,cy=590,outer=142,inner=77;
+    two.children.forEach((id,i)=>{
+      const a=(-180+i*90)*Math.PI/180,z=a+Math.PI/2,mid=(a+z)/2;
+      const p=(r,t)=>[cx+r*Math.cos(t),cy+r*Math.sin(t)].join(' '),n=get(id);
+      b+=link(n,`<path d="M ${p(outer,a)} A ${outer} ${outer} 0 0 1 ${p(outer,z)} L ${p(inner,z)} A ${inner} ${inner} 0 0 0 ${p(inner,a)} Z" class="kd-http-sector"/>`+text(cx+110*Math.cos(mid),cy+110*Math.sin(mid),n.title,'kd-white'));
+    });
+    b+=link(two,text(cx,cy,'HTTP 2.0','kd-section'));
+    b+=cell(480,565,100,44,'QUIC',quic,true)+wire('M 580 587 H 625')+`<rect x="625" y="438" width="265" height="305" rx="12" class="kd-blue"/>`+link(udp,text(757.5,465,'基于 UDP','kd-white kd-section'));
+    udp.children.forEach((id,i)=>b+=cell(645,493+i*58,225,43,get(id).title,get(id)));
+    return frame(930,780,'HTTP：HTTP 1.1 方法、HTTP 2.0 四项特征与基于 UDP 的 QUIC',b);
+  }
+  function tcpOverview(){
+    const root=get('network-deep-dive-6d20c80a70'),n=title=>child(root,title);
+    let b=text(625,28,'TCP：可靠传输、流量控制与拥塞控制','kd-section');
+    const top=[['顺序问题，稳重不乱',['每个事情编个号','像查看 JIRA ID 与周会任务列表']],['丢包问题，承诺靠谱',['交代任务后有应答、有回复','知道能否做到、程度和交付时间']],['连接维护，有始有终',['三次握手与四次挥手']]];
+    top.forEach(([title,labels],i)=>{
+      const x=25+i*410;b+=cell(x,68,380,138,'',null)+cell(x,68,380,40,title,n(title),true)+link(n(title),lines(x+190,145,labels));
+    });
+    const fc=n('流量控制，把握分寸'),parts=child(fc,'滑动窗口的四部分'),move=child(fc,'滑动窗口如何移动');
+    b+=cell(25,245,600,560,'',null)+cell(25,245,600,42,fc.title,fc,true)+text(325,320,'滑动窗口：记录布置给下属的任务的本子');
+    b+=link(parts,text(325,358,'四部分','kd-section'))+`<rect x="50" y="390" width="550" height="150" class="kd-blue"/>`;
+    const positions=[[65,405,210],[290,405,295],[65,468,210],[290,468,295]];
+    parts.children.forEach((id,i)=>{
+      const n=get(id),[x,y,w]=positions[i],labels=i===1?['已经布置的任务','正在做还没做完']:i===3?['工作饱和','不能再布置的任务']:[n.title];
+      b+=`<rect x="${x}" y="${y}" width="${w}" height="55" class="kd-tcp-dashed"/>`+link(n,lines(x+w/2,y+(labels.length===1?28:20),labels,'kd-white kd-small'));
+    });
+    move.children.forEach((id,i)=>{
+      const notes=[['做完一条划掉一条，新来一条在最后添加一条'],['做完一条，能够再布置一条'],['反馈能力强，多布置几条；做不过来，少布置几条']];
+      b+=multilineCell(50,580+i*60,550,46,notes[i],get(id),true);
+    });
+    const cc=n('拥塞控制，知进知退');
+    b+=cell(660,245,565,560,'',null)+cell(660,245,565,42,cc.title,cc,true);
+    const captions=[['慢慢倒水，发现还能倒进去，再越倒越快。'],['原图示例 ssthresh 为 65535 字节。','超过阈值后，小心一点、放慢增长。'],['超时重传：窗口为 1，从头慢启动。','部分丢包快速重传：窗口腰斩，并非变为 1。']];
+    cc.children.forEach((id,i)=>{
+      const n=get(id),y=325+i*150;
+      b+=`<rect x="680" y="${y}" width="525" height="125" class="kd-outline kd-tcp-card"/>`+link(n,text(942.5,y+30,n.title,'kd-section')+lines(942.5,y+71,captions[i],'kd-small'));
+    });
+    b+=text(625,850,'按原图的任务与倒水类比重绘；数值、窗口变化沿用原图教学表述。','kd-small');
+    return frame(1250,885,'TCP 五项特性与滑动窗口四部分',b);
+  }
   const specs={
+    'network-deep-dive-5d468fcd66':{width:920,height:680,title:'DHCP 租约流程',render:dhcpLease},
+    'network-deep-dive-94c7e6fffa':{width:930,height:780,title:'HTTP 版本与 QUIC',render:httpVersions},
+    'network-deep-dive-6d20c80a70':{width:1250,height:885,title:'TCP 特性与滑动窗口',render:tcpOverview},
     'os-064c686b05':{width:1100,height:640,title:'三阶段工作流程',interactive:false,render:operatingStages},
     'os-fa130d4e5c':{width:760,height:558,title:'应用与内核结构',interactive:false,render:kernel},
     'os-c54be2eeac':{width:780,height:516,title:'程序与进程管理',render:processes},

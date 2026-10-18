@@ -139,20 +139,98 @@
       "status": "ready",
       "extension": false,
       "count": 67
+    },
+    {
+      "id": "network-deep-dive",
+      "title": "网络专题",
+      "description": "从协议分层与路由，到传输、应用与网络服务；按 12 张原图整理 20 个主题。",
+      "photos": [
+        "IMG_8081",
+        "IMG_8082",
+        "IMG_8084",
+        "IMG_8085",
+        "IMG_8086",
+        "IMG_8087",
+        "IMG_8088",
+        "IMG_8089",
+        "IMG_8090",
+        "IMG_8091",
+        "IMG_8092",
+        "IMG_8093"
+      ],
+      "roots": [
+        "network-deep-dive-9171948ca4",
+        "network-deep-dive-a6c928fee5",
+        "network-deep-dive-244e289490",
+        "network-deep-dive-cee2a743cd",
+        "network-deep-dive-28cc540061",
+        "network-deep-dive-67ee9fd784",
+        "network-deep-dive-5824b787a5",
+        "network-deep-dive-84424541fe",
+        "network-deep-dive-391dc1675b",
+        "network-deep-dive-40ecca9748",
+        "network-deep-dive-34565a5051",
+        "network-deep-dive-197a2aa72d",
+        "network-deep-dive-94c7e6fffa",
+        "network-deep-dive-6d20c80a70",
+        "network-deep-dive-5d468fcd66",
+        "network-deep-dive-74b7ad5b65",
+        "network-deep-dive-6231c894b0",
+        "network-deep-dive-a23c68493d",
+        "network-deep-dive-65fc713a59",
+        "network-deep-dive-d4b3e74de5"
+      ],
+      "status": "ready",
+      "extension": true,
+      "count": 168
     }
   ],
   "extensions": [
     {
       "id": "network-deep-dive",
       "title": "网络专题",
-      "status": "planned",
-      "description": "在计算机网络与网络编程结构上继续细化，等待后续图片。",
+      "status": "ready",
+      "description": "从协议分层与路由，到传输、应用与网络服务；按 12 张原图整理 20 个主题。",
       "relatedDomains": [
         "networks",
         "os"
       ],
-      "roots": [],
-      "photos": []
+      "roots": [
+        "network-deep-dive-9171948ca4",
+        "network-deep-dive-a6c928fee5",
+        "network-deep-dive-244e289490",
+        "network-deep-dive-cee2a743cd",
+        "network-deep-dive-28cc540061",
+        "network-deep-dive-67ee9fd784",
+        "network-deep-dive-5824b787a5",
+        "network-deep-dive-84424541fe",
+        "network-deep-dive-391dc1675b",
+        "network-deep-dive-40ecca9748",
+        "network-deep-dive-34565a5051",
+        "network-deep-dive-197a2aa72d",
+        "network-deep-dive-94c7e6fffa",
+        "network-deep-dive-6d20c80a70",
+        "network-deep-dive-5d468fcd66",
+        "network-deep-dive-74b7ad5b65",
+        "network-deep-dive-6231c894b0",
+        "network-deep-dive-a23c68493d",
+        "network-deep-dive-65fc713a59",
+        "network-deep-dive-d4b3e74de5"
+      ],
+      "photos": [
+        "IMG_8081",
+        "IMG_8082",
+        "IMG_8084",
+        "IMG_8085",
+        "IMG_8086",
+        "IMG_8087",
+        "IMG_8088",
+        "IMG_8089",
+        "IMG_8090",
+        "IMG_8091",
+        "IMG_8092",
+        "IMG_8093"
+      ]
     },
     {
       "id": "compilers",
@@ -17553,6 +17631,3314 @@
         "confidence": 1,
         "method": "ocr-assisted"
       }
+    },
+    {
+      "id": "network-deep-dive-9171948ca4",
+      "title": "什么是网络协议？",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-74c0cf5abb"
+      ],
+      "photo": "IMG_8082",
+      "note": "",
+      "depth": 0,
+      "sourceText": "《圣经》中有一个通天塔的故事，大致是说，上帝为了阻止人类联合起来，就让人类说不同的语言。人类没法儿沟通，达不成“协议”，通天塔的计划就失败了。所以，要想打造互联网世界的通天塔，就需要让一大片机器互相协作、共同完成一件事。",
+      "evidence": {
+        "text": "•什么是网络协议？",
+        "box": [
+          0.29995331430687366,
+          0.1703637491707893,
+          0.2659535412472281,
+          0.03490356076969113
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-74c0cf5abb",
+      "title": "共同语言与协作",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-9171948ca4",
+      "children": [],
+      "photo": "IMG_8082",
+      "note": "",
+      "depth": 1,
+      "sourceText": "用通天塔的故事说明：机器要互相协作、共同完成一件事，需要达成“协议”。"
+    },
+    {
+      "id": "network-deep-dive-a6c928fee5",
+      "title": "网络为什么分层？",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-0f22193b10",
+        "network-deep-dive-eb0dda7606",
+        "network-deep-dive-79c3d3268d"
+      ],
+      "photo": "IMG_8082",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "网络为什么分层？",
+        "box": [
+          0.2999533091973855,
+          0.3418903903837425,
+          0.25587367922429394,
+          0.03488677329738222
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-0f22193b10",
+      "title": "复杂的程序都要分层",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-a6c928fee5",
+      "children": [
+        "network-deep-dive-90c5fa76ce"
+      ],
+      "photo": "IMG_8082",
+      "note": "",
+      "depth": 1,
+      "sourceText": "复杂的程序都要分层，不能表达层层封装的比喻都是不恰当的。",
+      "evidence": {
+        "text": "复杂的程序都要分层，不能表达层层封装的比喻都是不恰当的。",
+        "box": [
+          0.29366341090980863,
+          0.40502646118032803,
+          0.4908230090267445,
+          0.04319696766989567
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-90c5fa76ce",
+      "title": "TCP 换成 UDP 的需求",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-0f22193b10",
+      "children": [],
+      "photo": "IMG_8082",
+      "note": "",
+      "depth": 2,
+      "sourceText": "不理解？如果你把代码都写在一起，但是产品经理却突然改了需求，你需要将 TCP 换成 UDP 的时候，你就明白了。",
+      "evidence": {
+        "text": "不理解？如果你把代码都写在一起，但是产品经理却突然改了需求，你需要将TCP换成UDP钩时",
+        "box": [
+          0.2898911645176927,
+          0.4331766070788663,
+          0.6435557370463376,
+          0.04558529929509236
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-eb0dda7606",
+      "title": "网络包的层层封装",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-a6c928fee5",
+      "children": [],
+      "photo": "IMG_8082",
+      "note": "按原图的分层教学表述收录。",
+      "depth": 1,
+      "sourceText": "只要网络上跑的包，都是完整的，可以有下层没上层，不能有上层没下层。",
+      "evidence": {
+        "text": "只要网络上跑的包，都是完整的，可以有下层没上层，不能有上层没下层。",
+        "box": [
+          0.2840051997367221,
+          0.49829672796269686,
+          0.5876797065533028,
+          0.04589904111529153
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-79c3d3268d",
+      "title": "用收包程序理解设备",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-a6c928fee5",
+      "children": [
+        "network-deep-dive-297da427bd",
+        "network-deep-dive-a288b0ad61"
+      ],
+      "photo": "IMG_8082",
+      "note": "",
+      "depth": 1,
+      "sourceText": "把自己想象成一个处理网络包的程序，你的脑袋就是处理逻辑，你的手就是网口。",
+      "evidence": {
+        "text": "把自己想象成一个处理网络包的程序，你的脑袋就是处理逻辑，你的手就是网口。",
+        "box": [
+          0.2779020362876988,
+          0.5490817518199642,
+          0.647961732571718,
+          0.047973587399437356
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-297da427bd",
+      "title": "二层设备",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-79c3d3268d",
+      "children": [],
+      "photo": "IMG_8082",
+      "note": "",
+      "depth": 2,
+      "sourceText": "有人递给你左手一个包，取下一层头来看，用脑袋想想，是自己吃了，还是扔了，还是右手递给其他人。",
+      "evidence": {
+        "text": "• 啥叫二层设备？有人递给你左手一个包，取下二层头来看，用脑袋想想，是自己吃了，还",
+        "box": [
+          0.27584553621264746,
+          0.5788508243256284,
+          0.6436413154400216,
+          0.04892927692050031
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-a288b0ad61",
+      "title": "三层设备",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-79c3d3268d",
+      "children": [],
+      "photo": "IMG_8082",
+      "note": "",
+      "depth": 2,
+      "sourceText": "有人递给你左手一个包，取下二层头和三层头来看，用脑袋想想，是自己吃了，还是扔了，还是右手递给其他人。",
+      "evidence": {
+        "text": "• 啥叫三层设备？有人递给你左手一个包，取下二层和三层头来看，用脑袋想想，是自己吃",
+        "box": [
+          0.2700288654186957,
+          0.6256574135083377,
+          0.6495620485336062,
+          0.05014657217358787
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-244e289490",
+      "title": "IP 地址与 MAC 地址",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-9e53df3a49",
+        "network-deep-dive-ebeae8c266"
+      ],
+      "photo": "IMG_8082",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "3.IP地址与MAC地址",
+        "box": [
+          0.2225524689753641,
+          0.7076100119650894,
+          0.32416859379521124,
+          0.048032927134680437
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-9e53df3a49",
+      "title": "IP 地址：门牌号码",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-244e289490",
+      "children": [],
+      "photo": "IMG_8082",
+      "note": "",
+      "depth": 1,
+      "sourceText": "IP 地址是网络世界的通信地址，相当于现实世界的门牌号码，有定位功能。",
+      "evidence": {
+        "text": "1P地址是网络世界的通信地址，相当于现实世界的门牌号码，有定位功能。",
+        "box": [
+          0.23824927498811915,
+          0.7684804873934912,
+          0.5251545174411996,
+          0.058463204474676234
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-ebeae8c266",
+      "title": "MAC 地址：身份证",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-244e289490",
+      "children": [],
+      "photo": "IMG_8082",
+      "note": "",
+      "depth": 1,
+      "sourceText": "MAC 地址是网络世界的身份证，没有定位功能。",
+      "evidence": {
+        "text": "MAC地址是网络世界的身份证，没有定位功能。",
+        "box": [
+          0.2346601633298099,
+          0.8110095555059627,
+          0.33601748754107763,
+          0.052228435637458936
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-cee2a743cd",
+      "title": "网关",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-efe5947279",
+        "network-deep-dive-90d45e90ea",
+        "network-deep-dive-5e0f519678",
+        "network-deep-dive-16eba75a26"
+      ],
+      "photo": "IMG_8084",
+      "note": "5 个网口是原图的举例。",
+      "depth": 0,
+      "sourceText": "网关往往是一台路由器，它有 5 个网口或者网卡，相当于有 5 只手，分别连着 5 个局域网。每只手的 IP 地址都和局域网的 IP 地址在相同的网段，每只手都是它握住的那个局域网的网关。",
+      "evidence": {
+        "text": "网关往往是一台路由器，它有5个网口或者网卡，相当于有5只手，分别连着5个局域网。每只手的IP地址都和局域网的IP地址相同的网段，",
+        "box": [
+          0.0912795690206382,
+          0.0987267059143565,
+          0.8060371762230283,
+          0.0679693726635483
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-efe5947279",
+      "title": "静态路由",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-cee2a743cd",
+      "children": [
+        "network-deep-dive-0eac94d732"
+      ],
+      "photo": "IMG_8084",
+      "note": "",
+      "depth": 1,
+      "sourceText": "在路由器上配置一条条规则。",
+      "evidence": {
+        "text": "静态路由",
+        "box": [
+          0.11482389868903689,
+          0.21912147603406623,
+          0.060377587395688756,
+          0.02408716502755071
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-0eac94d732",
+      "title": "按目的地选择出口与下一跳",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-efe5947279",
+      "children": [],
+      "photo": "IMG_8084",
+      "note": "",
+      "depth": 2,
+      "sourceText": "想访问 BBS 站，从 2 号口出去，下一跳是 IP2；想访问教学视频站，从 3 号口出去，下一跳是 IP3。"
+    },
+    {
+      "id": "network-deep-dive-90d45e90ea",
+      "title": "策略路由",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-cee2a743cd",
+      "children": [
+        "network-deep-dive-3e1d40166b",
+        "network-deep-dive-d7885bdd44",
+        "network-deep-dive-ebad960327"
+      ],
+      "photo": "IMG_8084",
+      "note": "",
+      "depth": 1,
+      "sourceText": "可以配置多个路由表，可以根据源 IP 地址、入口设备、TOS 等选择不同的路由表，然后在路由表中查找路由。这样可以使得不同来源的包走不同的路由。",
+      "evidence": {
+        "text": "策略路由",
+        "box": [
+          0.5059341925035148,
+          0.2195458194012901,
+          0.060235774149747796,
+          0.02370374877245823
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-3e1d40166b",
+      "title": "源 IP 地址",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-90d45e90ea",
+      "children": [],
+      "photo": "IMG_8084",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "表，可以根据源IP地址、入口设备、TOS等选择路由",
+        "box": [
+          0.5993748279546445,
+          0.25504427865034074,
+          0.2790495408347591,
+          0.04052435183057598
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-d7885bdd44",
+      "title": "入口设备",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-90d45e90ea",
+      "children": [],
+      "photo": "IMG_8084",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "表，可以根据源IP地址、入口设备、TOS等选择路由",
+        "box": [
+          0.5993748279546445,
+          0.25504427865034074,
+          0.2790495408347591,
+          0.04052435183057598
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-ebad960327",
+      "title": "TOS",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-90d45e90ea",
+      "children": [],
+      "photo": "IMG_8084",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "表，可以根据源IP地址、入口设备、TOS等选择路由",
+        "box": [
+          0.5993748279546445,
+          0.25504427865034074,
+          0.2790495408347591,
+          0.04052435183057598
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-5e0f519678",
+      "title": "欧洲十国游",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-cee2a743cd",
+      "children": [],
+      "photo": "IMG_8084",
+      "note": "",
+      "depth": 1,
+      "sourceText": "MAC 变，IP 不变：像在欧洲各国旅游，一个签证就能搞定。",
+      "evidence": {
+        "text": "欧洲十国游",
+        "box": [
+          0.11280056972550125,
+          0.41548415223248564,
+          0.07442512099607468,
+          0.020159743635816962
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-16eba75a26",
+      "title": "玄奘西行与 NAT",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-cee2a743cd",
+      "children": [],
+      "photo": "IMG_8084",
+      "note": "",
+      "depth": 1,
+      "sourceText": "MAC 变，IP 也变：NAT。就像出国要用护照而不是身份证，玄奘使用通关文牒。"
+    },
+    {
+      "id": "network-deep-dive-28cc540061",
+      "title": "路由协议",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-f85cb1ec0a",
+        "network-deep-dive-c4f2dae8ee"
+      ],
+      "photo": "IMG_8084",
+      "note": "",
+      "depth": 0,
+      "sourceText": "唐僧西天取经有两个问题：每个国家内部，找到正确的路，换取通关文牒，吃饭、休息；国家之间在野外行走时，找到路和水源。",
+      "evidence": {
+        "text": "5.路由协议",
+        "box": [
+          0.08225747168209063,
+          0.6342131039054245,
+          0.13607507970239255,
+          0.03879110797557953
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-f85cb1ec0a",
+      "title": "OSPF：国家内部找路",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-28cc540061",
+      "children": [],
+      "photo": "IMG_8084",
+      "note": "",
+      "depth": 1,
+      "sourceText": "基于链路状态路由算法的 OSPF。一个国家内部，最短路径很重要，走得越少越好。"
+    },
+    {
+      "id": "network-deep-dive-c4f2dae8ee",
+      "title": "BGP：国家之间选路",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-28cc540061",
+      "children": [],
+      "photo": "IMG_8084",
+      "note": "保留原图的算法分组与取经类比，不作为协议算法的完整定义。",
+      "depth": 1,
+      "sourceText": "基于距离矢量路由算法的 BGP。国家之间，不光要考虑远近，还要考虑政策。例如路过女儿国，最好绕远走。"
+    },
+    {
+      "id": "network-deep-dive-67ee9fd784",
+      "title": "UDP",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-087221a3f3",
+        "network-deep-dive-7a33b92573"
+      ],
+      "photo": "IMG_8085",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "6.UDP",
+        "box": [
+          0.1198499010790939,
+          0.15357448783310765,
+          0.128716434083399,
+          0.028609612439189188
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-087221a3f3",
+      "title": "三大特点",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-67ee9fd784",
+      "children": [
+        "network-deep-dive-860fb58c03",
+        "network-deep-dive-6c5d16c065",
+        "network-deep-dive-1fc140b9b0"
+      ],
+      "photo": "IMG_8085",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "三大特点",
+        "box": [
+          0.17279899392588247,
+          0.21801332184391103,
+          0.09405424258733443,
+          0.01756138426153276
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-860fb58c03",
+      "title": "沟通简单",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-087221a3f3",
+      "children": [],
+      "photo": "IMG_8085",
+      "note": "",
+      "depth": 2,
+      "sourceText": "沟通简单，不需要一肚子花花肠子（大量的数据结构、处理逻辑、包头字段）。相信网络世界是美好的，秉承性善论，相信网络通路默认容易送达、不容易丢弃。",
+      "evidence": {
+        "text": "沟通简单，不需要一肚子花花",
+        "box": [
+          0.1710892126696175,
+          0.26886165141719326,
+          0.22862393248314952,
+          0.019561590759674216
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-6c5d16c065",
+      "title": "轻信他人",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-087221a3f3",
+      "children": [],
+      "photo": "IMG_8085",
+      "note": "",
+      "depth": 2,
+      "sourceText": "轻信他人，不会建立连接。虽然有端口号，但是只监听，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。",
+      "evidence": {
+        "text": "轻信他人。它不会建立连接，",
+        "box": [
+          0.17032941572901913,
+          0.37014940167232085,
+          0.22919665709708364,
+          0.019385636715074116
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-1fc140b9b0",
+      "title": "愣头青",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-087221a3f3",
+      "children": [],
+      "photo": "IMG_8085",
+      "note": "原图用人物性格解释 UDP 的特性。",
+      "depth": 2,
+      "sourceText": "做事不懂权变，不知道什么时候该坚持、什么时候该退让。不根据网络情况进行拥塞控制，无论丢包成什么样，还怎么发就怎么发。",
+      "evidence": {
+        "text": "愣头青，做事不懂权变。不",
+        "box": [
+          0.18026635062651142,
+          0.44297292202141214,
+          0.21869992096773608,
+          0.021137126019688857
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-7a33b92573",
+      "title": "三大使用场景",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-67ee9fd784",
+      "children": [
+        "network-deep-dive-d2c7815195",
+        "network-deep-dive-18ea2659af",
+        "network-deep-dive-43d163f3fa"
+      ],
+      "photo": "IMG_8085",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "三大使用场景",
+        "box": [
+          0.19058486763417812,
+          0.5587082531243495,
+          0.14133617924708944,
+          0.023649541603750865
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-d2c7815195",
+      "title": "资源少、内网或对丢包不敏感",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-7a33b92573",
+      "children": [
+        "network-deep-dive-f3eca57cfa"
+      ],
+      "photo": "IMG_8085",
+      "note": "",
+      "depth": 2,
+      "sourceText": "需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。",
+      "evidence": {
+        "text": "需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用",
+        "box": [
+          0.18483227974627078,
+          0.5909362284069142,
+          0.6185102109555844,
+          0.04964311917622877
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-f3eca57cfa",
+      "title": "刚毕业员工的类比",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-d2c7815195",
+      "children": [],
+      "photo": "IMG_8085",
+      "note": "",
+      "depth": 3,
+      "sourceText": "刚毕业的员工可以做一些简单的项目、服务一些简单的客户，或者做一些可以接受失败的实验项目。"
+    },
+    {
+      "id": "network-deep-dive-18ea2659af",
+      "title": "不需一对一连接、可以广播",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-7a33b92573",
+      "children": [
+        "network-deep-dive-2972189adc"
+      ],
+      "photo": "IMG_8085",
+      "note": "",
+      "depth": 2,
+      "sourceText": "不需要一对一沟通建立连接，而是可以广播的应用。",
+      "evidence": {
+        "text": "不需要一对一沟通，建立连接，而是可以广播的应用",
+        "box": [
+          0.18842569689770344,
+          0.6980566067085834,
+          0.4817023706183862,
+          0.04462528607201954
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-2972189adc",
+      "title": "当众说话与背靠背沟通",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-18ea2659af",
+      "children": [],
+      "photo": "IMG_8085",
+      "note": "",
+      "depth": 3,
+      "sourceText": "小时候可以在全班同学面前讲，长大了谈薪水、奖金，需要背靠背一对一沟通。"
+    },
+    {
+      "id": "network-deep-dive-43d163f3fa",
+      "title": "速度快、时延低、容忍少量丢包",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-7a33b92573",
+      "children": [
+        "network-deep-dive-ee0995de51"
+      ],
+      "photo": "IMG_8085",
+      "note": "",
+      "depth": 2,
+      "sourceText": "需要处理速度快、时延低，可以容忍少数丢包，但是要求即便网络拥塞也毫不退缩、一往无前。"
+    },
+    {
+      "id": "network-deep-dive-ee0995de51",
+      "title": "湘军与八旗兵的类比",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-43d163f3fa",
+      "children": [],
+      "photo": "IMG_8085",
+      "note": "",
+      "depth": 3,
+      "sourceText": "曾国藩建立湘军，招募新兵，不用“老油条”八旗兵。八旗兵经验多，遇到敌人反而不敢死战。"
+    },
+    {
+      "id": "network-deep-dive-5824b787a5",
+      "title": "Socket 编程",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-e3a7f632e4",
+        "network-deep-dive-8532847602",
+        "network-deep-dive-c387550e17",
+        "network-deep-dive-c1816809aa",
+        "network-deep-dive-1caacd506c"
+      ],
+      "photo": "IMG_8086",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "7. Socket编程",
+        "box": [
+          0.07326986544675639,
+          0.19675488652001152,
+          0.2109495246666375,
+          0.026914216585766832
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-e3a7f632e4",
+      "title": "0：单人循环服务",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-5824b787a5",
+      "children": [
+        "network-deep-dive-20ad9d8db0"
+      ],
+      "photo": "IMG_8086",
+      "note": "",
+      "depth": 1,
+      "sourceText": "建立连接后，进行一个 while 循环，客户端发了收，服务端收了发。",
+      "evidence": {
+        "text": "方式0：在建立连接后，进行一个while循环，客户端发了收，服务端收了发",
+        "box": [
+          0.09941923517208757,
+          0.22136632165326064,
+          0.6511872306702627,
+          0.05287561340937541
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-20ad9d8db0",
+      "title": "老板亲自服务客户",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-e3a7f632e4",
+      "children": [],
+      "photo": "IMG_8086",
+      "note": "",
+      "depth": 2,
+      "sourceText": "这就相当于老板成立一个公司，只有自己一个人，自己亲自上来服务客户，只能干完了一家再干下一家，赚不来多少钱。",
+      "evidence": {
+        "text": "这就相当于老板成立一个公司，只有自己一个人，自己亲自上来服务各尸，只能干完了一家再干下一家，赚不来多少钱。",
+        "box": [
+          0.10028406021352065,
+          0.26330907396106373,
+          0.8009981831545552,
+          0.04226808888571598
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-8532847602",
+      "title": "1：多进程",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-5824b787a5",
+      "children": [
+        "network-deep-dive-f4189542cf"
+      ],
+      "photo": "IMG_8086",
+      "note": "",
+      "depth": 1,
+      "sourceText": "将项目外包给其他公司。",
+      "evidence": {
+        "text": "方式1：将项目外包给其他公司（",
+        "box": [
+          0.09407982764751294,
+          0.36019571300165637,
+          0.30194393838264477,
+          0.024107445740371904
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-f4189542cf",
+      "title": "注册子公司、转包项目",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-8532847602",
+      "children": [],
+      "photo": "IMG_8086",
+      "note": "",
+      "depth": 2,
+      "sourceText": "就像来了一个新的项目，但是项目不一定是你自己做，可以再注册一家子公司，招一点人，然后项目转包给这家子公司。以后对接子公司，自己可以接新的项目。",
+      "evidence": {
+        "text": "就像来了一个新的项目，但是项目不一定是你自己做，可以再注册一家子公司，招一点人，然后项目转包给这家子公司",
+        "box": [
+          0.09434156325694823,
+          0.3846544497357549,
+          0.8226039018580523,
+          0.03922051475161603
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-c387550e17",
+      "title": "2：多线程",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-5824b787a5",
+      "children": [
+        "network-deep-dive-04006e815d"
+      ],
+      "photo": "IMG_8086",
+      "note": "",
+      "depth": 1,
+      "sourceText": "将项目转给独立的项目组。",
+      "evidence": {
+        "text": "方式2：将项目转给独立的项目组",
+        "box": [
+          0.08552913211946081,
+          0.4989006851483796,
+          0.3020030929038282,
+          0.025304540532643763
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-04006e815d",
+      "title": "同公司项目组共享办公家具",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-c387550e17",
+      "children": [],
+      "photo": "IMG_8086",
+      "note": "",
+      "depth": 2,
+      "sourceText": "如果创建进程相当于成立新公司，购买新办公家具，而创建线程就相当于在同一个公司成立项目组。一个项目做完，项目组可以解散，再成立新的项目组，办公家具可以共用。"
+    },
+    {
+      "id": "network-deep-dive-c1816809aa",
+      "title": "3：IO 多路复用与轮询",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-5824b787a5",
+      "children": [
+        "network-deep-dive-19167e9735"
+      ],
+      "photo": "IMG_8086",
+      "note": "",
+      "depth": 1,
+      "sourceText": "一个项目组支撑多个项目：一个线程处理多个 Socket。"
+    },
+    {
+      "id": "network-deep-dive-19167e9735",
+      "title": "项目进度墙与轮询",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-c1816809aa",
+      "children": [],
+      "photo": "IMG_8086",
+      "note": "",
+      "depth": 2,
+      "sourceText": "一个项目组看多个项目，每个项目组都应该有个项目进度墙，将自己组看的项目列在那里，每天通过项目进度墙轮询查看项目进展，有进展就派人盯着。"
+    },
+    {
+      "id": "network-deep-dive-1caacd506c",
+      "title": "4：IO 多路复用与事件通知",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-5824b787a5",
+      "children": [
+        "network-deep-dive-85765b7ab7"
+      ],
+      "photo": "IMG_8086",
+      "note": "",
+      "depth": 1,
+      "sourceText": "一个项目组支撑多个项目：从派人盯着到有事通知。"
+    },
+    {
+      "id": "network-deep-dive-85765b7ab7",
+      "title": "进度变化主动通知",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-1caacd506c",
+      "children": [],
+      "photo": "IMG_8086",
+      "note": "",
+      "depth": 2,
+      "sourceText": "如果改成事件通知的方式，情况就会好很多。项目组不需要通过轮询挨个盯着这些项目，而是当项目进度发生变化的时候，主动通知项目组，再进行对应的操作。",
+      "evidence": {
+        "text": "如果改成事件通知的方式，情况就会好很多，项目组不需要通过轮询挨个盯着这些项目，而是当项目进度发生变化的时",
+        "box": [
+          0.05906776219140743,
+          0.8270382069639486,
+          0.9050967100436095,
+          0.08098017980181982
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-84424541fe",
+      "title": "流媒体协议",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-48a1972741",
+        "network-deep-dive-bebd9bdf13",
+        "network-deep-dive-4284105427",
+        "network-deep-dive-a7fc22fb2b"
+      ],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "8. 流媒体协议",
+        "box": [
+          0.10643158270603524,
+          0.09641433625594147,
+          0.2593420831874416,
+          0.03913369538481947
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-48a1972741",
+      "title": "编码",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-84424541fe",
+      "children": [
+        "network-deep-dive-3772131578",
+        "network-deep-dive-c6a46bd5c2",
+        "network-deep-dive-7610c0be82"
+      ],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 1,
+      "sourceText": "如何将丰富多彩的图片变成二进制流？",
+      "evidence": {
+        "text": "编码：如何将丰富多彩的图片变成二进制流？",
+        "box": [
+          0.1392098019999761,
+          0.16406980099909374,
+          0.45409853496248753,
+          0.027296299972231486
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-3772131578",
+      "title": "视频与 I、B、P 帧",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-48a1972741",
+      "children": [
+        "network-deep-dive-5cd839c54f",
+        "network-deep-dive-88ad6d6aeb",
+        "network-deep-dive-f80f234072"
+      ],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 2,
+      "sourceText": "视频是一张张图片的序列，如果每张图片都完整保存，数据量太大。视频序列分为 I、B、P 三种帧。"
+    },
+    {
+      "id": "network-deep-dive-5cd839c54f",
+      "title": "I 帧",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-3772131578",
+      "children": [],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 3
+    },
+    {
+      "id": "network-deep-dive-88ad6d6aeb",
+      "title": "B 帧",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-3772131578",
+      "children": [],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 3
+    },
+    {
+      "id": "network-deep-dive-f80f234072",
+      "title": "P 帧",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-3772131578",
+      "children": [],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 3
+    },
+    {
+      "id": "network-deep-dive-c6a46bd5c2",
+      "title": "帧、片与 NALU",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-48a1972741",
+      "children": [],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 2,
+      "sourceText": "视频拆成一系列帧，每帧拆成一系列片，每片放在一个 NALU 里，NALU 之间用特殊的起始标识符分隔。"
+    },
+    {
+      "id": "network-deep-dive-7610c0be82",
+      "title": "SPS 与 PPS",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-48a1972741",
+      "children": [],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 2,
+      "sourceText": "每个 I 帧的第一片前面，插入单独保存 SPS 和 PPS 的 NALU，形成一个长的 NALU 序列。"
+    },
+    {
+      "id": "network-deep-dive-bebd9bdf13",
+      "title": "推流",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-84424541fe",
+      "children": [
+        "network-deep-dive-1180695851",
+        "network-deep-dive-8f02963dcb"
+      ],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 1,
+      "sourceText": "如何把数据流打包传输到对端？",
+      "evidence": {
+        "text": "推流：如何把数据流打包传输到对端？",
+        "box": [
+          0.11993094371487667,
+          0.43421645588435,
+          0.405493317457734,
+          0.023569027582804436
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-1180695851",
+      "title": "Message 与 RTMP Packet",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-bebd9bdf13",
+      "children": [],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 2,
+      "sourceText": "NALU 放在 Message 里面发送，也称为 RTMP Packet 包。"
+    },
+    {
+      "id": "network-deep-dive-8f02963dcb",
+      "title": "Chunk",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-bebd9bdf13",
+      "children": [],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 2,
+      "sourceText": "RTMP 在收发数据的时候并不是以 Message 为单位的，而是把 Message 拆分成 Chunk 发送。",
+      "evidence": {
+        "text": "RTMP在收发数据的时候并不是以Message为单位的，而是把Message拆分成Chunk",
+        "box": [
+          0.11434110313637445,
+          0.5376984122753541,
+          0.7810077162646742,
+          0.017609126984126977
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-4284105427",
+      "title": "分发与流处理",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-84424541fe",
+      "children": [
+        "network-deep-dive-5eb89e1096",
+        "network-deep-dive-505426da24"
+      ],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "分发与流处理",
+        "box": [
+          0.10919638255905623,
+          0.6583800369702357,
+          0.156888603830204,
+          0.02062633257954061
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-5eb89e1096",
+      "title": "中心流媒体服务集群",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-4284105427",
+      "children": [],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 2,
+      "sourceText": "分发网络分为中心和边缘两层，中心流媒体服务集群负责转发。"
+    },
+    {
+      "id": "network-deep-dive-505426da24",
+      "title": "边缘服务器",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-4284105427",
+      "children": [],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 2,
+      "sourceText": "边缘服务器部署在全国各地，跨运营商，离用户很近。"
+    },
+    {
+      "id": "network-deep-dive-a7fc22fb2b",
+      "title": "拉流",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-84424541fe",
+      "children": [
+        "network-deep-dive-54978ee532",
+        "network-deep-dive-08b7c41cf8"
+      ],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 1,
+      "sourceText": "观众客户端如何看到视频？",
+      "evidence": {
+        "text": "拉流：观众的客户端如何看到视频？",
+        "box": [
+          0.48449612014556387,
+          0.6482558135828645,
+          0.3972868339094535,
+          0.027616279465811577
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-54978ee532",
+      "title": "读取解码参数",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-a7fc22fb2b",
+      "children": [],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 2,
+      "sourceText": "先读取 H.264 解码参数，例如 SPS、PPS。"
+    },
+    {
+      "id": "network-deep-dive-08b7c41cf8",
+      "title": "解码与播放",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-a7fc22fb2b",
+      "children": [],
+      "photo": "IMG_8087",
+      "note": "",
+      "depth": 2,
+      "sourceText": "对收到的 NALU 组成的帧进行解码，交给播放器播放。"
+    },
+    {
+      "id": "network-deep-dive-391dc1675b",
+      "title": "DNS 与 HTTPDNS",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-66670f3bc4",
+        "network-deep-dive-ab4d963545",
+        "network-deep-dive-070973a04b"
+      ],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "9.DNS与HTTPDNS",
+        "box": [
+          0.043365284800535794,
+          0,
+          0.22982951580442032,
+          0.048705392191056095
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-66670f3bc4",
+      "title": "DNS",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-391dc1675b",
+      "children": [
+        "network-deep-dive-fe4e501179",
+        "network-deep-dive-9429ad2379",
+        "network-deep-dive-e42756f212"
+      ],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "DNS",
+        "box": [
+          0.06455410656035304,
+          0.08855258653169606,
+          0.030214844052520035,
+          0.01843408020048023
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-fe4e501179",
+      "title": "树状结构",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-66670f3bc4",
+      "children": [
+        "network-deep-dive-ea4ad21993",
+        "network-deep-dive-d4624eb4ba",
+        "network-deep-dive-e13ea3f428",
+        "network-deep-dive-196e17310b"
+      ],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2,
+      "sourceText": "老大是根域名服务器，老二是顶级域名服务器，真正干活的是权威 DNS。每次查地址簿都遍历一遍树比较耗时，各运营商会有本地域名服务器做缓存。",
+      "evidence": {
+        "text": "DNS服务器组织成树状结构，老大是根域名",
+        "box": [
+          0.05772980176982059,
+          0.1416542914489068,
+          0.2484396371189578,
+          0.04502250144239013
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-ea4ad21993",
+      "title": "根域名服务器",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-fe4e501179",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 3
+    },
+    {
+      "id": "network-deep-dive-d4624eb4ba",
+      "title": "顶级域名服务器",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-fe4e501179",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "服务酱，老二是顶级域名服务器，真正干活",
+        "box": [
+          0.05602759944117377,
+          0.16943431078066973,
+          0.25000314971409954,
+          0.04277088617632928
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-e13ea3f428",
+      "title": "权威 DNS",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-fe4e501179",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "的是权威DNS服务，每次查找地址簿，都",
+        "box": [
+          0.055344859144232615,
+          0.1946439860728073,
+          0.25014584456381944,
+          0.04602743909249898
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-196e17310b",
+      "title": "本地域名服务器与缓存",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-fe4e501179",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 3
+    },
+    {
+      "id": "network-deep-dive-9429ad2379",
+      "title": "域名地址簿",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-66670f3bc4",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2,
+      "sourceText": "常用的网站可能有二三十个，用 IP 地址不好记，需要一个地址簿，可以根据名称查地址。"
+    },
+    {
+      "id": "network-deep-dive-e42756f212",
+      "title": "全局负载均衡",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-66670f3bc4",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2,
+      "sourceText": "北京用户访问北京数据中心，上海用户访问上海数据中心，体验好、访问快。",
+      "evidence": {
+        "text": "就是全局负载均衡的概念。",
+        "box": [
+          0.03973503358201238,
+          0.5637187752945417,
+          0.1455278765244311,
+          0.025449497247833082
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-ab4d963545",
+      "title": "传统 DNS 的问题",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-391dc1675b",
+      "children": [
+        "network-deep-dive-3baff2d28b",
+        "network-deep-dive-6ee911489a",
+        "network-deep-dive-dbc21a24b3"
+      ],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "传统DNS问题",
+        "box": [
+          0.37144934413490827,
+          0.11616111909866755,
+          0.08894407181512742,
+          0.032696349057608105
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-3baff2d28b",
+      "title": "缓存问题",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-ab4d963545",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2,
+      "sourceText": "导游去过一家饭店后记住地址，下次游客问起就凭记忆回答；饭店搬家了，缓存没有刷新。",
+      "evidence": {
+        "text": "缓存问题",
+        "box": [
+          0.3698039365072097,
+          0.18012200731539454,
+          0.05606260219541919,
+          0.025028257254236325
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-6ee911489a",
+      "title": "负载均衡失效",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-ab4d963545",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2,
+      "sourceText": "游客在西湖想吃西湖醋鱼，推荐西湖的店；下次游客到了灵隐寺，仍然指向西湖，距离太远。",
+      "evidence": {
+        "text": "负载均衡失效",
+        "box": [
+          0.36966069665820966,
+          0.3316963212567158,
+          0.0809226743981284,
+          0.02460765393396942
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-dbc21a24b3",
+      "title": "域名转发",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-ab4d963545",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2,
+      "sourceText": "西湖的导游懒得自己查，去问负责灵隐寺的同事，结果推荐了灵隐寺旁边的西湖醋鱼。",
+      "evidence": {
+        "text": "域名转发",
+        "box": [
+          0.3677906749993906,
+          0.48589044185419894,
+          0.0544908560958563,
+          0.018947832835933865
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-070973a04b",
+      "title": "HTTPDNS",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-391dc1675b",
+      "children": [
+        "network-deep-dive-75c306adbd",
+        "network-deep-dive-da2f5c50c8"
+      ],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "HTTPDNS",
+        "box": [
+          0.7331161760270726,
+          0.1549953313308532,
+          0.06221474620319943,
+          0.014811738866383956
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-75c306adbd",
+      "title": "基于 HTTP 的解析服务",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-070973a04b",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2,
+      "sourceText": "不走传统 DNS 解析，自建基于 HTTP 协议的 DNS 服务器集群，分布在多个地点和运营商。客户端需要 DNS 解析时直接发送 HTTP 请求，得到就近的地址。"
+    },
+    {
+      "id": "network-deep-dive-da2f5c50c8",
+      "title": "HTTPDNS 服务器与 SDK",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-070973a04b",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2,
+      "sourceText": "有自己的 HTTPDNS 服务器和 SDK，从依赖本地导游变成上网查旅游攻略、自由行，避免不专业导游。"
+    },
+    {
+      "id": "network-deep-dive-40ecca9748",
+      "title": "HTTPS",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-2e1fb9af05",
+        "network-deep-dive-27be1fed66",
+        "network-deep-dive-3c48813941"
+      ],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "HTTPDNS",
+        "box": [
+          0.7331161760270726,
+          0.1549953313308532,
+          0.06221474620319943,
+          0.014811738866383956
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-2e1fb9af05",
+      "title": "对称加密",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-40ecca9748",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 1,
+      "sourceText": "谍战片里的密码本，截获无线电台的消息后，通过密码本破译原文。",
+      "evidence": {
+        "text": "对称加密",
+        "box": [
+          0.0412105014510439,
+          0.7481181300717572,
+          0.058355149579338954,
+          0.026183692903634422
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-27be1fed66",
+      "title": "非对称加密",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-40ecca9748",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "原图用外卖网站说明公钥与私钥的分工，未展开 HTTPS 握手和密钥协商。",
+      "depth": 1,
+      "sourceText": "私钥放在外卖网站，不在互联网上传输，保障秘密；对应的公钥可以在网上任意传输，只要外卖网站给你公钥，就可以互通。",
+      "evidence": {
+        "text": "非对称加密",
+        "box": [
+          0.363163903097033,
+          0.7444920966224905,
+          0.07823879444966463,
+          0.021129387322148915
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-3c48813941",
+      "title": "数字证书",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-40ecca9748",
+      "children": [
+        "network-deep-dive-3285c6d47a",
+        "network-deep-dive-84b8ad42c9",
+        "network-deep-dive-8e632ce362",
+        "network-deep-dive-f882107daa"
+      ],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "数字证书",
+        "box": [
+          0.7546158773633215,
+          0.740953775531913,
+          0.058172241697493694,
+          0.02030185980845786
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-3285c6d47a",
+      "title": "公钥",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-3c48813941",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2
+    },
+    {
+      "id": "network-deep-dive-84b8ad42c9",
+      "title": "证书所有者",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-3c48813941",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2
+    },
+    {
+      "id": "network-deep-dive-8e632ce362",
+      "title": "发布机构",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-3c48813941",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "者，还有证书的发布机构和证书的有效期。",
+        "box": [
+          0.7493966652556783,
+          0.8650793652010079,
+          0.2209495811279451,
+          0.018674136321195134
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-f882107daa",
+      "title": "有效期",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-3c48813941",
+      "children": [],
+      "photo": "IMG_8088",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "者，还有证书的发布机构和证书的有效期。",
+        "box": [
+          0.7493966652556783,
+          0.8650793652010079,
+          0.2209495811279451,
+          0.018674136321195134
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-34565a5051",
+      "title": "CDN",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-e65a982e91",
+        "network-deep-dive-7d9fd0c10b"
+      ],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "11. CDN",
+        "box": [
+          0.04472511014414113,
+          0.11493693087002844,
+          0.14737995621425656,
+          0.03487639427640802
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-e65a982e91",
+      "title": "静态资源：就近配送",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-34565a5051",
+      "children": [],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 1,
+      "sourceText": "模仿物流的“就近配送”。网站统计每类物品在各大城市每天的销量，分布到各地仓库，客户下单后就近发货，可以很快收到。",
+      "evidence": {
+        "text": "静态资源模仿物流“就近配送”",
+        "box": [
+          0.07283179938973756,
+          0.17110201508702588,
+          0.2986553630241159,
+          0.030156644633648512
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-7d9fd0c10b",
+      "title": "动态资源",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-34565a5051",
+      "children": [
+        "network-deep-dive-8b22208660",
+        "network-deep-dive-7d3cd057aa"
+      ],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "动态资源",
+        "box": [
+          0.5186383660577808,
+          0.19868190679791214,
+          0.10089351394040687,
+          0.02477767095302608
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-8b22208660",
+      "title": "生鲜超市模式：边缘计算",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-7d9fd0c10b",
+      "children": [],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 2,
+      "sourceText": "数据动态生成，计算和存储放在边缘节点。"
+    },
+    {
+      "id": "network-deep-dive-7d3cd057aa",
+      "title": "冷链运输模式：路径优化",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-7d9fd0c10b",
+      "children": [],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 2,
+      "sourceText": "数据在源站生成，下发时经过 CDN 网络优化路径。"
+    },
+    {
+      "id": "network-deep-dive-197a2aa72d",
+      "title": "P2P",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-651c602e08",
+        "network-deep-dive-96ba6275df",
+        "network-deep-dive-38a92bdf55",
+        "network-deep-dive-dea5ce0737",
+        "network-deep-dive-c54215d467",
+        "network-deep-dive-2ab552930e"
+      ],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "12.P2P",
+        "box": [
+          0.026163570786680773,
+          0.44881255123501745,
+          0.1360889224667732,
+          0.027917207456102582
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-651c602e08",
+      "title": "Peer-to-Peer",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-197a2aa72d",
+      "children": [],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 1,
+      "sourceText": "资源不是集中存储在某个设备上，而是分散存储在多台设备上，这些设备称为 Peer。",
+      "evidence": {
+        "text": "P2P就是Peer-to-Peer。资源",
+        "box": [
+          0.05095270922328709,
+          0.5233987270957521,
+          0.24697080980829839,
+          0.01844445396872129
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-96ba6275df",
+      "title": "BitTorrent 的两个角色",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-197a2aa72d",
+      "children": [
+        "network-deep-dive-bb6d2b9677",
+        "network-deep-dive-d87eea347a"
+      ],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 1
+    },
+    {
+      "id": "network-deep-dive-bb6d2b9677",
+      "title": "Peer：上传与下载",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-96ba6275df",
+      "children": [],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 2,
+      "sourceText": "启动 BitTorrent 后，一个角色是 Peer，负责上传和下载。"
+    },
+    {
+      "id": "network-deep-dive-d87eea347a",
+      "title": "DHT node：文件索引",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-96ba6275df",
+      "children": [],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 2,
+      "sourceText": "另一个角色是 DHT node，加入 DHT 网络。每个节点知道某些文件存在于哪些节点上，也就是文件索引。"
+    },
+    {
+      "id": "network-deep-dive-38a92bdf55",
+      "title": "文件哈希与节点 ID",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-197a2aa72d",
+      "children": [],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 1,
+      "sourceText": "文件可以计算出一个哈希值，DHT node 的 ID 是与这个哈希值同长度的串。ID 和文件哈希一样或者很接近的节点，负责知道从哪里下载这个文件。"
+    },
+    {
+      "id": "network-deep-dive-dea5ce0737",
+      "title": "DHT 与社交网络",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-197a2aa72d",
+      "children": [],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 1,
+      "sourceText": "DHT 就像社交网络，一个 node 保存其他 node 的联系方式，也就是朋友圈。节点互相通信，可以增加或者删除朋友圈。这里的距离是社交距离，不是物理距离。"
+    },
+    {
+      "id": "network-deep-dive-c54215d467",
+      "title": "新节点加入",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-197a2aa72d",
+      "children": [],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 1,
+      "sourceText": "一个新的 DHT node 上线时，只需要联系 DHT 网络中的一个节点，就可以加入这个网络。"
+    },
+    {
+      "id": "network-deep-dive-2ab552930e",
+      "title": "通过朋友圈查找文件",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-197a2aa72d",
+      "children": [],
+      "photo": "IMG_8089",
+      "note": "",
+      "depth": 1,
+      "sourceText": "新节点计算文件哈希，知道某个 node 应该有文件保存位置的信息，于是到万能的朋友圈询问。不知道就转问朋友的朋友圈，很快可以找到。"
+    },
+    {
+      "id": "network-deep-dive-94c7e6fffa",
+      "title": "HTTP",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-abcebfd463",
+        "network-deep-dive-9e21f48706",
+        "network-deep-dive-0d39ae1355"
+      ],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "13. HTTP",
+        "box": [
+          0.05113663784649068,
+          0.15498633088531694,
+          0.15441586790966388,
+          0.024559352372274402
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-abcebfd463",
+      "title": "HTTP 1.1",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-94c7e6fffa",
+      "children": [
+        "network-deep-dive-d6fa9593c4",
+        "network-deep-dive-2f24aa1dac",
+        "network-deep-dive-f29935f9e3",
+        "network-deep-dive-b0677be607"
+      ],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "HTTP 1.1",
+        "box": [
+          0.05557857859796833,
+          0.3860694791837345,
+          0.13381130243438522,
+          0.022592818369718472
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-d6fa9593c4",
+      "title": "GET",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-abcebfd463",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 2,
+      "sourceText": "GET 就是去服务器获取一些资源。对于访问网页来讲，要获取的资源往往是一个页面。",
+      "evidence": {
+        "text": "GET",
+        "box": [
+          0.3527856735850871,
+          0.19724380084457382,
+          0.04039023904239429,
+          0.014901089252145295
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-2f24aa1dac",
+      "title": "POST",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-abcebfd463",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 2,
+      "sourceText": "支付场景，客户端就需要把“我是谁？我要支付多少？我要买啥？”告诉服务器，这就需要通过 POST 方法。",
+      "evidence": {
+        "text": "POST",
+        "box": [
+          0.3465210283308013,
+          0.3062547028234274,
+          0.052868452170093304,
+          0.01312674995639022
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-f29935f9e3",
+      "title": "PUT",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-abcebfd463",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 2,
+      "sourceText": "向指定资源位置上传最新内容。",
+      "evidence": {
+        "text": "向指定资源位置上传最新内容。",
+        "box": [
+          0.3288489511611613,
+          0.44830619716199416,
+          0.2333877948151917,
+          0.018342962452009604
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-b0677be607",
+      "title": "DELETE",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-abcebfd463",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 2,
+      "sourceText": "用来删除资源。",
+      "evidence": {
+        "text": "DELETE",
+        "box": [
+          0.33869545880757834,
+          0.5115422651226439,
+          0.07448916252698996,
+          0.012399212652895616
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-9e21f48706",
+      "title": "HTTP 2.0",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-94c7e6fffa",
+      "children": [
+        "network-deep-dive-ea1712e3ae",
+        "network-deep-dive-8cfe88cc3a",
+        "network-deep-dive-03dff50842",
+        "network-deep-dive-dabe362715"
+      ],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "HTTP 2.0",
+        "box": [
+          0.119283909671545,
+          0.7739267080827312,
+          0.14064682676456,
+          0.023821775671186252
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-ea1712e3ae",
+      "title": "头索引",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-9e21f48706",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "头索引",
+        "box": [
+          0.05485413977203986,
+          0.6870758694260802,
+          0.08300937257227109,
+          0.06377203726017043
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-8cfe88cc3a",
+      "title": "分流",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-9e21f48706",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "分流",
+        "box": [
+          0.2295805388101709,
+          0.688768132853195,
+          0.08581978934151785,
+          0.05567814720328423
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-03dff50842",
+      "title": "分帧",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-9e21f48706",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "分帧",
+        "box": [
+          0.24425173973970987,
+          0.8191854285649173,
+          0.06921996500423087,
+          0.05341977691067037
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-dabe362715",
+      "title": "二进制编码",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-9e21f48706",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "二进制编码",
+        "box": [
+          0.03889018997159905,
+          0.8091499646303089,
+          0.11670945538860075,
+          0.0875076539733494
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-0d39ae1355",
+      "title": "QUIC",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-94c7e6fffa",
+      "children": [
+        "network-deep-dive-1659801806"
+      ],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "QUIC",
+        "box": [
+          0.44379844975245014,
+          0.754360464886145,
+          0.09689922433681591,
+          0.027633582788800348
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-1659801806",
+      "title": "基于 UDP",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-0d39ae1355",
+      "children": [
+        "network-deep-dive-19439cf0a2",
+        "network-deep-dive-00f9faebf0",
+        "network-deep-dive-ff9cfac1db",
+        "network-deep-dive-54723b9240"
+      ],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "基于UDP",
+        "box": [
+          0.7485798728983353,
+          0.6580950950025819,
+          0.09881837561684832,
+          0.02041635125958953
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-19439cf0a2",
+      "title": "自定义连接机制",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-1659801806",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "自定义连接机制",
+        "box": [
+          0.7323057633848378,
+          0.7038381810183395,
+          0.1314670908239598,
+          0.018475268807138404
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-00f9faebf0",
+      "title": "自定义重传机制",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-1659801806",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "自定义重传机制",
+        "box": [
+          0.7345751305205628,
+          0.7543118196229703,
+          0.13085756560111023,
+          0.019131888076552507
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-ff9cfac1db",
+      "title": "无阻塞的多路复用",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-1659801806",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "无阻塞的多路复用",
+        "box": [
+          0.7249750282585331,
+          0.804289245856044,
+          0.1501138154643368,
+          0.022055331453966247
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-54723b9240",
+      "title": "自定义流量控制",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-1659801806",
+      "children": [],
+      "photo": "IMG_8090",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "自定义流量控制",
+        "box": [
+          0.7369962586490981,
+          0.8570940250727498,
+          0.13166452901147438,
+          0.01935960571926187
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-6d20c80a70",
+      "title": "TCP",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-ddd4a1a9f3",
+        "network-deep-dive-8f9136f16f",
+        "network-deep-dive-b1fe14181f",
+        "network-deep-dive-a8ba76136f",
+        "network-deep-dive-045ac6334e"
+      ],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "14.TCP",
+        "box": [
+          0.06209893815478835,
+          0.045536504598913174,
+          0.09585136682476764,
+          0.041053811152553465
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-ddd4a1a9f3",
+      "title": "顺序问题，稳重不乱",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-6d20c80a70",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 1,
+      "sourceText": "给每个事情编个号。程序员平时看任务的时候，就像程序员都会看 JIRA 的 ID，等开周会的时候，将 JIRA ID 的列表拉出来就行了。",
+      "evidence": {
+        "text": "顺序问题，稳重不乱",
+        "box": [
+          0.0801359990553357,
+          0.16201763009822384,
+          0.14148684596253236,
+          0.0344957909107654
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-8f9136f16f",
+      "title": "丢包问题，承诺靠谱",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-6d20c80a70",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 1,
+      "sourceText": "比如你交代给下属一个事情以后，下属到底能不能做到，做到什么程度，什么时候能够交付，往往就会有应答、有回复。",
+      "evidence": {
+        "text": "丢包问题，承诺靠谱",
+        "box": [
+          0.4139082932291201,
+          0.18907563037555028,
+          0.12215715296128216,
+          0.023377050761303912
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-b1fe14181f",
+      "title": "连接维护，有始有终",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-6d20c80a70",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 1,
+      "sourceText": "三次握手与四次挥手。",
+      "evidence": {
+        "text": "连接维护，有始有终",
+        "box": [
+          0.7481682988956583,
+          0.18453444850550363,
+          0.12702658139430958,
+          0.02587979492130512
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-a8ba76136f",
+      "title": "流量控制，把握分寸",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-6d20c80a70",
+      "children": [
+        "network-deep-dive-d569eb7bad",
+        "network-deep-dive-63a75feff5"
+      ],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 1,
+      "sourceText": "滑动窗口就是你和你的下属记录你布置给他的任务的本子。",
+      "evidence": {
+        "text": "滑动窗口就是你和你的下属记录你布置给他的任务的本子。",
+        "box": [
+          0.07535283818389323,
+          0.45916752744762634,
+          0.3828369322277251,
+          0.03338681579266911
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-d569eb7bad",
+      "title": "滑动窗口的四部分",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-a8ba76136f",
+      "children": [
+        "network-deep-dive-311714ec46",
+        "network-deep-dive-0a67c03304",
+        "network-deep-dive-9dbb3f6d83",
+        "network-deep-dive-911221a15e"
+      ],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 2
+    },
+    {
+      "id": "network-deep-dive-311714ec46",
+      "title": "做完了的应该划掉",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-d569eb7bad",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "做完了的应该划掉",
+        "box": [
+          0.10873044907841112,
+          0.5356672381283651,
+          0.10698610442261372,
+          0.017087197326033268
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-0a67c03304",
+      "title": "已经布置的任务，正在做还没做完",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-d569eb7bad",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "已经布置的任务，正在做还没做完",
+        "box": [
+          0.26875220453176757,
+          0.5358533997598022,
+          0.1848743680923704,
+          0.023808073114465755
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-9dbb3f6d83",
+      "title": "尚未布置的任务",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-d569eb7bad",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "尚未布置任务",
+        "box": [
+          0.1144689466665894,
+          0.5840817473281887,
+          0.09493155112394232,
+          0.01852798461914065
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-911221a15e",
+      "title": "工作饱和，不能再布置的任务",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-d569eb7bad",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "工作饱和，不能再布置的任务",
+        "box": [
+          0.28035537805886784,
+          0.582210913642404,
+          0.16167295546758742,
+          0.023562668492554284
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-63a75feff5",
+      "title": "滑动窗口如何移动",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-a8ba76136f",
+      "children": [
+        "network-deep-dive-311a57de1d",
+        "network-deep-dive-09b295be8f",
+        "network-deep-dive-bac427f1f1"
+      ],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 2
+    },
+    {
+      "id": "network-deep-dive-311a57de1d",
+      "title": "做完一条划掉一条，新来一条在最后添加一条",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-63a75feff5",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "做完一条划掉一条，新来一条，在最后添加一条",
+        "box": [
+          0.10434050365642542,
+          0.7057775537872741,
+          0.27636298986621566,
+          0.03448355965921522
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-09b295be8f",
+      "title": "做完一条能够再布置一条",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-63a75feff5",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 3,
+      "evidence": {
+        "text": "做完一条能够再布置一条",
+        "box": [
+          0.10209709882488266,
+          0.7665675054902348,
+          0.14937694192659823,
+          0.02465064585709769
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-bac427f1f1",
+      "title": "根据反馈调整任务数量",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-63a75feff5",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 3,
+      "sourceText": "如果下属反馈能力强，可以多布置几条；反馈做不过来，就需要少布置几条。"
+    },
+    {
+      "id": "network-deep-dive-045ac6334e",
+      "title": "拥塞控制，知进知退",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-6d20c80a70",
+      "children": [
+        "network-deep-dive-7c693dbc65",
+        "network-deep-dive-9d57a76892",
+        "network-deep-dive-1f28e7bcb9"
+      ],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "拥塞控制，知进知退",
+        "box": [
+          0.5581700678507271,
+          0.3836937880337445,
+          0.14135327592951244,
+          0.02643693127885919
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-7c693dbc65",
+      "title": "慢启动，指数性增长",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-045ac6334e",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 2,
+      "sourceText": "我们通过漏斗往瓶子里灌水，一桶水一下子倒进去，肯定会溅出来。要一开始慢慢地倒，然后发现还可以倒进去，就可以越倒越快。这叫作慢启动。",
+      "evidence": {
+        "text": "慢启动，指数性增长",
+        "box": [
+          0.5741279081362072,
+          0.4612403106795915,
+          0.13372092776828348,
+          0.025201488424230534
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-9d57a76892",
+      "title": "拥塞避免，线性增长",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-045ac6334e",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "65535 个字节是原图中的数值，按原文保留，不作为通用固定阈值。",
+      "depth": 2,
+      "sourceText": "涨到什么时候是个头呢？有一个值 ssthresh 为 65535 个字节，当超过这个值的时候，就要小心一点了，不能倒这么快了，可能快满了，再慢下来。",
+      "evidence": {
+        "text": "拥塞避免，线性增长",
+        "box": [
+          0.5741279049678538,
+          0.60846560889075,
+          0.13808139922126894,
+          0.027193305353638952
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-1f28e7bcb9",
+      "title": "快速重传，快速恢复",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-045ac6334e",
+      "children": [
+        "network-deep-dive-cb29e66a3b",
+        "network-deep-dive-2e22d7a4e0"
+      ],
+      "photo": "IMG_8091",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "快速重传，快速恢复",
+        "box": [
+          0.5755813933023985,
+          0.7635582007128887,
+          0.13808139922126894,
+          0.027139473213720566
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-cb29e66a3b",
+      "title": "超时重传",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-1f28e7bcb9",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "这里的窗口与重传行为沿用原图的教学简化表述。",
+      "depth": 3,
+      "sourceText": "一旦超时重传，马上回到解放前，窗口为 1，从头开始慢启动。",
+      "evidence": {
+        "text": "一旦超时重传，马上回到解放前，窗口为1，从头开始慢启动。",
+        "box": [
+          0.5855472853401835,
+          0.8018202925193826,
+          0.36965185498434405,
+          0.033693525526258705
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-2e22d7a4e0",
+      "title": "部分丢包与快速重传",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-1f28e7bcb9",
+      "children": [],
+      "photo": "IMG_8091",
+      "note": "沿用原图类比，未补写不同拥塞控制算法的具体实现。",
+      "depth": 3,
+      "sourceText": "部分丢包可以快速重传，窗口腰斩，并非回到解放前为 1。",
+      "evidence": {
+        "text": "•部分丢包可以快速重传，窗口腰斩，并非回到解放前为1。",
+        "box": [
+          0.5737892142096427,
+          0.8302942780572389,
+          0.3539667583647229,
+          0.03833498273577007
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-5d468fcd66",
+      "title": "DHCP 协议",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-104ccbc942",
+        "network-deep-dive-306fd3455b",
+        "network-deep-dive-3aa8c4077a",
+        "network-deep-dive-7788930b89",
+        "network-deep-dive-695f3719b2",
+        "network-deep-dive-e7e5fb1353"
+      ],
+      "photo": "IMG_8092",
+      "note": "",
+      "depth": 0,
+      "sourceText": "手动配置 IP 地址相当于自己买房装修，DHCP 协议相当于租房。",
+      "evidence": {
+        "text": "手动配置IP地址相当于自己买房装修，DHCP协议相当于租房。",
+        "box": [
+          0.19397221040575927,
+          0.14028668763643115,
+          0.5115477143141327,
+          0.05132317921471974
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-104ccbc942",
+      "title": "Discover：寻找中介",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-5d468fcd66",
+      "children": [],
+      "photo": "IMG_8092",
+      "note": "",
+      "depth": 1,
+      "sourceText": "新到一个城市要先找中介（DHCP 服务器）租个房（IP）——Discover。",
+      "evidence": {
+        "text": "新到一个城市要先找中介（DHCP服务器）租个房（IP）——Discover。",
+        "box": [
+          0.1905975431838485,
+          0.18804139971935063,
+          0.5844171917627728,
+          0.05248980295090444
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-306fd3455b",
+      "title": "Offer：提供房源",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-5d468fcd66",
+      "children": [],
+      "photo": "IMG_8092",
+      "note": "",
+      "depth": 1,
+      "sourceText": "中介（DHCP 服务器）会带你看房，可能会有多个中介带你看多个房——Offer。",
+      "evidence": {
+        "text": "中介（DHCP服务器）会带你看房，可能会有多个中介带你看多个房——Offer。",
+        "box": [
+          0.1883551155195544,
+          0.23801822584051902,
+          0.6231947399321056,
+          0.052602938243321073
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-3aa8c4077a",
+      "title": "Request：选择房源",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-5d468fcd66",
+      "children": [],
+      "photo": "IMG_8092",
+      "note": "",
+      "depth": 1,
+      "sourceText": "你看上其中一个房，愿意租下来——Request。",
+      "evidence": {
+        "text": "你看上其中一个房，愿意租下来——Request。",
+        "box": [
+          0.18460643050312356,
+          0.2872007418086243,
+          0.40015076329468424,
+          0.04203438380407909
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-7788930b89",
+      "title": "Ack：租约达成",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-5d468fcd66",
+      "children": [],
+      "photo": "IMG_8092",
+      "note": "",
+      "depth": 1,
+      "sourceText": "中介说没问题，咱们签合同，租约达成——Ack。",
+      "evidence": {
+        "text": "中介说没问题，咱们签合同，租约达成——Ack。",
+        "box": [
+          0.18299409566983646,
+          0.3386055771237576,
+          0.4131705470816799,
+          0.03821828251793269
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-695f3719b2",
+      "title": "广播租约",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-5d468fcd66",
+      "children": [],
+      "photo": "IMG_8092",
+      "note": "保留原图的租房类比，未展开各报文的广播与单播条件。",
+      "depth": 1,
+      "sourceText": "租约达成要广播，防止中介之间跳单。",
+      "evidence": {
+        "text": "租约达成要广播，防止中介之间跳单。",
+        "box": [
+          0.1811636862168909,
+          0.3895020441947946,
+          0.32578237220723794,
+          0.03163607915242517
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-e7e5fb1353",
+      "title": "租期与续租",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-5d468fcd66",
+      "children": [],
+      "photo": "IMG_8092",
+      "note": "",
+      "depth": 1,
+      "sourceText": "租期快到之前，记得续租。",
+      "evidence": {
+        "text": "租期快到之前，记得续租",
+        "box": [
+          0.16989319052779145,
+          0.4397911891787185,
+          0.22845678391799434,
+          0.0252714584521553
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-74b7ad5b65",
+      "title": "ICMP",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-ff70bd99c2",
+        "network-deep-dive-4bef149ac4"
+      ],
+      "photo": "IMG_8092",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "16.ICMP",
+        "box": [
+          0.07568724072465872,
+          0.5099638426753145,
+          0.18423111432072828,
+          0.032051850433777014
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-ff70bd99c2",
+      "title": "查询报文类型",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-74b7ad5b65",
+      "children": [
+        "network-deep-dive-ffc7b3e709"
+      ],
+      "photo": "IMG_8092",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "查询报文类型",
+        "box": [
+          0.1085524619261301,
+          0.5779061627363101,
+          0.14964733248442605,
+          0.018732492997198886
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-ffc7b3e709",
+      "title": "ping",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-ff70bd99c2",
+      "children": [],
+      "photo": "IMG_8092",
+      "note": "",
+      "depth": 2,
+      "sourceText": "主帅说，来人哪！前方战事如何，快去派人打探，一有情况，立即通报！",
+      "evidence": {
+        "text": "主帅说，来人哪！前方战事如何，快去派人打探，一有情况，立即通报！",
+        "box": [
+          0.10843084252079299,
+          0.6234785538076599,
+          0.6261625340375951,
+          0.023564906347365633
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-4bef149ac4",
+      "title": "差错报文类型",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-74b7ad5b65",
+      "children": [
+        "network-deep-dive-9842a8683d"
+      ],
+      "photo": "IMG_8092",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "差错报文类型",
+        "box": [
+          0.09991868756030303,
+          0.7360753515506744,
+          0.14831173965354374,
+          0.01936064442241569
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-9842a8683d",
+      "title": "traceroute",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-4bef149ac4",
+      "children": [],
+      "photo": "IMG_8092",
+      "note": "按原图把工具与报文类别对应收录，未展开工具的不同实现。",
+      "depth": 2,
+      "sourceText": "主帅骑马走着走着，突然来了一匹快马，上面的小兵气喘吁吁地说：报告主公，不好啦！将军遭遇埋伏，全军覆没啦！",
+      "evidence": {
+        "text": "traceroute",
+        "box": [
+          0.09676516279431797,
+          0.8605854981396603,
+          0.1420882338124052,
+          0.021944450559841202
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-6231c894b0",
+      "title": "VLAN",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-f4826ec384",
+        "network-deep-dive-d8f58a0bde"
+      ],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "17. VLAN",
+        "box": [
+          0.09339401598430368,
+          0.018036761094451386,
+          0.11153895663111257,
+          0.032993106503669156
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-f4826ec384",
+      "title": "广播问题",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-6231c894b0",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 1,
+      "sourceText": "公司大了都在一个会议室吵，谁也没法工作。不同的部门不同 VLAN，你听不到别的部门开会，清净很多。",
+      "evidence": {
+        "text": "广播问题：公司大了都在一个会议室吵，",
+        "box": [
+          0.12764703115057094,
+          0.1126734214366802,
+          0.2714081248247373,
+          0.031984655129141476
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-d8f58a0bde",
+      "title": "安全问题",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-6231c894b0",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 1,
+      "sourceText": "公司大了都在一个会议室吵，HR 聊的东西，程序员都听到了。不同部门不同 VLAN，你别想听到 HR 开会，打听薪资。",
+      "evidence": {
+        "text": "安全问题：公司大了都",
+        "box": [
+          0.5526824211749051,
+          0.11868172172382452,
+          0.14711142788414194,
+          0.02507766844734314
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-a23c68493d",
+      "title": "MAC 层",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-5c0f15d909",
+        "network-deep-dive-456527d835",
+        "network-deep-dive-850b019f48"
+      ],
+      "photo": "IMG_8093",
+      "note": "交通类比按原图保留。",
+      "depth": 0,
+      "sourceText": "MAC 层主要解决多路访问的堵车问题。",
+      "evidence": {
+        "text": "MAC层主要解决多路访问的堵车问题。",
+        "box": [
+          0.1336225607517899,
+          0.3564451154472861,
+          0.2606759981819953,
+          0.026381083897181946
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-5c0f15d909",
+      "title": "思路一：划分多个车道",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-a23c68493d",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 1,
+      "sourceText": "划分多个车道，你走你的，我走我的。",
+      "evidence": {
+        "text": "思路一：划分多个车道，你走你的，我走我的。",
+        "box": [
+          0.14930740302199882,
+          0.417837993033638,
+          0.29150030348036027,
+          0.040237681575553186
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-456527d835",
+      "title": "思路二：单双号出行",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-a23c68493d",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 1,
+      "sourceText": "单双号，今天单号出行，明天双号出行。",
+      "evidence": {
+        "text": "思路二：单双号，今天单号出行，明天双号出行。",
+        "box": [
+          0.5087209354382921,
+          0.42248062061764147,
+          0.3052325475783575,
+          0.027254828700312816
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-850b019f48",
+      "title": "思路三：先出门，堵车再退回",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-a23c68493d",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "“以太网是这个思路”是原图表述，保留其教学语境，不泛化为所有以太网场景。",
+      "depth": 1,
+      "sourceText": "不管三七二十一，有事儿先出门，发现堵再回去，错过高峰再出门。以太网是这个思路。",
+      "evidence": {
+        "text": "思路三：不管三七二十一，有事儿先出门，发现堵再回去，错过高峰再出门。以太网是这个思路。",
+        "box": [
+          0.1481952533673502,
+          0.48883552905799776,
+          0.600390358576699,
+          0.031288136880864514
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-65fc713a59",
+      "title": "STP 协议",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-4782555c88",
+        "network-deep-dive-e831a68330",
+        "network-deep-dive-78937c269a"
+      ],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "19.STP协议",
+        "box": [
+          0.08934692950539969,
+          0.5987459812336986,
+          0.14755339573779772,
+          0.03898811518422478
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-4782555c88",
+      "title": "二层破环成树",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-65fc713a59",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 1,
+      "sourceText": "STP 就是在二层，将拓扑图中的环破了，生成了树。",
+      "evidence": {
+        "text": "STP就是在二层，将拓扑图中的环破了，生成了树。",
+        "box": [
+          0.10283809928971908,
+          0.6838444751379488,
+          0.2955224649906702,
+          0.02686496097055359
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-e831a68330",
+      "title": "树根与角色选举",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-65fc713a59",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 1,
+      "sourceText": "树要有树根，形成树的是一场血雨腥风的武林比武，最终决出谁是盟主、谁是长老、谁是堂主、谁是小兵的方式。"
+    },
+    {
+      "id": "network-deep-dive-78937c269a",
+      "title": "比武规则",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-65fc713a59",
+      "children": [
+        "network-deep-dive-0cc135fcde",
+        "network-deep-dive-2264f1ef24",
+        "network-deep-dive-53106d35ed"
+      ],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 1,
+      "evidence": {
+        "text": "比武规则：先比掌门（当前树的树根ID），再比和掌",
+        "box": [
+          0.1044016274319674,
+          0.8649727855882486,
+          0.2954689116990163,
+          0.034265609014601954
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-0cc135fcde",
+      "title": "先比掌门：当前树的树根 ID",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-78937c269a",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 2,
+      "evidence": {
+        "text": "比武规则：先比掌门（当前树的树根ID），再比和掌",
+        "box": [
+          0.1044016274319674,
+          0.8649727855882486,
+          0.2954689116990163,
+          0.034265609014601954
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-2264f1ef24",
+      "title": "再比关系：到树根的路径开销",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-78937c269a",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 2
+    },
+    {
+      "id": "network-deep-dive-53106d35ed",
+      "title": "最后比本事：自己的 ID",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-78937c269a",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 2
+    },
+    {
+      "id": "network-deep-dive-d4b3e74de5",
+      "title": "PXE",
+      "domain": "network-deep-dive",
+      "parent": null,
+      "children": [
+        "network-deep-dive-79d38762ab",
+        "network-deep-dive-66a7ff1540"
+      ],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 0,
+      "evidence": {
+        "text": "20. PXE",
+        "box": [
+          0.49743945206098483,
+          0.5920974882362829,
+          0.09649014940448836,
+          0.03672940835676718
+        ],
+        "confidence": 0.30000001192092896,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "network-deep-dive-79d38762ab",
+      "title": "DHCP 配置中的 next-server",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-d4b3e74de5",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 1,
+      "sourceText": "PXE 在 DHCP 服务器配置里面多了一个 next-server，可以安装操作系统。"
+    },
+    {
+      "id": "network-deep-dive-66a7ff1540",
+      "title": "中介介绍装修公司的类比",
+      "domain": "network-deep-dive",
+      "parent": "network-deep-dive-d4b3e74de5",
+      "children": [],
+      "photo": "IMG_8093",
+      "note": "",
+      "depth": 1,
+      "sourceText": "这就是中介租给你房子之后，签完约说，还给你介绍一个装修公司：“哥们，想装修一下吗，接下来找它。”"
     }
   ],
   "photos": [
@@ -17690,6 +21076,114 @@
       "thumb": "photos/IMG_8078-thumb.jpg",
       "domains": [
         "engineering"
+      ]
+    },
+    {
+      "id": "IMG_8081",
+      "title": "目录 · 网络协议知识图谱",
+      "src": "photos/IMG_8081.jpg",
+      "thumb": "photos/IMG_8081-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
+      ]
+    },
+    {
+      "id": "IMG_8082",
+      "title": "网络协议、分层与地址",
+      "src": "photos/IMG_8082.jpg",
+      "thumb": "photos/IMG_8082-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
+      ]
+    },
+    {
+      "id": "IMG_8084",
+      "title": "网关与路由协议",
+      "src": "photos/IMG_8084.jpg",
+      "thumb": "photos/IMG_8084-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
+      ]
+    },
+    {
+      "id": "IMG_8085",
+      "title": "UDP · 特点与使用场景",
+      "src": "photos/IMG_8085.jpg",
+      "thumb": "photos/IMG_8085-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
+      ]
+    },
+    {
+      "id": "IMG_8086",
+      "title": "Socket 编程 · 五种服务方式",
+      "src": "photos/IMG_8086.jpg",
+      "thumb": "photos/IMG_8086-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
+      ]
+    },
+    {
+      "id": "IMG_8087",
+      "title": "流媒体 · 编码、推流、分发与拉流",
+      "src": "photos/IMG_8087.jpg",
+      "thumb": "photos/IMG_8087-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
+      ]
+    },
+    {
+      "id": "IMG_8088",
+      "title": "DNS、HTTPDNS 与 HTTPS",
+      "src": "photos/IMG_8088.jpg",
+      "thumb": "photos/IMG_8088-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
+      ]
+    },
+    {
+      "id": "IMG_8089",
+      "title": "CDN 与 P2P",
+      "src": "photos/IMG_8089.jpg",
+      "thumb": "photos/IMG_8089-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
+      ]
+    },
+    {
+      "id": "IMG_8090",
+      "title": "HTTP 1.1、HTTP 2.0 与 QUIC",
+      "src": "photos/IMG_8090.jpg",
+      "thumb": "photos/IMG_8090-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
+      ]
+    },
+    {
+      "id": "IMG_8091",
+      "title": "TCP · 可靠传输、流量与拥塞控制",
+      "src": "photos/IMG_8091.jpg",
+      "thumb": "photos/IMG_8091-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
+      ]
+    },
+    {
+      "id": "IMG_8092",
+      "title": "DHCP 与 ICMP",
+      "src": "photos/IMG_8092.jpg",
+      "thumb": "photos/IMG_8092-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
+      ]
+    },
+    {
+      "id": "IMG_8093",
+      "title": "VLAN、MAC、STP 与 PXE",
+      "src": "photos/IMG_8093.jpg",
+      "thumb": "photos/IMG_8093-thumb.jpg",
+      "domains": [
+        "network-deep-dive"
       ]
     }
   ],

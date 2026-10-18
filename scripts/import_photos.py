@@ -20,6 +20,6 @@ for source in sorted(args.directory.iterdir()):
   with Image.open(decoded) as im:
    clean=ImageOps.exif_transpose(im).convert('RGB');clean.save(target,quality=95)
    clean.thumbnail((840,630));clean.save(thumb,quality=82)
- by_name[source.name]={'original':source.name,'originalSha256':original_hash,'webImage':'photos/'+target.name,'webImageSha256':sha(target)}
+ by_name[source.name]={'original':source.name,'sourceCollection':args.directory.resolve().name,'originalSha256':original_hash,'webImage':'photos/'+target.name,'webImageSha256':sha(target)}
 ledger_path.write_text(json.dumps(list(by_name.values()),ensure_ascii=False,indent=2)+'\n')
 print(f'{len(by_name)} source files in ledger; originals unchanged.')

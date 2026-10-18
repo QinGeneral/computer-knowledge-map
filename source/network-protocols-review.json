@@ -1,0 +1,1205 @@
+{
+  "collection": "网络协议知识地图",
+  "sourcePhotos": 12,
+  "topics": [
+    "什么是网络协议？",
+    "网络为什么分层？",
+    "IP 地址与 MAC 地址",
+    "网关",
+    "路由协议",
+    "UDP",
+    "Socket 编程",
+    "流媒体协议",
+    "DNS 与 HTTPDNS",
+    "HTTPS",
+    "CDN",
+    "P2P",
+    "HTTP",
+    "TCP",
+    "DHCP 协议",
+    "ICMP",
+    "VLAN",
+    "MAC 层",
+    "STP 协议",
+    "PXE"
+  ],
+  "items": [
+    {
+      "id": "network-deep-dive-9171948ca4",
+      "title": "什么是网络协议？",
+      "photo": "IMG_8082",
+      "depth": 0,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-74c0cf5abb",
+      "title": "共同语言与协作",
+      "photo": "IMG_8082",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-a6c928fee5",
+      "title": "网络为什么分层？",
+      "photo": "IMG_8082",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-0f22193b10",
+      "title": "复杂的程序都要分层",
+      "photo": "IMG_8082",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-90c5fa76ce",
+      "title": "TCP 换成 UDP 的需求",
+      "photo": "IMG_8082",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-eb0dda7606",
+      "title": "网络包的层层封装",
+      "photo": "IMG_8082",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-79c3d3268d",
+      "title": "用收包程序理解设备",
+      "photo": "IMG_8082",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-297da427bd",
+      "title": "二层设备",
+      "photo": "IMG_8082",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-a288b0ad61",
+      "title": "三层设备",
+      "photo": "IMG_8082",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-244e289490",
+      "title": "IP 地址与 MAC 地址",
+      "photo": "IMG_8082",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-9e53df3a49",
+      "title": "IP 地址：门牌号码",
+      "photo": "IMG_8082",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-ebeae8c266",
+      "title": "MAC 地址：身份证",
+      "photo": "IMG_8082",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-cee2a743cd",
+      "title": "网关",
+      "photo": "IMG_8084",
+      "depth": 0,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-efe5947279",
+      "title": "静态路由",
+      "photo": "IMG_8084",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-0eac94d732",
+      "title": "按目的地选择出口与下一跳",
+      "photo": "IMG_8084",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-90d45e90ea",
+      "title": "策略路由",
+      "photo": "IMG_8084",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-3e1d40166b",
+      "title": "源 IP 地址",
+      "photo": "IMG_8084",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-d7885bdd44",
+      "title": "入口设备",
+      "photo": "IMG_8084",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-ebad960327",
+      "title": "TOS",
+      "photo": "IMG_8084",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-5e0f519678",
+      "title": "欧洲十国游",
+      "photo": "IMG_8084",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-16eba75a26",
+      "title": "玄奘西行与 NAT",
+      "photo": "IMG_8084",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-28cc540061",
+      "title": "路由协议",
+      "photo": "IMG_8084",
+      "depth": 0,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-f85cb1ec0a",
+      "title": "OSPF：国家内部找路",
+      "photo": "IMG_8084",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-c4f2dae8ee",
+      "title": "BGP：国家之间选路",
+      "photo": "IMG_8084",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-67ee9fd784",
+      "title": "UDP",
+      "photo": "IMG_8085",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-087221a3f3",
+      "title": "三大特点",
+      "photo": "IMG_8085",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-860fb58c03",
+      "title": "沟通简单",
+      "photo": "IMG_8085",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-6c5d16c065",
+      "title": "轻信他人",
+      "photo": "IMG_8085",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-1fc140b9b0",
+      "title": "愣头青",
+      "photo": "IMG_8085",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-7a33b92573",
+      "title": "三大使用场景",
+      "photo": "IMG_8085",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-d2c7815195",
+      "title": "资源少、内网或对丢包不敏感",
+      "photo": "IMG_8085",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-f3eca57cfa",
+      "title": "刚毕业员工的类比",
+      "photo": "IMG_8085",
+      "depth": 3,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-18ea2659af",
+      "title": "不需一对一连接、可以广播",
+      "photo": "IMG_8085",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-2972189adc",
+      "title": "当众说话与背靠背沟通",
+      "photo": "IMG_8085",
+      "depth": 3,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-43d163f3fa",
+      "title": "速度快、时延低、容忍少量丢包",
+      "photo": "IMG_8085",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-ee0995de51",
+      "title": "湘军与八旗兵的类比",
+      "photo": "IMG_8085",
+      "depth": 3,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-5824b787a5",
+      "title": "Socket 编程",
+      "photo": "IMG_8086",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-e3a7f632e4",
+      "title": "0：单人循环服务",
+      "photo": "IMG_8086",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-20ad9d8db0",
+      "title": "老板亲自服务客户",
+      "photo": "IMG_8086",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-8532847602",
+      "title": "1：多进程",
+      "photo": "IMG_8086",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-f4189542cf",
+      "title": "注册子公司、转包项目",
+      "photo": "IMG_8086",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-c387550e17",
+      "title": "2：多线程",
+      "photo": "IMG_8086",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-04006e815d",
+      "title": "同公司项目组共享办公家具",
+      "photo": "IMG_8086",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-c1816809aa",
+      "title": "3：IO 多路复用与轮询",
+      "photo": "IMG_8086",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-19167e9735",
+      "title": "项目进度墙与轮询",
+      "photo": "IMG_8086",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-1caacd506c",
+      "title": "4：IO 多路复用与事件通知",
+      "photo": "IMG_8086",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-85765b7ab7",
+      "title": "进度变化主动通知",
+      "photo": "IMG_8086",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-84424541fe",
+      "title": "流媒体协议",
+      "photo": "IMG_8087",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-48a1972741",
+      "title": "编码",
+      "photo": "IMG_8087",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-3772131578",
+      "title": "视频与 I、B、P 帧",
+      "photo": "IMG_8087",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-5cd839c54f",
+      "title": "I 帧",
+      "photo": "IMG_8087",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-88ad6d6aeb",
+      "title": "B 帧",
+      "photo": "IMG_8087",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-f80f234072",
+      "title": "P 帧",
+      "photo": "IMG_8087",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-c6a46bd5c2",
+      "title": "帧、片与 NALU",
+      "photo": "IMG_8087",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-7610c0be82",
+      "title": "SPS 与 PPS",
+      "photo": "IMG_8087",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-bebd9bdf13",
+      "title": "推流",
+      "photo": "IMG_8087",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-1180695851",
+      "title": "Message 与 RTMP Packet",
+      "photo": "IMG_8087",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-8f02963dcb",
+      "title": "Chunk",
+      "photo": "IMG_8087",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-4284105427",
+      "title": "分发与流处理",
+      "photo": "IMG_8087",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-5eb89e1096",
+      "title": "中心流媒体服务集群",
+      "photo": "IMG_8087",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-505426da24",
+      "title": "边缘服务器",
+      "photo": "IMG_8087",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-a7fc22fb2b",
+      "title": "拉流",
+      "photo": "IMG_8087",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-54978ee532",
+      "title": "读取解码参数",
+      "photo": "IMG_8087",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-08b7c41cf8",
+      "title": "解码与播放",
+      "photo": "IMG_8087",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-391dc1675b",
+      "title": "DNS 与 HTTPDNS",
+      "photo": "IMG_8088",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-66670f3bc4",
+      "title": "DNS",
+      "photo": "IMG_8088",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-fe4e501179",
+      "title": "树状结构",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-ea4ad21993",
+      "title": "根域名服务器",
+      "photo": "IMG_8088",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-d4624eb4ba",
+      "title": "顶级域名服务器",
+      "photo": "IMG_8088",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-e13ea3f428",
+      "title": "权威 DNS",
+      "photo": "IMG_8088",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-196e17310b",
+      "title": "本地域名服务器与缓存",
+      "photo": "IMG_8088",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-9429ad2379",
+      "title": "域名地址簿",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-e42756f212",
+      "title": "全局负载均衡",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-ab4d963545",
+      "title": "传统 DNS 的问题",
+      "photo": "IMG_8088",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-3baff2d28b",
+      "title": "缓存问题",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-6ee911489a",
+      "title": "负载均衡失效",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-dbc21a24b3",
+      "title": "域名转发",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-070973a04b",
+      "title": "HTTPDNS",
+      "photo": "IMG_8088",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-75c306adbd",
+      "title": "基于 HTTP 的解析服务",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-da2f5c50c8",
+      "title": "HTTPDNS 服务器与 SDK",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-40ecca9748",
+      "title": "HTTPS",
+      "photo": "IMG_8088",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-2e1fb9af05",
+      "title": "对称加密",
+      "photo": "IMG_8088",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-27be1fed66",
+      "title": "非对称加密",
+      "photo": "IMG_8088",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-3c48813941",
+      "title": "数字证书",
+      "photo": "IMG_8088",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-3285c6d47a",
+      "title": "公钥",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-84b8ad42c9",
+      "title": "证书所有者",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-8e632ce362",
+      "title": "发布机构",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-f882107daa",
+      "title": "有效期",
+      "photo": "IMG_8088",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-34565a5051",
+      "title": "CDN",
+      "photo": "IMG_8089",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-e65a982e91",
+      "title": "静态资源：就近配送",
+      "photo": "IMG_8089",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-7d9fd0c10b",
+      "title": "动态资源",
+      "photo": "IMG_8089",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-8b22208660",
+      "title": "生鲜超市模式：边缘计算",
+      "photo": "IMG_8089",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-7d3cd057aa",
+      "title": "冷链运输模式：路径优化",
+      "photo": "IMG_8089",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-197a2aa72d",
+      "title": "P2P",
+      "photo": "IMG_8089",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-651c602e08",
+      "title": "Peer-to-Peer",
+      "photo": "IMG_8089",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-96ba6275df",
+      "title": "BitTorrent 的两个角色",
+      "photo": "IMG_8089",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-bb6d2b9677",
+      "title": "Peer：上传与下载",
+      "photo": "IMG_8089",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-d87eea347a",
+      "title": "DHT node：文件索引",
+      "photo": "IMG_8089",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-38a92bdf55",
+      "title": "文件哈希与节点 ID",
+      "photo": "IMG_8089",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-dea5ce0737",
+      "title": "DHT 与社交网络",
+      "photo": "IMG_8089",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-c54215d467",
+      "title": "新节点加入",
+      "photo": "IMG_8089",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-2ab552930e",
+      "title": "通过朋友圈查找文件",
+      "photo": "IMG_8089",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-94c7e6fffa",
+      "title": "HTTP",
+      "photo": "IMG_8090",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-abcebfd463",
+      "title": "HTTP 1.1",
+      "photo": "IMG_8090",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-d6fa9593c4",
+      "title": "GET",
+      "photo": "IMG_8090",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-2f24aa1dac",
+      "title": "POST",
+      "photo": "IMG_8090",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-f29935f9e3",
+      "title": "PUT",
+      "photo": "IMG_8090",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-b0677be607",
+      "title": "DELETE",
+      "photo": "IMG_8090",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-9e21f48706",
+      "title": "HTTP 2.0",
+      "photo": "IMG_8090",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-ea1712e3ae",
+      "title": "头索引",
+      "photo": "IMG_8090",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-8cfe88cc3a",
+      "title": "分流",
+      "photo": "IMG_8090",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-03dff50842",
+      "title": "分帧",
+      "photo": "IMG_8090",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-dabe362715",
+      "title": "二进制编码",
+      "photo": "IMG_8090",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-0d39ae1355",
+      "title": "QUIC",
+      "photo": "IMG_8090",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-1659801806",
+      "title": "基于 UDP",
+      "photo": "IMG_8090",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-19439cf0a2",
+      "title": "自定义连接机制",
+      "photo": "IMG_8090",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-00f9faebf0",
+      "title": "自定义重传机制",
+      "photo": "IMG_8090",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-ff9cfac1db",
+      "title": "无阻塞的多路复用",
+      "photo": "IMG_8090",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-54723b9240",
+      "title": "自定义流量控制",
+      "photo": "IMG_8090",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-6d20c80a70",
+      "title": "TCP",
+      "photo": "IMG_8091",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-ddd4a1a9f3",
+      "title": "顺序问题，稳重不乱",
+      "photo": "IMG_8091",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-8f9136f16f",
+      "title": "丢包问题，承诺靠谱",
+      "photo": "IMG_8091",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-b1fe14181f",
+      "title": "连接维护，有始有终",
+      "photo": "IMG_8091",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-a8ba76136f",
+      "title": "流量控制，把握分寸",
+      "photo": "IMG_8091",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-d569eb7bad",
+      "title": "滑动窗口的四部分",
+      "photo": "IMG_8091",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-311714ec46",
+      "title": "做完了的应该划掉",
+      "photo": "IMG_8091",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-0a67c03304",
+      "title": "已经布置的任务，正在做还没做完",
+      "photo": "IMG_8091",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-9dbb3f6d83",
+      "title": "尚未布置的任务",
+      "photo": "IMG_8091",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-911221a15e",
+      "title": "工作饱和，不能再布置的任务",
+      "photo": "IMG_8091",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-63a75feff5",
+      "title": "滑动窗口如何移动",
+      "photo": "IMG_8091",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-311a57de1d",
+      "title": "做完一条划掉一条，新来一条在最后添加一条",
+      "photo": "IMG_8091",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-09b295be8f",
+      "title": "做完一条能够再布置一条",
+      "photo": "IMG_8091",
+      "depth": 3,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-bac427f1f1",
+      "title": "根据反馈调整任务数量",
+      "photo": "IMG_8091",
+      "depth": 3,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-045ac6334e",
+      "title": "拥塞控制，知进知退",
+      "photo": "IMG_8091",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-7c693dbc65",
+      "title": "慢启动，指数性增长",
+      "photo": "IMG_8091",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-9d57a76892",
+      "title": "拥塞避免，线性增长",
+      "photo": "IMG_8091",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-1f28e7bcb9",
+      "title": "快速重传，快速恢复",
+      "photo": "IMG_8091",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-cb29e66a3b",
+      "title": "超时重传",
+      "photo": "IMG_8091",
+      "depth": 3,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-2e22d7a4e0",
+      "title": "部分丢包与快速重传",
+      "photo": "IMG_8091",
+      "depth": 3,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-5d468fcd66",
+      "title": "DHCP 协议",
+      "photo": "IMG_8092",
+      "depth": 0,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-104ccbc942",
+      "title": "Discover：寻找中介",
+      "photo": "IMG_8092",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-306fd3455b",
+      "title": "Offer：提供房源",
+      "photo": "IMG_8092",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-3aa8c4077a",
+      "title": "Request：选择房源",
+      "photo": "IMG_8092",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-7788930b89",
+      "title": "Ack：租约达成",
+      "photo": "IMG_8092",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-695f3719b2",
+      "title": "广播租约",
+      "photo": "IMG_8092",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-e7e5fb1353",
+      "title": "租期与续租",
+      "photo": "IMG_8092",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-74b7ad5b65",
+      "title": "ICMP",
+      "photo": "IMG_8092",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-ff70bd99c2",
+      "title": "查询报文类型",
+      "photo": "IMG_8092",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-ffc7b3e709",
+      "title": "ping",
+      "photo": "IMG_8092",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-4bef149ac4",
+      "title": "差错报文类型",
+      "photo": "IMG_8092",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-9842a8683d",
+      "title": "traceroute",
+      "photo": "IMG_8092",
+      "depth": 2,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-6231c894b0",
+      "title": "VLAN",
+      "photo": "IMG_8093",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-f4826ec384",
+      "title": "广播问题",
+      "photo": "IMG_8093",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-d8f58a0bde",
+      "title": "安全问题",
+      "photo": "IMG_8093",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-a23c68493d",
+      "title": "MAC 层",
+      "photo": "IMG_8093",
+      "depth": 0,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-5c0f15d909",
+      "title": "思路一：划分多个车道",
+      "photo": "IMG_8093",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-456527d835",
+      "title": "思路二：单双号出行",
+      "photo": "IMG_8093",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-850b019f48",
+      "title": "思路三：先出门，堵车再退回",
+      "photo": "IMG_8093",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-65fc713a59",
+      "title": "STP 协议",
+      "photo": "IMG_8093",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-4782555c88",
+      "title": "二层破环成树",
+      "photo": "IMG_8093",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-e831a68330",
+      "title": "树根与角色选举",
+      "photo": "IMG_8093",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-78937c269a",
+      "title": "比武规则",
+      "photo": "IMG_8093",
+      "depth": 1,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-0cc135fcde",
+      "title": "先比掌门：当前树的树根 ID",
+      "photo": "IMG_8093",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-2264f1ef24",
+      "title": "再比关系：到树根的路径开销",
+      "photo": "IMG_8093",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-53106d35ed",
+      "title": "最后比本事：自己的 ID",
+      "photo": "IMG_8093",
+      "depth": 2,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-d4b3e74de5",
+      "title": "PXE",
+      "photo": "IMG_8093",
+      "depth": 0,
+      "hasDescription": false
+    },
+    {
+      "id": "network-deep-dive-79d38762ab",
+      "title": "DHCP 配置中的 next-server",
+      "photo": "IMG_8093",
+      "depth": 1,
+      "hasDescription": true
+    },
+    {
+      "id": "network-deep-dive-66a7ff1540",
+      "title": "中介介绍装修公司的类比",
+      "photo": "IMG_8093",
+      "depth": 1,
+      "hasDescription": true
+    }
+  ],
+  "transcriptionPolicy": "逐图核对后整理层级、正文与类比；统一中英文空格与标点，较长段落按语义拆为子节点。原图说明和整理说明分开保存；没有补写照片中未提供的课程正文。"
+}

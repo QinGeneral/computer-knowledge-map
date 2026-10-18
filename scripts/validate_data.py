@@ -19,7 +19,9 @@ manifest=json.loads((DIST/'source-manifest.json').read_text())
 assert len(manifest)==len(photos)
 for row in manifest:
  assert hashlib.sha256((DIST/row['webImage']).read_bytes()).hexdigest()==row['webImageSha256']
- source=Path('/Users/hanzhang/Downloads/计算机基础知识地图')/row['original']
+ collection=row.get('sourceCollection','计算机基础知识地图')
+ assert Path(collection).name==collection, 'Source collection must be a folder name'
+ source=Path.home()/'Downloads'/collection/row['original']
  if source.exists():assert hashlib.sha256(source.read_bytes()).hexdigest()==row['originalSha256']
 assert len((DIST/'knowledge-map.md').read_text().split('[原图]'))-1==len(nodes)
 annotations=json.loads((ROOT/'source/annotations.json').read_text()) if (ROOT/'source/annotations.json').exists() else {}
@@ -93,6 +95,16 @@ for path,override in json.loads((ROOT/'source/node-overrides.json').read_text())
   assert '/'.join([n['domain']]+titles)==path, f'Existing link changed: {path}'
 
 assert all((t['status']=='planned' and not t['roots'] and not t['photos']) or (t['status']=='ready' and t['roots'] and t['photos']) for t in data['extensions'])
+network_review=json.loads((ROOT/'source/network-protocols-review.json').read_text())
+topic=next(d for d in data['domains'] if d['id']=='network-deep-dive')
+assert [nodes[id]['title'] for id in topic['roots']]==network_review['topics']
+assert len(network_review['topics'])==20 and len(topic['photos'])==network_review['sourcePhotos']==12
+assert topic['count']==len(network_review['items'])
+for row in network_review['items']:
+ n=nodes[row['id']]
+ assert n['domain']==topic['id'] and n['title']==row['title'] and n['photo']==row['photo'] and n['depth']==row['depth']
+ assert bool(n.get('sourceText'))==row['hasDescription']
+assert {nodes[row['id']]['photo'] for row in network_review['items']}==set(topic['photos'])-{'IMG_8081'}, 'Every content photo must have structured entries; IMG_8081 is the contents page'
 for p in DIST.rglob('*'):
  if p.suffix in ['.html','.js','.json','.css','.md']:
   assert '/Users/' not in p.read_text(),f'Local path leaked into {p}'

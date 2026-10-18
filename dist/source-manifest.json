@@ -88,5 +88,89 @@
     "originalSha256": "888ec1f96b89191f5838aecf9dbfa063f24fecd9509cca058f686ad807473e35",
     "webImage": "photos/IMG_8078.jpg",
     "webImageSha256": "53563d3cf8dc6ab1a564f9c0b0d1cf9c32be9da29746470449c427eb51f8f30d"
+  },
+  {
+    "original": "IMG_8081.HEIC",
+    "originalSha256": "983eca74fccf6b811bf366ace7b760b2f5b8c2708e20c602b09383d5e89077a7",
+    "webImage": "photos/IMG_8081.jpg",
+    "webImageSha256": "aed48476b313007d9d71141c80cf2e8e33c15b7eaf8d94264b8ab4a424075c9a",
+    "sourceCollection": "网络协议知识地图"
+  },
+  {
+    "original": "IMG_8082.HEIC",
+    "originalSha256": "cdfeaf3f1fee0252e9db33ad2787732c40b570976a3130cc613aadeac430821b",
+    "webImage": "photos/IMG_8082.jpg",
+    "webImageSha256": "42f4aa94a352183053f476dab15f2ceb46b878034b3bb3f8f6c0936ff727dc4f",
+    "sourceCollection": "网络协议知识地图"
+  },
+  {
+    "original": "IMG_8084.HEIC",
+    "originalSha256": "0c1862daf7f104d7edcd71995410242083856b71e4b4a27ff21fa23cc41cb5e5",
+    "webImage": "photos/IMG_8084.jpg",
+    "webImageSha256": "8ae25679003efa47d6f2e77e9465e017bc1de3623cafeaecda62da8a1ce29910",
+    "sourceCollection": "网络协议知识地图"
+  },
+  {
+    "original": "IMG_8085.HEIC",
+    "originalSha256": "c6b346f4ddfcd089b5c4d870a21d0b103f9fc253730ae44ff0aa0edc1dc2e8f1",
+    "webImage": "photos/IMG_8085.jpg",
+    "webImageSha256": "7d21c5e25a665a7dcd5b1bff30bbdc558d6acfd6a242c18a7ab211195d6704f8",
+    "sourceCollection": "网络协议知识地图"
+  },
+  {
+    "original": "IMG_8086.HEIC",
+    "originalSha256": "6ba515be29ffd2497ae07de2418f21dbd9924689a417ac8845a08efe35c0a2b9",
+    "webImage": "photos/IMG_8086.jpg",
+    "webImageSha256": "924818889a29e4c161d0b4c504c54e4c62c0e05f419645c2b74a20f5501cfbab",
+    "sourceCollection": "网络协议知识地图"
+  },
+  {
+    "original": "IMG_8087.HEIC",
+    "originalSha256": "f218b97d2b5b4b3d21cd525b0be5e0137562500691e86bd20dda2596169c211f",
+    "webImage": "photos/IMG_8087.jpg",
+    "webImageSha256": "b1f017e8643472baa430e8aefd31584b3f58b0d161d560eba1f76ae99ba4dea2",
+    "sourceCollection": "网络协议知识地图"
+  },
+  {
+    "original": "IMG_8088.HEIC",
+    "originalSha256": "1501dceb53e142ccfd87f7967b247bbe24dbb83f606341a9fc7e74fa260dd3b7",
+    "webImage": "photos/IMG_8088.jpg",
+    "webImageSha256": "e0d85d9e04d42d89bab451a31678b5e0629f845642dfb7b624b66e80dc58f47e",
+    "sourceCollection": "网络协议知识地图"
+  },
+  {
+    "original": "IMG_8089.HEIC",
+    "originalSha256": "e6f80922dcbb5ff56b28fc2b5ff4fa83af102435c6b4f16e94b8f50bc03a6a21",
+    "webImage": "photos/IMG_8089.jpg",
+    "webImageSha256": "74538122c078baa1877bf34ca056cfee37a45267f3ac86a218c877804bb49e5c",
+    "sourceCollection": "网络协议知识地图"
+  },
+  {
+    "original": "IMG_8090.HEIC",
+    "originalSha256": "1fb6afab5cc4ea998e1a0616617502976a7fd90005a7fe8c61a68add7e4694c4",
+    "webImage": "photos/IMG_8090.jpg",
+    "webImageSha256": "5013391fe42af1fc37454a3192a76b234a9955cd25e4fe37deca2ff65da785c3",
+    "sourceCollection": "网络协议知识地图"
+  },
+  {
+    "original": "IMG_8091.HEIC",
+    "originalSha256": "485efe5418cc286ba1ecbe643519844a42cc3a13728634156005eac5eb146563",
+    "webImage": "photos/IMG_8091.jpg",
+    "webImageSha256": "d5300a794daf1c9be1cd6930dbb1f94fb5ef09357ae74ed13bd976a811923f15",
+    "sourceCollection": "网络协议知识地图"
+  },
+  {
+    "original": "IMG_8092.HEIC",
+    "originalSha256": "50030a203204df59da4b6b0cdf7781e544fb107738b29e207eb83ada6d1ea71c",
+    "webImage": "photos/IMG_8092.jpg",
+    "webImageSha256": "9a3384ce1cfe97d5074468da631af9228dbd0e9a0cc32cb96110980fc4c544b9",
+    "sourceCollection": "网络协议知识地图"
+  },
+  {
+    "original": "IMG_8093.HEIC",
+    "originalSha256": "fdad79fae2b62571faf218dbbcc52f187240d5ac320025d7597c6d822c1848a0",
+    "webImage": "photos/IMG_8093.jpg",
+    "webImageSha256": "236587450626b149b4e27ce1d08928250874b1c9f2da0f015becce7a4ee68403",
+    "sourceCollection": "网络协议知识地图"
   }
 ]

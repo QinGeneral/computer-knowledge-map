@@ -823,6 +823,10 @@ HTTPS @8077
 topic_config=json.loads((ROOT/'source/topics.json').read_text())
 for t in topic_config:
  if t['status']=='ready':
+  if t.get('outlineFile'):
+   outline_path=(ROOT/t['outlineFile']).resolve()
+   assert outline_path.is_relative_to(ROOT/'source'), 'Topic outlines must be inside source/'
+   t['outline']=outline_path.read_text()
   assert t['outline'].strip() and t['photos'], 'Ready topics require an outline and source photos'
   DOMAINS.append((t['id'],t['title'],t['description'],[p['id'].replace('IMG_','') for p in t['photos']],t['outline']))
 
@@ -875,7 +879,7 @@ for slug,title,desc,photos,block in DOMAINS:
   else:roots.append(node['id'])
   nodes.append(node);stack.append(node)
  domains.append({'id':slug,'title':title,'description':desc,'photos':['IMG_'+p for p in photos],'roots':roots,'status':'ready','extension':any(t['id']==slug for t in topic_config),'count':sum(n['domain']==slug for n in nodes)})
-extensions=[{k:v for k,v in t.items() if k not in ['outline','photos']}|{'roots':next((d['roots'] for d in domains if d['id']==t['id']),[]),'photos':[p['id'] for p in t['photos']]} for t in topic_config]
+extensions=[{k:v for k,v in t.items() if k not in ['outline','outlineFile','photos']}|{'roots':next((d['roots'] for d in domains if d['id']==t['id']),[]),'photos':[p['id'] for p in t['photos']]} for t in topic_config]
 photo_labels={'8064':'原始目录','8065':'计算机基础总览','8066':'数据结构与算法（一）· 全幅','8067':'数据结构与算法（二）','8068':'常用数学 · 算法补充','8069':'操作系统 · 进程与内存','8070':'操作系统 · 文件、I/O 与网络通信','8071':'网络编程 · 基础、I/O 与框架','8072':'网络编程 · 协议与编程模型','8073':'计算机组成原理 · 总览','8074':'CPU 指令 · MIPS','8075':'程序栈、寄存器与程序执行','8076':'计算机网络 · 协议与 HTTP','8077':'计算机网络 · Web 与 HTTPS','8078':'软件工程'}
 for t in topic_config:
  for p in t['photos']:photo_labels[p['id'].replace('IMG_','')]=p['title']

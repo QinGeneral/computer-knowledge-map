@@ -2,18 +2,73 @@
   {
     "id": "network-deep-dive",
     "title": "网络专题",
-    "status": "planned",
-    "description": "在计算机网络与网络编程结构上继续细化，等待后续图片。",
-    "relatedDomains": ["networks", "os"],
-    "photos": [],
-    "outline": ""
+    "status": "ready",
+    "description": "从协议分层与路由，到传输、应用与网络服务；按 12 张原图整理 20 个主题。",
+    "relatedDomains": [
+      "networks",
+      "os"
+    ],
+    "photos": [
+      {
+        "id": "IMG_8081",
+        "title": "目录 · 网络协议知识图谱"
+      },
+      {
+        "id": "IMG_8082",
+        "title": "网络协议、分层与地址"
+      },
+      {
+        "id": "IMG_8084",
+        "title": "网关与路由协议"
+      },
+      {
+        "id": "IMG_8085",
+        "title": "UDP · 特点与使用场景"
+      },
+      {
+        "id": "IMG_8086",
+        "title": "Socket 编程 · 五种服务方式"
+      },
+      {
+        "id": "IMG_8087",
+        "title": "流媒体 · 编码、推流、分发与拉流"
+      },
+      {
+        "id": "IMG_8088",
+        "title": "DNS、HTTPDNS 与 HTTPS"
+      },
+      {
+        "id": "IMG_8089",
+        "title": "CDN 与 P2P"
+      },
+      {
+        "id": "IMG_8090",
+        "title": "HTTP 1.1、HTTP 2.0 与 QUIC"
+      },
+      {
+        "id": "IMG_8091",
+        "title": "TCP · 可靠传输、流量与拥塞控制"
+      },
+      {
+        "id": "IMG_8092",
+        "title": "DHCP 与 ICMP"
+      },
+      {
+        "id": "IMG_8093",
+        "title": "VLAN、MAC、STP 与 PXE"
+      }
+    ],
+    "outlineFile": "source/network-protocols-outline.txt"
   },
   {
     "id": "compilers",
     "title": "编译原理",
     "status": "planned",
     "description": "已在总览与程序执行过程中保留关联入口，等待后续专题图片。",
-    "relatedDomains": ["overview", "architecture"],
+    "relatedDomains": [
+      "overview",
+      "architecture"
+    ],
     "photos": [],
     "outline": ""
   }
