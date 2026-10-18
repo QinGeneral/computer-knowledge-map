@@ -10,22 +10,42 @@ function mountIcons(root=document){root.querySelectorAll('[data-icon]').forEach(
 const norm=s=>String(s).normalize('NFKC').toLowerCase().replace(/\s+/g,'').replace(/[·/／_、，,()（）-]/g,'');
 const ancestry=n=>{const out=[];for(let c=n;c;c=nodeMap.get(c.parent))out.unshift(c);return out;};
 const crumb=n=>[domainMap.get(n.domain).title,...ancestry(n).slice(0,-1).map(n=>n.title)].join(' › ');
-const readState=()=>{const p=new URLSearchParams(location.hash.slice(1));return {view:['overview','tree','photos'].includes(p.get('view'))?p.get('view'):'overview',domain:domainMap.has(p.get('domain'))||extensionMap.has(p.get('domain'))?p.get('domain'):'',q:(p.get('q')||'').slice(0,180),node:nodeMap.has(p.get('node'))?p.get('node'):''};};
+const articleMap=new Map((data.articles||[]).map(a=>[a.id,a]));
+const domainView=id=>domainMap.get(id)?.presentation==='articles'?'articles':'tree';
+const readState=()=>{
+ const p=new URLSearchParams(location.hash.slice(1));
+ let view=['overview','tree','photos','articles'].includes(p.get('view'))?p.get('view'):'overview';
+ let domain=domainMap.has(p.get('domain'))||extensionMap.has(p.get('domain'))?p.get('domain'):'';
+ if(view==='tree'&&domainView(domain)==='articles')view='articles';
+ if(view==='articles'&&domainView(domain)!=='articles')domain=data.domains.find(d=>d.presentation==='articles')?.id||'';
+ let article=articleMap.get(p.get('article'))?.domain===domain?p.get('article'):'';
+ const node=nodeMap.get(p.get('node'));
+ if(node?.articleId){view='articles';domain=node.domain;article=node.articleId;}
+ const section=articleMap.get(article)?.toc.some(t=>t.id===p.get('section'))?p.get('section'):'';
+ return {view,domain,q:(p.get('q')||'').slice(0,180),node:node&&!node.articleId?node.id:'',article,section};
+};
 const href=s=>{const p=new URLSearchParams();Object.entries(s).forEach(([k,v])=>{if(v)p.set(k,v)});return '#'+p.toString();};
 let state=readState(),previous=null,cropVersion=0,photoVersion=0,photoScale=1,photoEvidence=null,mindmapInstance=null;
 function go(patch,replace=false){const next={...state,...patch};const url=href(next);if(replace){history.replaceState(null,'',url);render();}else if(location.hash!==url)location.hash=url;}
-function navigateDomain(id){go({view:'tree',domain:id,q:'',node:''});}
+const articleUI=window.createKnowledgeArticles({data,href,e,icon});
+function navigateDomain(id){go({view:domainView(id),domain:id,q:'',node:'',article:'',section:''});}
+function openNode(id){const n=nodeMap.get(id);if(n?.articleId)go({view:'articles',domain:n.domain,article:n.articleId,section:'',q:'',node:''});else go({node:id});}
+function scrollArticle(){
+ document.querySelectorAll('.article-toc a').forEach(a=>{if(a.dataset.section===state.section)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
+ if(state.section)requestAnimationFrame(()=>{document.getElementById(state.section)?.scrollIntoView({block:'start'});});
+}
+
 function sidebar(){
- $('domainNav').innerHTML=`<a href="${href({view:state.view})}" class="nav-item" data-home ${!state.domain?'aria-current="page"':''}>${icon('grid')}<span>全部知识</span></a>`+data.domains.filter(d=>!d.extension).map((d,i)=>`<a class="nav-item" href="${href({view:state.view==='photos'?'photos':'tree',domain:d.id})}" ${state.domain===d.id&&state.view!=='overview'?'aria-current="page"':''}>${icon(subjectIcons[i])}<span>${e(d.title)}</span></a>`).join('');
- $('extensionNav').innerHTML=data.extensions.map(d=>`<a class="nav-item" href="${href({view:'tree',domain:d.id})}" ${state.domain===d.id?'aria-current="page"':''}>${icon(d.status==='ready'?'globe':'clock')}<span>${e(d.title)}</span>${d.status==='ready'?'':'<small>待补充</small>'}</a>`).join('');
+ $('domainNav').innerHTML=`<a href="${href({view:state.view==='articles'?'overview':state.view})}" class="nav-item" data-home ${!state.domain?'aria-current="page"':''}>${icon('grid')}<span>全部知识</span></a>`+data.domains.filter(d=>!d.extension).map((d,i)=>`<a class="nav-item" href="${href({view:state.view==='photos'?'photos':'tree',domain:d.id})}" ${state.domain===d.id&&state.view!=='overview'?'aria-current="page"':''}>${icon(subjectIcons[i])}<span>${e(d.title)}</span></a>`).join('');
+ $('extensionNav').innerHTML=data.extensions.map(d=>`<a class="nav-item" href="${href({view:domainView(d.id),domain:d.id})}" ${state.domain===d.id?'aria-current="page"':''}>${icon(d.status==='ready'?'globe':'clock')}<span>${e(d.title)}</span>${d.status==='ready'?'':'<small>待补充</small>'}</a>`).join('');
  $('domainPicker').innerHTML=`<option value="">全部知识</option>`+data.domains.filter(d=>!d.extension).map(d=>`<option value="${d.id}" ${state.domain===d.id?'selected':''}>${e(d.title)}</option>`).join('')+`<optgroup label="专题扩展">`+data.extensions.map(d=>`<option value="${d.id}" ${state.domain===d.id?'selected':''}>${e(d.title)}${d.status==='ready'?'':' · 待补充'}</option>`).join('')+'</optgroup>';
- document.querySelectorAll('[data-view]').forEach(a=>{if(a.dataset.view===state.view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');a.href=href({view:a.dataset.view,domain:a.dataset.view==='overview'?'':state.domain});});
+ document.querySelectorAll('[data-view]').forEach(a=>{if(a.dataset.view===state.view)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');a.href=href({view:a.dataset.view,domain:a.dataset.view==='overview'||a.dataset.view==='tree'&&domainView(state.domain)==='articles'?'':a.dataset.view==='articles'?'compilers':state.domain});});
 }
 function searchBox(){return `<div class="search">${icon('search')}<input id="searchInput" type="search" aria-label="搜索知识概念" placeholder="搜索概念、协议、算法…" value="${e(state.q)}" maxlength="180" autocomplete="off"><kbd>/</kbd></div>`;}
-function footer(){return `<footer class="page-foot"><span>${data.domains.length} 个领域 · ${data.nodes.length} 个层级条目 · ${data.photos.length} 张照片</span><span>条目数含分组节点；同名概念保留各自结构位置。</span><a href="knowledge-map.md" download>Markdown</a><a href="data.json" download>JSON</a></footer>`;}
+function footer(){return `<footer class="page-foot"><span>${data.domains.length} 个领域 · ${data.nodes.filter(n=>!n.articleId).length} 个层级条目${data.articles?.length?' · '+data.articles.length+' 篇文章':''} · ${data.photos.length} 张照片</span><span>条目数含分组节点；同名概念保留各自结构位置。</span><a href="knowledge-map.md" download>Markdown</a><a href="data.json" download>JSON</a></footer>`;}
 function home(){
  const layerButton=(label,domain)=>`<button data-domain="${domain}">${label}</button>`;
- return `<div class="home-grid"><section class="home-copy"><h1>连接计算机知识的每一层</h1><p class="intro">从硬件到系统，从算法到应用。按结构探索，回到原图核对。</p>${searchBox()}<div class="subject-list">${data.domains.filter(d=>!d.extension).map((d,i)=>`<a class="subject-row" href="${href({view:'tree',domain:d.id})}"><span class="number">${String(i+1).padStart(2,'0')}</span><h2>${e(d.title)}</h2><p>${e(d.description)}</p>${icon('chevron')}</a>`).join('')}</div></section><section class="layer-panel" aria-labelledby="layersTitle"><h2 id="layersTitle">计算机的知识层次</h2><div class="layer-diagram"><div class="layer single">${layerButton('计算机应用程序','overview')}</div><div class="layer-trunk"></div><div class="layer">${layerButton('操作系统','os')}${layerButton('编译原理','compilers')}${layerButton('计算机网络','networks')}</div><div class="layer-trunk"></div><div class="layer single">${layerButton('计算机体系结构','architecture')}</div><div class="layer-trunk"></div><div class="layer single">${layerButton('计算机组成','architecture')}</div><div class="layer-trunk short"></div><div class="layer hardware-layer">${layerButton('CPU / GPU','architecture')}${layerButton('内存 / 硬盘','architecture')}${layerButton('显示器 / 键盘','overview')}</div></div><a class="layer-bottom" href="#view=tree&domain=overview">从总览开始${icon('arrow')}</a></section></div><section class="grow-band"><h2>让知识继续生长</h2><div class="grow-links">${data.extensions.map((d,i)=>`<a href="${href({view:'tree',domain:d.id})}">${icon(i?'file':'globe')}${e(d.title)}<span>${d.status==='ready'?domainMap.get(d.id).count+' 个条目':'等待后续图片'}</span>${icon('chevron','arrow')}</a>`).join('')}</div></section>${footer()}`;
+ return `<div class="home-grid"><section class="home-copy"><h1>连接计算机知识的每一层</h1><p class="intro">从硬件到系统，从算法到应用。按结构探索，回到原图核对。</p>${searchBox()}<div class="subject-list">${data.domains.filter(d=>!d.extension).map((d,i)=>`<a class="subject-row" href="${href({view:domainView(d.id),domain:d.id})}"><span class="number">${String(i+1).padStart(2,'0')}</span><h2>${e(d.title)}</h2><p>${e(d.description)}</p>${icon('chevron')}</a>`).join('')}</div></section><section class="layer-panel" aria-labelledby="layersTitle"><h2 id="layersTitle">计算机的知识层次</h2><div class="layer-diagram"><div class="layer single">${layerButton('计算机应用程序','overview')}</div><div class="layer-trunk"></div><div class="layer">${layerButton('操作系统','os')}${layerButton('编译原理','compilers')}${layerButton('计算机网络','networks')}</div><div class="layer-trunk"></div><div class="layer single">${layerButton('计算机体系结构','architecture')}</div><div class="layer-trunk"></div><div class="layer single">${layerButton('计算机组成','architecture')}</div><div class="layer-trunk short"></div><div class="layer hardware-layer">${layerButton('CPU / GPU','architecture')}${layerButton('内存 / 硬盘','architecture')}${layerButton('显示器 / 键盘','overview')}</div></div><a class="layer-bottom" href="#view=tree&domain=overview">从总览开始${icon('arrow')}</a></section></div><section class="grow-band"><h2>让知识继续生长</h2><div class="grow-links">${data.extensions.map((d,i)=>`<a href="${href({view:domainView(d.id),domain:d.id})}">${icon(i?'file':'globe')}${e(d.title)}<span>${d.status==='ready'?domainMap.get(d.id).count+(domainView(d.id)==='articles'?' 篇文章':' 个条目'):'等待后续图片'}</span>${icon('chevron','arrow')}</a>`).join('')}</div></section>${footer()}`;
 }
 function pending(d){return `<header class="page-head"><div><h1>${e(d.title)}</h1><p>专题扩展</p></div></header><section class="pending-topic">${icon('clock')}<h2>结构已预留，等待后续图片</h2><p>${e(d.description)}</p><div class="related-topics">${d.relatedDomains.map(id=>`<button class="button" data-domain="${id}">${e(domainMap.get(id).title)}${icon('arrow')}</button>`).join('')}</div><div class="pending-outline"><strong>先沿着已有结构探索</strong>后续专题将接入同一套思维导图、搜索和原图对照。当前没有新增的专题条目。</div></section>${footer()}`;}
 function tree(){
@@ -39,24 +59,24 @@ function updateTree(){
  let matches=null;
  if(state.q.trim()){
   const tokens=state.q.trim().split(/\s+/).map(norm);
-  matches=nodes.filter(n=>tokens.every(t=>norm(n.title+' '+(n.sourceText||'')+' '+n.note+' '+crumb(n)).includes(t))).map(n=>n.id);
+  matches=nodes.filter(n=>tokens.every(t=>norm(n.title+' '+(n.searchText||'')+' '+(n.sourceText||'')+' '+n.note+' '+crumb(n)).includes(t))).map(n=>n.id);
  }
  el.innerHTML=(matches?`<div class="result-info" role="status" aria-live="polite"><span>匹配 <strong>${matches.length}</strong> 个条目 · 保留所属分支</span><button data-clear>清除搜索</button></div>`:'')+(matches&&!matches.length?`<div class="empty"><h2>没有找到相关条目</h2><p>试试“TCP”“内存”“二叉树”，或切换到全部知识搜索。</p><button class="button" data-clear>清除搜索</button>${state.domain?'<button class="button" data-search-all>搜索全部领域</button>':''}</div>`:'<div id="mindmapHost"></div>');
- if($('mindmapHost'))mindmapInstance=window.createKnowledgeMindmap($('mindmapHost'),{domains:data.domains,nodes:data.nodes,domainId:state.domain,matches,onOpenNode:id=>go({node:id}),onOpenDomain:navigateDomain});
+ if($('mindmapHost'))mindmapInstance=window.createKnowledgeMindmap($('mindmapHost'),{domains:data.domains,nodes:data.nodes,domainId:state.domain,matches,onOpenNode:openNode,onOpenDomain:navigateDomain});
 }
 function photos(){
  const d=domainMap.get(state.domain),ext=extensionMap.get(state.domain);if(ext&&ext.status!=='ready')return pending(ext);
  const ps=d?data.photos.filter(p=>d.photos.includes(p.id)):data.photos;
- return `<header class="page-head"><div><h1>${d?e(d.title)+' · ':''}原图资料</h1><p>${ps.length} 张照片 · 保留完整画面，支持放大与条目来源对照。</p></div><a class="button" href="${href({view:'tree',domain:state.domain})}">${icon('tree')}返回知识树</a></header><div class="gallery">${ps.map(p=>`<figure class="photo-card"><button data-photo="${p.id}" aria-label="放大${e(p.title)}"><img src="${p.thumb}" alt="${e(p.title)}" loading="lazy" width="840" height="630"><span class="photo-overlay">${icon('plus')}</span></button><figcaption><h2>${e(p.title)}</h2><p>${e(p.id)} · ${p.domains.map(id=>e(domainMap.get(id).title)).join(' / ')||'目录'}</p></figcaption></figure>`).join('')}</div><details class="source-info"><summary>资料来源与整理说明</summary><p>${e(data.contentPolicy)}</p><p>原始 HEIC 文件保留在你的来源目录，站点使用转换后的 JPEG。每张源文件和网页图片均记录 SHA-256。局部定位来自 OCR，可能有偏移；请结合完整照片核对。整理版保留原图的分组逻辑，并非更新后的技术规范。</p><a href="source-manifest.json" download>下载来源校验清单</a><a href="data.json" download>下载结构数据</a><a href="knowledge-map.md" download>下载 Markdown</a></details>${footer()}`;
+ return `<header class="page-head"><div><h1>${d?e(d.title)+' · ':''}原图资料</h1><p>${ps.length} 张照片 · 保留完整画面，支持放大与条目来源对照。</p></div><a class="button" href="${href({view:domainView(state.domain),domain:state.domain})}">${icon(domainView(state.domain)==='articles'?'file':'tree')}返回${domainView(state.domain)==='articles'?'文章目录':'知识树'}</a></header><div class="gallery">${ps.map(p=>`<figure class="photo-card"><button data-photo="${p.id}" aria-label="放大${e(p.title)}"><img src="${p.thumb}" alt="${e(p.title)}" loading="lazy" width="840" height="630"><span class="photo-overlay">${icon('plus')}</span></button><figcaption><h2>${e(p.title)}</h2><p>${e(p.id)} · ${p.domains.map(id=>e(domainMap.get(id).title)).join(' / ')||'目录'}</p></figcaption></figure>`).join('')}</div><details class="source-info"><summary>资料来源与整理说明</summary><p>${e(data.contentPolicy)}</p><p>原始 HEIC / JPEG 文件保留在来源目录，站点提供完整 JPEG、清晰预览与缩略图。每张源文件和网页图片均记录 SHA-256。局部定位来自 OCR，可能有偏移；请结合完整照片核对。整理版保留原图的分组逻辑，并非更新后的技术规范。</p><a href="source-manifest.json" download>下载来源校验清单</a><a href="data.json" download>下载结构数据</a><a href="knowledge-map.md" download>下载 Markdown</a></details>${footer()}`;
 }
 function render(){
  const next=readState();const old=previous;state=next;document.body.classList.toggle('map-view',state.view==='tree'&&!extensionMap.has(state.domain)||state.view==='tree'&&extensionMap.get(state.domain)?.status==='ready');
- const sameMain=old&&['view','domain','q'].every(k=>old[k]===state[k]);
- if(!sameMain){mindmapInstance?.destroy();mindmapInstance=null;if(!old||old.view!==state.view||old.domain!==state.domain)window.scrollTo(0,0);sidebar();$('content').innerHTML=state.view==='overview'?home():state.view==='tree'?tree():photos();if(state.view==='tree')updateTree();}
+ const sameMain=old&&['view','domain','q','article'].every(k=>old[k]===state[k]);
+ if(!sameMain){mindmapInstance?.destroy();mindmapInstance=null;if(!old||old.view!==state.view||old.domain!==state.domain||old.article!==state.article)window.scrollTo(0,0);sidebar();$('content').innerHTML=state.view==='overview'?home():state.view==='tree'?tree():state.view==='articles'?articleUI.render(state)+footer():photos();if(state.view==='tree')updateTree();}
  const title=domainMap.get(state.domain)?.title||extensionMap.get(state.domain)?.title;
- document.title=(state.node?nodeMap.get(state.node).title:title||'计算机基础知识地图')+(state.node||title?' · 计算机基础知识地图':'');
+ document.title=(state.article?articleMap.get(state.article).title:state.node?nodeMap.get(state.node).title:title||'计算机基础知识地图')+(state.article||state.node||title?' · 计算机基础知识地图':'');
  if(state.node)showNode(state.node);else if($('detailDialog').open)$('detailDialog').close();
- previous={...state};mountIcons();
+ previous={...state};mountIcons();if(state.view==='articles')scrollArticle();
 }
 function syncScrollLock(){document.body.classList.toggle('dialog-open',!!document.querySelector('dialog[open]'));}
 function showNode(id){
@@ -85,18 +105,19 @@ function showPhoto(id,nodeId){
 }
 document.addEventListener('click',async ev=>{
  const t=ev.target.closest('button,a');if(!t)return;
- if(t.dataset.node){ev.preventDefault();go({node:t.dataset.node});}
+ if(t.dataset.section){document.querySelector('.mobile-article-toc')?.removeAttribute('open');if(state.section===t.dataset.section)scrollArticle();}
+ if(t.dataset.node){ev.preventDefault();openNode(t.dataset.node);}
  if(t.dataset.domain){ev.preventDefault();navigateDomain(t.dataset.domain);}
  if(t.dataset.close){$(t.dataset.close).close();}
- if(t.dataset.photo)showPhoto(t.dataset.photo,t.dataset.sourceNode);
+ if(t.dataset.photo){ev.preventDefault();showPhoto(t.dataset.photo,t.dataset.sourceNode);}
  if(t.dataset.expand){if(t.dataset.expand==='true')mindmapInstance?.expandAll();else mindmapInstance?.collapseAll();}
  if(t.hasAttribute('data-clear')){go({q:''},true);$('searchInput')?.focus();}
  if(t.hasAttribute('data-search-all'))go({domain:''});
- if(t.dataset.locate){const n=nodeMap.get(t.dataset.locate);go({view:'tree',domain:n.domain,q:'',node:''});requestAnimationFrame(()=>requestAnimationFrame(()=>{mindmapInstance?.focusNode(n.id);$('mindmapHost')?.scrollIntoView({block:'nearest'});}));}
+ if(t.dataset.locate){const n=nodeMap.get(t.dataset.locate);if(n.articleId){openNode(n.id);return;}go({view:'tree',domain:n.domain,q:'',node:''});requestAnimationFrame(()=>requestAnimationFrame(()=>{mindmapInstance?.focusNode(n.id);$('mindmapHost')?.scrollIntoView({block:'nearest'});}));}
  if(t.dataset.copy){try{await navigator.clipboard.writeText(location.href);t.textContent='链接已复制';}catch{t.textContent='请复制浏览器地址栏链接';}}
 });
-document.addEventListener('input',ev=>{if(ev.target.id!=='searchInput')return;const value=ev.target.value,pos=ev.target.selectionStart;if(state.view!=='tree'){go({view:'tree',domain:'',q:value,node:''},true);$('searchInput').focus();try{$('searchInput').setSelectionRange(pos,pos);}catch{}}else{state.q=value;history.replaceState(null,'',href(state));previous={...state};updateTree();}});
-$('domainPicker').addEventListener('change',ev=>go({view:state.view==='photos'&&!extensionMap.has(ev.target.value)?'photos':'tree',domain:ev.target.value,q:'',node:''}));
+document.addEventListener('input',ev=>{if(ev.target.id!=='searchInput')return;const value=ev.target.value,pos=ev.target.selectionStart;if(state.view==='articles'){go({q:value,article:'',section:''},true);$('searchInput')?.focus();try{$('searchInput')?.setSelectionRange(pos,pos);}catch{}}else if(state.view!=='tree'){go({view:'tree',domain:'',q:value,node:''},true);$('searchInput').focus();try{$('searchInput').setSelectionRange(pos,pos);}catch{}}else{state.q=value;history.replaceState(null,'',href(state));previous={...state};updateTree();}});
+$('domainPicker').addEventListener('change',ev=>go({view:state.view==='photos'?'photos':domainView(ev.target.value),domain:ev.target.value,q:'',node:'',article:'',section:''}));
 $('detailDialog').addEventListener('close',()=>{cropVersion++;if(readState().node){const next={...readState(),node:''};history.replaceState(null,'',href(next));state=next;previous={...state};document.title=(domainMap.get(state.domain)?.title||'知识树')+' · 计算机基础知识地图';}syncScrollLock();});
 $('photoDialog').addEventListener('close',()=>{photoVersion++;syncScrollLock();});
 for(const dlg of [$('detailDialog'),$('photoDialog')])dlg.addEventListener('click',ev=>{if(ev.target===dlg){const r=dlg.getBoundingClientRect();if(ev.clientX<r.left||ev.clientX>r.right||ev.clientY<r.top||ev.clientY>r.bottom)dlg.close();}});

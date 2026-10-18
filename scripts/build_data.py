@@ -1,5 +1,6 @@
 from pathlib import Path
 import json,re,hashlib,unicodedata,difflib
+from article_markdown import build_articles
 ROOT=Path(__file__).resolve().parents[1]
 DIST=ROOT/'dist'
 DOMAINS=[
@@ -821,14 +822,20 @@ HTTPS @8077
     线上监控工具
 ''')]
 topic_config=json.loads((ROOT/'source/topics.json').read_text())
+articles=[]
+def photo_id(value):return 'IMG_'+value if value.isdigit() else value
 for t in topic_config:
  if t['status']=='ready':
+  if t.get('articleIndex'):
+   chapter_articles=build_articles(ROOT,t)
+   articles.extend(chapter_articles)
+   t['outline']='\n'.join(a['title']+' @'+a['primaryPhoto']+' :: '+a['summary'] for a in chapter_articles)
   if t.get('outlineFile'):
    outline_path=(ROOT/t['outlineFile']).resolve()
    assert outline_path.is_relative_to(ROOT/'source'), 'Topic outlines must be inside source/'
    t['outline']=outline_path.read_text()
   assert t['outline'].strip() and t['photos'], 'Ready topics require an outline and source photos'
-  DOMAINS.append((t['id'],t['title'],t['description'],[p['id'].replace('IMG_','') for p in t['photos']],t['outline']))
+  DOMAINS.append((t['id'],t['title'],t['description'],[p['id'] for p in t['photos']],t['outline']))
 
 def norm(s):return re.sub(r'[^a-z0-9\u4e00-\u9fff]','',unicodedata.normalize('NFKC',s).lower())
 ocr={p.stem:json.loads(p.read_text()) for p in (ROOT/'source/ocr').glob('*.json')}
@@ -852,18 +859,20 @@ node_overrides=json.loads((ROOT/'source/node-overrides.json').read_text())
 used_overrides=set()
 nodes=[];domains=[]
 for slug,title,desc,photos,block in DOMAINS:
- stack=[];roots=[];photo='IMG_'+photos[0]
+ stack=[];roots=[];photo=photo_id(photos[0])
  for i,line in enumerate(block.strip().splitlines()):
   depth=(len(line)-len(line.lstrip()))//2
   text=line.strip();label,_,note=text.partition(' :: ')
-  m=re.search(r' @(\d+)$',label)
-  if m:photo='IMG_'+m[1];label=label[:m.start()]
+  m=re.search(r' @([A-Za-z0-9_-]+)$',label)
+  if m:photo=photo_id(m[1]);label=label[:m.start()]
   while len(stack)>depth:stack.pop()
   path_key='/'.join([slug]+[x['title'] for x in stack]+[label])
   override=node_overrides.get(path_key,{})
   if override:used_overrides.add(path_key)
   stable_id=override.get('id',slug+'-'+hashlib.sha256(path_key.encode()).hexdigest()[:10])
   node={'id':stable_id,'title':label,'domain':slug,'parent':stack[-1]['id'] if stack else None,'children':[],'photo':photo,'note':note,'depth':depth}
+  article=next((a for a in articles if a['domain']==slug and a['title']==label),None)
+  if article:node.update(articleId=article['id'],searchText=article['text'])
   annotation=annotations.get(stable_id)
   if annotation:
    assert annotation['title']==label and annotation['photo']==photo, f'Annotation source mismatch: {stable_id}'
@@ -878,18 +887,19 @@ for slug,title,desc,photos,block in DOMAINS:
   if stack:stack[-1]['children'].append(node['id'])
   else:roots.append(node['id'])
   nodes.append(node);stack.append(node)
- domains.append({'id':slug,'title':title,'description':desc,'photos':['IMG_'+p for p in photos],'roots':roots,'status':'ready','extension':any(t['id']==slug for t in topic_config),'count':sum(n['domain']==slug for n in nodes)})
-extensions=[{k:v for k,v in t.items() if k not in ['outline','outlineFile','photos']}|{'roots':next((d['roots'] for d in domains if d['id']==t['id']),[]),'photos':[p['id'] for p in t['photos']]} for t in topic_config]
+ domains.append({'id':slug,'title':title,'description':desc,'photos':[photo_id(p) for p in photos],'roots':roots,'status':'ready','extension':any(t['id']==slug for t in topic_config),'count':sum(n['domain']==slug for n in nodes)})
+ if any(a['domain']==slug for a in articles):domains[-1].update(presentation='articles',articleIds=[a['id'] for a in articles if a['domain']==slug])
+extensions=[{k:v for k,v in t.items() if k not in ['outline','outlineFile','articleIndex','photos']}|{'roots':next((d['roots'] for d in domains if d['id']==t['id']),[]),'photos':[p['id'] for p in t['photos']]} for t in topic_config]
 photo_labels={'8064':'原始目录','8065':'计算机基础总览','8066':'数据结构与算法（一）· 全幅','8067':'数据结构与算法（二）','8068':'常用数学 · 算法补充','8069':'操作系统 · 进程与内存','8070':'操作系统 · 文件、I/O 与网络通信','8071':'网络编程 · 基础、I/O 与框架','8072':'网络编程 · 协议与编程模型','8073':'计算机组成原理 · 总览','8074':'CPU 指令 · MIPS','8075':'程序栈、寄存器与程序执行','8076':'计算机网络 · 协议与 HTTP','8077':'计算机网络 · Web 与 HTTPS','8078':'软件工程'}
 for t in topic_config:
  for p in t['photos']:photo_labels[p['id'].replace('IMG_','')]=p['title']
 photos=[]
 for num,label in photo_labels.items():
- p='IMG_'+num
+ p=photo_id(num)
  photos.append({'id':p,'title':label,'src':'photos/'+p+'.jpg','preview':'photos/'+p+'-preview.jpg','thumb':'photos/'+p+'-thumb.jpg','domains':[d['id'] for d in domains if p in d['photos']]})
 assert used_overrides==set(node_overrides), 'Node overrides refer to removed paths'
 assert set(annotations).issubset({n['id'] for n in nodes}), 'Annotations refer to removed nodes'
-data={'schemaVersion':2,'title':'计算机基础知识地图','description':'从知识结构出发，读懂计算机','domains':domains,'extensions':extensions,'nodes':nodes,'photos':photos,'contentPolicy':'根据用户提供的照片整理层级与摘要；原图中的简化说法在条目中另作说明。OCR 仅作为定位辅助，不能替代原图。'}
+data={'schemaVersion':2,'title':'计算机基础知识地图','description':'从知识结构出发，读懂计算机','domains':domains,'extensions':extensions,'nodes':nodes,'photos':photos,'articles':articles,'contentPolicy':'根据用户提供的照片整理层级与摘要；原图中的简化说法在条目中另作说明。OCR 仅作为定位辅助，不能替代原图。'}
 (DIST/'data.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 # Browser-native data keeps file:// preview useful as well as normal static hosting.
 (DIST/'data.js').write_text('window.KNOWLEDGE_DATA='+json.dumps(data,ensure_ascii=False).replace('</','<\\/')+';\n')
@@ -902,6 +912,9 @@ for d in domains:
  md.append('')
 md+=['## 后续专题','']
 for t in extensions:md.append('- '+t['title']+'：'+('' if t['status']=='ready' else '等待图片。')+t['description'])
+if articles:
+ md+=['','## Markdown 文章','']
+ for a in articles:md.append('- ['+a['title']+']('+a['markdown']+')')
 md.append('')
 (DIST/'knowledge-map.md').write_text('\n'.join(md))
 print(json.dumps({'domains':len(domains),'nodes':len(nodes),'photos':len(photos),'evidenceLocated':sum('evidence'in n for n in nodes),'sourceAnnotations':sum(bool(n.get('sourceText')) for n in nodes)},ensure_ascii=False))

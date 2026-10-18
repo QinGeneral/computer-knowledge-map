@@ -1,0 +1,262 @@
+[
+  {
+    "photo": "compiler-06",
+    "name": "token",
+    "box": [
+      0.11,
+      0.46,
+      0.93,
+      0.645
+    ],
+    "asset": "figures/compilers/compiler-06-token.jpg",
+    "sourceSha256": "c80030b083aedd6640702c704b66f6d0e4af8227d2e5d842693c7a1962671b1e",
+    "assetSha256": "66e89e51d26ea65ba78918ece85efe882b39541abc36a6a59ab706e267484b05"
+  },
+  {
+    "photo": "compiler-07",
+    "name": "fsa",
+    "box": [
+      0.095,
+      0.45,
+      0.91,
+      0.745
+    ],
+    "asset": "figures/compilers/compiler-07-fsa.jpg",
+    "sourceSha256": "bdd815284130f2669583880c19cfbbef42b26d5954a820e61fff708149c11b2a",
+    "assetSha256": "80a11adb7216917da54056ab5e7b8c9947a1b3394d25cf4d66c3da6a49e01980"
+  },
+  {
+    "photo": "compiler-08",
+    "name": "dfa",
+    "box": [
+      0.16,
+      0.53,
+      0.86,
+      0.875
+    ],
+    "asset": "figures/compilers/compiler-08-dfa.jpg",
+    "sourceSha256": "6ff86d8e559b681b45f951470634acc41420ae314de511dbaa6f7c633a441624",
+    "assetSha256": "a29afcfe057f3befb44774103badda567791e03bb68800fb2f69d09c5a39d1d5"
+  },
+  {
+    "photo": "compiler-09",
+    "name": "nfa",
+    "box": [
+      0.26,
+      0.14,
+      0.79,
+      0.375
+    ],
+    "asset": "figures/compilers/compiler-09-nfa.jpg",
+    "sourceSha256": "0f8db8d11d0f5343a69562668f8594f2a78946ab664fdbf15f191dfd6d899f56",
+    "assetSha256": "41fbf3c1e4248b66210a9ba9becac7a8c62e49f23ce4032b1d3e9c78d3ebbcaa"
+  },
+  {
+    "photo": "compiler-10",
+    "name": "ast",
+    "box": [
+      0.49,
+      0.34,
+      0.91,
+      0.72
+    ],
+    "asset": "figures/compilers/compiler-10-ast.jpg",
+    "sourceSha256": "6f037110f842438c6ae1801f35bd34a395a7c0f8dd4c67d531bf66973f043bc8",
+    "assetSha256": "dbab89f88a6750294d60d7eb30154c1b4d5ed09eef602fc6b36e32f088b61004"
+  },
+  {
+    "photo": "compiler-11",
+    "name": "grammar",
+    "box": [
+      0.54,
+      0.18,
+      0.92,
+      0.43
+    ],
+    "asset": "figures/compilers/compiler-11-grammar.jpg",
+    "sourceSha256": "a2fe008b215162b505cdf5732f8191ed436f577d7d81c565e03a617c6f394d7b",
+    "assetSha256": "bdd6c300a3d0cc9bcdca99462418a65bd8f959a50fc13f6794895af8c16c6f27"
+  },
+  {
+    "photo": "compiler-13",
+    "name": "phases",
+    "box": [
+      0.11,
+      0.61,
+      0.88,
+      0.865
+    ],
+    "asset": "figures/compilers/compiler-13-phases.jpg",
+    "sourceSha256": "49a6b37975e70d212c48d3e2484ab7ec1e6e6fd83b82aeab3b35ef53f21d5dd8",
+    "assetSha256": "4af3e0a139fed699643c807a15c440d6055b67ee1dd51b627885e2a3e59400c9"
+  },
+  {
+    "photo": "compiler-14",
+    "name": "scope",
+    "box": [
+      0.2,
+      0.47,
+      0.9,
+      0.745
+    ],
+    "asset": "figures/compilers/compiler-14-scope.jpg",
+    "sourceSha256": "7603e78438d502638e1df46132be79ce7a91b6c9c01ffb45fbdf06e3a27a5c7f",
+    "assetSha256": "b7368921388b3a8f0ed64a8ac70a6825a8b91b49bef802e8a67b681350ae8c52"
+  },
+  {
+    "photo": "compiler-15",
+    "name": "annotated-ast",
+    "box": [
+      0.17,
+      0.51,
+      0.81,
+      0.87
+    ],
+    "asset": "figures/compilers/compiler-15-annotated-ast.jpg",
+    "sourceSha256": "a37a7714bc12438371137233565303e5f88d1b81ddde430698043fe9649c5615",
+    "assetSha256": "0376ff38e0717acc04874883b4d1fba96752a7f24dc26e7eb16ae2da97069a52"
+  },
+  {
+    "photo": "compiler-17",
+    "name": "symbol-table",
+    "box": [
+      0.11,
+      0.18,
+      0.88,
+      0.47
+    ],
+    "asset": "figures/compilers/compiler-17-symbol-table.jpg",
+    "sourceSha256": "1025d14904c0549b755369bef0ab18d93c48fd8610d721727efde477233e6b63",
+    "assetSha256": "b766945553972463eabb6b58aa2546b2a57080ebe3065cab12ba2f7039f06c44"
+  },
+  {
+    "photo": "compiler-17",
+    "name": "reference-table",
+    "box": [
+      0.45,
+      0.49,
+      0.93,
+      0.865
+    ],
+    "asset": "figures/compilers/compiler-17-reference-table.jpg",
+    "sourceSha256": "1025d14904c0549b755369bef0ab18d93c48fd8610d721727efde477233e6b63",
+    "assetSha256": "d3c5882bd02d3ee24fe62127b3d8fd8dacfc509961f2c03b989de83f3f8b81f5"
+  },
+  {
+    "photo": "compiler-18",
+    "name": "references",
+    "box": [
+      0.12,
+      0.44,
+      0.9,
+      0.875
+    ],
+    "asset": "figures/compilers/compiler-18-references.jpg",
+    "sourceSha256": "8b1bfd1d651dfc7afbf406047367bcae29bc05367cdea40cff155c13a9ed8ff5",
+    "assetSha256": "944426427567b4f41ed0e119f4119ee7b5fc4bd97ccfbf8117b22ae70d28f8d2"
+  },
+  {
+    "photo": "compiler-24",
+    "name": "ast-dag",
+    "box": [
+      0.12,
+      0.18,
+      0.89,
+      0.49
+    ],
+    "asset": "figures/compilers/compiler-24-ast-dag.jpg",
+    "sourceSha256": "92c7f0e4407d23ddd09a471d82f2d44adaa127a6126d2a77468855b6cbd181c3",
+    "assetSha256": "7b454f70eb28d658e5008794ee255bf10ce4daf8bfca3e8b610c532b170efbca"
+  },
+  {
+    "photo": "compiler-32",
+    "name": "backend",
+    "box": [
+      0.1,
+      0.61,
+      0.88,
+      0.865
+    ],
+    "asset": "figures/compilers/compiler-32-backend.jpg",
+    "sourceSha256": "73a5980bb94b7930a75df6350bf1136044c8c0a52dbaed39f5833669615a2b09",
+    "assetSha256": "07e73032f364b23f96da899e09183433382132c62e2e4f7bae18d87243faa388"
+  },
+  {
+    "photo": "compiler-33",
+    "name": "pipeline",
+    "box": [
+      0.28,
+      0.54,
+      0.78,
+      0.84
+    ],
+    "asset": "figures/compilers/compiler-33-pipeline.jpg",
+    "sourceSha256": "aa0bb170363b2a6b2a833c4632a030ecb6e3a6ef452ed58f36e7f81fe85e129f",
+    "assetSha256": "d4cfa64e57005eca276e8da7f6f1d7ec3b916e5b7edcdc77ddff13dbcc4c9081"
+  },
+  {
+    "photo": "compiler-38",
+    "name": "computer",
+    "box": [
+      0.4,
+      0.18,
+      0.93,
+      0.56
+    ],
+    "asset": "figures/compilers/compiler-38-computer.jpg",
+    "sourceSha256": "0552ad8920a34a7b98224f0eec2b67e31aa5c1be1aba11f3f568b4c5f9204edc",
+    "assetSha256": "a719894e456c66347779a41b9060907991ca44881a8c462fda00018039efba5e"
+  },
+  {
+    "photo": "compiler-39",
+    "name": "assembly",
+    "box": [
+      0.54,
+      0.29,
+      0.9,
+      0.51
+    ],
+    "asset": "figures/compilers/compiler-39-assembly.jpg",
+    "sourceSha256": "6ad9190461aac693b3a180fa1584a94d555c3f4f7c85b08dcbd617d6cd12b757",
+    "assetSha256": "c3c87c463799f893c9e2e249a7a41a9a8a33d06c85f6a401045e2ea4777d17c1"
+  },
+  {
+    "photo": "compiler-41",
+    "name": "address-space",
+    "box": [
+      0.1,
+      0.16,
+      0.91,
+      0.49
+    ],
+    "asset": "figures/compilers/compiler-41-address-space.jpg",
+    "sourceSha256": "880fb16514fb3a3e87ec66ecffb0721ea7cf9ac3ec96eeb2e61a4d5309d7fa7c",
+    "assetSha256": "2cd739176142d1b568659632bed329e857fd668dc3a63dc73cbb69a7da9025f4"
+  },
+  {
+    "photo": "compiler-42",
+    "name": "memory-layout",
+    "box": [
+      0.53,
+      0.46,
+      0.9,
+      0.875
+    ],
+    "asset": "figures/compilers/compiler-42-memory-layout.jpg",
+    "sourceSha256": "4a3caee917cefd39a5aaea9fcdb98a8eae78d177ccbf1a3b270e0aa2600410d9",
+    "assetSha256": "6fbce6ef9a6f8a7a6910a62ef1fe3833743b49aea183917b64d6b0a784b2b082"
+  },
+  {
+    "photo": "compiler-45",
+    "name": "ignition-frame",
+    "box": [
+      0.1,
+      0.685,
+      0.9,
+      0.87
+    ],
+    "asset": "figures/compilers/compiler-45-ignition-frame.jpg",
+    "sourceSha256": "85d96916f3c023f0a56674c64fa0b4cae71f52934d10713d5f104425c9880509",
+    "assetSha256": "545ab86516e771d1a49f0a46392601fd3efd1334930c7b560b096c88457e13c5"
+  }
+]

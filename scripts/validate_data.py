@@ -108,6 +108,54 @@ for row in network_review['items']:
 for row in network_review['verbatimPassages']:
  assert nodes[row['id']]['sourceText']==row['text'] and nodes[row['id']]['photo']==row['photo'], 'Original wording was altered'
 assert {nodes[row['id']]['photo'] for row in network_review['items']}==set(topic['photos'])-{'IMG_8081'}, 'Every content photo must have structured entries; IMG_8081 is the contents page'
+
+# Compiler articles must retain every supplied page and export the actual source Markdown.
+from article_markdown import render_markdown
+from html.parser import HTMLParser
+article_index=json.loads((ROOT/'source/compiler-articles.json').read_text())
+compiler=next(d for d in data['domains'] if d['id']=='compilers')
+articles=data['articles'];assert len(articles)==8
+assert compiler['presentation']=='articles' and compiler['articleIds']==[a['id'] for a in articles]
+assert {p for a in articles for p in a['photos']}==set(compiler['photos'])=={f'compiler-{i:02}' for i in range(1,47)}
+assert len([n for n in nodes.values() if n.get('articleId')])==8
+class ArticleLinks(HTMLParser):
+ def __init__(self):super().__init__();self.ids=[];self.local=[]
+ def handle_starttag(self,tag,attrs):
+  attrs=dict(attrs)
+  assert tag not in ('script','iframe','object','embed','style')
+  assert not any(k.startswith('on') for k in attrs)
+  if 'id' in attrs:self.ids.append(attrs['id'])
+  for key in ('src','href'):
+   value=attrs.get(key,'')
+   if value:
+    assert not value.lower().startswith(('javascript:','data:','file:'))
+    if not value.startswith(('https:','http:','#')):self.local.append(value)
+for a,entry in zip(articles,article_index):
+ text=(ROOT/entry['source']).read_text()
+ assert (DIST/a['markdown']).read_bytes()==(ROOT/entry['source']).read_bytes()
+ assert a['text']==text and len(text)>900 and '## 面试指南' in text and '## 扩展阅读' in text
+ assert render_markdown(text,a['domain'],a['id'])==(a['html'],a['toc'],a['assets'])
+ parser=ArticleLinks();parser.feed(a['html'])
+ assert len(parser.ids)==len(set(parser.ids)) and parser.ids==[t['id'] for t in a['toc']]
+ for path in parser.local:assert (DIST/path).is_file(), path
+ for photo in a['photos']:assert f'data-photo="{photo}"' in a['html']
+ assert next(n for n in nodes.values() if n.get('articleId')==a['id'])['searchText']==text
+compiler_review=json.loads((ROOT/'source/compiler-review.json').read_text())
+assert compiler_review['sourcePages']==46 and compiler_review['articleCount']==len(articles)
+for a,row in zip(articles,compiler_review['chapters']):
+ assert a['id']==row['id'] and a['photos']==row['photos']
+ assert hashlib.sha256(a['text'].encode()).hexdigest()==row['markdownSha256']
+figures=json.loads((ROOT/'source/compiler-figures.json').read_text());assert len(figures)==20
+assert {r['asset'] for r in figures}=={p for a in articles for p in a['assets']}
+for row in figures:
+ assert hashlib.sha256((DIST/row['asset']).read_bytes()).hexdigest()==row['assetSha256']
+ assert hashlib.sha256((DIST/'photos'/(row['photo']+'.jpg')).read_bytes()).hexdigest()==row['sourceSha256']
+ x,y,x2,y2=row['box'];assert 0<=x<x2<=1 and 0<=y<y2<=1
+for bad in ['[bad](javascript:alert)','[bad](data:text/html,boom)','[bad](../secret)','![bad](https://example.test/image.jpg)']:
+ try:render_markdown(bad,'compilers','unsafe')
+ except AssertionError:pass
+ else:raise AssertionError('Unsafe article markup was accepted')
+assert '&lt;script&gt;' in render_markdown('<script>bad</script>','compilers','escaped')[0]
 for p in DIST.rglob('*'):
  if p.suffix in ['.html','.js','.json','.css','.md']:
   assert '/Users/' not in p.read_text(),f'Local path leaked into {p}'

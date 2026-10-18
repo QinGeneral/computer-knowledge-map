@@ -63,13 +63,199 @@
   {
     "id": "compilers",
     "title": "编译原理",
-    "status": "planned",
-    "description": "已在总览与程序执行过程中保留关联入口，等待后续专题图片。",
+    "status": "ready",
+    "description": "从 46 页原图整理 8 篇 Markdown 文章，依次阅读前端、后端与运行时。",
     "relatedDomains": [
       "overview",
       "architecture"
     ],
-    "photos": [],
-    "outline": ""
+    "photos": [
+      {
+        "id": "compiler-01",
+        "title": "目录（1/3）"
+      },
+      {
+        "id": "compiler-02",
+        "title": "目录（2/3）"
+      },
+      {
+        "id": "compiler-03",
+        "title": "目录（3/3）"
+      },
+      {
+        "id": "compiler-04",
+        "title": "前端部分 · 扉页"
+      },
+      {
+        "id": "compiler-05",
+        "title": "第 07 页 · 前端概述"
+      },
+      {
+        "id": "compiler-06",
+        "title": "第 08 页 · 词法分析"
+      },
+      {
+        "id": "compiler-07",
+        "title": "第 09 页 · 词法分析"
+      },
+      {
+        "id": "compiler-08",
+        "title": "第 10 页 · 词法分析"
+      },
+      {
+        "id": "compiler-09",
+        "title": "第 11 页 · 词法分析"
+      },
+      {
+        "id": "compiler-10",
+        "title": "第 12 页 · 语法分析"
+      },
+      {
+        "id": "compiler-11",
+        "title": "第 13 页 · 语法分析"
+      },
+      {
+        "id": "compiler-12",
+        "title": "第 14 页 · 语法分析"
+      },
+      {
+        "id": "compiler-13",
+        "title": "第 15 页 · 语义分析"
+      },
+      {
+        "id": "compiler-14",
+        "title": "第 16 页 · 语义分析"
+      },
+      {
+        "id": "compiler-15",
+        "title": "第 17 页 · 语义分析"
+      },
+      {
+        "id": "compiler-16",
+        "title": "第 18 页 · 语义分析"
+      },
+      {
+        "id": "compiler-17",
+        "title": "第 19 页 · 语义分析"
+      },
+      {
+        "id": "compiler-18",
+        "title": "第 20 页 · 语义分析"
+      },
+      {
+        "id": "compiler-19",
+        "title": "第 21 页 · 语义分析"
+      },
+      {
+        "id": "compiler-20",
+        "title": "第 22 页 · 语义分析"
+      },
+      {
+        "id": "compiler-21",
+        "title": "后端部分 · 扉页"
+      },
+      {
+        "id": "compiler-22",
+        "title": "第 24 页 · 后端概述"
+      },
+      {
+        "id": "compiler-23",
+        "title": "第 25 页 · 中间代码"
+      },
+      {
+        "id": "compiler-24",
+        "title": "第 26 页 · 中间代码"
+      },
+      {
+        "id": "compiler-25",
+        "title": "第 27 页 · 中间代码"
+      },
+      {
+        "id": "compiler-26",
+        "title": "第 28 页 · 代码分析与优化"
+      },
+      {
+        "id": "compiler-27",
+        "title": "第 29 页 · 代码分析与优化"
+      },
+      {
+        "id": "compiler-28",
+        "title": "第 30 页 · 代码分析与优化"
+      },
+      {
+        "id": "compiler-29",
+        "title": "第 31 页 · 代码分析与优化"
+      },
+      {
+        "id": "compiler-30",
+        "title": "第 32 页 · 代码分析与优化"
+      },
+      {
+        "id": "compiler-31",
+        "title": "第 33 页 · 代码分析与优化"
+      },
+      {
+        "id": "compiler-32",
+        "title": "第 34 页 · 目标代码生成"
+      },
+      {
+        "id": "compiler-33",
+        "title": "第 35 页 · 目标代码生成"
+      },
+      {
+        "id": "compiler-34",
+        "title": "第 36 页 · 目标代码生成"
+      },
+      {
+        "id": "compiler-35",
+        "title": "第 37 页 · 目标代码生成"
+      },
+      {
+        "id": "compiler-36",
+        "title": "运行时部分 · 扉页"
+      },
+      {
+        "id": "compiler-37",
+        "title": "第 39 页 · 基于物理机与操作系统的运行时"
+      },
+      {
+        "id": "compiler-38",
+        "title": "第 40 页 · 基于物理机与操作系统的运行时"
+      },
+      {
+        "id": "compiler-39",
+        "title": "第 41 页 · 基于物理机与操作系统的运行时"
+      },
+      {
+        "id": "compiler-40",
+        "title": "第 42 页 · 基于物理机与操作系统的运行时"
+      },
+      {
+        "id": "compiler-41",
+        "title": "第 43 页 · 基于物理机与操作系统的运行时"
+      },
+      {
+        "id": "compiler-42",
+        "title": "第 44 页 · 基于物理机与操作系统的运行时"
+      },
+      {
+        "id": "compiler-43",
+        "title": "第 45 页 · 基于虚拟机的运行时"
+      },
+      {
+        "id": "compiler-44",
+        "title": "第 46 页 · 基于虚拟机的运行时"
+      },
+      {
+        "id": "compiler-45",
+        "title": "第 47 页 · 基于虚拟机的运行时"
+      },
+      {
+        "id": "compiler-46",
+        "title": "第 48 页 · 基于虚拟机的运行时"
+      }
+    ],
+    "presentation": "articles",
+    "articleIndex": "source/compiler-articles.json"
   }
 ]

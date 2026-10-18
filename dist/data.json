@@ -183,6 +183,83 @@
       "status": "ready",
       "extension": true,
       "count": 168
+    },
+    {
+      "id": "compilers",
+      "title": "编译原理",
+      "description": "从 46 页原图整理 8 篇 Markdown 文章，依次阅读前端、后端与运行时。",
+      "photos": [
+        "compiler-01",
+        "compiler-02",
+        "compiler-03",
+        "compiler-04",
+        "compiler-05",
+        "compiler-06",
+        "compiler-07",
+        "compiler-08",
+        "compiler-09",
+        "compiler-10",
+        "compiler-11",
+        "compiler-12",
+        "compiler-13",
+        "compiler-14",
+        "compiler-15",
+        "compiler-16",
+        "compiler-17",
+        "compiler-18",
+        "compiler-19",
+        "compiler-20",
+        "compiler-21",
+        "compiler-22",
+        "compiler-23",
+        "compiler-24",
+        "compiler-25",
+        "compiler-26",
+        "compiler-27",
+        "compiler-28",
+        "compiler-29",
+        "compiler-30",
+        "compiler-31",
+        "compiler-32",
+        "compiler-33",
+        "compiler-34",
+        "compiler-35",
+        "compiler-36",
+        "compiler-37",
+        "compiler-38",
+        "compiler-39",
+        "compiler-40",
+        "compiler-41",
+        "compiler-42",
+        "compiler-43",
+        "compiler-44",
+        "compiler-45",
+        "compiler-46"
+      ],
+      "roots": [
+        "compilers-f179bbed6e",
+        "compilers-ea3d6ced6f",
+        "compilers-ad78a7fd21",
+        "compilers-10777576a6",
+        "compilers-42d29bc5d2",
+        "compilers-c80a46915e",
+        "compilers-62e3088e61",
+        "compilers-655afd0db4"
+      ],
+      "status": "ready",
+      "extension": true,
+      "count": 8,
+      "presentation": "articles",
+      "articleIds": [
+        "lexical-analysis",
+        "syntax-analysis",
+        "semantic-analysis",
+        "intermediate-representation",
+        "analysis-and-optimization",
+        "code-generation",
+        "native-runtime",
+        "virtual-machine-runtime"
+      ]
     }
   ],
   "extensions": [
@@ -235,14 +312,71 @@
     {
       "id": "compilers",
       "title": "编译原理",
-      "status": "planned",
-      "description": "已在总览与程序执行过程中保留关联入口，等待后续专题图片。",
+      "status": "ready",
+      "description": "从 46 页原图整理 8 篇 Markdown 文章，依次阅读前端、后端与运行时。",
       "relatedDomains": [
         "overview",
         "architecture"
       ],
-      "roots": [],
-      "photos": []
+      "presentation": "articles",
+      "roots": [
+        "compilers-f179bbed6e",
+        "compilers-ea3d6ced6f",
+        "compilers-ad78a7fd21",
+        "compilers-10777576a6",
+        "compilers-42d29bc5d2",
+        "compilers-c80a46915e",
+        "compilers-62e3088e61",
+        "compilers-655afd0db4"
+      ],
+      "photos": [
+        "compiler-01",
+        "compiler-02",
+        "compiler-03",
+        "compiler-04",
+        "compiler-05",
+        "compiler-06",
+        "compiler-07",
+        "compiler-08",
+        "compiler-09",
+        "compiler-10",
+        "compiler-11",
+        "compiler-12",
+        "compiler-13",
+        "compiler-14",
+        "compiler-15",
+        "compiler-16",
+        "compiler-17",
+        "compiler-18",
+        "compiler-19",
+        "compiler-20",
+        "compiler-21",
+        "compiler-22",
+        "compiler-23",
+        "compiler-24",
+        "compiler-25",
+        "compiler-26",
+        "compiler-27",
+        "compiler-28",
+        "compiler-29",
+        "compiler-30",
+        "compiler-31",
+        "compiler-32",
+        "compiler-33",
+        "compiler-34",
+        "compiler-35",
+        "compiler-36",
+        "compiler-37",
+        "compiler-38",
+        "compiler-39",
+        "compiler-40",
+        "compiler-41",
+        "compiler-42",
+        "compiler-43",
+        "compiler-44",
+        "compiler-45",
+        "compiler-46"
+      ]
     }
   ],
   "nodes": [
@@ -21020,6 +21154,190 @@
       "note": "",
       "depth": 1,
       "sourceText": "这就是中介租给你房子之后，签完约说，还给你介绍一个装修公司：“哥们，想装修一下吗，接下来找它。”"
+    },
+    {
+      "id": "compilers-f179bbed6e",
+      "title": "词法分析",
+      "domain": "compilers",
+      "parent": null,
+      "children": [],
+      "photo": "compiler-06",
+      "note": "从源程序到 Token：正则文法、有限状态自动机、DFA 与 NFA。",
+      "depth": 0,
+      "articleId": "lexical-analysis",
+      "searchText": "# 词法分析\n\n## 前端部分\n\n概述：编译器的前端是指将源程序代码（字符串）处理转换为抽象语法树（AST）的程序模块，通常是作为编译器中的一部分而存在的；也有一些语言的编译器只实现前端功能，而复用其他已有的编译器后端，这通常是建立在将源程序代码转换为某种中间代码的基础之上。\n\n编译器前端其实与一门编程语言的设计息息相关，这也是一门语言的核心，在理论方面更多地牵涉到形式语言、自动机理论乃至一些数学上的基础理论知识；同时也要求设计者拥有丰富的软件编码工作经验，这又牵涉到了软件工程、工程实践等具体项目经验的积累。\n\n## 基本概念\n\n词法分析是编译器前端部分的第一个处理环节，其输入通常就是未经任何其他处理的源程序代码，输出的是一个 Token 化的序列（通常以 Token 对象构成的数组方式实现），供下游处理环节使用。\n\n![把字符串转换为 Token（注意：其中的空白字符代表空格、tab、回车和换行符，EOF 是文件结束符）](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-06-token.jpg)\n\n- 正则文法：词法分析工作的主要文法，它涉及的重要概念是正则表达式。\n- 正则表达式：正则文法的一种直观描述，它是按照指定模式匹配字符串的一种字符组合。\n- 正则表达式工具：字符串的模式匹配工具。\n\n## 核心难点\n\n### 有限状态自动机\n\n构造词法分析器使用的计算模型：有限自动机（FSA）。它是用于识别正则文法的一种程序实现方案。其组成的词法单元是 Token，也就是指程序中标记出来单词和标点符号，它可以分成关键字、标识符、字面量、操作符号等多个种类。\n\n在实际的编译器中，词法分析器一般都是手写的。\n\n状态机的描述方式——状态图：\n\n![左：一个能够识别标识符和数字字面量的有限自动机；右：一个能够识别 int 关键字和标识符的有限自动机](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-07-fsa.jpg)\n\n### DFA 与 NFA\n\nNFA：不确定的有限自动机。它的特点是：该状态机中存在某些状态，针对某些输入，不能做一个确定的转换。这里可以细分成两种情况：一种是对于一个输入，它有两个状态可以转换；另一种是存在 ε 转换的情况，也就是没有任何字符输入的情况下，NFA 也可以从一个状态迁移到另一个状态。\n\nNFA 的优点是在设计上更简单直观，缺点是它无法避免回溯问题，在某些极端的情况下可能会造成编译器运行的性能低下。主要适用于状态较为简单，且不存在回溯的场景。\n\nDFA：确定的有限自动机。它的特点是：该状态机在任何一个状态，基于输入的字符，都能做一个确定的状态转换。\n\nDFA 的优点是它可以避免回溯问题，运行性能较高，缺点是 DFA 通常不容易直接设计出来，需要通过一系列方案，基于 NFA 的转换而得到，并且需要占用额外的空间。主要适用于状态较为复杂，或者对时间复杂度要求较为严苛的工业级词法分析器。\n\n示例：\n\n![DFA](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-08-dfa.jpg)\n\n![NFA](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-09-nfa.jpg)\n\n## 面试指南\n\n### 从 Java 程序员视角看词法分析\n\nJDK 源代码：`com.sun.tools.javac.parser.Lexer`（词法解析器接口），它可以把字符流变成一个个的 Token，具体的实现在 Scanner 和 JavaTokenizer 类中。\n\n### 从 Python 程序员的视角看词法分析\n\nCPython 编译器源代码：tokenizer.c 的关键函数 tok_get0。\n\n### 从 JavaScript 程序员的视角看 V8 引擎的词法分析\n\nV8 的词法分析：[https://v8.dev/blog/scanner](https://v8.dev/blog/scanner)\n\n## 扩展阅读\n\n- NFA 转 DFA 的算法：龙书（第 2/3 版）第 3.7 章节\n- 输入缓冲技术：龙书（第 3 版）第 3.2 节\n- 有穷自动机：龙书（第 3 版）第 3.6 节\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [目录 1](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-01.jpg)\n- [目录 2](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-02.jpg)\n- [目录 3](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-03.jpg)\n- [前端部分扉页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-04.jpg)\n- [第 07 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-05.jpg)\n- [第 08 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-06.jpg)\n- [第 09 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-07.jpg)\n- [第 10 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-08.jpg)\n- [第 11 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-09.jpg)\n",
+      "evidence": {
+        "text": "词法分析",
+        "box": [
+          0.11664587110419229,
+          0.18938192656551134,
+          0.15690978163972907,
+          0.030159778830140316
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "compilers-ea3d6ced6f",
+      "title": "语法分析",
+      "domain": "compilers",
+      "parent": null,
+      "children": [],
+      "photo": "compiler-10",
+      "note": "从 Token 到 AST：上下文无关文法、递归下降、LL 与 LR。",
+      "depth": 0,
+      "articleId": "syntax-analysis",
+      "searchText": "# 语法分析\n\n## 基本概念\n\n语法分析是编译器前端的第二个处理环节，其输入是词法分析环节中输出的 Token 化字列，根据既定的语法规则输出抽象语法树（AST），供下游环节使用。语法分析只针对上下文无关的内容进行处理。\n\n![“int a=2”对应的 AST](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-10-ast.jpg)\n\n## 核心难点\n\n### 上下文无关文法\n\n上下文无关含义：在任何情况下，文法的推导规则都是一样的。\n\n语法规则由 4 个部分组成：一个有穷的非终结符（或变元）集合、一个有穷的终结符的集合、一个有穷产生式集合、一个起始非终结符（变元）。符合这四个特点文法规则就是上下文无关文法。\n\n![正则文法是上下文无关文法的子集](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-11-grammar.jpg)\n\n两种描述形式：一种是巴科斯范式（BNF）；另一种是巴科斯范式的一种扩展形式（EBNF），它更利于自动化生成语法分析器。其中，产生式、终结符、非终结符、开始符号是巴科斯范式的基本组成要素。\n\n上下文无关文法与正则文法的区别：上下文无关文法允许递归调用，而正则文法不允许；上下文无关文法比正则文法的表达能力更强，正则文法是上下文无关文法的一个子集。\n\n### 自顶向下和自底向上\n\n自顶向下的算法思路：从根节点逐层往下分解，形成最后的 AST。\n\n递归下降算法：它的算法思路是按照语法规则去匹配 Token 串。\n\n- 优点：程序结构基本上是跟文法规则同构的。\n- 缺点：会造成左递归和回溯问题。\n\n注意，递归下降是深度优先（DFS）的，只有最左边的子树都生成完了，才会在右生成它的兄弟节点。\n\nLL 算法：对于一些比较复杂的语法规则来说，这个算法可以自动计算出选择不同产生式的依据。\n\n- 方法：从左到右地消化掉 Token。\n- 要点：计算 First 和 Follow 集合。\n\n自底向上的算法思路：从底下先拼凑出 AST 的一些局部拼图，并逐步组装成一棵完整的 AST。\n\nLR 算法：移进，把 Token 加入工作区；规约，在工作区内组装 AST 的片段。LR 算法和 LL 算法一样，也是从左到右地消化掉 Token。\n\n## 面试指南\n\n从工业级编译器的实现角度来看，常规的设计思路基本上都是：手写的语法分析器、经典递归下降算法实现主体流程，再用 LR 等高级算法实现二元表达式等特殊语法的解析。\n\n值得一提：Python 语言是利用工具自动生成语法分析程序的，其使用的工具 pgen 能够根据语法规则生成解析表，让修改语法的过程变得更加容易。\n\n## 扩展阅读\n\n- 左递归消除：龙书（第 3 版）第 4.3.3 章节\n- First 与 Follow 集合：龙书（第 3 版）第 4.4.2 章节\n- LR 相关详细介绍：龙书（第 3 版）第 4.6～4.7 章节、虎书（C 语言版）第 3.3 章节\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [第 12 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-10.jpg)\n- [第 13 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-11.jpg)\n- [第 14 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-12.jpg)\n",
+      "evidence": {
+        "text": "语法分析",
+        "box": [
+          0.1292582087562365,
+          0.1944639275517871,
+          0.15832136470740593,
+          0.028223307627551986
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "compilers-ad78a7fd21",
+      "title": "语义分析",
+      "domain": "compilers",
+      "parent": null,
+      "children": [],
+      "photo": "compiler-13",
+      "note": "属性计算、类型系统、符号表、引用消解、闭包与控制流检查。",
+      "depth": 0,
+      "articleId": "semantic-analysis",
+      "searchText": "# 语义分析\n\n## 基本概念\n\n语义分析是编译器前端的第三个处理环节，其输入是在语法分析环节输出的抽象语法树，根据语言的特性对当前语法树进行检查和优化，在结构上进行节点的补充属性、调整语义化标识和删除不必要的节点等操作，因此输出的依然还是抽象语法树。\n\n语义分析会针对上下文相关的内容进行处理，有时一部分语义分析的工作会和语法分析环节融合在一起。\n\n![编译过程中的每个阶段，都可能使用符号表](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-13-phases.jpg)\n\n## 核心难点\n\n### 上下文相关文法\n\n- 属性文法：上下文相关文法对 EBNF 进行了扩充，在上下文无关的推导过程中，辅助性解决一些上下文相关的问题。\n- 注意：上下文相关文法由于和语言的设计、特性强耦合，并没有像状态图、BNF 那样有直观的、通用化分析范式。\n- 应用场景：控制流检查、闭包分析、引用消解等。\n\n```c\nint a = 10;\nint foo(int a) {\n    int b = a + 3;\n    return b;\n}\n```\n\n![变量的作用域](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-14-scope.jpg)\n\n### 属性计算\n\n编译器一般会采用属性计算的方法，来计算出每个 AST 节点的类型属性，然后检查它们是否匹配。\n\n- 属性文法：属性计算的方法，就是基于语法规则，来定义一些属性计算的规则，在做语法解析或遍历 AST 的时候执行这些规则，我们就可以计算出属性值。这种基于语法规则定义的计算规则，被叫做属性文法（Attribute Grammar）。\n- 属性计算：S 属性，字面意思是综合属性，就是在 AST 中从下级的属性归纳、综合出本级的属性，更准确地说，是通过下级节点和自身来确定的；I 属性，继承属性，即 AST 中某个节点的属性是由上级节点、兄弟节点和它自身来决定的。\n- 形成的数据结构：Annotated AST（带有标注信息的 AST）。\n- 语法制导的翻译：属性计算的特点是会基于语法规则，增加一些与语义处理有关的规则，我们把这种语义规则的定义叫做语法制导的定义，如果变成计算动作，就叫做语法制导的翻译。\n\n![带有标注信息的 AST](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-15-annotated-ast.jpg)\n\n### 类型系统\n\n- 类型：在计算机语言里，类型是数据的一个属性，它的作用是来告诉编译器或解释器，程序可以如何使用这些数据。\n- 类型系统：类型系统是一门语言所有的类型的集合，其中包含了操作这些类型的规则，以及规定了类型之间是怎么相互作用的（比如一个类型能否转换成另一个类型）。\n- 类型检查：这是与类型有关的分析和处理工作之一。主要用于对源程序代码中，一些类型不匹配的情况进行隐式类型转换或直接抛错。\n- 子类型：面向对象编程时，我们可以给某个类创建不同的子类，实现一些个性化的功能；写程序时，我们可以站在抽象度更高的层次上，不去管具体的差异。把这里的结论抽象成一般意义上的类型理论，就是子类型。\n- 类型转换：比如说，表达式“a=b+10”，如果 a 的类型是浮点型，而右边传过来的是整型，那么一般就要进行缺省的类型转换。\n- 参数化类型/泛型：泛型是程序设计语言的一种风格或范式。泛型允许程序员在强类型程序设计语言中，编写代码时使用一些以后才指定的类型，在实例化时作为参数指明这些类型。\n\n### 符号表\n\n- 符号表内包含的信息：名称、分类、类型、作用域等。\n- 存储形式：线性表格、层次化表格。\n\n![一种层次化的符号表](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-17-symbol-table.jpg)\n\n- 符号表的作用：维护程序中定义的标识符（ID 类 Token），提供给编译器的各个环节进行操作。\n- 建立符号表的过程：整个编译器前端都会涉及到，词法分析阶段将 ID 类 Token 收集到符号表中，语法分析阶段可进行读取和补充，语义分析阶段在做引用消解时，符号表的作用至关重要。\n- 注意：符号表跟编译过程多个阶段都相关。\n\n![利用符号表帮助做引用消解](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-17-reference-table.jpg)\n\n### 引用消解\n\n- 概念解释：引用消解是一种非常重要的上下文相关的语义规则，它其实就是从符号表里查找被引用的符号的定义。\n- 作用域：指计算机语言中变量、函数、类等起作用的范围。对于变量来说，为了找到正确的引用，就需要用到作用域。一般来说，它有两种使用场景，一种是标识符作用域，一种是词法作用域。\n\n![变量引用的消解](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-18-references.jpg)\n\n### 闭包分析\n\n很多语言都支持闭包。而要正确地使用闭包，就必须在编译期知道哪些变量是自由变量。\n\n这里的自由变量是指在本函数外面定义的变量，但被这个函数中的代码所使用。这样，在运行期，编译器就会用特殊的内存管理机制来管理这些变量。所以，对闭包的分析，也是上下文敏感的。\n\n### 控制流检查\n\n像 return、break 和 continue 等语句，都与程序的控制流有关，它们必须符合控制流方面的规则。\n\n在 Java 这样的语言中，语义规则会规定：如果返回值不是 void，那么在退出函数体之前，一定要执行一个 return 语句，那么就要检查所有的控制流分支，是否都以 return 语句结尾。\n\n## 面试指南\n\n语义分析与每一门编程语言的具体语法特性息息相关，因此针对不同语言的语义分析过程可能大相径庭。\n\n- Java 在语义分析环节着重静态类型处理，并会对很多源程序中所涉及的语法糖进行去除。\n- Python 在语义分析环节的一个显著特点是：由于其语法特性可以不声明变量就直接使用，所以编译器要能识别出正确的“定义-使用”关系。\n- TypeScript 作为 JavaScript 的一种方言，强调通过类型检查在编译期提前发现程序的错误（而不像 JavaScript 那样在运行期才能发现很多问题），TypeScript 在编译耗时中有超过一半的时间用在了类型检查上。\n- MySQL 在对 SQL 的语义分析过程中，需要结合对库名、表名等引用消解，进行正确性检查以及必要的优化。\n\n## 扩展阅读\n\n- 一本介绍有关语义分析的形式化方法的书：The Formal Semantics of Programming Languages: An Introduction (Foundations of Computing)\n- 面向对象的语言特性：虎书（C 语言版）第 14 章\n- 函数是语言的特性：虎书（C 语言版）第 15 章\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [第 15 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-13.jpg)\n- [第 16 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-14.jpg)\n- [第 17 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-15.jpg)\n- [第 18 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-16.jpg)\n- [第 19 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-17.jpg)\n- [第 20 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-18.jpg)\n- [第 21 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-19.jpg)\n- [第 22 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-20.jpg)\n",
+      "evidence": {
+        "text": "语义分析",
+        "box": [
+          0.11684198163957621,
+          0.18985036876507944,
+          0.15851316221362854,
+          0.030182981913068674
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "compilers-10777576a6",
+      "title": "中间代码",
+      "domain": "compilers",
+      "parent": null,
+      "children": [],
+      "photo": "compiler-23",
+      "note": "后端概述与 IR：HIR / MIR / LIR、树与 DAG、P-Code 和 SSA。",
+      "depth": 0,
+      "articleId": "intermediate-representation",
+      "searchText": "# 中间代码\n\n## 后端部分\n\n概述：编译器的后端是指基于前端解析生成的 AST 或其他中间代码（IR），经过一系列优化之后，生成可以直接运行程序代码（目标代码）的程序模块。目标代码有时是直接编译到程序将要运行的物理机的本地代码上（机器码），还有一些时候是先编译为一种中间代码（通常是跨平台的），结合各个系统平台的虚拟机来运行。\n\n编译器后端更多的是与 CPU、内存等硬件的底层设施打交道，通常只有参与操作系统方面的研发工作才有机会涉足。在理论方面，会涉及到计算机体系结构方面硬件理论知识。这对软件工程师提出了更高的要求，需要具备软硬结合等跨领域、跨学科的综合型知识。\n\n## 中间代码\n\nIR，也就是中间代码（Intermediate Representation，有时也称 Intermediate Code，IC），它是编译器中很重要的一种数据结构。编译器在做完前端工作以后，首先就是生成 IR，并在此基础上执行各种优化算法，最后再生成目标代码。\n\n## 基本概念\n\n### 基于用途的分类\n\n第一类用途：基于源语言做一些分析和变换（HIR）\n\n第二类用途：独立于源语言和 CPU 架构做分析和优化（MIR）\n\n第三类用途：依赖于 CPU 架构做优化和代码生成（LIR）\n\n### IR 数据结构\n\n第一种：类似 TAC（Three Address Code）的线性结构\n\n第二种：树结构\n\n第三种：DAG - 有向无环图\n\n第四种：PDG - 程序依赖图\n\n![冗余的子树——树结构；DAG 结构消除了冗余的子树——DAG 结构](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-24-ast-dag.jpg)\n\n### P-Code：用于解释执行的 IR\n\n即“Portable Code”，这是另外一种 IR 的类别范畴，与目标机器无关，因此可以在多种设备上基于运行时虚拟机的方式进行解释执行。\n\n### SSA 格式\n\nSSA 是 Static Single Assignment 的缩写，也就是静态单赋值。这是 IR 的一种设计范式，它要求一个变量只能被赋值一次。\n\nSSA 的优点：使用 SSA 的形式，体现了精确的“使用-定义（use-def）”关系。并且变量的值定义出来以后就不再变化，所以基于 SSA 更容易运行一些优化算法。\n\n## 面试指南\n\n- Java 的字节码就是一种 IR，它可以直接被 JVM 解释执行，也可以进一步优化编译（JIT）到机器码运行。\n- JavaScript - V8 的 Ignition 解释器接收的字节码，也有类似的机制。它是通过 TurboFun 进行 JIT 编译为机器码。\n\n## 扩展阅读\n\n- 关于程序依赖图的论文参考：[ferrante87.pdf](https://www.cs.utexas.edu/~pingali/CS395T/2009fa/papers/ferrante87.pdf)\n- LLVM 官方手册：[LangRef.html](https://llvm.org/docs/LangRef.html)\n- Java 虚拟机字节码指令集：[jvms-6.html](https://docs.oracle.com/javase/specs/jvms/se14/html/jvms-6.html)\n- 鲸书 - 第 4 章\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [后端部分扉页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-21.jpg)\n- [第 24 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-22.jpg)\n- [第 25 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-23.jpg)\n- [第 26 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-24.jpg)\n- [第 27 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-25.jpg)\n",
+      "evidence": {
+        "text": "中间代码",
+        "box": [
+          0.11909650804860966,
+          0.210619469389709,
+          0.15811088504743537,
+          0.027752623656506326
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "compilers-42d29bc5d2",
+      "title": "代码分析与优化",
+      "domain": "compilers",
+      "parent": null,
+      "children": [],
+      "photo": "compiler-26",
+      "note": "八类优化思路，以及控制流、数据流、依赖与别名分析。",
+      "depth": 0,
+      "articleId": "analysis-and-optimization",
+      "searchText": "# 代码分析与优化\n\n从两个分类维度来对代码进行优化：\n\n- 机器无关优化与机器相关优化。\n- 按优化范围分为局部优化、全局优化、过程间优化。\n\n## 常见优化思路\n\n### 1. 常量优化\n\na. 常数折叠：程序里的有些表达式，肯定能计算出一个常数值，那就不要等到运行时再去计算，干脆在编译期就计算出来。比如“x=2*3”可以优化成“x=6”。\n\nb. 常数传播：如果你一旦知道 x 的值其实是一个常量，那你就可以把所有用到 x 的地方，替换成这个常量。\n\nc. 稀疏有条件的常数传播：基于常数传播，还可以进一步导致分支判断条件转化为常量，导致一个分支的代码不会被执行。\n\n### 2. 用低代价做计算\n\n代数简化：利用代数运算规则所做的简化，比如“x=x*0”可以简化成“x=0”。\n\n### 3. 消除重复计算\n\na. 拷贝传播：遇到相同引用的变量，拷贝替换为同一个，节省内存到寄存器的操作，以此提升运算速度。\n\nb. 值编号（VN 和 GVN）：把相同的值，在系统里给一个相同编号，并且只计算一次。\n\nc. 公共子表达式消除（CSE）：也会减少程序的计算次数。比如“x=a+b”和“y=a+b”，x 和 y 右边的形式是一样的，就可以让 y 等于 x，从而减少了一次对“a+b”的计算。\n\nd. 部分冗余消除（PRE）：是公共子表达式消除的一种特殊情况。\n\n### 4. 化零为整，向量计算\n\na. 超字级并行（SLP）：把基本块中的多个变量组成一个向量，用一个指令完成多个变量的计算。\n\nb. 循环向量化：在循环展开的基础上，把多次计算优化成一个向量计算。\n\n### 5. 化整为零，各个优化\n\na. 聚合体标量替换（SROA）：很多语言都有结构和对象这样的复合数据类型，内部包含了多个成员变量，这种数据类型叫做聚合体（aggregates）。\n\nb. 编译器可以把聚合体的成员变量放在寄存器中进行计算，不需要访问内存。\n\n### 6. 循环优化\n\na. 归纳变量优化：归纳变量是指在循环体内由循环变量派生出来变量，其变化是很有规律的，因此可以尝试做强度折减优化。\n\nb. 边界检查消除：在循环体内每次循环都会执行边界检查代码，将其整合抽离出来，避免每次重复判断。\n\nc. 循环展开：通过把循环次数减少，但在每一次循环里，完成原来多次循环的工作量。\n\nd. 循环向量化：在循环展开的基础上，把多次计算优化成一个向量计算。\n\ne. 重组：在循环结构中，使用代数简化和重组，能获得更大的收益。\n\nf. 循环不变代码外提（LICM）：在循环结构中，如果发现有些代码其实跟循环无关，那就应该提到循环外面去，避免一次次重复计算。\n\ng. 代码提升：在条件语句中，如果多个分支条件里都执行了同一句代码，可将其提升至判断条件之前；如果是在循环体内，还可以继续借助循环不变代码外提优化方法，进一步提升到循环体之外，从而降低计算量。\n\n### 7. 过程调用优化\n\na. 尾调用优化和尾递归优化：尾调用就是一个函数的最后一句，它是对另一个函数的调用。如果函数最后一句调用的函数是它自己，就称为尾递归。尾调用可以将函数调用栈合并，尾递归还可以转换成循环，从而进一步做一系列针对循环语句的优化工作。\n\nb. 内联：内联也叫做过程集成，就是把被调用函数的代码拷贝到调用者中，从而避免函数调用。\n\nc. 内联扩展：内联扩展跟普通内联类似，也是在调用的地方展开代码。不过内联扩展被展开的代码，通常是手写的、高度优化的汇编代码。\n\nd. 叶子程序优化：叶子程序，是指不会再调用其他程序的函数（或过程）。因此，它也可以对栈的使用做一些优化。\n\n### 8. 控制流优化\n\na. 不可达代码的消除：根据控制流的分析，发现有些代码是不可能到达的，可以直接删掉，比如 return 语句后面的代码。\n\nb. 死代码删除：通过对流程的分析，发现某个变量赋值了以后，后面根本没有再用到这个变量。这样的代码就是死代码，就可以删除。\n\nc. if 简化：在讲常量传播时我们就见到过，如果有可能 if 条件肯定为真或者假，那么就可以消除掉 if 结构中的 then 块、else 块，甚至整个消除 if 结构。\n\nd. 循环简化：也就是把空循环或者简单的循环，变成直线代码，从而增加了其他优化的机会，比如指令的流水线化。\n\ne. 循环反转：这是对循环语句常做的一种优化，就是把一个 while 循环改成一个 repeat···until 循环（或者 do···while 循环）。这样会使基本块的结构更简化，从而更有利于其他优化。\n\nf. 拉直：如果发现两个基本块是线性连接的，那可以把它们合并，从而增加优化机会。\n\ng. 反分支：也就是减少程序分支，因为分支会导致程序从一个基本块跳到另一个基本块，这样就不容易做优化。比如，把循环内部的 if 分支挪到循环外面去，先做 if 判断，然后再执行循环，这样总的执行 if 判断的次数就会减少，并且循环体里面的基本块不那么零碎，就更加容易优化。\n\n## 代码优化依靠的分析方法\n\n1. 控制流分析（CFA）：基于程序控制语句（如条件语句、循环语句、分支语句和基本块语句等）进行分析，建立对程序执行过程的理解，从而进一步做出优化。\n2. 数据流分析（DFA）：基于数据流分析框架（包含“方向（D）”“值（V）”“转换函数（F）”“初始值（I）”和“交运算（∧）”5 个元素）等方式，建立对程序中数据变化情况的理解，从而进一步做出优化。\n3. 依赖分析：分析出程序代码的控制依赖（Control Dependency）和数据依赖（Data Dependency）关系。这对指令排序和缓存优化很重要。\n4. 别名分析：在 C、C++ 等可以使用指针的语言中，同一个内存地址可能会有多个别名，因为不同的指针都可能指向同一个地址。编译器需要知道不同变量是否是别名关系，以便决定能否做某些优化。\n\n## 面试指南\n\nJava 编译器在 FLOW 阶段做了四种数据流分析：活跃性分析、异常分析、赋值分析和本地变量捕获分析。\n\nJava 编译器的逃逸分析：[choi99escape.pdf](https://www.cc.gatech.edu/~harrold/6340/cs6340_fall2009/Readings/choi99escape.pdf)\n\nJavaScript 的 V8 引擎在代码优化方面，也有很多地方参考了 Java 的 HotSpot 虚拟机的设计思路，如：\n\n- 字节码 + JIT 的混合架构；\n- 做 JIT 优化编译时采用的 IR，都是基于 Sea of Nodes 的；\n- 内联优化于逃逸分析。\n\nGolang 的 GC 编译器，在代码优化方面：\n\n- 采用了 SSA 格式的 IR；\n- 控制流图（CFG）；\n- 多个 Pass 的优化框架；\n- 通过 DSL 支持的优化规则。\n\n## 扩展阅读\n\n- 龙书 - 第 9 章\n- 鲸书 - 第 7～15 章\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [第 28 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-26.jpg)\n- [第 29 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-27.jpg)\n- [第 30 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-28.jpg)\n- [第 31 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-29.jpg)\n- [第 32 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-30.jpg)\n- [第 33 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-31.jpg)\n",
+      "evidence": {
+        "text": "代码分析与优化",
+        "box": [
+          0.09856263076572697,
+          0.18023255789227155,
+          0.29158110375996926,
+          0.030523256285000744
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "compilers-c80a46915e",
+      "title": "目标代码生成",
+      "domain": "compilers",
+      "parent": null,
+      "children": [],
+      "photo": "compiler-32",
+      "note": "CPU 架构、指令选择与排序、寄存器分配、窥孔优化和 ABI。",
+      "depth": 0,
+      "articleId": "code-generation",
+      "searchText": "# 目标代码生成\n\n## CPU 硬件架构\n\n- 复杂指令集（CISC）：典型代表 Intel x86，Register-Memory 架构，在指令里可以混合使用内存地址和寄存器。\n- 精简指令集（RISC）：典型代表 ARM，Load-Store 架构。在这种架构下，指令被分为内存访问（Load 和 Store）和 ALU 操作两大类，而后者只能在寄存器上操作。各种 RISC 指令集都是 Load-Store 架构的，比如 ARM、MIPS、RISC-V 和 PowerPC 等。\n\n## 后端处理整体过程\n\n![典型后端处理过程](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-32-backend.jpg)\n\nMIR → 指令选择 → LIR → 指令排序 → 寄存器分配 → 指令排序 → 翻译成目标代码 → 目标代码。\n\n## 关键流程\n\n### 指令选择\n\n对于相同的源代码和 IR，编译器可以生成不同的指令，而我们要选择代价最低的那个。\n\n### 指令排序\n\nCPU 内部是分成多个功能单元的。\n\n对于一条指令，每个功能单元处理完毕以后，交给下一个功能单元，然后它就可以接着再处理下一条指令。\n\n![在某一时刻，各个功能部件分别用于不同的指令——多个功能单元并行](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-33-pipeline.jpg)\n\n在同一时刻，不同的功能单元实际上是在处理不同的指令。多条指令实质上是并行执行的，从而减少了总的执行时间，这种并行叫做指令级并行。\n\n但是有的时候，指令之间会存在依赖关系，后一条指令必须等到前一条指令执行完毕才能运行。\n\n指令排序的目的是让指令以最佳顺序执行，尽量利用指令级并行的性能优势。\n\n### 寄存器分配\n\n对于编译器来说，肯定要尽量利用寄存器，不去读写内存。因为内存读写对于 CPU 来说就是 IO，性能很低。\n\n### 窥孔优化\n\n窥孔优化思路，是提供一个固定大小的窗口，比如能够容纳 20 条指令，并检查窗口内的指令，看看是否可以优化。然后再往下滑动窗口，再次检查优化机会。\n\n### 调用约定（面向硬件）\n\nABI 是 Application Binary Interface 的缩写，也就是应用程序的二进制接口。通常，ABI 里面除了规定调用约定外，还要包括二进制文件的格式、进程初始化方式等更多内容。\n\n在实现编译器时候，你可以发明自己的调用约定，比如哪些寄存器用来放参数、哪些用来放返回值，等等。但是，如果你要使用别语言编译好的目标文件，或者你想让自己的编译器生成的目标文件被别人使用，那你就要遵守某种特定的 ABI 标准。\n\n## 面试指南\n\n具备芯片相关产品的研发经验是真正掌握编译目标代码生成部分程序开发的必要前提。\n\n## 扩展阅读\n\n- 指令排序：基于数据依赖图的 List Scheduling 算法\n- 寄存器分配：寄存器分配染色算法\n- 指令选择：树覆盖算法\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [第 34 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-32.jpg)\n- [第 35 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-33.jpg)\n- [第 36 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-34.jpg)\n- [第 37 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-35.jpg)\n",
+      "evidence": {
+        "text": "目标代码生成",
+        "box": [
+          0.10672908972557989,
+          0.1887582188434458,
+          0.24034058838908728,
+          0.029460305312894453
+        ],
+        "confidence": 1,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "compilers-62e3088e61",
+      "title": "基于物理机与操作系统的运行时",
+      "domain": "compilers",
+      "parent": null,
+      "children": [],
+      "photo": "compiler-37",
+      "note": "运行时概述、CPU 与内存、操作系统资源管理及 C / Go 运行时。",
+      "depth": 0,
+      "articleId": "native-runtime",
+      "searchText": "# 基于物理机与操作系统的运行时\n\n## 运行时部分\n\n概述：基于对一门高级语言设计角度的考虑，我们通常会提到编译期和运行时两个阶段。如今很多动态类型语言、脚本语言，出于便于开发等需要，都会将很多工作从编译期后移到运行时。而运行时的很多工作，其实与程序编译期的处理流程又是密不可分的，因此对于编译原理的学习不得不涉足运行时范畴的很多内容。\n\n## 基本概念\n\n一些传统的高级语言，会直接将源代码编译为机器上直接执行的机器代码，因此对这部分编程语言运行时的讨论，实际上是对物理计算机（简称为物理机）和操作系统相关知识的讨论。\n\n每一种不同的操作系统或不同物理机硬件架构，都需要将源代码编译成相应的目标代码，以确保其在目标平台上的正确运行。\n\n![计算机运行机制](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-38-computer.jpg)\n\n## 典型代表\n\nC、C++、Golang\n\n## CPU 相关核心概念\n\nCPU 是计算机的核心，是运行指令的地方。不同架构的 CPU 对软件层面暴露了不同的指令集以供计算。\n\n### 指令\n\n在所有架构 CPU 上，指令最终形态都是 0101 的二进制方式，为了便于理解，我们通常会用汇编代码来表示机器指令。\n\n根据 GNU 汇编器规定的格式，每条指令都包含两部分：操作码（opcode）和操作数（oprand）。\n\n操作码是让 CPU 执行的动作，而操作数是指令的操作对象，它可以是常数、寄存器和某个内存地址。\n\n![汇编代码示例](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-39-assembly.jpg)\n\n### 寄存器\n\n寄存器可以直接由指令访问。寄存器的读写速度非常快，大约是内存 100 倍。所以我们编译后的代码，要尽量充分利用寄存器，而不是频繁地去访问内存。\n\n### 高速缓存\n\n高速缓存通常是多级的（常见 CPU 架构中至少分为 L1～L3）。高速缓存也比内存快。\n\nCPU 在读取指令和数据的时候，不是一次读取一条，而是读取相邻一批数据，放到高速缓存里。接下来要读取的数据，很可能已经在高速缓存里了，通过这种机制来提高运行性能。因此，编译器要尽量提高缓存的命中率。\n\n### CPU 的其他功能模块\n\nCPU 内部有多个功能单元，有的负责计算，有的负责解码，等等。所以，一个指令可以被切分成多个执行阶段，每个阶段在不同的功能单元上运行，这为实现指令级并行提供了硬件基础。\n\n## 内存相关核心概念\n\n### 1. 代码区\n\n存放编译完成以后的机器码。\n\n### 2. 静态数据区\n\n保存程序中全局的变量和常量。\n\n### 3. 栈\n\n适合保存生存期比较短的数据，比如函数和方法里的本地变量。\n\n- 重要知识点：栈帧的构成、活动记录、逐级调用过程。\n- 栈的特点：申请和释放——修改栈顶指针，生存期与作用域相同。\n\n### 4. 堆\n\n适合管理生存期较长的一些数据，这些数据在退出作用域以后也不会消失。\n\n- 重要知识点：通过操作系统 API 手动申请和释放。\n- 管理机制：自动管理、手动管理。\n\n![物理内存和逻辑内存关系](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-41-address-space.jpg)\n\n## 操作系统相关核心概念\n\n1. 定义：除了硬件支撑，程序的运行还需要软件，这些软件叫做运行时系统。\n2. 操作系统：对于把源代码编译成机器码在操作系统上运行的语言来说（比如 C、C++），操作系统本身就可以看做是它们的运行时系统。\n3. 管理 CPU 资源：分时执行。比如，时间片轮转算法，将 CPU 以时钟周期为单元执行多进程任务，实现并发。\n4. 管理内存资源：逻辑内存（系统内核对内存地址划定）、物理内存（硬件中具体每一个 Bit 实际硬件存储情况）、虚拟内存（基于操作系统内核对内存管理问题的抽象，通常有一部分虚拟内存实际上是存在磁盘上的）。\n\n## 面试指南\n\n- C/C++：运行时其实就是操作系统本身，因此涉及到的概念其实是操作系统内核以及内核提供给用户态应用程序的各种 API。\n- Golang：虽然像 C/C++ 一样也是编译成二进制的可执行文件，但它的运行时却更复杂，因为自带了垃圾回收（GC）和自有的一套并发机制（goroutine）。\n\n## 扩展阅读\n\n- C 语言的内存布局方式（见图例）\n- 鲸书（第 5 章）：运行时支持\n- 龙书（第 7 章）：运行时刻环境\n\n![C 语言的内存布局方式](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-42-memory-layout.jpg)\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [运行时部分扉页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-36.jpg)\n- [第 39 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-37.jpg)\n- [第 40 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-38.jpg)\n- [第 41 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-39.jpg)\n- [第 42 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-40.jpg)\n- [第 43 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-41.jpg)\n- [第 44 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-42.jpg)\n",
+      "evidence": {
+        "text": "基于物理机与操作系统昀运行时",
+        "box": [
+          0.09999999102514329,
+          0.662441037941241,
+          0.5705882526617234,
+          0.03755896158938132
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
+    },
+    {
+      "id": "compilers-655afd0db4",
+      "title": "基于虚拟机的运行时",
+      "domain": "compilers",
+      "parent": null,
+      "children": [],
+      "photo": "compiler-43",
+      "note": "栈与寄存器虚拟机、Java / V8 / Python、栈帧与垃圾收集。",
+      "depth": 0,
+      "articleId": "virtual-machine-runtime",
+      "searchText": "# 基于虚拟机的运行时\n\n## 基本概念\n\n一部分高级语言会提供一个语言的特有虚拟机运行时（一个运行于操作系统之上的应用程序），在编译时先将源代码转换为一种中间代码（通常是字节码），把中间代码交给虚拟机执行，虚拟机也可以抹平不同物理机硬件架构和不同操作系统之间的差异性。\n\n## 典型代表\n\nJava、Python、JavaScript\n\n## 核心概念\n\n### 基于栈的虚拟机\n\n- 典型代表：JVM（Java）、Python 虚拟机。\n- 优点：易于生成代码。\n- 缺点：代码体积较大、不能充分利用寄存器。\n\n### 基于寄存器的虚拟机\n\n- 典型代表：Erlang、Lua、Dalvik（Android）、Ignition（JavaScript-V8）。\n- 优点：代码体积较小，因为参数更好地结合了寄存器进行传递。\n- 缺点：实现起来更加复杂，难度大。\n\n## 面试指南\n\n### Java\n\n- HotSpot 是基于堆栈架构的虚拟机。\n- 内存管理：划分了程序计数器、虚拟机栈、堆、方法区、运行时常量和本地方法栈等不同区域。\n- JVM 封装了操作系统的线程模型，为应用程序提供了并发处理机制。\n- 操作系统的多线程并发、线程锁等概念是面试常考的话题之一。\n\n### JavaScript-V8\n\n- 曾经是基于堆栈架构的虚拟机，后来改为了目前的基于寄存器架构。\n- 运行时方面的主要优化算法：隐藏类、内联缓存。\n- 垃圾回收方面基于分代回收、染色算法。\n\n### Python\n\n- 在运行时层面，Python 虚拟机有些时候是运行机器码，比如内置函数，而有些时候是解释执行字节码。前者的栈帧类似于 C 语言，而后者则会加入操作数栈，这一点更像 JVM。\n- 自己实现了对堆的管理机制，被称作 Arena 机制，相比直接调用操作系统的堆内存操作来说，更加高效、灵活。\n- 在并发方面，除了对系统的线程进行了封装之外，还实现了协程机制。\n\n## 扩展阅读\n\n一篇有关 Java HotSpot 虚拟机的论文：[schwaighofer09master.pdf](http://ssw.jku.at/Research/Papers/Schwaighofer09Master/schwaighofer09master.pdf)\n\nJavaScript-V8 虚拟机的栈帧：\n\n![Ignition 的栈帧](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-45-ignition-frame.jpg)\n\n### 垃圾收集（GC）常见一些算法\n\n- 标记-清除（Mark and Sweep）\n- 标记-整理（Mark and Compact）\n- 停止-拷贝（Stop and Copy）\n- 引用计数\n- 分代收集\n- 增量收集\n- 并发收集\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [第 45 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-43.jpg)\n- [第 46 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-44.jpg)\n- [第 47 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-45.jpg)\n- [第 48 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-46.jpg)\n",
+      "evidence": {
+        "text": "基于虚拟机的运行时",
+        "box": [
+          0.11293635043619032,
+          0.18313953481077316,
+          0.35934290436529137,
+          0.027616279174444647
+        ],
+        "confidence": 0.5,
+        "method": "ocr-assisted"
+      }
     }
   ],
   "photos": [
@@ -21292,6 +21610,1150 @@
       "thumb": "photos/IMG_8093-thumb.jpg",
       "domains": [
         "network-deep-dive"
+      ]
+    },
+    {
+      "id": "compiler-01",
+      "title": "目录（1/3）",
+      "src": "photos/compiler-01.jpg",
+      "preview": "photos/compiler-01-preview.jpg",
+      "thumb": "photos/compiler-01-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-02",
+      "title": "目录（2/3）",
+      "src": "photos/compiler-02.jpg",
+      "preview": "photos/compiler-02-preview.jpg",
+      "thumb": "photos/compiler-02-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-03",
+      "title": "目录（3/3）",
+      "src": "photos/compiler-03.jpg",
+      "preview": "photos/compiler-03-preview.jpg",
+      "thumb": "photos/compiler-03-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-04",
+      "title": "前端部分 · 扉页",
+      "src": "photos/compiler-04.jpg",
+      "preview": "photos/compiler-04-preview.jpg",
+      "thumb": "photos/compiler-04-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-05",
+      "title": "第 07 页 · 前端概述",
+      "src": "photos/compiler-05.jpg",
+      "preview": "photos/compiler-05-preview.jpg",
+      "thumb": "photos/compiler-05-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-06",
+      "title": "第 08 页 · 词法分析",
+      "src": "photos/compiler-06.jpg",
+      "preview": "photos/compiler-06-preview.jpg",
+      "thumb": "photos/compiler-06-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-07",
+      "title": "第 09 页 · 词法分析",
+      "src": "photos/compiler-07.jpg",
+      "preview": "photos/compiler-07-preview.jpg",
+      "thumb": "photos/compiler-07-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-08",
+      "title": "第 10 页 · 词法分析",
+      "src": "photos/compiler-08.jpg",
+      "preview": "photos/compiler-08-preview.jpg",
+      "thumb": "photos/compiler-08-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-09",
+      "title": "第 11 页 · 词法分析",
+      "src": "photos/compiler-09.jpg",
+      "preview": "photos/compiler-09-preview.jpg",
+      "thumb": "photos/compiler-09-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-10",
+      "title": "第 12 页 · 语法分析",
+      "src": "photos/compiler-10.jpg",
+      "preview": "photos/compiler-10-preview.jpg",
+      "thumb": "photos/compiler-10-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-11",
+      "title": "第 13 页 · 语法分析",
+      "src": "photos/compiler-11.jpg",
+      "preview": "photos/compiler-11-preview.jpg",
+      "thumb": "photos/compiler-11-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-12",
+      "title": "第 14 页 · 语法分析",
+      "src": "photos/compiler-12.jpg",
+      "preview": "photos/compiler-12-preview.jpg",
+      "thumb": "photos/compiler-12-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-13",
+      "title": "第 15 页 · 语义分析",
+      "src": "photos/compiler-13.jpg",
+      "preview": "photos/compiler-13-preview.jpg",
+      "thumb": "photos/compiler-13-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-14",
+      "title": "第 16 页 · 语义分析",
+      "src": "photos/compiler-14.jpg",
+      "preview": "photos/compiler-14-preview.jpg",
+      "thumb": "photos/compiler-14-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-15",
+      "title": "第 17 页 · 语义分析",
+      "src": "photos/compiler-15.jpg",
+      "preview": "photos/compiler-15-preview.jpg",
+      "thumb": "photos/compiler-15-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-16",
+      "title": "第 18 页 · 语义分析",
+      "src": "photos/compiler-16.jpg",
+      "preview": "photos/compiler-16-preview.jpg",
+      "thumb": "photos/compiler-16-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-17",
+      "title": "第 19 页 · 语义分析",
+      "src": "photos/compiler-17.jpg",
+      "preview": "photos/compiler-17-preview.jpg",
+      "thumb": "photos/compiler-17-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-18",
+      "title": "第 20 页 · 语义分析",
+      "src": "photos/compiler-18.jpg",
+      "preview": "photos/compiler-18-preview.jpg",
+      "thumb": "photos/compiler-18-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-19",
+      "title": "第 21 页 · 语义分析",
+      "src": "photos/compiler-19.jpg",
+      "preview": "photos/compiler-19-preview.jpg",
+      "thumb": "photos/compiler-19-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-20",
+      "title": "第 22 页 · 语义分析",
+      "src": "photos/compiler-20.jpg",
+      "preview": "photos/compiler-20-preview.jpg",
+      "thumb": "photos/compiler-20-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-21",
+      "title": "后端部分 · 扉页",
+      "src": "photos/compiler-21.jpg",
+      "preview": "photos/compiler-21-preview.jpg",
+      "thumb": "photos/compiler-21-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-22",
+      "title": "第 24 页 · 后端概述",
+      "src": "photos/compiler-22.jpg",
+      "preview": "photos/compiler-22-preview.jpg",
+      "thumb": "photos/compiler-22-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-23",
+      "title": "第 25 页 · 中间代码",
+      "src": "photos/compiler-23.jpg",
+      "preview": "photos/compiler-23-preview.jpg",
+      "thumb": "photos/compiler-23-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-24",
+      "title": "第 26 页 · 中间代码",
+      "src": "photos/compiler-24.jpg",
+      "preview": "photos/compiler-24-preview.jpg",
+      "thumb": "photos/compiler-24-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-25",
+      "title": "第 27 页 · 中间代码",
+      "src": "photos/compiler-25.jpg",
+      "preview": "photos/compiler-25-preview.jpg",
+      "thumb": "photos/compiler-25-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-26",
+      "title": "第 28 页 · 代码分析与优化",
+      "src": "photos/compiler-26.jpg",
+      "preview": "photos/compiler-26-preview.jpg",
+      "thumb": "photos/compiler-26-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-27",
+      "title": "第 29 页 · 代码分析与优化",
+      "src": "photos/compiler-27.jpg",
+      "preview": "photos/compiler-27-preview.jpg",
+      "thumb": "photos/compiler-27-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-28",
+      "title": "第 30 页 · 代码分析与优化",
+      "src": "photos/compiler-28.jpg",
+      "preview": "photos/compiler-28-preview.jpg",
+      "thumb": "photos/compiler-28-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-29",
+      "title": "第 31 页 · 代码分析与优化",
+      "src": "photos/compiler-29.jpg",
+      "preview": "photos/compiler-29-preview.jpg",
+      "thumb": "photos/compiler-29-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-30",
+      "title": "第 32 页 · 代码分析与优化",
+      "src": "photos/compiler-30.jpg",
+      "preview": "photos/compiler-30-preview.jpg",
+      "thumb": "photos/compiler-30-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-31",
+      "title": "第 33 页 · 代码分析与优化",
+      "src": "photos/compiler-31.jpg",
+      "preview": "photos/compiler-31-preview.jpg",
+      "thumb": "photos/compiler-31-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-32",
+      "title": "第 34 页 · 目标代码生成",
+      "src": "photos/compiler-32.jpg",
+      "preview": "photos/compiler-32-preview.jpg",
+      "thumb": "photos/compiler-32-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-33",
+      "title": "第 35 页 · 目标代码生成",
+      "src": "photos/compiler-33.jpg",
+      "preview": "photos/compiler-33-preview.jpg",
+      "thumb": "photos/compiler-33-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-34",
+      "title": "第 36 页 · 目标代码生成",
+      "src": "photos/compiler-34.jpg",
+      "preview": "photos/compiler-34-preview.jpg",
+      "thumb": "photos/compiler-34-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-35",
+      "title": "第 37 页 · 目标代码生成",
+      "src": "photos/compiler-35.jpg",
+      "preview": "photos/compiler-35-preview.jpg",
+      "thumb": "photos/compiler-35-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-36",
+      "title": "运行时部分 · 扉页",
+      "src": "photos/compiler-36.jpg",
+      "preview": "photos/compiler-36-preview.jpg",
+      "thumb": "photos/compiler-36-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-37",
+      "title": "第 39 页 · 基于物理机与操作系统的运行时",
+      "src": "photos/compiler-37.jpg",
+      "preview": "photos/compiler-37-preview.jpg",
+      "thumb": "photos/compiler-37-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-38",
+      "title": "第 40 页 · 基于物理机与操作系统的运行时",
+      "src": "photos/compiler-38.jpg",
+      "preview": "photos/compiler-38-preview.jpg",
+      "thumb": "photos/compiler-38-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-39",
+      "title": "第 41 页 · 基于物理机与操作系统的运行时",
+      "src": "photos/compiler-39.jpg",
+      "preview": "photos/compiler-39-preview.jpg",
+      "thumb": "photos/compiler-39-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-40",
+      "title": "第 42 页 · 基于物理机与操作系统的运行时",
+      "src": "photos/compiler-40.jpg",
+      "preview": "photos/compiler-40-preview.jpg",
+      "thumb": "photos/compiler-40-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-41",
+      "title": "第 43 页 · 基于物理机与操作系统的运行时",
+      "src": "photos/compiler-41.jpg",
+      "preview": "photos/compiler-41-preview.jpg",
+      "thumb": "photos/compiler-41-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-42",
+      "title": "第 44 页 · 基于物理机与操作系统的运行时",
+      "src": "photos/compiler-42.jpg",
+      "preview": "photos/compiler-42-preview.jpg",
+      "thumb": "photos/compiler-42-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-43",
+      "title": "第 45 页 · 基于虚拟机的运行时",
+      "src": "photos/compiler-43.jpg",
+      "preview": "photos/compiler-43-preview.jpg",
+      "thumb": "photos/compiler-43-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-44",
+      "title": "第 46 页 · 基于虚拟机的运行时",
+      "src": "photos/compiler-44.jpg",
+      "preview": "photos/compiler-44-preview.jpg",
+      "thumb": "photos/compiler-44-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-45",
+      "title": "第 47 页 · 基于虚拟机的运行时",
+      "src": "photos/compiler-45.jpg",
+      "preview": "photos/compiler-45-preview.jpg",
+      "thumb": "photos/compiler-45-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    },
+    {
+      "id": "compiler-46",
+      "title": "第 48 页 · 基于虚拟机的运行时",
+      "src": "photos/compiler-46.jpg",
+      "preview": "photos/compiler-46-preview.jpg",
+      "thumb": "photos/compiler-46-thumb.jpg",
+      "domains": [
+        "compilers"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "id": "lexical-analysis",
+      "title": "词法分析",
+      "group": "前端部分",
+      "summary": "从源程序到 Token：正则文法、有限状态自动机、DFA 与 NFA。",
+      "photos": [
+        "compiler-01",
+        "compiler-02",
+        "compiler-03",
+        "compiler-04",
+        "compiler-05",
+        "compiler-06",
+        "compiler-07",
+        "compiler-08",
+        "compiler-09"
+      ],
+      "primaryPhoto": "compiler-06",
+      "printedPages": "07–11",
+      "order": 1,
+      "domain": "compilers",
+      "markdown": "articles/compilers/lexical-analysis.md",
+      "html": "<h2 id=\"section-8c0ea7d35a\">前端部分</h2><p>概述：编译器的前端是指将源程序代码（字符串）处理转换为抽象语法树（AST）的程序模块，通常是作为编译器中的一部分而存在的；也有一些语言的编译器只实现前端功能，而复用其他已有的编译器后端，这通常是建立在将源程序代码转换为某种中间代码的基础之上。</p><p>编译器前端其实与一门编程语言的设计息息相关，这也是一门语言的核心，在理论方面更多地牵涉到形式语言、自动机理论乃至一些数学上的基础理论知识；同时也要求设计者拥有丰富的软件编码工作经验，这又牵涉到了软件工程、工程实践等具体项目经验的积累。</p><h2 id=\"section-bd3cd2a16b\">基本概念</h2><p>词法分析是编译器前端部分的第一个处理环节，其输入通常就是未经任何其他处理的源程序代码，输出的是一个 Token 化的序列（通常以 Token 对象构成的数组方式实现），供下游处理环节使用。</p><figure><button class=\"article-figure\" data-photo=\"compiler-06\" aria-label=\"打开原图：把字符串转换为 Token（注意：其中的空白字符代表空格、tab、回车和换行符，EOF 是文件结束符）\"><img src=\"figures/compilers/compiler-06-token.jpg\" alt=\"把字符串转换为 Token（注意：其中的空白字符代表空格、tab、回车和换行符，EOF 是文件结束符）\" loading=\"lazy\"><span>把字符串转换为 Token（注意：其中的空白字符代表空格、tab、回车和换行符，EOF 是文件结束符） · 点击对照原图</span></button></figure><ul><li>正则文法：词法分析工作的主要文法，它涉及的重要概念是正则表达式。</li><li>正则表达式：正则文法的一种直观描述，它是按照指定模式匹配字符串的一种字符组合。</li><li>正则表达式工具：字符串的模式匹配工具。</li></ul><h2 id=\"section-2961a698f6\">核心难点</h2><h3 id=\"section-e3356740d5\">有限状态自动机</h3><p>构造词法分析器使用的计算模型：有限自动机（FSA）。它是用于识别正则文法的一种程序实现方案。其组成的词法单元是 Token，也就是指程序中标记出来单词和标点符号，它可以分成关键字、标识符、字面量、操作符号等多个种类。</p><p>在实际的编译器中，词法分析器一般都是手写的。</p><p>状态机的描述方式——状态图：</p><figure><button class=\"article-figure\" data-photo=\"compiler-07\" aria-label=\"打开原图：左：一个能够识别标识符和数字字面量的有限自动机；右：一个能够识别 int 关键字和标识符的有限自动机\"><img src=\"figures/compilers/compiler-07-fsa.jpg\" alt=\"左：一个能够识别标识符和数字字面量的有限自动机；右：一个能够识别 int 关键字和标识符的有限自动机\" loading=\"lazy\"><span>左：一个能够识别标识符和数字字面量的有限自动机；右：一个能够识别 int 关键字和标识符的有限自动机 · 点击对照原图</span></button></figure><h3 id=\"section-5aec6cf989\">DFA 与 NFA</h3><p>NFA：不确定的有限自动机。它的特点是：该状态机中存在某些状态，针对某些输入，不能做一个确定的转换。这里可以细分成两种情况：一种是对于一个输入，它有两个状态可以转换；另一种是存在 ε 转换的情况，也就是没有任何字符输入的情况下，NFA 也可以从一个状态迁移到另一个状态。</p><p>NFA 的优点是在设计上更简单直观，缺点是它无法避免回溯问题，在某些极端的情况下可能会造成编译器运行的性能低下。主要适用于状态较为简单，且不存在回溯的场景。</p><p>DFA：确定的有限自动机。它的特点是：该状态机在任何一个状态，基于输入的字符，都能做一个确定的状态转换。</p><p>DFA 的优点是它可以避免回溯问题，运行性能较高，缺点是 DFA 通常不容易直接设计出来，需要通过一系列方案，基于 NFA 的转换而得到，并且需要占用额外的空间。主要适用于状态较为复杂，或者对时间复杂度要求较为严苛的工业级词法分析器。</p><p>示例：</p><figure><button class=\"article-figure\" data-photo=\"compiler-08\" aria-label=\"打开原图：DFA\"><img src=\"figures/compilers/compiler-08-dfa.jpg\" alt=\"DFA\" loading=\"lazy\"><span>DFA · 点击对照原图</span></button></figure><figure><button class=\"article-figure\" data-photo=\"compiler-09\" aria-label=\"打开原图：NFA\"><img src=\"figures/compilers/compiler-09-nfa.jpg\" alt=\"NFA\" loading=\"lazy\"><span>NFA · 点击对照原图</span></button></figure><h2 id=\"section-28cf4eabf7\">面试指南</h2><h3 id=\"section-3481d5c58a\">从 Java 程序员视角看词法分析</h3><p>JDK 源代码：<code>com.sun.tools.javac.parser.Lexer</code>（词法解析器接口），它可以把字符流变成一个个的 Token，具体的实现在 Scanner 和 JavaTokenizer 类中。</p><h3 id=\"section-620726308d\">从 Python 程序员的视角看词法分析</h3><p>CPython 编译器源代码：tokenizer.c 的关键函数 tok_get0。</p><h3 id=\"section-2ac266a744\">从 JavaScript 程序员的视角看 V8 引擎的词法分析</h3><p>V8 的词法分析：<a href=\"https://v8.dev/blog/scanner\" target=\"_blank\" rel=\"noopener noreferrer\">https://v8.dev/blog/scanner</a></p><h2 id=\"section-16c8201b44\">扩展阅读</h2><ul><li>NFA 转 DFA 的算法：龙书（第 2/3 版）第 3.7 章节</li><li>输入缓冲技术：龙书（第 3 版）第 3.2 节</li><li>有穷自动机：龙书（第 3 版）第 3.6 节</li></ul><h2 id=\"section-259c6cf68b\">原图对照</h2><blockquote>整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。</blockquote><ul><li><a href=\"photos/compiler-01.jpg\" data-photo=\"compiler-01\">目录 1</a></li><li><a href=\"photos/compiler-02.jpg\" data-photo=\"compiler-02\">目录 2</a></li><li><a href=\"photos/compiler-03.jpg\" data-photo=\"compiler-03\">目录 3</a></li><li><a href=\"photos/compiler-04.jpg\" data-photo=\"compiler-04\">前端部分扉页</a></li><li><a href=\"photos/compiler-05.jpg\" data-photo=\"compiler-05\">第 07 页</a></li><li><a href=\"photos/compiler-06.jpg\" data-photo=\"compiler-06\">第 08 页</a></li><li><a href=\"photos/compiler-07.jpg\" data-photo=\"compiler-07\">第 09 页</a></li><li><a href=\"photos/compiler-08.jpg\" data-photo=\"compiler-08\">第 10 页</a></li><li><a href=\"photos/compiler-09.jpg\" data-photo=\"compiler-09\">第 11 页</a></li></ul>",
+      "text": "# 词法分析\n\n## 前端部分\n\n概述：编译器的前端是指将源程序代码（字符串）处理转换为抽象语法树（AST）的程序模块，通常是作为编译器中的一部分而存在的；也有一些语言的编译器只实现前端功能，而复用其他已有的编译器后端，这通常是建立在将源程序代码转换为某种中间代码的基础之上。\n\n编译器前端其实与一门编程语言的设计息息相关，这也是一门语言的核心，在理论方面更多地牵涉到形式语言、自动机理论乃至一些数学上的基础理论知识；同时也要求设计者拥有丰富的软件编码工作经验，这又牵涉到了软件工程、工程实践等具体项目经验的积累。\n\n## 基本概念\n\n词法分析是编译器前端部分的第一个处理环节，其输入通常就是未经任何其他处理的源程序代码，输出的是一个 Token 化的序列（通常以 Token 对象构成的数组方式实现），供下游处理环节使用。\n\n![把字符串转换为 Token（注意：其中的空白字符代表空格、tab、回车和换行符，EOF 是文件结束符）](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-06-token.jpg)\n\n- 正则文法：词法分析工作的主要文法，它涉及的重要概念是正则表达式。\n- 正则表达式：正则文法的一种直观描述，它是按照指定模式匹配字符串的一种字符组合。\n- 正则表达式工具：字符串的模式匹配工具。\n\n## 核心难点\n\n### 有限状态自动机\n\n构造词法分析器使用的计算模型：有限自动机（FSA）。它是用于识别正则文法的一种程序实现方案。其组成的词法单元是 Token，也就是指程序中标记出来单词和标点符号，它可以分成关键字、标识符、字面量、操作符号等多个种类。\n\n在实际的编译器中，词法分析器一般都是手写的。\n\n状态机的描述方式——状态图：\n\n![左：一个能够识别标识符和数字字面量的有限自动机；右：一个能够识别 int 关键字和标识符的有限自动机](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-07-fsa.jpg)\n\n### DFA 与 NFA\n\nNFA：不确定的有限自动机。它的特点是：该状态机中存在某些状态，针对某些输入，不能做一个确定的转换。这里可以细分成两种情况：一种是对于一个输入，它有两个状态可以转换；另一种是存在 ε 转换的情况，也就是没有任何字符输入的情况下，NFA 也可以从一个状态迁移到另一个状态。\n\nNFA 的优点是在设计上更简单直观，缺点是它无法避免回溯问题，在某些极端的情况下可能会造成编译器运行的性能低下。主要适用于状态较为简单，且不存在回溯的场景。\n\nDFA：确定的有限自动机。它的特点是：该状态机在任何一个状态，基于输入的字符，都能做一个确定的状态转换。\n\nDFA 的优点是它可以避免回溯问题，运行性能较高，缺点是 DFA 通常不容易直接设计出来，需要通过一系列方案，基于 NFA 的转换而得到，并且需要占用额外的空间。主要适用于状态较为复杂，或者对时间复杂度要求较为严苛的工业级词法分析器。\n\n示例：\n\n![DFA](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-08-dfa.jpg)\n\n![NFA](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-09-nfa.jpg)\n\n## 面试指南\n\n### 从 Java 程序员视角看词法分析\n\nJDK 源代码：`com.sun.tools.javac.parser.Lexer`（词法解析器接口），它可以把字符流变成一个个的 Token，具体的实现在 Scanner 和 JavaTokenizer 类中。\n\n### 从 Python 程序员的视角看词法分析\n\nCPython 编译器源代码：tokenizer.c 的关键函数 tok_get0。\n\n### 从 JavaScript 程序员的视角看 V8 引擎的词法分析\n\nV8 的词法分析：[https://v8.dev/blog/scanner](https://v8.dev/blog/scanner)\n\n## 扩展阅读\n\n- NFA 转 DFA 的算法：龙书（第 2/3 版）第 3.7 章节\n- 输入缓冲技术：龙书（第 3 版）第 3.2 节\n- 有穷自动机：龙书（第 3 版）第 3.6 节\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [目录 1](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-01.jpg)\n- [目录 2](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-02.jpg)\n- [目录 3](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-03.jpg)\n- [前端部分扉页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-04.jpg)\n- [第 07 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-05.jpg)\n- [第 08 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-06.jpg)\n- [第 09 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-07.jpg)\n- [第 10 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-08.jpg)\n- [第 11 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-09.jpg)\n",
+      "toc": [
+        {
+          "id": "section-8c0ea7d35a",
+          "title": "前端部分",
+          "level": 2
+        },
+        {
+          "id": "section-bd3cd2a16b",
+          "title": "基本概念",
+          "level": 2
+        },
+        {
+          "id": "section-2961a698f6",
+          "title": "核心难点",
+          "level": 2
+        },
+        {
+          "id": "section-e3356740d5",
+          "title": "有限状态自动机",
+          "level": 3
+        },
+        {
+          "id": "section-5aec6cf989",
+          "title": "DFA 与 NFA",
+          "level": 3
+        },
+        {
+          "id": "section-28cf4eabf7",
+          "title": "面试指南",
+          "level": 2
+        },
+        {
+          "id": "section-3481d5c58a",
+          "title": "从 Java 程序员视角看词法分析",
+          "level": 3
+        },
+        {
+          "id": "section-620726308d",
+          "title": "从 Python 程序员的视角看词法分析",
+          "level": 3
+        },
+        {
+          "id": "section-2ac266a744",
+          "title": "从 JavaScript 程序员的视角看 V8 引擎的词法分析",
+          "level": 3
+        },
+        {
+          "id": "section-16c8201b44",
+          "title": "扩展阅读",
+          "level": 2
+        },
+        {
+          "id": "section-259c6cf68b",
+          "title": "原图对照",
+          "level": 2
+        }
+      ],
+      "assets": [
+        "figures/compilers/compiler-06-token.jpg",
+        "figures/compilers/compiler-07-fsa.jpg",
+        "figures/compilers/compiler-08-dfa.jpg",
+        "figures/compilers/compiler-09-nfa.jpg"
+      ]
+    },
+    {
+      "id": "syntax-analysis",
+      "title": "语法分析",
+      "group": "前端部分",
+      "summary": "从 Token 到 AST：上下文无关文法、递归下降、LL 与 LR。",
+      "photos": [
+        "compiler-10",
+        "compiler-11",
+        "compiler-12"
+      ],
+      "primaryPhoto": "compiler-10",
+      "printedPages": "12–14",
+      "order": 2,
+      "domain": "compilers",
+      "markdown": "articles/compilers/syntax-analysis.md",
+      "html": "<h2 id=\"section-8bd6e1858b\">基本概念</h2><p>语法分析是编译器前端的第二个处理环节，其输入是词法分析环节中输出的 Token 化字列，根据既定的语法规则输出抽象语法树（AST），供下游环节使用。语法分析只针对上下文无关的内容进行处理。</p><figure><button class=\"article-figure\" data-photo=\"compiler-10\" aria-label=\"打开原图：“int a=2”对应的 AST\"><img src=\"figures/compilers/compiler-10-ast.jpg\" alt=\"“int a=2”对应的 AST\" loading=\"lazy\"><span>“int a=2”对应的 AST · 点击对照原图</span></button></figure><h2 id=\"section-0b294fa811\">核心难点</h2><h3 id=\"section-b3776b3708\">上下文无关文法</h3><p>上下文无关含义：在任何情况下，文法的推导规则都是一样的。</p><p>语法规则由 4 个部分组成：一个有穷的非终结符（或变元）集合、一个有穷的终结符的集合、一个有穷产生式集合、一个起始非终结符（变元）。符合这四个特点文法规则就是上下文无关文法。</p><figure><button class=\"article-figure\" data-photo=\"compiler-11\" aria-label=\"打开原图：正则文法是上下文无关文法的子集\"><img src=\"figures/compilers/compiler-11-grammar.jpg\" alt=\"正则文法是上下文无关文法的子集\" loading=\"lazy\"><span>正则文法是上下文无关文法的子集 · 点击对照原图</span></button></figure><p>两种描述形式：一种是巴科斯范式（BNF）；另一种是巴科斯范式的一种扩展形式（EBNF），它更利于自动化生成语法分析器。其中，产生式、终结符、非终结符、开始符号是巴科斯范式的基本组成要素。</p><p>上下文无关文法与正则文法的区别：上下文无关文法允许递归调用，而正则文法不允许；上下文无关文法比正则文法的表达能力更强，正则文法是上下文无关文法的一个子集。</p><h3 id=\"section-ed000ef4f0\">自顶向下和自底向上</h3><p>自顶向下的算法思路：从根节点逐层往下分解，形成最后的 AST。</p><p>递归下降算法：它的算法思路是按照语法规则去匹配 Token 串。</p><ul><li>优点：程序结构基本上是跟文法规则同构的。</li><li>缺点：会造成左递归和回溯问题。</li></ul><p>注意，递归下降是深度优先（DFS）的，只有最左边的子树都生成完了，才会在右生成它的兄弟节点。</p><p>LL 算法：对于一些比较复杂的语法规则来说，这个算法可以自动计算出选择不同产生式的依据。</p><ul><li>方法：从左到右地消化掉 Token。</li><li>要点：计算 First 和 Follow 集合。</li></ul><p>自底向上的算法思路：从底下先拼凑出 AST 的一些局部拼图，并逐步组装成一棵完整的 AST。</p><p>LR 算法：移进，把 Token 加入工作区；规约，在工作区内组装 AST 的片段。LR 算法和 LL 算法一样，也是从左到右地消化掉 Token。</p><h2 id=\"section-3e62acbc2a\">面试指南</h2><p>从工业级编译器的实现角度来看，常规的设计思路基本上都是：手写的语法分析器、经典递归下降算法实现主体流程，再用 LR 等高级算法实现二元表达式等特殊语法的解析。</p><p>值得一提：Python 语言是利用工具自动生成语法分析程序的，其使用的工具 pgen 能够根据语法规则生成解析表，让修改语法的过程变得更加容易。</p><h2 id=\"section-eac0fee0f9\">扩展阅读</h2><ul><li>左递归消除：龙书（第 3 版）第 4.3.3 章节</li><li>First 与 Follow 集合：龙书（第 3 版）第 4.4.2 章节</li><li>LR 相关详细介绍：龙书（第 3 版）第 4.6～4.7 章节、虎书（C 语言版）第 3.3 章节</li></ul><h2 id=\"section-e2a1efdc41\">原图对照</h2><blockquote>整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。</blockquote><ul><li><a href=\"photos/compiler-10.jpg\" data-photo=\"compiler-10\">第 12 页</a></li><li><a href=\"photos/compiler-11.jpg\" data-photo=\"compiler-11\">第 13 页</a></li><li><a href=\"photos/compiler-12.jpg\" data-photo=\"compiler-12\">第 14 页</a></li></ul>",
+      "text": "# 语法分析\n\n## 基本概念\n\n语法分析是编译器前端的第二个处理环节，其输入是词法分析环节中输出的 Token 化字列，根据既定的语法规则输出抽象语法树（AST），供下游环节使用。语法分析只针对上下文无关的内容进行处理。\n\n![“int a=2”对应的 AST](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-10-ast.jpg)\n\n## 核心难点\n\n### 上下文无关文法\n\n上下文无关含义：在任何情况下，文法的推导规则都是一样的。\n\n语法规则由 4 个部分组成：一个有穷的非终结符（或变元）集合、一个有穷的终结符的集合、一个有穷产生式集合、一个起始非终结符（变元）。符合这四个特点文法规则就是上下文无关文法。\n\n![正则文法是上下文无关文法的子集](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-11-grammar.jpg)\n\n两种描述形式：一种是巴科斯范式（BNF）；另一种是巴科斯范式的一种扩展形式（EBNF），它更利于自动化生成语法分析器。其中，产生式、终结符、非终结符、开始符号是巴科斯范式的基本组成要素。\n\n上下文无关文法与正则文法的区别：上下文无关文法允许递归调用，而正则文法不允许；上下文无关文法比正则文法的表达能力更强，正则文法是上下文无关文法的一个子集。\n\n### 自顶向下和自底向上\n\n自顶向下的算法思路：从根节点逐层往下分解，形成最后的 AST。\n\n递归下降算法：它的算法思路是按照语法规则去匹配 Token 串。\n\n- 优点：程序结构基本上是跟文法规则同构的。\n- 缺点：会造成左递归和回溯问题。\n\n注意，递归下降是深度优先（DFS）的，只有最左边的子树都生成完了，才会在右生成它的兄弟节点。\n\nLL 算法：对于一些比较复杂的语法规则来说，这个算法可以自动计算出选择不同产生式的依据。\n\n- 方法：从左到右地消化掉 Token。\n- 要点：计算 First 和 Follow 集合。\n\n自底向上的算法思路：从底下先拼凑出 AST 的一些局部拼图，并逐步组装成一棵完整的 AST。\n\nLR 算法：移进，把 Token 加入工作区；规约，在工作区内组装 AST 的片段。LR 算法和 LL 算法一样，也是从左到右地消化掉 Token。\n\n## 面试指南\n\n从工业级编译器的实现角度来看，常规的设计思路基本上都是：手写的语法分析器、经典递归下降算法实现主体流程，再用 LR 等高级算法实现二元表达式等特殊语法的解析。\n\n值得一提：Python 语言是利用工具自动生成语法分析程序的，其使用的工具 pgen 能够根据语法规则生成解析表，让修改语法的过程变得更加容易。\n\n## 扩展阅读\n\n- 左递归消除：龙书（第 3 版）第 4.3.3 章节\n- First 与 Follow 集合：龙书（第 3 版）第 4.4.2 章节\n- LR 相关详细介绍：龙书（第 3 版）第 4.6～4.7 章节、虎书（C 语言版）第 3.3 章节\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [第 12 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-10.jpg)\n- [第 13 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-11.jpg)\n- [第 14 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-12.jpg)\n",
+      "toc": [
+        {
+          "id": "section-8bd6e1858b",
+          "title": "基本概念",
+          "level": 2
+        },
+        {
+          "id": "section-0b294fa811",
+          "title": "核心难点",
+          "level": 2
+        },
+        {
+          "id": "section-b3776b3708",
+          "title": "上下文无关文法",
+          "level": 3
+        },
+        {
+          "id": "section-ed000ef4f0",
+          "title": "自顶向下和自底向上",
+          "level": 3
+        },
+        {
+          "id": "section-3e62acbc2a",
+          "title": "面试指南",
+          "level": 2
+        },
+        {
+          "id": "section-eac0fee0f9",
+          "title": "扩展阅读",
+          "level": 2
+        },
+        {
+          "id": "section-e2a1efdc41",
+          "title": "原图对照",
+          "level": 2
+        }
+      ],
+      "assets": [
+        "figures/compilers/compiler-10-ast.jpg",
+        "figures/compilers/compiler-11-grammar.jpg"
+      ]
+    },
+    {
+      "id": "semantic-analysis",
+      "title": "语义分析",
+      "group": "前端部分",
+      "summary": "属性计算、类型系统、符号表、引用消解、闭包与控制流检查。",
+      "photos": [
+        "compiler-13",
+        "compiler-14",
+        "compiler-15",
+        "compiler-16",
+        "compiler-17",
+        "compiler-18",
+        "compiler-19",
+        "compiler-20"
+      ],
+      "primaryPhoto": "compiler-13",
+      "printedPages": "15–22",
+      "order": 3,
+      "domain": "compilers",
+      "markdown": "articles/compilers/semantic-analysis.md",
+      "html": "<h2 id=\"section-6e1cba1d8d\">基本概念</h2><p>语义分析是编译器前端的第三个处理环节，其输入是在语法分析环节输出的抽象语法树，根据语言的特性对当前语法树进行检查和优化，在结构上进行节点的补充属性、调整语义化标识和删除不必要的节点等操作，因此输出的依然还是抽象语法树。</p><p>语义分析会针对上下文相关的内容进行处理，有时一部分语义分析的工作会和语法分析环节融合在一起。</p><figure><button class=\"article-figure\" data-photo=\"compiler-13\" aria-label=\"打开原图：编译过程中的每个阶段，都可能使用符号表\"><img src=\"figures/compilers/compiler-13-phases.jpg\" alt=\"编译过程中的每个阶段，都可能使用符号表\" loading=\"lazy\"><span>编译过程中的每个阶段，都可能使用符号表 · 点击对照原图</span></button></figure><h2 id=\"section-0df71cbea7\">核心难点</h2><h3 id=\"section-cdc7ece271\">上下文相关文法</h3><ul><li>属性文法：上下文相关文法对 EBNF 进行了扩充，在上下文无关的推导过程中，辅助性解决一些上下文相关的问题。</li><li>注意：上下文相关文法由于和语言的设计、特性强耦合，并没有像状态图、BNF 那样有直观的、通用化分析范式。</li><li>应用场景：控制流检查、闭包分析、引用消解等。</li></ul><pre><code>int a = 10;\nint foo(int a) {\n    int b = a + 3;\n    return b;\n}</code></pre><figure><button class=\"article-figure\" data-photo=\"compiler-14\" aria-label=\"打开原图：变量的作用域\"><img src=\"figures/compilers/compiler-14-scope.jpg\" alt=\"变量的作用域\" loading=\"lazy\"><span>变量的作用域 · 点击对照原图</span></button></figure><h3 id=\"section-feee41c50e\">属性计算</h3><p>编译器一般会采用属性计算的方法，来计算出每个 AST 节点的类型属性，然后检查它们是否匹配。</p><ul><li>属性文法：属性计算的方法，就是基于语法规则，来定义一些属性计算的规则，在做语法解析或遍历 AST 的时候执行这些规则，我们就可以计算出属性值。这种基于语法规则定义的计算规则，被叫做属性文法（Attribute Grammar）。</li><li>属性计算：S 属性，字面意思是综合属性，就是在 AST 中从下级的属性归纳、综合出本级的属性，更准确地说，是通过下级节点和自身来确定的；I 属性，继承属性，即 AST 中某个节点的属性是由上级节点、兄弟节点和它自身来决定的。</li><li>形成的数据结构：Annotated AST（带有标注信息的 AST）。</li><li>语法制导的翻译：属性计算的特点是会基于语法规则，增加一些与语义处理有关的规则，我们把这种语义规则的定义叫做语法制导的定义，如果变成计算动作，就叫做语法制导的翻译。</li></ul><figure><button class=\"article-figure\" data-photo=\"compiler-15\" aria-label=\"打开原图：带有标注信息的 AST\"><img src=\"figures/compilers/compiler-15-annotated-ast.jpg\" alt=\"带有标注信息的 AST\" loading=\"lazy\"><span>带有标注信息的 AST · 点击对照原图</span></button></figure><h3 id=\"section-f0d1b44fdc\">类型系统</h3><ul><li>类型：在计算机语言里，类型是数据的一个属性，它的作用是来告诉编译器或解释器，程序可以如何使用这些数据。</li><li>类型系统：类型系统是一门语言所有的类型的集合，其中包含了操作这些类型的规则，以及规定了类型之间是怎么相互作用的（比如一个类型能否转换成另一个类型）。</li><li>类型检查：这是与类型有关的分析和处理工作之一。主要用于对源程序代码中，一些类型不匹配的情况进行隐式类型转换或直接抛错。</li><li>子类型：面向对象编程时，我们可以给某个类创建不同的子类，实现一些个性化的功能；写程序时，我们可以站在抽象度更高的层次上，不去管具体的差异。把这里的结论抽象成一般意义上的类型理论，就是子类型。</li><li>类型转换：比如说，表达式“a=b+10”，如果 a 的类型是浮点型，而右边传过来的是整型，那么一般就要进行缺省的类型转换。</li><li>参数化类型/泛型：泛型是程序设计语言的一种风格或范式。泛型允许程序员在强类型程序设计语言中，编写代码时使用一些以后才指定的类型，在实例化时作为参数指明这些类型。</li></ul><h3 id=\"section-0ace5b0db3\">符号表</h3><ul><li>符号表内包含的信息：名称、分类、类型、作用域等。</li><li>存储形式：线性表格、层次化表格。</li></ul><figure><button class=\"article-figure\" data-photo=\"compiler-17\" aria-label=\"打开原图：一种层次化的符号表\"><img src=\"figures/compilers/compiler-17-symbol-table.jpg\" alt=\"一种层次化的符号表\" loading=\"lazy\"><span>一种层次化的符号表 · 点击对照原图</span></button></figure><ul><li>符号表的作用：维护程序中定义的标识符（ID 类 Token），提供给编译器的各个环节进行操作。</li><li>建立符号表的过程：整个编译器前端都会涉及到，词法分析阶段将 ID 类 Token 收集到符号表中，语法分析阶段可进行读取和补充，语义分析阶段在做引用消解时，符号表的作用至关重要。</li><li>注意：符号表跟编译过程多个阶段都相关。</li></ul><figure><button class=\"article-figure\" data-photo=\"compiler-17\" aria-label=\"打开原图：利用符号表帮助做引用消解\"><img src=\"figures/compilers/compiler-17-reference-table.jpg\" alt=\"利用符号表帮助做引用消解\" loading=\"lazy\"><span>利用符号表帮助做引用消解 · 点击对照原图</span></button></figure><h3 id=\"section-01fc5056a6\">引用消解</h3><ul><li>概念解释：引用消解是一种非常重要的上下文相关的语义规则，它其实就是从符号表里查找被引用的符号的定义。</li><li>作用域：指计算机语言中变量、函数、类等起作用的范围。对于变量来说，为了找到正确的引用，就需要用到作用域。一般来说，它有两种使用场景，一种是标识符作用域，一种是词法作用域。</li></ul><figure><button class=\"article-figure\" data-photo=\"compiler-18\" aria-label=\"打开原图：变量引用的消解\"><img src=\"figures/compilers/compiler-18-references.jpg\" alt=\"变量引用的消解\" loading=\"lazy\"><span>变量引用的消解 · 点击对照原图</span></button></figure><h3 id=\"section-1d7e44145c\">闭包分析</h3><p>很多语言都支持闭包。而要正确地使用闭包，就必须在编译期知道哪些变量是自由变量。</p><p>这里的自由变量是指在本函数外面定义的变量，但被这个函数中的代码所使用。这样，在运行期，编译器就会用特殊的内存管理机制来管理这些变量。所以，对闭包的分析，也是上下文敏感的。</p><h3 id=\"section-30aa7a3f8e\">控制流检查</h3><p>像 return、break 和 continue 等语句，都与程序的控制流有关，它们必须符合控制流方面的规则。</p><p>在 Java 这样的语言中，语义规则会规定：如果返回值不是 void，那么在退出函数体之前，一定要执行一个 return 语句，那么就要检查所有的控制流分支，是否都以 return 语句结尾。</p><h2 id=\"section-b2836c830d\">面试指南</h2><p>语义分析与每一门编程语言的具体语法特性息息相关，因此针对不同语言的语义分析过程可能大相径庭。</p><ul><li>Java 在语义分析环节着重静态类型处理，并会对很多源程序中所涉及的语法糖进行去除。</li><li>Python 在语义分析环节的一个显著特点是：由于其语法特性可以不声明变量就直接使用，所以编译器要能识别出正确的“定义-使用”关系。</li><li>TypeScript 作为 JavaScript 的一种方言，强调通过类型检查在编译期提前发现程序的错误（而不像 JavaScript 那样在运行期才能发现很多问题），TypeScript 在编译耗时中有超过一半的时间用在了类型检查上。</li><li>MySQL 在对 SQL 的语义分析过程中，需要结合对库名、表名等引用消解，进行正确性检查以及必要的优化。</li></ul><h2 id=\"section-b2b8e76381\">扩展阅读</h2><ul><li>一本介绍有关语义分析的形式化方法的书：The Formal Semantics of Programming Languages: An Introduction (Foundations of Computing)</li><li>面向对象的语言特性：虎书（C 语言版）第 14 章</li><li>函数是语言的特性：虎书（C 语言版）第 15 章</li></ul><h2 id=\"section-b071a6f973\">原图对照</h2><blockquote>整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。</blockquote><ul><li><a href=\"photos/compiler-13.jpg\" data-photo=\"compiler-13\">第 15 页</a></li><li><a href=\"photos/compiler-14.jpg\" data-photo=\"compiler-14\">第 16 页</a></li><li><a href=\"photos/compiler-15.jpg\" data-photo=\"compiler-15\">第 17 页</a></li><li><a href=\"photos/compiler-16.jpg\" data-photo=\"compiler-16\">第 18 页</a></li><li><a href=\"photos/compiler-17.jpg\" data-photo=\"compiler-17\">第 19 页</a></li><li><a href=\"photos/compiler-18.jpg\" data-photo=\"compiler-18\">第 20 页</a></li><li><a href=\"photos/compiler-19.jpg\" data-photo=\"compiler-19\">第 21 页</a></li><li><a href=\"photos/compiler-20.jpg\" data-photo=\"compiler-20\">第 22 页</a></li></ul>",
+      "text": "# 语义分析\n\n## 基本概念\n\n语义分析是编译器前端的第三个处理环节，其输入是在语法分析环节输出的抽象语法树，根据语言的特性对当前语法树进行检查和优化，在结构上进行节点的补充属性、调整语义化标识和删除不必要的节点等操作，因此输出的依然还是抽象语法树。\n\n语义分析会针对上下文相关的内容进行处理，有时一部分语义分析的工作会和语法分析环节融合在一起。\n\n![编译过程中的每个阶段，都可能使用符号表](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-13-phases.jpg)\n\n## 核心难点\n\n### 上下文相关文法\n\n- 属性文法：上下文相关文法对 EBNF 进行了扩充，在上下文无关的推导过程中，辅助性解决一些上下文相关的问题。\n- 注意：上下文相关文法由于和语言的设计、特性强耦合，并没有像状态图、BNF 那样有直观的、通用化分析范式。\n- 应用场景：控制流检查、闭包分析、引用消解等。\n\n```c\nint a = 10;\nint foo(int a) {\n    int b = a + 3;\n    return b;\n}\n```\n\n![变量的作用域](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-14-scope.jpg)\n\n### 属性计算\n\n编译器一般会采用属性计算的方法，来计算出每个 AST 节点的类型属性，然后检查它们是否匹配。\n\n- 属性文法：属性计算的方法，就是基于语法规则，来定义一些属性计算的规则，在做语法解析或遍历 AST 的时候执行这些规则，我们就可以计算出属性值。这种基于语法规则定义的计算规则，被叫做属性文法（Attribute Grammar）。\n- 属性计算：S 属性，字面意思是综合属性，就是在 AST 中从下级的属性归纳、综合出本级的属性，更准确地说，是通过下级节点和自身来确定的；I 属性，继承属性，即 AST 中某个节点的属性是由上级节点、兄弟节点和它自身来决定的。\n- 形成的数据结构：Annotated AST（带有标注信息的 AST）。\n- 语法制导的翻译：属性计算的特点是会基于语法规则，增加一些与语义处理有关的规则，我们把这种语义规则的定义叫做语法制导的定义，如果变成计算动作，就叫做语法制导的翻译。\n\n![带有标注信息的 AST](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-15-annotated-ast.jpg)\n\n### 类型系统\n\n- 类型：在计算机语言里，类型是数据的一个属性，它的作用是来告诉编译器或解释器，程序可以如何使用这些数据。\n- 类型系统：类型系统是一门语言所有的类型的集合，其中包含了操作这些类型的规则，以及规定了类型之间是怎么相互作用的（比如一个类型能否转换成另一个类型）。\n- 类型检查：这是与类型有关的分析和处理工作之一。主要用于对源程序代码中，一些类型不匹配的情况进行隐式类型转换或直接抛错。\n- 子类型：面向对象编程时，我们可以给某个类创建不同的子类，实现一些个性化的功能；写程序时，我们可以站在抽象度更高的层次上，不去管具体的差异。把这里的结论抽象成一般意义上的类型理论，就是子类型。\n- 类型转换：比如说，表达式“a=b+10”，如果 a 的类型是浮点型，而右边传过来的是整型，那么一般就要进行缺省的类型转换。\n- 参数化类型/泛型：泛型是程序设计语言的一种风格或范式。泛型允许程序员在强类型程序设计语言中，编写代码时使用一些以后才指定的类型，在实例化时作为参数指明这些类型。\n\n### 符号表\n\n- 符号表内包含的信息：名称、分类、类型、作用域等。\n- 存储形式：线性表格、层次化表格。\n\n![一种层次化的符号表](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-17-symbol-table.jpg)\n\n- 符号表的作用：维护程序中定义的标识符（ID 类 Token），提供给编译器的各个环节进行操作。\n- 建立符号表的过程：整个编译器前端都会涉及到，词法分析阶段将 ID 类 Token 收集到符号表中，语法分析阶段可进行读取和补充，语义分析阶段在做引用消解时，符号表的作用至关重要。\n- 注意：符号表跟编译过程多个阶段都相关。\n\n![利用符号表帮助做引用消解](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-17-reference-table.jpg)\n\n### 引用消解\n\n- 概念解释：引用消解是一种非常重要的上下文相关的语义规则，它其实就是从符号表里查找被引用的符号的定义。\n- 作用域：指计算机语言中变量、函数、类等起作用的范围。对于变量来说，为了找到正确的引用，就需要用到作用域。一般来说，它有两种使用场景，一种是标识符作用域，一种是词法作用域。\n\n![变量引用的消解](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-18-references.jpg)\n\n### 闭包分析\n\n很多语言都支持闭包。而要正确地使用闭包，就必须在编译期知道哪些变量是自由变量。\n\n这里的自由变量是指在本函数外面定义的变量，但被这个函数中的代码所使用。这样，在运行期，编译器就会用特殊的内存管理机制来管理这些变量。所以，对闭包的分析，也是上下文敏感的。\n\n### 控制流检查\n\n像 return、break 和 continue 等语句，都与程序的控制流有关，它们必须符合控制流方面的规则。\n\n在 Java 这样的语言中，语义规则会规定：如果返回值不是 void，那么在退出函数体之前，一定要执行一个 return 语句，那么就要检查所有的控制流分支，是否都以 return 语句结尾。\n\n## 面试指南\n\n语义分析与每一门编程语言的具体语法特性息息相关，因此针对不同语言的语义分析过程可能大相径庭。\n\n- Java 在语义分析环节着重静态类型处理，并会对很多源程序中所涉及的语法糖进行去除。\n- Python 在语义分析环节的一个显著特点是：由于其语法特性可以不声明变量就直接使用，所以编译器要能识别出正确的“定义-使用”关系。\n- TypeScript 作为 JavaScript 的一种方言，强调通过类型检查在编译期提前发现程序的错误（而不像 JavaScript 那样在运行期才能发现很多问题），TypeScript 在编译耗时中有超过一半的时间用在了类型检查上。\n- MySQL 在对 SQL 的语义分析过程中，需要结合对库名、表名等引用消解，进行正确性检查以及必要的优化。\n\n## 扩展阅读\n\n- 一本介绍有关语义分析的形式化方法的书：The Formal Semantics of Programming Languages: An Introduction (Foundations of Computing)\n- 面向对象的语言特性：虎书（C 语言版）第 14 章\n- 函数是语言的特性：虎书（C 语言版）第 15 章\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [第 15 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-13.jpg)\n- [第 16 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-14.jpg)\n- [第 17 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-15.jpg)\n- [第 18 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-16.jpg)\n- [第 19 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-17.jpg)\n- [第 20 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-18.jpg)\n- [第 21 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-19.jpg)\n- [第 22 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-20.jpg)\n",
+      "toc": [
+        {
+          "id": "section-6e1cba1d8d",
+          "title": "基本概念",
+          "level": 2
+        },
+        {
+          "id": "section-0df71cbea7",
+          "title": "核心难点",
+          "level": 2
+        },
+        {
+          "id": "section-cdc7ece271",
+          "title": "上下文相关文法",
+          "level": 3
+        },
+        {
+          "id": "section-feee41c50e",
+          "title": "属性计算",
+          "level": 3
+        },
+        {
+          "id": "section-f0d1b44fdc",
+          "title": "类型系统",
+          "level": 3
+        },
+        {
+          "id": "section-0ace5b0db3",
+          "title": "符号表",
+          "level": 3
+        },
+        {
+          "id": "section-01fc5056a6",
+          "title": "引用消解",
+          "level": 3
+        },
+        {
+          "id": "section-1d7e44145c",
+          "title": "闭包分析",
+          "level": 3
+        },
+        {
+          "id": "section-30aa7a3f8e",
+          "title": "控制流检查",
+          "level": 3
+        },
+        {
+          "id": "section-b2836c830d",
+          "title": "面试指南",
+          "level": 2
+        },
+        {
+          "id": "section-b2b8e76381",
+          "title": "扩展阅读",
+          "level": 2
+        },
+        {
+          "id": "section-b071a6f973",
+          "title": "原图对照",
+          "level": 2
+        }
+      ],
+      "assets": [
+        "figures/compilers/compiler-13-phases.jpg",
+        "figures/compilers/compiler-14-scope.jpg",
+        "figures/compilers/compiler-15-annotated-ast.jpg",
+        "figures/compilers/compiler-17-reference-table.jpg",
+        "figures/compilers/compiler-17-symbol-table.jpg",
+        "figures/compilers/compiler-18-references.jpg"
+      ]
+    },
+    {
+      "id": "intermediate-representation",
+      "title": "中间代码",
+      "group": "后端部分",
+      "summary": "后端概述与 IR：HIR / MIR / LIR、树与 DAG、P-Code 和 SSA。",
+      "photos": [
+        "compiler-21",
+        "compiler-22",
+        "compiler-23",
+        "compiler-24",
+        "compiler-25"
+      ],
+      "primaryPhoto": "compiler-23",
+      "printedPages": "24–27",
+      "order": 4,
+      "domain": "compilers",
+      "markdown": "articles/compilers/intermediate-representation.md",
+      "html": "<h2 id=\"section-84c92798d4\">后端部分</h2><p>概述：编译器的后端是指基于前端解析生成的 AST 或其他中间代码（IR），经过一系列优化之后，生成可以直接运行程序代码（目标代码）的程序模块。目标代码有时是直接编译到程序将要运行的物理机的本地代码上（机器码），还有一些时候是先编译为一种中间代码（通常是跨平台的），结合各个系统平台的虚拟机来运行。</p><p>编译器后端更多的是与 CPU、内存等硬件的底层设施打交道，通常只有参与操作系统方面的研发工作才有机会涉足。在理论方面，会涉及到计算机体系结构方面硬件理论知识。这对软件工程师提出了更高的要求，需要具备软硬结合等跨领域、跨学科的综合型知识。</p><h2 id=\"section-5904a49855\">中间代码</h2><p>IR，也就是中间代码（Intermediate Representation，有时也称 Intermediate Code，IC），它是编译器中很重要的一种数据结构。编译器在做完前端工作以后，首先就是生成 IR，并在此基础上执行各种优化算法，最后再生成目标代码。</p><h2 id=\"section-d556166414\">基本概念</h2><h3 id=\"section-f335779dfc\">基于用途的分类</h3><p>第一类用途：基于源语言做一些分析和变换（HIR）</p><p>第二类用途：独立于源语言和 CPU 架构做分析和优化（MIR）</p><p>第三类用途：依赖于 CPU 架构做优化和代码生成（LIR）</p><h3 id=\"section-0af736f081\">IR 数据结构</h3><p>第一种：类似 TAC（Three Address Code）的线性结构</p><p>第二种：树结构</p><p>第三种：DAG - 有向无环图</p><p>第四种：PDG - 程序依赖图</p><figure><button class=\"article-figure\" data-photo=\"compiler-24\" aria-label=\"打开原图：冗余的子树——树结构；DAG 结构消除了冗余的子树——DAG 结构\"><img src=\"figures/compilers/compiler-24-ast-dag.jpg\" alt=\"冗余的子树——树结构；DAG 结构消除了冗余的子树——DAG 结构\" loading=\"lazy\"><span>冗余的子树——树结构；DAG 结构消除了冗余的子树——DAG 结构 · 点击对照原图</span></button></figure><h3 id=\"section-8ef2f9a069\">P-Code：用于解释执行的 IR</h3><p>即“Portable Code”，这是另外一种 IR 的类别范畴，与目标机器无关，因此可以在多种设备上基于运行时虚拟机的方式进行解释执行。</p><h3 id=\"section-bea07ef17c\">SSA 格式</h3><p>SSA 是 Static Single Assignment 的缩写，也就是静态单赋值。这是 IR 的一种设计范式，它要求一个变量只能被赋值一次。</p><p>SSA 的优点：使用 SSA 的形式，体现了精确的“使用-定义（use-def）”关系。并且变量的值定义出来以后就不再变化，所以基于 SSA 更容易运行一些优化算法。</p><h2 id=\"section-ecce29ffad\">面试指南</h2><ul><li>Java 的字节码就是一种 IR，它可以直接被 JVM 解释执行，也可以进一步优化编译（JIT）到机器码运行。</li><li>JavaScript - V8 的 Ignition 解释器接收的字节码，也有类似的机制。它是通过 TurboFun 进行 JIT 编译为机器码。</li></ul><h2 id=\"section-fef53c713a\">扩展阅读</h2><ul><li>关于程序依赖图的论文参考：<a href=\"https://www.cs.utexas.edu/~pingali/CS395T/2009fa/papers/ferrante87.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">ferrante87.pdf</a></li><li>LLVM 官方手册：<a href=\"https://llvm.org/docs/LangRef.html\" target=\"_blank\" rel=\"noopener noreferrer\">LangRef.html</a></li><li>Java 虚拟机字节码指令集：<a href=\"https://docs.oracle.com/javase/specs/jvms/se14/html/jvms-6.html\" target=\"_blank\" rel=\"noopener noreferrer\">jvms-6.html</a></li><li>鲸书 - 第 4 章</li></ul><h2 id=\"section-d316227223\">原图对照</h2><blockquote>整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。</blockquote><ul><li><a href=\"photos/compiler-21.jpg\" data-photo=\"compiler-21\">后端部分扉页</a></li><li><a href=\"photos/compiler-22.jpg\" data-photo=\"compiler-22\">第 24 页</a></li><li><a href=\"photos/compiler-23.jpg\" data-photo=\"compiler-23\">第 25 页</a></li><li><a href=\"photos/compiler-24.jpg\" data-photo=\"compiler-24\">第 26 页</a></li><li><a href=\"photos/compiler-25.jpg\" data-photo=\"compiler-25\">第 27 页</a></li></ul>",
+      "text": "# 中间代码\n\n## 后端部分\n\n概述：编译器的后端是指基于前端解析生成的 AST 或其他中间代码（IR），经过一系列优化之后，生成可以直接运行程序代码（目标代码）的程序模块。目标代码有时是直接编译到程序将要运行的物理机的本地代码上（机器码），还有一些时候是先编译为一种中间代码（通常是跨平台的），结合各个系统平台的虚拟机来运行。\n\n编译器后端更多的是与 CPU、内存等硬件的底层设施打交道，通常只有参与操作系统方面的研发工作才有机会涉足。在理论方面，会涉及到计算机体系结构方面硬件理论知识。这对软件工程师提出了更高的要求，需要具备软硬结合等跨领域、跨学科的综合型知识。\n\n## 中间代码\n\nIR，也就是中间代码（Intermediate Representation，有时也称 Intermediate Code，IC），它是编译器中很重要的一种数据结构。编译器在做完前端工作以后，首先就是生成 IR，并在此基础上执行各种优化算法，最后再生成目标代码。\n\n## 基本概念\n\n### 基于用途的分类\n\n第一类用途：基于源语言做一些分析和变换（HIR）\n\n第二类用途：独立于源语言和 CPU 架构做分析和优化（MIR）\n\n第三类用途：依赖于 CPU 架构做优化和代码生成（LIR）\n\n### IR 数据结构\n\n第一种：类似 TAC（Three Address Code）的线性结构\n\n第二种：树结构\n\n第三种：DAG - 有向无环图\n\n第四种：PDG - 程序依赖图\n\n![冗余的子树——树结构；DAG 结构消除了冗余的子树——DAG 结构](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-24-ast-dag.jpg)\n\n### P-Code：用于解释执行的 IR\n\n即“Portable Code”，这是另外一种 IR 的类别范畴，与目标机器无关，因此可以在多种设备上基于运行时虚拟机的方式进行解释执行。\n\n### SSA 格式\n\nSSA 是 Static Single Assignment 的缩写，也就是静态单赋值。这是 IR 的一种设计范式，它要求一个变量只能被赋值一次。\n\nSSA 的优点：使用 SSA 的形式，体现了精确的“使用-定义（use-def）”关系。并且变量的值定义出来以后就不再变化，所以基于 SSA 更容易运行一些优化算法。\n\n## 面试指南\n\n- Java 的字节码就是一种 IR，它可以直接被 JVM 解释执行，也可以进一步优化编译（JIT）到机器码运行。\n- JavaScript - V8 的 Ignition 解释器接收的字节码，也有类似的机制。它是通过 TurboFun 进行 JIT 编译为机器码。\n\n## 扩展阅读\n\n- 关于程序依赖图的论文参考：[ferrante87.pdf](https://www.cs.utexas.edu/~pingali/CS395T/2009fa/papers/ferrante87.pdf)\n- LLVM 官方手册：[LangRef.html](https://llvm.org/docs/LangRef.html)\n- Java 虚拟机字节码指令集：[jvms-6.html](https://docs.oracle.com/javase/specs/jvms/se14/html/jvms-6.html)\n- 鲸书 - 第 4 章\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [后端部分扉页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-21.jpg)\n- [第 24 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-22.jpg)\n- [第 25 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-23.jpg)\n- [第 26 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-24.jpg)\n- [第 27 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-25.jpg)\n",
+      "toc": [
+        {
+          "id": "section-84c92798d4",
+          "title": "后端部分",
+          "level": 2
+        },
+        {
+          "id": "section-5904a49855",
+          "title": "中间代码",
+          "level": 2
+        },
+        {
+          "id": "section-d556166414",
+          "title": "基本概念",
+          "level": 2
+        },
+        {
+          "id": "section-f335779dfc",
+          "title": "基于用途的分类",
+          "level": 3
+        },
+        {
+          "id": "section-0af736f081",
+          "title": "IR 数据结构",
+          "level": 3
+        },
+        {
+          "id": "section-8ef2f9a069",
+          "title": "P-Code：用于解释执行的 IR",
+          "level": 3
+        },
+        {
+          "id": "section-bea07ef17c",
+          "title": "SSA 格式",
+          "level": 3
+        },
+        {
+          "id": "section-ecce29ffad",
+          "title": "面试指南",
+          "level": 2
+        },
+        {
+          "id": "section-fef53c713a",
+          "title": "扩展阅读",
+          "level": 2
+        },
+        {
+          "id": "section-d316227223",
+          "title": "原图对照",
+          "level": 2
+        }
+      ],
+      "assets": [
+        "figures/compilers/compiler-24-ast-dag.jpg"
+      ]
+    },
+    {
+      "id": "analysis-and-optimization",
+      "title": "代码分析与优化",
+      "group": "后端部分",
+      "summary": "八类优化思路，以及控制流、数据流、依赖与别名分析。",
+      "photos": [
+        "compiler-26",
+        "compiler-27",
+        "compiler-28",
+        "compiler-29",
+        "compiler-30",
+        "compiler-31"
+      ],
+      "primaryPhoto": "compiler-26",
+      "printedPages": "28–33",
+      "order": 5,
+      "domain": "compilers",
+      "markdown": "articles/compilers/analysis-and-optimization.md",
+      "html": "<p>从两个分类维度来对代码进行优化：</p><ul><li>机器无关优化与机器相关优化。</li><li>按优化范围分为局部优化、全局优化、过程间优化。</li></ul><h2 id=\"section-955dc8018e\">常见优化思路</h2><h3 id=\"section-81b981b0b2\">1. 常量优化</h3><p>a. 常数折叠：程序里的有些表达式，肯定能计算出一个常数值，那就不要等到运行时再去计算，干脆在编译期就计算出来。比如“x=2*3”可以优化成“x=6”。</p><p>b. 常数传播：如果你一旦知道 x 的值其实是一个常量，那你就可以把所有用到 x 的地方，替换成这个常量。</p><p>c. 稀疏有条件的常数传播：基于常数传播，还可以进一步导致分支判断条件转化为常量，导致一个分支的代码不会被执行。</p><h3 id=\"section-9ad12765b4\">2. 用低代价做计算</h3><p>代数简化：利用代数运算规则所做的简化，比如“x=x*0”可以简化成“x=0”。</p><h3 id=\"section-cf295bdcf1\">3. 消除重复计算</h3><p>a. 拷贝传播：遇到相同引用的变量，拷贝替换为同一个，节省内存到寄存器的操作，以此提升运算速度。</p><p>b. 值编号（VN 和 GVN）：把相同的值，在系统里给一个相同编号，并且只计算一次。</p><p>c. 公共子表达式消除（CSE）：也会减少程序的计算次数。比如“x=a+b”和“y=a+b”，x 和 y 右边的形式是一样的，就可以让 y 等于 x，从而减少了一次对“a+b”的计算。</p><p>d. 部分冗余消除（PRE）：是公共子表达式消除的一种特殊情况。</p><h3 id=\"section-e61b05331d\">4. 化零为整，向量计算</h3><p>a. 超字级并行（SLP）：把基本块中的多个变量组成一个向量，用一个指令完成多个变量的计算。</p><p>b. 循环向量化：在循环展开的基础上，把多次计算优化成一个向量计算。</p><h3 id=\"section-49ccb91aad\">5. 化整为零，各个优化</h3><p>a. 聚合体标量替换（SROA）：很多语言都有结构和对象这样的复合数据类型，内部包含了多个成员变量，这种数据类型叫做聚合体（aggregates）。</p><p>b. 编译器可以把聚合体的成员变量放在寄存器中进行计算，不需要访问内存。</p><h3 id=\"section-7e9664b147\">6. 循环优化</h3><p>a. 归纳变量优化：归纳变量是指在循环体内由循环变量派生出来变量，其变化是很有规律的，因此可以尝试做强度折减优化。</p><p>b. 边界检查消除：在循环体内每次循环都会执行边界检查代码，将其整合抽离出来，避免每次重复判断。</p><p>c. 循环展开：通过把循环次数减少，但在每一次循环里，完成原来多次循环的工作量。</p><p>d. 循环向量化：在循环展开的基础上，把多次计算优化成一个向量计算。</p><p>e. 重组：在循环结构中，使用代数简化和重组，能获得更大的收益。</p><p>f. 循环不变代码外提（LICM）：在循环结构中，如果发现有些代码其实跟循环无关，那就应该提到循环外面去，避免一次次重复计算。</p><p>g. 代码提升：在条件语句中，如果多个分支条件里都执行了同一句代码，可将其提升至判断条件之前；如果是在循环体内，还可以继续借助循环不变代码外提优化方法，进一步提升到循环体之外，从而降低计算量。</p><h3 id=\"section-df8cf66614\">7. 过程调用优化</h3><p>a. 尾调用优化和尾递归优化：尾调用就是一个函数的最后一句，它是对另一个函数的调用。如果函数最后一句调用的函数是它自己，就称为尾递归。尾调用可以将函数调用栈合并，尾递归还可以转换成循环，从而进一步做一系列针对循环语句的优化工作。</p><p>b. 内联：内联也叫做过程集成，就是把被调用函数的代码拷贝到调用者中，从而避免函数调用。</p><p>c. 内联扩展：内联扩展跟普通内联类似，也是在调用的地方展开代码。不过内联扩展被展开的代码，通常是手写的、高度优化的汇编代码。</p><p>d. 叶子程序优化：叶子程序，是指不会再调用其他程序的函数（或过程）。因此，它也可以对栈的使用做一些优化。</p><h3 id=\"section-66c62c5e10\">8. 控制流优化</h3><p>a. 不可达代码的消除：根据控制流的分析，发现有些代码是不可能到达的，可以直接删掉，比如 return 语句后面的代码。</p><p>b. 死代码删除：通过对流程的分析，发现某个变量赋值了以后，后面根本没有再用到这个变量。这样的代码就是死代码，就可以删除。</p><p>c. if 简化：在讲常量传播时我们就见到过，如果有可能 if 条件肯定为真或者假，那么就可以消除掉 if 结构中的 then 块、else 块，甚至整个消除 if 结构。</p><p>d. 循环简化：也就是把空循环或者简单的循环，变成直线代码，从而增加了其他优化的机会，比如指令的流水线化。</p><p>e. 循环反转：这是对循环语句常做的一种优化，就是把一个 while 循环改成一个 repeat···until 循环（或者 do···while 循环）。这样会使基本块的结构更简化，从而更有利于其他优化。</p><p>f. 拉直：如果发现两个基本块是线性连接的，那可以把它们合并，从而增加优化机会。</p><p>g. 反分支：也就是减少程序分支，因为分支会导致程序从一个基本块跳到另一个基本块，这样就不容易做优化。比如，把循环内部的 if 分支挪到循环外面去，先做 if 判断，然后再执行循环，这样总的执行 if 判断的次数就会减少，并且循环体里面的基本块不那么零碎，就更加容易优化。</p><h2 id=\"section-6cfd1bb815\">代码优化依靠的分析方法</h2><ol start=\"1\"><li>控制流分析（CFA）：基于程序控制语句（如条件语句、循环语句、分支语句和基本块语句等）进行分析，建立对程序执行过程的理解，从而进一步做出优化。</li><li>数据流分析（DFA）：基于数据流分析框架（包含“方向（D）”“值（V）”“转换函数（F）”“初始值（I）”和“交运算（∧）”5 个元素）等方式，建立对程序中数据变化情况的理解，从而进一步做出优化。</li><li>依赖分析：分析出程序代码的控制依赖（Control Dependency）和数据依赖（Data Dependency）关系。这对指令排序和缓存优化很重要。</li><li>别名分析：在 C、C++ 等可以使用指针的语言中，同一个内存地址可能会有多个别名，因为不同的指针都可能指向同一个地址。编译器需要知道不同变量是否是别名关系，以便决定能否做某些优化。</li></ol><h2 id=\"section-d0c522f00f\">面试指南</h2><p>Java 编译器在 FLOW 阶段做了四种数据流分析：活跃性分析、异常分析、赋值分析和本地变量捕获分析。</p><p>Java 编译器的逃逸分析：<a href=\"https://www.cc.gatech.edu/~harrold/6340/cs6340_fall2009/Readings/choi99escape.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">choi99escape.pdf</a></p><p>JavaScript 的 V8 引擎在代码优化方面，也有很多地方参考了 Java 的 HotSpot 虚拟机的设计思路，如：</p><ul><li>字节码 + JIT 的混合架构；</li><li>做 JIT 优化编译时采用的 IR，都是基于 Sea of Nodes 的；</li><li>内联优化于逃逸分析。</li></ul><p>Golang 的 GC 编译器，在代码优化方面：</p><ul><li>采用了 SSA 格式的 IR；</li><li>控制流图（CFG）；</li><li>多个 Pass 的优化框架；</li><li>通过 DSL 支持的优化规则。</li></ul><h2 id=\"section-fdd0249b8b\">扩展阅读</h2><ul><li>龙书 - 第 9 章</li><li>鲸书 - 第 7～15 章</li></ul><h2 id=\"section-f5a51a858c\">原图对照</h2><blockquote>整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。</blockquote><ul><li><a href=\"photos/compiler-26.jpg\" data-photo=\"compiler-26\">第 28 页</a></li><li><a href=\"photos/compiler-27.jpg\" data-photo=\"compiler-27\">第 29 页</a></li><li><a href=\"photos/compiler-28.jpg\" data-photo=\"compiler-28\">第 30 页</a></li><li><a href=\"photos/compiler-29.jpg\" data-photo=\"compiler-29\">第 31 页</a></li><li><a href=\"photos/compiler-30.jpg\" data-photo=\"compiler-30\">第 32 页</a></li><li><a href=\"photos/compiler-31.jpg\" data-photo=\"compiler-31\">第 33 页</a></li></ul>",
+      "text": "# 代码分析与优化\n\n从两个分类维度来对代码进行优化：\n\n- 机器无关优化与机器相关优化。\n- 按优化范围分为局部优化、全局优化、过程间优化。\n\n## 常见优化思路\n\n### 1. 常量优化\n\na. 常数折叠：程序里的有些表达式，肯定能计算出一个常数值，那就不要等到运行时再去计算，干脆在编译期就计算出来。比如“x=2*3”可以优化成“x=6”。\n\nb. 常数传播：如果你一旦知道 x 的值其实是一个常量，那你就可以把所有用到 x 的地方，替换成这个常量。\n\nc. 稀疏有条件的常数传播：基于常数传播，还可以进一步导致分支判断条件转化为常量，导致一个分支的代码不会被执行。\n\n### 2. 用低代价做计算\n\n代数简化：利用代数运算规则所做的简化，比如“x=x*0”可以简化成“x=0”。\n\n### 3. 消除重复计算\n\na. 拷贝传播：遇到相同引用的变量，拷贝替换为同一个，节省内存到寄存器的操作，以此提升运算速度。\n\nb. 值编号（VN 和 GVN）：把相同的值，在系统里给一个相同编号，并且只计算一次。\n\nc. 公共子表达式消除（CSE）：也会减少程序的计算次数。比如“x=a+b”和“y=a+b”，x 和 y 右边的形式是一样的，就可以让 y 等于 x，从而减少了一次对“a+b”的计算。\n\nd. 部分冗余消除（PRE）：是公共子表达式消除的一种特殊情况。\n\n### 4. 化零为整，向量计算\n\na. 超字级并行（SLP）：把基本块中的多个变量组成一个向量，用一个指令完成多个变量的计算。\n\nb. 循环向量化：在循环展开的基础上，把多次计算优化成一个向量计算。\n\n### 5. 化整为零，各个优化\n\na. 聚合体标量替换（SROA）：很多语言都有结构和对象这样的复合数据类型，内部包含了多个成员变量，这种数据类型叫做聚合体（aggregates）。\n\nb. 编译器可以把聚合体的成员变量放在寄存器中进行计算，不需要访问内存。\n\n### 6. 循环优化\n\na. 归纳变量优化：归纳变量是指在循环体内由循环变量派生出来变量，其变化是很有规律的，因此可以尝试做强度折减优化。\n\nb. 边界检查消除：在循环体内每次循环都会执行边界检查代码，将其整合抽离出来，避免每次重复判断。\n\nc. 循环展开：通过把循环次数减少，但在每一次循环里，完成原来多次循环的工作量。\n\nd. 循环向量化：在循环展开的基础上，把多次计算优化成一个向量计算。\n\ne. 重组：在循环结构中，使用代数简化和重组，能获得更大的收益。\n\nf. 循环不变代码外提（LICM）：在循环结构中，如果发现有些代码其实跟循环无关，那就应该提到循环外面去，避免一次次重复计算。\n\ng. 代码提升：在条件语句中，如果多个分支条件里都执行了同一句代码，可将其提升至判断条件之前；如果是在循环体内，还可以继续借助循环不变代码外提优化方法，进一步提升到循环体之外，从而降低计算量。\n\n### 7. 过程调用优化\n\na. 尾调用优化和尾递归优化：尾调用就是一个函数的最后一句，它是对另一个函数的调用。如果函数最后一句调用的函数是它自己，就称为尾递归。尾调用可以将函数调用栈合并，尾递归还可以转换成循环，从而进一步做一系列针对循环语句的优化工作。\n\nb. 内联：内联也叫做过程集成，就是把被调用函数的代码拷贝到调用者中，从而避免函数调用。\n\nc. 内联扩展：内联扩展跟普通内联类似，也是在调用的地方展开代码。不过内联扩展被展开的代码，通常是手写的、高度优化的汇编代码。\n\nd. 叶子程序优化：叶子程序，是指不会再调用其他程序的函数（或过程）。因此，它也可以对栈的使用做一些优化。\n\n### 8. 控制流优化\n\na. 不可达代码的消除：根据控制流的分析，发现有些代码是不可能到达的，可以直接删掉，比如 return 语句后面的代码。\n\nb. 死代码删除：通过对流程的分析，发现某个变量赋值了以后，后面根本没有再用到这个变量。这样的代码就是死代码，就可以删除。\n\nc. if 简化：在讲常量传播时我们就见到过，如果有可能 if 条件肯定为真或者假，那么就可以消除掉 if 结构中的 then 块、else 块，甚至整个消除 if 结构。\n\nd. 循环简化：也就是把空循环或者简单的循环，变成直线代码，从而增加了其他优化的机会，比如指令的流水线化。\n\ne. 循环反转：这是对循环语句常做的一种优化，就是把一个 while 循环改成一个 repeat···until 循环（或者 do···while 循环）。这样会使基本块的结构更简化，从而更有利于其他优化。\n\nf. 拉直：如果发现两个基本块是线性连接的，那可以把它们合并，从而增加优化机会。\n\ng. 反分支：也就是减少程序分支，因为分支会导致程序从一个基本块跳到另一个基本块，这样就不容易做优化。比如，把循环内部的 if 分支挪到循环外面去，先做 if 判断，然后再执行循环，这样总的执行 if 判断的次数就会减少，并且循环体里面的基本块不那么零碎，就更加容易优化。\n\n## 代码优化依靠的分析方法\n\n1. 控制流分析（CFA）：基于程序控制语句（如条件语句、循环语句、分支语句和基本块语句等）进行分析，建立对程序执行过程的理解，从而进一步做出优化。\n2. 数据流分析（DFA）：基于数据流分析框架（包含“方向（D）”“值（V）”“转换函数（F）”“初始值（I）”和“交运算（∧）”5 个元素）等方式，建立对程序中数据变化情况的理解，从而进一步做出优化。\n3. 依赖分析：分析出程序代码的控制依赖（Control Dependency）和数据依赖（Data Dependency）关系。这对指令排序和缓存优化很重要。\n4. 别名分析：在 C、C++ 等可以使用指针的语言中，同一个内存地址可能会有多个别名，因为不同的指针都可能指向同一个地址。编译器需要知道不同变量是否是别名关系，以便决定能否做某些优化。\n\n## 面试指南\n\nJava 编译器在 FLOW 阶段做了四种数据流分析：活跃性分析、异常分析、赋值分析和本地变量捕获分析。\n\nJava 编译器的逃逸分析：[choi99escape.pdf](https://www.cc.gatech.edu/~harrold/6340/cs6340_fall2009/Readings/choi99escape.pdf)\n\nJavaScript 的 V8 引擎在代码优化方面，也有很多地方参考了 Java 的 HotSpot 虚拟机的设计思路，如：\n\n- 字节码 + JIT 的混合架构；\n- 做 JIT 优化编译时采用的 IR，都是基于 Sea of Nodes 的；\n- 内联优化于逃逸分析。\n\nGolang 的 GC 编译器，在代码优化方面：\n\n- 采用了 SSA 格式的 IR；\n- 控制流图（CFG）；\n- 多个 Pass 的优化框架；\n- 通过 DSL 支持的优化规则。\n\n## 扩展阅读\n\n- 龙书 - 第 9 章\n- 鲸书 - 第 7～15 章\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [第 28 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-26.jpg)\n- [第 29 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-27.jpg)\n- [第 30 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-28.jpg)\n- [第 31 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-29.jpg)\n- [第 32 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-30.jpg)\n- [第 33 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-31.jpg)\n",
+      "toc": [
+        {
+          "id": "section-955dc8018e",
+          "title": "常见优化思路",
+          "level": 2
+        },
+        {
+          "id": "section-81b981b0b2",
+          "title": "1. 常量优化",
+          "level": 3
+        },
+        {
+          "id": "section-9ad12765b4",
+          "title": "2. 用低代价做计算",
+          "level": 3
+        },
+        {
+          "id": "section-cf295bdcf1",
+          "title": "3. 消除重复计算",
+          "level": 3
+        },
+        {
+          "id": "section-e61b05331d",
+          "title": "4. 化零为整，向量计算",
+          "level": 3
+        },
+        {
+          "id": "section-49ccb91aad",
+          "title": "5. 化整为零，各个优化",
+          "level": 3
+        },
+        {
+          "id": "section-7e9664b147",
+          "title": "6. 循环优化",
+          "level": 3
+        },
+        {
+          "id": "section-df8cf66614",
+          "title": "7. 过程调用优化",
+          "level": 3
+        },
+        {
+          "id": "section-66c62c5e10",
+          "title": "8. 控制流优化",
+          "level": 3
+        },
+        {
+          "id": "section-6cfd1bb815",
+          "title": "代码优化依靠的分析方法",
+          "level": 2
+        },
+        {
+          "id": "section-d0c522f00f",
+          "title": "面试指南",
+          "level": 2
+        },
+        {
+          "id": "section-fdd0249b8b",
+          "title": "扩展阅读",
+          "level": 2
+        },
+        {
+          "id": "section-f5a51a858c",
+          "title": "原图对照",
+          "level": 2
+        }
+      ],
+      "assets": []
+    },
+    {
+      "id": "code-generation",
+      "title": "目标代码生成",
+      "group": "后端部分",
+      "summary": "CPU 架构、指令选择与排序、寄存器分配、窥孔优化和 ABI。",
+      "photos": [
+        "compiler-32",
+        "compiler-33",
+        "compiler-34",
+        "compiler-35"
+      ],
+      "primaryPhoto": "compiler-32",
+      "printedPages": "34–37",
+      "order": 6,
+      "domain": "compilers",
+      "markdown": "articles/compilers/code-generation.md",
+      "html": "<h2 id=\"section-2b852fd5b8\">CPU 硬件架构</h2><ul><li>复杂指令集（CISC）：典型代表 Intel x86，Register-Memory 架构，在指令里可以混合使用内存地址和寄存器。</li><li>精简指令集（RISC）：典型代表 ARM，Load-Store 架构。在这种架构下，指令被分为内存访问（Load 和 Store）和 ALU 操作两大类，而后者只能在寄存器上操作。各种 RISC 指令集都是 Load-Store 架构的，比如 ARM、MIPS、RISC-V 和 PowerPC 等。</li></ul><h2 id=\"section-0d55d65d6f\">后端处理整体过程</h2><figure><button class=\"article-figure\" data-photo=\"compiler-32\" aria-label=\"打开原图：典型后端处理过程\"><img src=\"figures/compilers/compiler-32-backend.jpg\" alt=\"典型后端处理过程\" loading=\"lazy\"><span>典型后端处理过程 · 点击对照原图</span></button></figure><p>MIR → 指令选择 → LIR → 指令排序 → 寄存器分配 → 指令排序 → 翻译成目标代码 → 目标代码。</p><h2 id=\"section-c3b19723c2\">关键流程</h2><h3 id=\"section-33c17e7507\">指令选择</h3><p>对于相同的源代码和 IR，编译器可以生成不同的指令，而我们要选择代价最低的那个。</p><h3 id=\"section-35e56f9c63\">指令排序</h3><p>CPU 内部是分成多个功能单元的。</p><p>对于一条指令，每个功能单元处理完毕以后，交给下一个功能单元，然后它就可以接着再处理下一条指令。</p><figure><button class=\"article-figure\" data-photo=\"compiler-33\" aria-label=\"打开原图：在某一时刻，各个功能部件分别用于不同的指令——多个功能单元并行\"><img src=\"figures/compilers/compiler-33-pipeline.jpg\" alt=\"在某一时刻，各个功能部件分别用于不同的指令——多个功能单元并行\" loading=\"lazy\"><span>在某一时刻，各个功能部件分别用于不同的指令——多个功能单元并行 · 点击对照原图</span></button></figure><p>在同一时刻，不同的功能单元实际上是在处理不同的指令。多条指令实质上是并行执行的，从而减少了总的执行时间，这种并行叫做指令级并行。</p><p>但是有的时候，指令之间会存在依赖关系，后一条指令必须等到前一条指令执行完毕才能运行。</p><p>指令排序的目的是让指令以最佳顺序执行，尽量利用指令级并行的性能优势。</p><h3 id=\"section-64f70e0e92\">寄存器分配</h3><p>对于编译器来说，肯定要尽量利用寄存器，不去读写内存。因为内存读写对于 CPU 来说就是 IO，性能很低。</p><h3 id=\"section-94e0a424ce\">窥孔优化</h3><p>窥孔优化思路，是提供一个固定大小的窗口，比如能够容纳 20 条指令，并检查窗口内的指令，看看是否可以优化。然后再往下滑动窗口，再次检查优化机会。</p><h3 id=\"section-a4c6cd264d\">调用约定（面向硬件）</h3><p>ABI 是 Application Binary Interface 的缩写，也就是应用程序的二进制接口。通常，ABI 里面除了规定调用约定外，还要包括二进制文件的格式、进程初始化方式等更多内容。</p><p>在实现编译器时候，你可以发明自己的调用约定，比如哪些寄存器用来放参数、哪些用来放返回值，等等。但是，如果你要使用别语言编译好的目标文件，或者你想让自己的编译器生成的目标文件被别人使用，那你就要遵守某种特定的 ABI 标准。</p><h2 id=\"section-3346d76f3c\">面试指南</h2><p>具备芯片相关产品的研发经验是真正掌握编译目标代码生成部分程序开发的必要前提。</p><h2 id=\"section-513026887d\">扩展阅读</h2><ul><li>指令排序：基于数据依赖图的 List Scheduling 算法</li><li>寄存器分配：寄存器分配染色算法</li><li>指令选择：树覆盖算法</li></ul><h2 id=\"section-d987a3d57c\">原图对照</h2><blockquote>整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。</blockquote><ul><li><a href=\"photos/compiler-32.jpg\" data-photo=\"compiler-32\">第 34 页</a></li><li><a href=\"photos/compiler-33.jpg\" data-photo=\"compiler-33\">第 35 页</a></li><li><a href=\"photos/compiler-34.jpg\" data-photo=\"compiler-34\">第 36 页</a></li><li><a href=\"photos/compiler-35.jpg\" data-photo=\"compiler-35\">第 37 页</a></li></ul>",
+      "text": "# 目标代码生成\n\n## CPU 硬件架构\n\n- 复杂指令集（CISC）：典型代表 Intel x86，Register-Memory 架构，在指令里可以混合使用内存地址和寄存器。\n- 精简指令集（RISC）：典型代表 ARM，Load-Store 架构。在这种架构下，指令被分为内存访问（Load 和 Store）和 ALU 操作两大类，而后者只能在寄存器上操作。各种 RISC 指令集都是 Load-Store 架构的，比如 ARM、MIPS、RISC-V 和 PowerPC 等。\n\n## 后端处理整体过程\n\n![典型后端处理过程](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-32-backend.jpg)\n\nMIR → 指令选择 → LIR → 指令排序 → 寄存器分配 → 指令排序 → 翻译成目标代码 → 目标代码。\n\n## 关键流程\n\n### 指令选择\n\n对于相同的源代码和 IR，编译器可以生成不同的指令，而我们要选择代价最低的那个。\n\n### 指令排序\n\nCPU 内部是分成多个功能单元的。\n\n对于一条指令，每个功能单元处理完毕以后，交给下一个功能单元，然后它就可以接着再处理下一条指令。\n\n![在某一时刻，各个功能部件分别用于不同的指令——多个功能单元并行](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-33-pipeline.jpg)\n\n在同一时刻，不同的功能单元实际上是在处理不同的指令。多条指令实质上是并行执行的，从而减少了总的执行时间，这种并行叫做指令级并行。\n\n但是有的时候，指令之间会存在依赖关系，后一条指令必须等到前一条指令执行完毕才能运行。\n\n指令排序的目的是让指令以最佳顺序执行，尽量利用指令级并行的性能优势。\n\n### 寄存器分配\n\n对于编译器来说，肯定要尽量利用寄存器，不去读写内存。因为内存读写对于 CPU 来说就是 IO，性能很低。\n\n### 窥孔优化\n\n窥孔优化思路，是提供一个固定大小的窗口，比如能够容纳 20 条指令，并检查窗口内的指令，看看是否可以优化。然后再往下滑动窗口，再次检查优化机会。\n\n### 调用约定（面向硬件）\n\nABI 是 Application Binary Interface 的缩写，也就是应用程序的二进制接口。通常，ABI 里面除了规定调用约定外，还要包括二进制文件的格式、进程初始化方式等更多内容。\n\n在实现编译器时候，你可以发明自己的调用约定，比如哪些寄存器用来放参数、哪些用来放返回值，等等。但是，如果你要使用别语言编译好的目标文件，或者你想让自己的编译器生成的目标文件被别人使用，那你就要遵守某种特定的 ABI 标准。\n\n## 面试指南\n\n具备芯片相关产品的研发经验是真正掌握编译目标代码生成部分程序开发的必要前提。\n\n## 扩展阅读\n\n- 指令排序：基于数据依赖图的 List Scheduling 算法\n- 寄存器分配：寄存器分配染色算法\n- 指令选择：树覆盖算法\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [第 34 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-32.jpg)\n- [第 35 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-33.jpg)\n- [第 36 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-34.jpg)\n- [第 37 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-35.jpg)\n",
+      "toc": [
+        {
+          "id": "section-2b852fd5b8",
+          "title": "CPU 硬件架构",
+          "level": 2
+        },
+        {
+          "id": "section-0d55d65d6f",
+          "title": "后端处理整体过程",
+          "level": 2
+        },
+        {
+          "id": "section-c3b19723c2",
+          "title": "关键流程",
+          "level": 2
+        },
+        {
+          "id": "section-33c17e7507",
+          "title": "指令选择",
+          "level": 3
+        },
+        {
+          "id": "section-35e56f9c63",
+          "title": "指令排序",
+          "level": 3
+        },
+        {
+          "id": "section-64f70e0e92",
+          "title": "寄存器分配",
+          "level": 3
+        },
+        {
+          "id": "section-94e0a424ce",
+          "title": "窥孔优化",
+          "level": 3
+        },
+        {
+          "id": "section-a4c6cd264d",
+          "title": "调用约定（面向硬件）",
+          "level": 3
+        },
+        {
+          "id": "section-3346d76f3c",
+          "title": "面试指南",
+          "level": 2
+        },
+        {
+          "id": "section-513026887d",
+          "title": "扩展阅读",
+          "level": 2
+        },
+        {
+          "id": "section-d987a3d57c",
+          "title": "原图对照",
+          "level": 2
+        }
+      ],
+      "assets": [
+        "figures/compilers/compiler-32-backend.jpg",
+        "figures/compilers/compiler-33-pipeline.jpg"
+      ]
+    },
+    {
+      "id": "native-runtime",
+      "title": "基于物理机与操作系统的运行时",
+      "group": "运行时部分",
+      "summary": "运行时概述、CPU 与内存、操作系统资源管理及 C / Go 运行时。",
+      "photos": [
+        "compiler-36",
+        "compiler-37",
+        "compiler-38",
+        "compiler-39",
+        "compiler-40",
+        "compiler-41",
+        "compiler-42"
+      ],
+      "primaryPhoto": "compiler-37",
+      "printedPages": "39–44",
+      "order": 7,
+      "domain": "compilers",
+      "markdown": "articles/compilers/native-runtime.md",
+      "html": "<h2 id=\"section-68b3a93c2b\">运行时部分</h2><p>概述：基于对一门高级语言设计角度的考虑，我们通常会提到编译期和运行时两个阶段。如今很多动态类型语言、脚本语言，出于便于开发等需要，都会将很多工作从编译期后移到运行时。而运行时的很多工作，其实与程序编译期的处理流程又是密不可分的，因此对于编译原理的学习不得不涉足运行时范畴的很多内容。</p><h2 id=\"section-6a983d12cb\">基本概念</h2><p>一些传统的高级语言，会直接将源代码编译为机器上直接执行的机器代码，因此对这部分编程语言运行时的讨论，实际上是对物理计算机（简称为物理机）和操作系统相关知识的讨论。</p><p>每一种不同的操作系统或不同物理机硬件架构，都需要将源代码编译成相应的目标代码，以确保其在目标平台上的正确运行。</p><figure><button class=\"article-figure\" data-photo=\"compiler-38\" aria-label=\"打开原图：计算机运行机制\"><img src=\"figures/compilers/compiler-38-computer.jpg\" alt=\"计算机运行机制\" loading=\"lazy\"><span>计算机运行机制 · 点击对照原图</span></button></figure><h2 id=\"section-464de0ab4a\">典型代表</h2><p>C、C++、Golang</p><h2 id=\"section-ec202abab6\">CPU 相关核心概念</h2><p>CPU 是计算机的核心，是运行指令的地方。不同架构的 CPU 对软件层面暴露了不同的指令集以供计算。</p><h3 id=\"section-320b1a4a35\">指令</h3><p>在所有架构 CPU 上，指令最终形态都是 0101 的二进制方式，为了便于理解，我们通常会用汇编代码来表示机器指令。</p><p>根据 GNU 汇编器规定的格式，每条指令都包含两部分：操作码（opcode）和操作数（oprand）。</p><p>操作码是让 CPU 执行的动作，而操作数是指令的操作对象，它可以是常数、寄存器和某个内存地址。</p><figure><button class=\"article-figure\" data-photo=\"compiler-39\" aria-label=\"打开原图：汇编代码示例\"><img src=\"figures/compilers/compiler-39-assembly.jpg\" alt=\"汇编代码示例\" loading=\"lazy\"><span>汇编代码示例 · 点击对照原图</span></button></figure><h3 id=\"section-a77d374073\">寄存器</h3><p>寄存器可以直接由指令访问。寄存器的读写速度非常快，大约是内存 100 倍。所以我们编译后的代码，要尽量充分利用寄存器，而不是频繁地去访问内存。</p><h3 id=\"section-01fd729d65\">高速缓存</h3><p>高速缓存通常是多级的（常见 CPU 架构中至少分为 L1～L3）。高速缓存也比内存快。</p><p>CPU 在读取指令和数据的时候，不是一次读取一条，而是读取相邻一批数据，放到高速缓存里。接下来要读取的数据，很可能已经在高速缓存里了，通过这种机制来提高运行性能。因此，编译器要尽量提高缓存的命中率。</p><h3 id=\"section-5f69c8c325\">CPU 的其他功能模块</h3><p>CPU 内部有多个功能单元，有的负责计算，有的负责解码，等等。所以，一个指令可以被切分成多个执行阶段，每个阶段在不同的功能单元上运行，这为实现指令级并行提供了硬件基础。</p><h2 id=\"section-601f3a373d\">内存相关核心概念</h2><h3 id=\"section-f0f56ca4ca\">1. 代码区</h3><p>存放编译完成以后的机器码。</p><h3 id=\"section-61dca87134\">2. 静态数据区</h3><p>保存程序中全局的变量和常量。</p><h3 id=\"section-ed640dccd3\">3. 栈</h3><p>适合保存生存期比较短的数据，比如函数和方法里的本地变量。</p><ul><li>重要知识点：栈帧的构成、活动记录、逐级调用过程。</li><li>栈的特点：申请和释放——修改栈顶指针，生存期与作用域相同。</li></ul><h3 id=\"section-fc1d05006a\">4. 堆</h3><p>适合管理生存期较长的一些数据，这些数据在退出作用域以后也不会消失。</p><ul><li>重要知识点：通过操作系统 API 手动申请和释放。</li><li>管理机制：自动管理、手动管理。</li></ul><figure><button class=\"article-figure\" data-photo=\"compiler-41\" aria-label=\"打开原图：物理内存和逻辑内存关系\"><img src=\"figures/compilers/compiler-41-address-space.jpg\" alt=\"物理内存和逻辑内存关系\" loading=\"lazy\"><span>物理内存和逻辑内存关系 · 点击对照原图</span></button></figure><h2 id=\"section-527ee9ff45\">操作系统相关核心概念</h2><ol start=\"1\"><li>定义：除了硬件支撑，程序的运行还需要软件，这些软件叫做运行时系统。</li><li>操作系统：对于把源代码编译成机器码在操作系统上运行的语言来说（比如 C、C++），操作系统本身就可以看做是它们的运行时系统。</li><li>管理 CPU 资源：分时执行。比如，时间片轮转算法，将 CPU 以时钟周期为单元执行多进程任务，实现并发。</li><li>管理内存资源：逻辑内存（系统内核对内存地址划定）、物理内存（硬件中具体每一个 Bit 实际硬件存储情况）、虚拟内存（基于操作系统内核对内存管理问题的抽象，通常有一部分虚拟内存实际上是存在磁盘上的）。</li></ol><h2 id=\"section-d487f317b2\">面试指南</h2><ul><li>C/C++：运行时其实就是操作系统本身，因此涉及到的概念其实是操作系统内核以及内核提供给用户态应用程序的各种 API。</li><li>Golang：虽然像 C/C++ 一样也是编译成二进制的可执行文件，但它的运行时却更复杂，因为自带了垃圾回收（GC）和自有的一套并发机制（goroutine）。</li></ul><h2 id=\"section-b4bebb336f\">扩展阅读</h2><ul><li>C 语言的内存布局方式（见图例）</li><li>鲸书（第 5 章）：运行时支持</li><li>龙书（第 7 章）：运行时刻环境</li></ul><figure><button class=\"article-figure\" data-photo=\"compiler-42\" aria-label=\"打开原图：C 语言的内存布局方式\"><img src=\"figures/compilers/compiler-42-memory-layout.jpg\" alt=\"C 语言的内存布局方式\" loading=\"lazy\"><span>C 语言的内存布局方式 · 点击对照原图</span></button></figure><h2 id=\"section-bbb2d0ab61\">原图对照</h2><blockquote>整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。</blockquote><ul><li><a href=\"photos/compiler-36.jpg\" data-photo=\"compiler-36\">运行时部分扉页</a></li><li><a href=\"photos/compiler-37.jpg\" data-photo=\"compiler-37\">第 39 页</a></li><li><a href=\"photos/compiler-38.jpg\" data-photo=\"compiler-38\">第 40 页</a></li><li><a href=\"photos/compiler-39.jpg\" data-photo=\"compiler-39\">第 41 页</a></li><li><a href=\"photos/compiler-40.jpg\" data-photo=\"compiler-40\">第 42 页</a></li><li><a href=\"photos/compiler-41.jpg\" data-photo=\"compiler-41\">第 43 页</a></li><li><a href=\"photos/compiler-42.jpg\" data-photo=\"compiler-42\">第 44 页</a></li></ul>",
+      "text": "# 基于物理机与操作系统的运行时\n\n## 运行时部分\n\n概述：基于对一门高级语言设计角度的考虑，我们通常会提到编译期和运行时两个阶段。如今很多动态类型语言、脚本语言，出于便于开发等需要，都会将很多工作从编译期后移到运行时。而运行时的很多工作，其实与程序编译期的处理流程又是密不可分的，因此对于编译原理的学习不得不涉足运行时范畴的很多内容。\n\n## 基本概念\n\n一些传统的高级语言，会直接将源代码编译为机器上直接执行的机器代码，因此对这部分编程语言运行时的讨论，实际上是对物理计算机（简称为物理机）和操作系统相关知识的讨论。\n\n每一种不同的操作系统或不同物理机硬件架构，都需要将源代码编译成相应的目标代码，以确保其在目标平台上的正确运行。\n\n![计算机运行机制](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-38-computer.jpg)\n\n## 典型代表\n\nC、C++、Golang\n\n## CPU 相关核心概念\n\nCPU 是计算机的核心，是运行指令的地方。不同架构的 CPU 对软件层面暴露了不同的指令集以供计算。\n\n### 指令\n\n在所有架构 CPU 上，指令最终形态都是 0101 的二进制方式，为了便于理解，我们通常会用汇编代码来表示机器指令。\n\n根据 GNU 汇编器规定的格式，每条指令都包含两部分：操作码（opcode）和操作数（oprand）。\n\n操作码是让 CPU 执行的动作，而操作数是指令的操作对象，它可以是常数、寄存器和某个内存地址。\n\n![汇编代码示例](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-39-assembly.jpg)\n\n### 寄存器\n\n寄存器可以直接由指令访问。寄存器的读写速度非常快，大约是内存 100 倍。所以我们编译后的代码，要尽量充分利用寄存器，而不是频繁地去访问内存。\n\n### 高速缓存\n\n高速缓存通常是多级的（常见 CPU 架构中至少分为 L1～L3）。高速缓存也比内存快。\n\nCPU 在读取指令和数据的时候，不是一次读取一条，而是读取相邻一批数据，放到高速缓存里。接下来要读取的数据，很可能已经在高速缓存里了，通过这种机制来提高运行性能。因此，编译器要尽量提高缓存的命中率。\n\n### CPU 的其他功能模块\n\nCPU 内部有多个功能单元，有的负责计算，有的负责解码，等等。所以，一个指令可以被切分成多个执行阶段，每个阶段在不同的功能单元上运行，这为实现指令级并行提供了硬件基础。\n\n## 内存相关核心概念\n\n### 1. 代码区\n\n存放编译完成以后的机器码。\n\n### 2. 静态数据区\n\n保存程序中全局的变量和常量。\n\n### 3. 栈\n\n适合保存生存期比较短的数据，比如函数和方法里的本地变量。\n\n- 重要知识点：栈帧的构成、活动记录、逐级调用过程。\n- 栈的特点：申请和释放——修改栈顶指针，生存期与作用域相同。\n\n### 4. 堆\n\n适合管理生存期较长的一些数据，这些数据在退出作用域以后也不会消失。\n\n- 重要知识点：通过操作系统 API 手动申请和释放。\n- 管理机制：自动管理、手动管理。\n\n![物理内存和逻辑内存关系](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-41-address-space.jpg)\n\n## 操作系统相关核心概念\n\n1. 定义：除了硬件支撑，程序的运行还需要软件，这些软件叫做运行时系统。\n2. 操作系统：对于把源代码编译成机器码在操作系统上运行的语言来说（比如 C、C++），操作系统本身就可以看做是它们的运行时系统。\n3. 管理 CPU 资源：分时执行。比如，时间片轮转算法，将 CPU 以时钟周期为单元执行多进程任务，实现并发。\n4. 管理内存资源：逻辑内存（系统内核对内存地址划定）、物理内存（硬件中具体每一个 Bit 实际硬件存储情况）、虚拟内存（基于操作系统内核对内存管理问题的抽象，通常有一部分虚拟内存实际上是存在磁盘上的）。\n\n## 面试指南\n\n- C/C++：运行时其实就是操作系统本身，因此涉及到的概念其实是操作系统内核以及内核提供给用户态应用程序的各种 API。\n- Golang：虽然像 C/C++ 一样也是编译成二进制的可执行文件，但它的运行时却更复杂，因为自带了垃圾回收（GC）和自有的一套并发机制（goroutine）。\n\n## 扩展阅读\n\n- C 语言的内存布局方式（见图例）\n- 鲸书（第 5 章）：运行时支持\n- 龙书（第 7 章）：运行时刻环境\n\n![C 语言的内存布局方式](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-42-memory-layout.jpg)\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [运行时部分扉页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-36.jpg)\n- [第 39 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-37.jpg)\n- [第 40 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-38.jpg)\n- [第 41 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-39.jpg)\n- [第 42 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-40.jpg)\n- [第 43 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-41.jpg)\n- [第 44 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-42.jpg)\n",
+      "toc": [
+        {
+          "id": "section-68b3a93c2b",
+          "title": "运行时部分",
+          "level": 2
+        },
+        {
+          "id": "section-6a983d12cb",
+          "title": "基本概念",
+          "level": 2
+        },
+        {
+          "id": "section-464de0ab4a",
+          "title": "典型代表",
+          "level": 2
+        },
+        {
+          "id": "section-ec202abab6",
+          "title": "CPU 相关核心概念",
+          "level": 2
+        },
+        {
+          "id": "section-320b1a4a35",
+          "title": "指令",
+          "level": 3
+        },
+        {
+          "id": "section-a77d374073",
+          "title": "寄存器",
+          "level": 3
+        },
+        {
+          "id": "section-01fd729d65",
+          "title": "高速缓存",
+          "level": 3
+        },
+        {
+          "id": "section-5f69c8c325",
+          "title": "CPU 的其他功能模块",
+          "level": 3
+        },
+        {
+          "id": "section-601f3a373d",
+          "title": "内存相关核心概念",
+          "level": 2
+        },
+        {
+          "id": "section-f0f56ca4ca",
+          "title": "1. 代码区",
+          "level": 3
+        },
+        {
+          "id": "section-61dca87134",
+          "title": "2. 静态数据区",
+          "level": 3
+        },
+        {
+          "id": "section-ed640dccd3",
+          "title": "3. 栈",
+          "level": 3
+        },
+        {
+          "id": "section-fc1d05006a",
+          "title": "4. 堆",
+          "level": 3
+        },
+        {
+          "id": "section-527ee9ff45",
+          "title": "操作系统相关核心概念",
+          "level": 2
+        },
+        {
+          "id": "section-d487f317b2",
+          "title": "面试指南",
+          "level": 2
+        },
+        {
+          "id": "section-b4bebb336f",
+          "title": "扩展阅读",
+          "level": 2
+        },
+        {
+          "id": "section-bbb2d0ab61",
+          "title": "原图对照",
+          "level": 2
+        }
+      ],
+      "assets": [
+        "figures/compilers/compiler-38-computer.jpg",
+        "figures/compilers/compiler-39-assembly.jpg",
+        "figures/compilers/compiler-41-address-space.jpg",
+        "figures/compilers/compiler-42-memory-layout.jpg"
+      ]
+    },
+    {
+      "id": "virtual-machine-runtime",
+      "title": "基于虚拟机的运行时",
+      "group": "运行时部分",
+      "summary": "栈与寄存器虚拟机、Java / V8 / Python、栈帧与垃圾收集。",
+      "photos": [
+        "compiler-43",
+        "compiler-44",
+        "compiler-45",
+        "compiler-46"
+      ],
+      "primaryPhoto": "compiler-43",
+      "printedPages": "45–48",
+      "order": 8,
+      "domain": "compilers",
+      "markdown": "articles/compilers/virtual-machine-runtime.md",
+      "html": "<h2 id=\"section-d6f2e58262\">基本概念</h2><p>一部分高级语言会提供一个语言的特有虚拟机运行时（一个运行于操作系统之上的应用程序），在编译时先将源代码转换为一种中间代码（通常是字节码），把中间代码交给虚拟机执行，虚拟机也可以抹平不同物理机硬件架构和不同操作系统之间的差异性。</p><h2 id=\"section-a9a1f67ab3\">典型代表</h2><p>Java、Python、JavaScript</p><h2 id=\"section-c8f35d243f\">核心概念</h2><h3 id=\"section-1f952a8b23\">基于栈的虚拟机</h3><ul><li>典型代表：JVM（Java）、Python 虚拟机。</li><li>优点：易于生成代码。</li><li>缺点：代码体积较大、不能充分利用寄存器。</li></ul><h3 id=\"section-a0c4f683cb\">基于寄存器的虚拟机</h3><ul><li>典型代表：Erlang、Lua、Dalvik（Android）、Ignition（JavaScript-V8）。</li><li>优点：代码体积较小，因为参数更好地结合了寄存器进行传递。</li><li>缺点：实现起来更加复杂，难度大。</li></ul><h2 id=\"section-5e9d5e89de\">面试指南</h2><h3 id=\"section-e0b28e1805\">Java</h3><ul><li>HotSpot 是基于堆栈架构的虚拟机。</li><li>内存管理：划分了程序计数器、虚拟机栈、堆、方法区、运行时常量和本地方法栈等不同区域。</li><li>JVM 封装了操作系统的线程模型，为应用程序提供了并发处理机制。</li><li>操作系统的多线程并发、线程锁等概念是面试常考的话题之一。</li></ul><h3 id=\"section-71e0e31a0f\">JavaScript-V8</h3><ul><li>曾经是基于堆栈架构的虚拟机，后来改为了目前的基于寄存器架构。</li><li>运行时方面的主要优化算法：隐藏类、内联缓存。</li><li>垃圾回收方面基于分代回收、染色算法。</li></ul><h3 id=\"section-65196610b1\">Python</h3><ul><li>在运行时层面，Python 虚拟机有些时候是运行机器码，比如内置函数，而有些时候是解释执行字节码。前者的栈帧类似于 C 语言，而后者则会加入操作数栈，这一点更像 JVM。</li><li>自己实现了对堆的管理机制，被称作 Arena 机制，相比直接调用操作系统的堆内存操作来说，更加高效、灵活。</li><li>在并发方面，除了对系统的线程进行了封装之外，还实现了协程机制。</li></ul><h2 id=\"section-d0eb8ccf4f\">扩展阅读</h2><p>一篇有关 Java HotSpot 虚拟机的论文：<a href=\"http://ssw.jku.at/Research/Papers/Schwaighofer09Master/schwaighofer09master.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">schwaighofer09master.pdf</a></p><p>JavaScript-V8 虚拟机的栈帧：</p><figure><button class=\"article-figure\" data-photo=\"compiler-45\" aria-label=\"打开原图：Ignition 的栈帧\"><img src=\"figures/compilers/compiler-45-ignition-frame.jpg\" alt=\"Ignition 的栈帧\" loading=\"lazy\"><span>Ignition 的栈帧 · 点击对照原图</span></button></figure><h3 id=\"section-ecb1845574\">垃圾收集（GC）常见一些算法</h3><ul><li>标记-清除（Mark and Sweep）</li><li>标记-整理（Mark and Compact）</li><li>停止-拷贝（Stop and Copy）</li><li>引用计数</li><li>分代收集</li><li>增量收集</li><li>并发收集</li></ul><h2 id=\"section-178771e012\">原图对照</h2><blockquote>整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。</blockquote><ul><li><a href=\"photos/compiler-43.jpg\" data-photo=\"compiler-43\">第 45 页</a></li><li><a href=\"photos/compiler-44.jpg\" data-photo=\"compiler-44\">第 46 页</a></li><li><a href=\"photos/compiler-45.jpg\" data-photo=\"compiler-45\">第 47 页</a></li><li><a href=\"photos/compiler-46.jpg\" data-photo=\"compiler-46\">第 48 页</a></li></ul>",
+      "text": "# 基于虚拟机的运行时\n\n## 基本概念\n\n一部分高级语言会提供一个语言的特有虚拟机运行时（一个运行于操作系统之上的应用程序），在编译时先将源代码转换为一种中间代码（通常是字节码），把中间代码交给虚拟机执行，虚拟机也可以抹平不同物理机硬件架构和不同操作系统之间的差异性。\n\n## 典型代表\n\nJava、Python、JavaScript\n\n## 核心概念\n\n### 基于栈的虚拟机\n\n- 典型代表：JVM（Java）、Python 虚拟机。\n- 优点：易于生成代码。\n- 缺点：代码体积较大、不能充分利用寄存器。\n\n### 基于寄存器的虚拟机\n\n- 典型代表：Erlang、Lua、Dalvik（Android）、Ignition（JavaScript-V8）。\n- 优点：代码体积较小，因为参数更好地结合了寄存器进行传递。\n- 缺点：实现起来更加复杂，难度大。\n\n## 面试指南\n\n### Java\n\n- HotSpot 是基于堆栈架构的虚拟机。\n- 内存管理：划分了程序计数器、虚拟机栈、堆、方法区、运行时常量和本地方法栈等不同区域。\n- JVM 封装了操作系统的线程模型，为应用程序提供了并发处理机制。\n- 操作系统的多线程并发、线程锁等概念是面试常考的话题之一。\n\n### JavaScript-V8\n\n- 曾经是基于堆栈架构的虚拟机，后来改为了目前的基于寄存器架构。\n- 运行时方面的主要优化算法：隐藏类、内联缓存。\n- 垃圾回收方面基于分代回收、染色算法。\n\n### Python\n\n- 在运行时层面，Python 虚拟机有些时候是运行机器码，比如内置函数，而有些时候是解释执行字节码。前者的栈帧类似于 C 语言，而后者则会加入操作数栈，这一点更像 JVM。\n- 自己实现了对堆的管理机制，被称作 Arena 机制，相比直接调用操作系统的堆内存操作来说，更加高效、灵活。\n- 在并发方面，除了对系统的线程进行了封装之外，还实现了协程机制。\n\n## 扩展阅读\n\n一篇有关 Java HotSpot 虚拟机的论文：[schwaighofer09master.pdf](http://ssw.jku.at/Research/Papers/Schwaighofer09Master/schwaighofer09master.pdf)\n\nJavaScript-V8 虚拟机的栈帧：\n\n![Ignition 的栈帧](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-45-ignition-frame.jpg)\n\n### 垃圾收集（GC）常见一些算法\n\n- 标记-清除（Mark and Sweep）\n- 标记-整理（Mark and Compact）\n- 停止-拷贝（Stop and Copy）\n- 引用计数\n- 分代收集\n- 增量收集\n- 并发收集\n\n## 原图对照\n\n> 整理说明：正文按所提供图片转录，合并印刷换行并调整 Markdown 排版；保留原图的术语、表述和历史语境。图表直接截取原图，参考链接使用图中二维码地址。\n\n- [第 45 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-43.jpg)\n- [第 46 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-44.jpg)\n- [第 47 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-45.jpg)\n- [第 48 页](https://qingeneral.github.io/computer-knowledge-map/photos/compiler-46.jpg)\n",
+      "toc": [
+        {
+          "id": "section-d6f2e58262",
+          "title": "基本概念",
+          "level": 2
+        },
+        {
+          "id": "section-a9a1f67ab3",
+          "title": "典型代表",
+          "level": 2
+        },
+        {
+          "id": "section-c8f35d243f",
+          "title": "核心概念",
+          "level": 2
+        },
+        {
+          "id": "section-1f952a8b23",
+          "title": "基于栈的虚拟机",
+          "level": 3
+        },
+        {
+          "id": "section-a0c4f683cb",
+          "title": "基于寄存器的虚拟机",
+          "level": 3
+        },
+        {
+          "id": "section-5e9d5e89de",
+          "title": "面试指南",
+          "level": 2
+        },
+        {
+          "id": "section-e0b28e1805",
+          "title": "Java",
+          "level": 3
+        },
+        {
+          "id": "section-71e0e31a0f",
+          "title": "JavaScript-V8",
+          "level": 3
+        },
+        {
+          "id": "section-65196610b1",
+          "title": "Python",
+          "level": 3
+        },
+        {
+          "id": "section-d0eb8ccf4f",
+          "title": "扩展阅读",
+          "level": 2
+        },
+        {
+          "id": "section-ecb1845574",
+          "title": "垃圾收集（GC）常见一些算法",
+          "level": 3
+        },
+        {
+          "id": "section-178771e012",
+          "title": "原图对照",
+          "level": 2
+        }
+      ],
+      "assets": [
+        "figures/compilers/compiler-45-ignition-frame.jpg"
       ]
     }
   ],

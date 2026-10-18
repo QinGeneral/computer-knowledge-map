@@ -1,0 +1,144 @@
+[
+  {
+    "id": "lexical-analysis",
+    "title": "词法分析",
+    "group": "前端部分",
+    "summary": "从源程序到 Token：正则文法、有限状态自动机、DFA 与 NFA。",
+    "source": "source/articles/compilers/lexical-analysis.md",
+    "photos": [
+      "compiler-01",
+      "compiler-02",
+      "compiler-03",
+      "compiler-04",
+      "compiler-05",
+      "compiler-06",
+      "compiler-07",
+      "compiler-08",
+      "compiler-09"
+    ],
+    "primaryPhoto": "compiler-06",
+    "printedPages": "07–11",
+    "order": 1
+  },
+  {
+    "id": "syntax-analysis",
+    "title": "语法分析",
+    "group": "前端部分",
+    "summary": "从 Token 到 AST：上下文无关文法、递归下降、LL 与 LR。",
+    "source": "source/articles/compilers/syntax-analysis.md",
+    "photos": [
+      "compiler-10",
+      "compiler-11",
+      "compiler-12"
+    ],
+    "primaryPhoto": "compiler-10",
+    "printedPages": "12–14",
+    "order": 2
+  },
+  {
+    "id": "semantic-analysis",
+    "title": "语义分析",
+    "group": "前端部分",
+    "summary": "属性计算、类型系统、符号表、引用消解、闭包与控制流检查。",
+    "source": "source/articles/compilers/semantic-analysis.md",
+    "photos": [
+      "compiler-13",
+      "compiler-14",
+      "compiler-15",
+      "compiler-16",
+      "compiler-17",
+      "compiler-18",
+      "compiler-19",
+      "compiler-20"
+    ],
+    "primaryPhoto": "compiler-13",
+    "printedPages": "15–22",
+    "order": 3
+  },
+  {
+    "id": "intermediate-representation",
+    "title": "中间代码",
+    "group": "后端部分",
+    "summary": "后端概述与 IR：HIR / MIR / LIR、树与 DAG、P-Code 和 SSA。",
+    "source": "source/articles/compilers/intermediate-representation.md",
+    "photos": [
+      "compiler-21",
+      "compiler-22",
+      "compiler-23",
+      "compiler-24",
+      "compiler-25"
+    ],
+    "primaryPhoto": "compiler-23",
+    "printedPages": "24–27",
+    "order": 4
+  },
+  {
+    "id": "analysis-and-optimization",
+    "title": "代码分析与优化",
+    "group": "后端部分",
+    "summary": "八类优化思路，以及控制流、数据流、依赖与别名分析。",
+    "source": "source/articles/compilers/analysis-and-optimization.md",
+    "photos": [
+      "compiler-26",
+      "compiler-27",
+      "compiler-28",
+      "compiler-29",
+      "compiler-30",
+      "compiler-31"
+    ],
+    "primaryPhoto": "compiler-26",
+    "printedPages": "28–33",
+    "order": 5
+  },
+  {
+    "id": "code-generation",
+    "title": "目标代码生成",
+    "group": "后端部分",
+    "summary": "CPU 架构、指令选择与排序、寄存器分配、窥孔优化和 ABI。",
+    "source": "source/articles/compilers/code-generation.md",
+    "photos": [
+      "compiler-32",
+      "compiler-33",
+      "compiler-34",
+      "compiler-35"
+    ],
+    "primaryPhoto": "compiler-32",
+    "printedPages": "34–37",
+    "order": 6
+  },
+  {
+    "id": "native-runtime",
+    "title": "基于物理机与操作系统的运行时",
+    "group": "运行时部分",
+    "summary": "运行时概述、CPU 与内存、操作系统资源管理及 C / Go 运行时。",
+    "source": "source/articles/compilers/native-runtime.md",
+    "photos": [
+      "compiler-36",
+      "compiler-37",
+      "compiler-38",
+      "compiler-39",
+      "compiler-40",
+      "compiler-41",
+      "compiler-42"
+    ],
+    "primaryPhoto": "compiler-37",
+    "printedPages": "39–44",
+    "order": 7
+  },
+  {
+    "id": "virtual-machine-runtime",
+    "title": "基于虚拟机的运行时",
+    "group": "运行时部分",
+    "summary": "栈与寄存器虚拟机、Java / V8 / Python、栈帧与垃圾收集。",
+    "source": "source/articles/compilers/virtual-machine-runtime.md",
+    "photos": [
+      "compiler-43",
+      "compiler-44",
+      "compiler-45",
+      "compiler-46"
+    ],
+    "primaryPhoto": "compiler-43",
+    "printedPages": "45–48",
+    "order": 8
+  }
+]

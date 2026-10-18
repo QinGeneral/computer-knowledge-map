@@ -1,0 +1,251 @@
+{
+  "sourceCollection": "编译原理知识地图",
+  "sourcePages": 46,
+  "bodyPrintedPages": "07–48，23、38 为分部扉页",
+  "articleCount": 8,
+  "figureCount": 20,
+  "transcriptionPolicy": "正文合并印刷换行、规范 Markdown 排版；图表从原页截取。保留原图术语、表述与历史语境；二维码地址逐一解码。",
+  "preservedSourceWording": [
+    "TurboFun",
+    "函数是语言的特性",
+    "内联优化于逃逸分析",
+    "oprand"
+  ],
+  "chapters": [
+    {
+      "id": "lexical-analysis",
+      "title": "词法分析",
+      "group": "前端部分",
+      "photos": [
+        "compiler-01",
+        "compiler-02",
+        "compiler-03",
+        "compiler-04",
+        "compiler-05",
+        "compiler-06",
+        "compiler-07",
+        "compiler-08",
+        "compiler-09"
+      ],
+      "printedPages": "07–11",
+      "markdownSha256": "db5d1d80a910b61fa7e10eeacef8ca5987b8c214a314a69a204e6f24213db3fc",
+      "headings": [
+        "词法分析",
+        "前端部分",
+        "基本概念",
+        "核心难点",
+        "有限状态自动机",
+        "DFA 与 NFA",
+        "面试指南",
+        "从 Java 程序员视角看词法分析",
+        "从 Python 程序员的视角看词法分析",
+        "从 JavaScript 程序员的视角看 V8 引擎的词法分析",
+        "扩展阅读",
+        "原图对照"
+      ]
+    },
+    {
+      "id": "syntax-analysis",
+      "title": "语法分析",
+      "group": "前端部分",
+      "photos": [
+        "compiler-10",
+        "compiler-11",
+        "compiler-12"
+      ],
+      "printedPages": "12–14",
+      "markdownSha256": "19efe35f53dcaff5324a1eadd0d8458276ed9d77c8f4449322133e4ce059cced",
+      "headings": [
+        "语法分析",
+        "基本概念",
+        "核心难点",
+        "上下文无关文法",
+        "自顶向下和自底向上",
+        "面试指南",
+        "扩展阅读",
+        "原图对照"
+      ]
+    },
+    {
+      "id": "semantic-analysis",
+      "title": "语义分析",
+      "group": "前端部分",
+      "photos": [
+        "compiler-13",
+        "compiler-14",
+        "compiler-15",
+        "compiler-16",
+        "compiler-17",
+        "compiler-18",
+        "compiler-19",
+        "compiler-20"
+      ],
+      "printedPages": "15–22",
+      "markdownSha256": "d1938331873667c96d43aeee9a63f69d89bea8754378f81a831d536c5e4692ba",
+      "headings": [
+        "语义分析",
+        "基本概念",
+        "核心难点",
+        "上下文相关文法",
+        "属性计算",
+        "类型系统",
+        "符号表",
+        "引用消解",
+        "闭包分析",
+        "控制流检查",
+        "面试指南",
+        "扩展阅读",
+        "原图对照"
+      ]
+    },
+    {
+      "id": "intermediate-representation",
+      "title": "中间代码",
+      "group": "后端部分",
+      "photos": [
+        "compiler-21",
+        "compiler-22",
+        "compiler-23",
+        "compiler-24",
+        "compiler-25"
+      ],
+      "printedPages": "24–27",
+      "markdownSha256": "cabbb3ec92b0ce4035e0dc8bbb3876174421c33665981d43a3e8b3fb19944627",
+      "headings": [
+        "中间代码",
+        "后端部分",
+        "中间代码",
+        "基本概念",
+        "基于用途的分类",
+        "IR 数据结构",
+        "P-Code：用于解释执行的 IR",
+        "SSA 格式",
+        "面试指南",
+        "扩展阅读",
+        "原图对照"
+      ]
+    },
+    {
+      "id": "analysis-and-optimization",
+      "title": "代码分析与优化",
+      "group": "后端部分",
+      "photos": [
+        "compiler-26",
+        "compiler-27",
+        "compiler-28",
+        "compiler-29",
+        "compiler-30",
+        "compiler-31"
+      ],
+      "printedPages": "28–33",
+      "markdownSha256": "f21c04eff8c102ff9a5fc1eafb6b27e65c4841f0dc673c0289c7bbfe676fabec",
+      "headings": [
+        "代码分析与优化",
+        "常见优化思路",
+        "1. 常量优化",
+        "2. 用低代价做计算",
+        "3. 消除重复计算",
+        "4. 化零为整，向量计算",
+        "5. 化整为零，各个优化",
+        "6. 循环优化",
+        "7. 过程调用优化",
+        "8. 控制流优化",
+        "代码优化依靠的分析方法",
+        "面试指南",
+        "扩展阅读",
+        "原图对照"
+      ]
+    },
+    {
+      "id": "code-generation",
+      "title": "目标代码生成",
+      "group": "后端部分",
+      "photos": [
+        "compiler-32",
+        "compiler-33",
+        "compiler-34",
+        "compiler-35"
+      ],
+      "printedPages": "34–37",
+      "markdownSha256": "999c8853eabe9eec2915fb7f83acaa44175e160db279dd9d5461323875df4e3f",
+      "headings": [
+        "目标代码生成",
+        "CPU 硬件架构",
+        "后端处理整体过程",
+        "关键流程",
+        "指令选择",
+        "指令排序",
+        "寄存器分配",
+        "窥孔优化",
+        "调用约定（面向硬件）",
+        "面试指南",
+        "扩展阅读",
+        "原图对照"
+      ]
+    },
+    {
+      "id": "native-runtime",
+      "title": "基于物理机与操作系统的运行时",
+      "group": "运行时部分",
+      "photos": [
+        "compiler-36",
+        "compiler-37",
+        "compiler-38",
+        "compiler-39",
+        "compiler-40",
+        "compiler-41",
+        "compiler-42"
+      ],
+      "printedPages": "39–44",
+      "markdownSha256": "6d121f429914a2643e9c7cc11c35593ba8245c477cc513df32a8344e236bdb70",
+      "headings": [
+        "基于物理机与操作系统的运行时",
+        "运行时部分",
+        "基本概念",
+        "典型代表",
+        "CPU 相关核心概念",
+        "指令",
+        "寄存器",
+        "高速缓存",
+        "CPU 的其他功能模块",
+        "内存相关核心概念",
+        "1. 代码区",
+        "2. 静态数据区",
+        "3. 栈",
+        "4. 堆",
+        "操作系统相关核心概念",
+        "面试指南",
+        "扩展阅读",
+        "原图对照"
+      ]
+    },
+    {
+      "id": "virtual-machine-runtime",
+      "title": "基于虚拟机的运行时",
+      "group": "运行时部分",
+      "photos": [
+        "compiler-43",
+        "compiler-44",
+        "compiler-45",
+        "compiler-46"
+      ],
+      "printedPages": "45–48",
+      "markdownSha256": "73a9242be269dcbec829e6a50eeb041417e02f603cc3a4fd7c547f0680f3bbac",
+      "headings": [
+        "基于虚拟机的运行时",
+        "基本概念",
+        "典型代表",
+        "核心概念",
+        "基于栈的虚拟机",
+        "基于寄存器的虚拟机",
+        "面试指南",
+        "Java",
+        "JavaScript-V8",
+        "Python",
+        "扩展阅读",
+        "垃圾收集（GC）常见一些算法",
+        "原图对照"
+      ]
+    }
+  ]
+}

@@ -26,10 +26,11 @@ jobs:
           python3 scripts/build_data.py
           python3 scripts/validate_data.py
           node --check dist/app.js
+          node --check dist/articles.js
           node --check dist/mindmap.js
           node --check dist/diagrams.js
           git diff --check
-          git diff --exit-code -- dist/data.json dist/data.js dist/knowledge-map.md
+          git diff --exit-code -- dist/data.json dist/data.js dist/knowledge-map.md dist/articles
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v6.0.0
       - name: Upload static site

@@ -1024,7 +1024,31 @@
   - DHCP 配置中的 next-server：PXE在DHCP服务器配置里面多了一个next-server，可以安装操作系统。 [原图](photos/IMG_8093.jpg)
   - 中介介绍装修公司的类比：这就是中介租给你房子之后，签完约说，还给你介绍一个装修公司：“哥们，想装修一下吗，接下来找它。” [原图](photos/IMG_8093.jpg)
 
+## 编译原理
+
+从 46 页原图整理 8 篇 Markdown 文章，依次阅读前端、后端与运行时。
+
+- 词法分析（整理说明：从源程序到 Token：正则文法、有限状态自动机、DFA 与 NFA。） [原图](photos/compiler-06.jpg)
+- 语法分析（整理说明：从 Token 到 AST：上下文无关文法、递归下降、LL 与 LR。） [原图](photos/compiler-10.jpg)
+- 语义分析（整理说明：属性计算、类型系统、符号表、引用消解、闭包与控制流检查。） [原图](photos/compiler-13.jpg)
+- 中间代码（整理说明：后端概述与 IR：HIR / MIR / LIR、树与 DAG、P-Code 和 SSA。） [原图](photos/compiler-23.jpg)
+- 代码分析与优化（整理说明：八类优化思路，以及控制流、数据流、依赖与别名分析。） [原图](photos/compiler-26.jpg)
+- 目标代码生成（整理说明：CPU 架构、指令选择与排序、寄存器分配、窥孔优化和 ABI。） [原图](photos/compiler-32.jpg)
+- 基于物理机与操作系统的运行时（整理说明：运行时概述、CPU 与内存、操作系统资源管理及 C / Go 运行时。） [原图](photos/compiler-37.jpg)
+- 基于虚拟机的运行时（整理说明：栈与寄存器虚拟机、Java / V8 / Python、栈帧与垃圾收集。） [原图](photos/compiler-43.jpg)
+
 ## 后续专题
 
 - 网络协议知识地图：从协议分层与路由，到传输、应用与网络服务；按 12 张原图整理 20 个主题。
-- 编译原理：等待图片。已在总览与程序执行过程中保留关联入口，等待后续专题图片。
+- 编译原理：从 46 页原图整理 8 篇 Markdown 文章，依次阅读前端、后端与运行时。
+
+## Markdown 文章
+
+- [词法分析](articles/compilers/lexical-analysis.md)
+- [语法分析](articles/compilers/syntax-analysis.md)
+- [语义分析](articles/compilers/semantic-analysis.md)
+- [中间代码](articles/compilers/intermediate-representation.md)
+- [代码分析与优化](articles/compilers/analysis-and-optimization.md)
+- [目标代码生成](articles/compilers/code-generation.md)
+- [基于物理机与操作系统的运行时](articles/compilers/native-runtime.md)
+- [基于虚拟机的运行时](articles/compilers/virtual-machine-runtime.md)
