@@ -170,16 +170,16 @@
   },
   {
     "photo": "compiler-32",
-    "name": "backend",
+    "name": "backend-flow",
     "box": [
       0.1,
       0.61,
-      0.88,
+      0.96,
       0.865
     ],
-    "asset": "figures/compilers/compiler-32-backend.jpg",
+    "asset": "figures/compilers/compiler-32-backend-flow.jpg",
     "sourceSha256": "73a5980bb94b7930a75df6350bf1136044c8c0a52dbaed39f5833669615a2b09",
-    "assetSha256": "07e73032f364b23f96da899e09183433382132c62e2e4f7bae18d87243faa388"
+    "assetSha256": "e8ea02a57e7f06a605849e40113acb8a87819503a819bac89f4c6b8688c234d6"
   },
   {
     "photo": "compiler-33",

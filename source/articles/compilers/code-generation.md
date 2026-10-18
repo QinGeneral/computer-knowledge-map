@@ -7,7 +7,7 @@
 
 ## 后端处理整体过程
 
-![典型后端处理过程](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-32-backend.jpg)
+![典型后端处理过程](https://qingeneral.github.io/computer-knowledge-map/figures/compilers/compiler-32-backend-flow.jpg)
 
 MIR → 指令选择 → LIR → 指令排序 → 寄存器分配 → 指令排序 → 翻译成目标代码 → 目标代码。
 
